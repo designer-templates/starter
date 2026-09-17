@@ -1,0 +1,35 @@
+title: Testimonials — quote cards
+description: Three-column grid of quote cards with a name and role
+category: testimonials
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "What managers are saying"
+        required: true
+    subheading:
+        type: textarea
+        label: Subheading
+        description: Short line under the heading. Clear to hide.
+        rows: 2
+        default: "Notes from people who moved their week off the spreadsheet."
+    testimonials:
+        type: repeater
+        label: Testimonials
+        source: "collections.testimonials"
+        add_button_label: "Add testimonial"
+        item_label: name
+        sub_fields:
+            quote:
+                type: textarea
+                label: Quote
+                rows: 3
+                default: "A short quote about the product."
+            name:
+                type: text
+                label: Name
+                default: "A name"
+            role:
+                type: text
+                label: Role
+                default: "Role, Company"

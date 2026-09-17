@@ -1,0 +1,10 @@
+# Column types for plans.json — the pricing tiers. Features are one per line.
+fields:
+    name: { type: text }
+    price: { type: text }
+    period: { type: text }
+    description: { type: text }
+    features: { type: textarea }
+    ctaText: { type: text }
+    ctaLink: { type: url }
+    featured: { type: select, options: { yes: "Yes", no: "No" } }

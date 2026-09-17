@@ -1,0 +1,24 @@
+title: Stats — figure row
+description: Four headline numbers in a row with dividers between them
+category: stats
+fields:
+    heading:
+        type: text
+        label: Heading
+        description: Optional heading above the numbers. Clear to hide.
+        default: "The numbers from the first year"
+    stats:
+        type: repeater
+        label: Stats
+        source: "collections.stats"
+        add_button_label: "Add stat"
+        item_label: label
+        sub_fields:
+            value:
+                type: text
+                label: Value
+                default: "42%"
+            label:
+                type: text
+                label: Label
+                default: "What this number measures"

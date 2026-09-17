@@ -1,0 +1,46 @@
+title: Contact — details and form
+description: Contact details beside a simple form
+category: contact
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Get in touch"
+        required: true
+    subheading:
+        type: textarea
+        label: Subheading
+        description: Short line under the heading. Clear to hide.
+        rows: 3
+        default: "Questions about plans, a demo for a few locations, or moving a schedule over from another tool. We reply within one business day."
+    email:
+        type: text
+        label: Email
+        description: Clear to hide the email row.
+        default: "hello@starter.app"
+    phone:
+        type: text
+        label: Phone
+        description: Clear to hide the phone row.
+        default: "+1 (614) 555-0136"
+    address:
+        type: text
+        label: Address
+        description: Clear to hide the address row.
+        default: "221 N High St, Suite 400, Columbus, OH 43215"
+    nameLabel:
+        type: text
+        label: Name field label
+        default: "Name"
+    emailLabel:
+        type: text
+        label: Email field label
+        default: "Email"
+    messageLabel:
+        type: text
+        label: Message field label
+        default: "Message"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Send message"

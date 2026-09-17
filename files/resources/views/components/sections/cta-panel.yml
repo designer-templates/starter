@@ -1,0 +1,35 @@
+title: CTA — bordered panel
+description: Centered heading, supporting text, and two buttons in a bordered panel
+category: cta
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Start with the free plan"
+        required: true
+    text:
+        type: textarea
+        label: Supporting text
+        description: Short line under the heading. Clear to hide.
+        rows: 2
+        default: "One location, ten people, the full schedule and swaps. Upgrade when the roster outgrows it."
+    primaryText:
+        type: text
+        label: Primary button text
+        default: "Start free"
+    primaryUrl:
+        type: url
+        label: Primary button link
+        default: "/pricing"
+    showSecondary:
+        type: toggle
+        label: Show secondary button
+        default: "1"
+    secondaryText:
+        type: text
+        label: Secondary button text
+        default: "View pricing"
+    secondaryUrl:
+        type: url
+        label: Secondary button link
+        default: "/pricing"

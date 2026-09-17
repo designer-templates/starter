@@ -1,0 +1,20 @@
+title: Hero — page header
+description: An eyebrow, a heading and one line of copy to open an inner page
+category: heroes
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Pricing"
+    heading:
+        type: text
+        label: Heading
+        default: "One flat price per location"
+        required: true
+    text:
+        type: textarea
+        label: Description
+        description: Clear to hide.
+        rows: 2
+        default: "Every plan includes the weekly schedule, swaps and the mobile app. Pay monthly, cancel any time."

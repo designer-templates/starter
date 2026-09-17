@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1200" viewBox="0 0 2400 1200" font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+<rect width="2400" height="1200" fill="#f7f6f3"/>
+<rect x="120" y="120" width="2160" height="960" rx="28" fill="#ffffff" stroke="#dedbd4"/>
+<line x1="120" y1="210" x2="2280" y2="210" stroke="#dedbd4"/>
+<text x="180" y="175.8" font-size="30" font-weight="600" fill="#141310">Week of Sep 14</text>
+<rect x="2064" y="136" width="156" height="57" rx="28" fill="#141310"/>
+<text x="2142.0" y="175.8" font-size="27" font-weight="500" fill="#f7f6f3" text-anchor="middle">Publish</text>
+<text x="560.5714285714286" y="258" font-size="25" fill="#6b6a64" text-anchor="middle">Mon</text>
+<line x1="432.0" y1="270" x2="432.0" y2="1044" stroke="#dedbd4" stroke-dasharray="4 6"/>
+<text x="817.7142857142857" y="258" font-size="25" fill="#6b6a64" text-anchor="middle">Tue</text>
+<line x1="689.1428571428571" y1="270" x2="689.1428571428571" y2="1044" stroke="#dedbd4" stroke-dasharray="4 6"/>
+<text x="1074.857142857143" y="258" font-size="25" fill="#6b6a64" text-anchor="middle">Wed</text>
+<line x1="946.2857142857143" y1="270" x2="946.2857142857143" y2="1044" stroke="#dedbd4" stroke-dasharray="4 6"/>
+<text x="1332.0000000000002" y="258" font-size="25" fill="#6b6a64" text-anchor="middle">Thu</text>
+<line x1="1203.4285714285716" y1="270" x2="1203.4285714285716" y2="1044" stroke="#dedbd4" stroke-dasharray="4 6"/>
+<text x="1589.1428571428573" y="258" font-size="25" fill="#6b6a64" text-anchor="middle">Fri</text>
+<line x1="1460.5714285714287" y1="270" x2="1460.5714285714287" y2="1044" stroke="#dedbd4" stroke-dasharray="4 6"/>
+<text x="1846.2857142857144" y="258" font-size="25" fill="#6b6a64" text-anchor="middle">Sat</text>
+<line x1="1717.7142857142858" y1="270" x2="1717.7142857142858" y2="1044" stroke="#dedbd4" stroke-dasharray="4 6"/>
+<text x="2103.4285714285716" y="258" font-size="25" fill="#6b6a64" text-anchor="middle">Sun</text>
+<line x1="1974.8571428571431" y1="270" x2="1974.8571428571431" y2="1044" stroke="#dedbd4" stroke-dasharray="4 6"/>
+<line x1="120" y1="282.0" x2="2280" y2="282.0" stroke="#dedbd4"/>
+<circle cx="192" cy="345.5" r="27.94" fill="#eeece7"/>
+<text x="252" y="356.0" font-size="25" fill="#141310">Dana W.</text>
+<line x1="120" y1="409.0" x2="2280" y2="409.0" stroke="#dedbd4"/>
+<circle cx="192" cy="472.5" r="27.94" fill="#eeece7"/>
+<text x="252" y="483.0" font-size="25" fill="#141310">Marcus B.</text>
+<line x1="120" y1="536.0" x2="2280" y2="536.0" stroke="#dedbd4"/>
+<circle cx="192" cy="599.5" r="27.94" fill="#eeece7"/>
+<text x="252" y="610.0" font-size="25" fill="#141310">Elena R.</text>
+<line x1="120" y1="663.0" x2="2280" y2="663.0" stroke="#dedbd4"/>
+<circle cx="192" cy="726.5" r="27.94" fill="#eeece7"/>
+<text x="252" y="737.0" font-size="25" fill="#141310">Owen P.</text>
+<line x1="120" y1="790.0" x2="2280" y2="790.0" stroke="#dedbd4"/>
+<circle cx="192" cy="853.5" r="27.94" fill="#eeece7"/>
+<text x="252" y="864.0" font-size="25" fill="#141310">Nia T.</text>
+<line x1="120" y1="917.0" x2="2280" y2="917.0" stroke="#dedbd4"/>
+<circle cx="192" cy="980.5" r="27.94" fill="#eeece7"/>
+<text x="252" y="991.0" font-size="25" fill="#141310">Sam O.</text>
+<rect x="448" y="310" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="509" y="354" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="705" y="310" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="766" y="354" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="1309" y="310" width="135" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1377" y="354" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="1476" y="310" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1538" y="354" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="551" y="437" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="612" y="482" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="962" y="437" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1023" y="482" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="1219" y="437" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1281" y="482" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="1798" y="437" width="148" height="71" rx="17" fill="#e3e9f9" stroke="#1d4ed8"/>
+<text x="1872" y="482" font-size="22" fill="#1d4ed8" text-anchor="middle">Open</text>
+<rect x="795" y="564" width="135" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="863" y="608" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="1052" y="564" width="135" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1120" y="608" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="1579" y="564" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1641" y="608" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="1991" y="564" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="2052" y="608" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="448" y="691" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="509" y="736" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="705" y="691" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="766" y="736" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="962" y="691" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1023" y="736" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="1734" y="691" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1795" y="736" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="1065" y="818" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1126" y="862" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="1322" y="818" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1383" y="862" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="1579" y="818" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1641" y="862" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="2081" y="818" width="135" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="2148" y="862" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="808" y="945" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="869" y="990" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="1219" y="945" width="123" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1281" y="990" font-size="22" fill="#141310" text-anchor="middle">7–3</text>
+<rect x="1849" y="945" width="110" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="1904" y="990" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+<rect x="2106" y="945" width="110" height="71" rx="17" fill="#eeece7" stroke="#dedbd4"/>
+<text x="2161" y="990" font-size="22" fill="#141310" text-anchor="middle">2–10</text>
+</svg>

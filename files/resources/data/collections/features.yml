@@ -1,0 +1,5 @@
+# Column types for features.json — the rows every features section reads
+fields:
+    icon: { type: textarea }
+    title: { type: text }
+    description: { type: textarea }

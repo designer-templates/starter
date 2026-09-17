@@ -1,0 +1,28 @@
+title: Newsletter — signup
+description: Centered heading and text with an email input and subscribe button
+category: newsletter
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "One email a month"
+        required: true
+    text:
+        type: textarea
+        label: Text
+        description: Short line under the heading. Clear to hide.
+        rows: 2
+        default: "What shipped, what changed, and one scheduling habit worth stealing from another store. That is all."
+    inputPlaceholder:
+        type: text
+        label: Input placeholder
+        default: "you@yourshop.com"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Subscribe"
+    finePrint:
+        type: text
+        label: Fine print
+        description: Small line under the form. Clear to hide.
+        default: "No spam. Unsubscribe any time."

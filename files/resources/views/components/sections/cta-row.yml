@@ -1,0 +1,35 @@
+title: CTA — split row
+description: Heading on the left and buttons on the right between two hairlines
+category: cta
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Ready when your roster is"
+        required: true
+    text:
+        type: textarea
+        label: Supporting text
+        description: Short line under the heading. Clear to hide.
+        rows: 2
+        default: "Set up takes a few minutes. Invite the team when the first week looks right."
+    primaryText:
+        type: text
+        label: Primary button text
+        default: "Create an account"
+    primaryUrl:
+        type: url
+        label: Primary button link
+        default: "/pricing"
+    showSecondary:
+        type: toggle
+        label: Show secondary button
+        default: "1"
+    secondaryText:
+        type: text
+        label: Secondary button text
+        default: "Talk to us"
+    secondaryUrl:
+        type: url
+        label: Secondary button link
+        default: "/contact"

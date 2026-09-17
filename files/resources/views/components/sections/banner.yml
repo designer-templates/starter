@@ -1,0 +1,22 @@
+title: Banner — announcement bar
+description: A thin announcement bar with a message, a link, and an optional dismiss button
+category: banners
+fields:
+    message:
+        type: text
+        label: Message
+        default: "Shift swaps now approve themselves when both people qualify."
+        required: true
+    linkText:
+        type: text
+        label: Link text
+        description: Clear to hide the link.
+        default: "See what changed"
+    linkUrl:
+        type: url
+        label: Link URL
+        default: "/#features"
+    dismissible:
+        type: toggle
+        label: Show dismiss button
+        default: "1"

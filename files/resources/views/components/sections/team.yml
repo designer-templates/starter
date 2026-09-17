@@ -1,0 +1,34 @@
+title: Team — people grid
+description: A grid of people with a photo, name, and role
+category: team
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "The team"
+        required: true
+    subheading:
+        type: textarea
+        label: Subheading
+        description: Short line under the heading. Clear to hide.
+        rows: 2
+        default: "Six people in Columbus, Ohio, most of whom have closed a store or a clinic on a Saturday night."
+    members:
+        type: repeater
+        label: Members
+        source: "collections.team"
+        add_button_label: "Add member"
+        item_label: name
+        sub_fields:
+            image:
+                type: image
+                label: Photo
+                default: "/images/team/dana.svg"
+            name:
+                type: text
+                label: Name
+                default: "A name"
+            role:
+                type: text
+                label: Role
+                default: "Role"

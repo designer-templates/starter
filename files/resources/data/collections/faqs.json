@@ -1,0 +1,8 @@
+[
+    { "question": "Can I try it before paying?", "answer": "Yes. Every account starts with a 30-day trial of the Team plan, no card needed. When it ends you pick a plan or stay on Free with up to 10 people." },
+    { "question": "How do my staff see the schedule?", "answer": "Each person gets a text with a link the first time you publish. The schedule opens on any phone, and changes to their own shifts arrive as a notification." },
+    { "question": "Does it handle two people covering the same role?", "answer": "Yes. A shift can hold as many people as you need, and a role can require a minimum, so the Saturday register always has two trained cashiers on it." },
+    { "question": "Can I change plans later?", "answer": "Upgrades apply the same day and we prorate the difference on your next invoice. Downgrades take effect at the end of the billing period, so you never lose time you already paid for." },
+    { "question": "Is my data portable?", "answer": "Always. Export schedules, timesheets and staff as CSV from settings, and if you close the account the export stays available for 30 days." },
+    { "question": "What kind of support do you offer?", "answer": "Email on every plan with replies within one business day, chat on Team from 7 AM to 7 PM ET, and a phone line on Business." }
+]

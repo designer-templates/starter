@@ -1,0 +1,5 @@
+# Column types for testimonials.json — quote cards
+fields:
+    quote: { type: textarea }
+    name: { type: text }
+    role: { type: text }

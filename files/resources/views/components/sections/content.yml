@@ -1,0 +1,32 @@
+title: Content — prose column
+description: A single prose column with an eyebrow, a heading, and paragraphs
+category: content
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "About"
+    heading:
+        type: text
+        label: Heading
+        default: "Why we built a scheduler"
+        required: true
+    paragraph1:
+        type: textarea
+        label: Paragraph 1
+        rows: 4
+        default: "Two of us managed a coffee shop and a climbing gym before this. Every week ended the same way: a spreadsheet on Sunday night, a photo of it in the group chat, and a Monday morning of texts about who was swapping with whom."
+        required: true
+    paragraph2:
+        type: textarea
+        label: Paragraph 2
+        description: Clear to hide.
+        rows: 4
+        default: "The tools we tried were built for companies with an HR department. They had approval chains and org charts and a mobile app that needed a password reset every month. What a twelve-person team needs is a schedule that publishes in minutes and a swap that approves itself when it fits."
+    paragraph3:
+        type: textarea
+        label: Paragraph 3
+        description: Clear to hide.
+        rows: 4
+        default: "So that is what we built. Starter runs 2,140 schedules a week now, most of them for teams under twenty, and the whole company still fits around one table in Columbus."

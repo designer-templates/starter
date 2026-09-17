@@ -1,0 +1,31 @@
+title: FAQ — accordion
+description: Heading with a bordered accordion of questions
+category: faq
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Questions, answered"
+        required: true
+    subheading:
+        type: textarea
+        label: Subheading
+        description: Short line under the heading. Clear to hide.
+        rows: 2
+        default: "Quick answers about plans, billing, and getting the team on board."
+    faqs:
+        type: repeater
+        label: Questions
+        source: "collections.faqs"
+        add_button_label: "Add question"
+        item_label: question
+        sub_fields:
+            question:
+                type: text
+                label: Question
+                default: "A question"
+            answer:
+                type: textarea
+                label: Answer
+                rows: 3
+                default: "A clear, direct answer."

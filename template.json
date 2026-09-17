@@ -1,12 +1,12 @@
 {
     "name": "Starter",
     "dialect": "blade",
-    "description": "One evocative sentence naming the standout surfaces — rewrite before shipping.",
-    "icon": "✦",
-    "repo": "https://github.com/designerdotdev/starter",
-    "order": 99,
-    "category": "landing",
+    "description": "A neutral, light starter site with a library of 20 general-purpose sections — four heroes, three feature layouts, three calls to action, pricing, FAQ, stats, team, testimonials, newsletter, contact, prose and a banner — composed into four pages: Home, Pricing, About and Contact.",
+    "icon": "▢",
+    "repo": "https://github.com/designer-templates/starter",
+    "order": 2,
+    "category": "starter",
     "theme": "light",
     "accent": "#1d4ed8",
-    "pages": ["Home"]
+    "pages": ["Home", "Pricing", "About", "Contact"]
 }

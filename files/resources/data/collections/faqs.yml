@@ -1,0 +1,4 @@
+# Column types for faqs.json — the questions in the accordion
+fields:
+    question: { type: text }
+    answer: { type: textarea }

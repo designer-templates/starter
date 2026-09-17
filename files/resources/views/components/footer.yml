@@ -9,7 +9,7 @@ fields:
         type: textarea
         label: Tagline
         rows: 2
-        default: "Rewrite this line in the product's voice."
+        default: "Shift scheduling for small hourly teams. Built in Columbus, OH."
     columns:
         type: repeater
         label: Link columns

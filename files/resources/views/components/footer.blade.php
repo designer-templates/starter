@@ -1,6 +1,6 @@
 @props([
     'brand' => 'Starter',
-    'tagline' => 'Rewrite this line in the product\'s voice.',
+    'tagline' => 'Shift scheduling for small hourly teams. Built in Columbus, OH.',
     'columns' => [],
     'social' => [],
     'legal' => '© 2026 Starter. All rights reserved.',

@@ -13,6 +13,7 @@ headerState();
 dropdowns();
 mobileMenu();
 markCurrentMenuItem();
+banners();
 reveals(document);
 
 /* Transparent at the top; glass once content scrolls underneath (site.css #header rules). */
@@ -95,6 +96,15 @@ function mobileMenu() {
     panel.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
     window.matchMedia('(min-width: 64rem)').addEventListener('change', function (e) { if (e.matches) set(false); });
+}
+
+/* The announcement banner (sections/banner.blade.php): the dismiss button hides it for this visit. */
+function banners() {
+    document.querySelectorAll('[data-banner]').forEach(function (banner) {
+        var button = banner.querySelector('[data-banner-dismiss]');
+        if (!button) return;
+        button.addEventListener('click', function () { banner.classList.add('is-dismissed'); });
+    });
 }
 
 /* aria-current on the nav link matching the page. */

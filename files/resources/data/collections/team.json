@@ -1,0 +1,8 @@
+[
+    { "image": "/images/team/dana.svg", "name": "Dana Whitfield", "role": "Co-founder and CEO" },
+    { "image": "/images/team/marcus.svg", "name": "Marcus Bell", "role": "Co-founder and CTO" },
+    { "image": "/images/team/elena.svg", "name": "Elena Ruiz", "role": "Head of Design" },
+    { "image": "/images/team/owen.svg", "name": "Owen Park", "role": "Engineering" },
+    { "image": "/images/team/nia.svg", "name": "Nia Thompson", "role": "Customer Support" },
+    { "image": "/images/team/sam.svg", "name": "Sam Okada", "role": "Sales" }
+]

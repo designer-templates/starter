@@ -1,16 +1,16 @@
-title: Closing call to action
+title: CTA — dark band
 description: A dark band with a statement and one primary action
 category: cta
 fields:
     heading:
         type: text
         label: Heading
-        default: "Start on the free plan today"
+        default: "Publish next week today"
     body:
         type: textarea
         label: Supporting copy
         rows: 2
-        default: "No card, no call. Import your first project and see the difference this afternoon."
+        default: "No card, no call. Import your roster and have the first schedule on everyone's phone this afternoon."
     ctaText:
         type: text
         label: Primary button text
@@ -26,4 +26,4 @@ fields:
     secondaryLink:
         type: url
         label: Secondary button link
-        default: "mailto:hello@example.com"
+        default: "/contact"

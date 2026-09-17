@@ -6,12 +6,24 @@
     real values live here and only here. The tokens become utilities:
     bg-canvas, text-ink, text-muted, border-line, bg-panel, bg-shade…
     (contract: the designer-craft skill, references/tokens.md)
+
+    The mood: a warm off-white page, white cards, one blue for the actions
+    that matter. Inter for everything, so the sections read as a neutral kit.
 */
 @theme {
-    --font-display: 'Instrument Serif', ui-serif, Georgia, serif;
+    --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
+    /* Type scale: the hero, section headings, and the big figures */
+    --text-hero: clamp(2.5rem, 1.5rem + 3.6vw, 4.25rem);
+    --text-hero--line-height: 1.06;
+    --text-h2: clamp(1.875rem, 1.35rem + 1.9vw, 2.75rem);
+    --text-h2--line-height: 1.1;
+    --text-figure: clamp(2.25rem, 1.75rem + 1.8vw, 3.25rem);
+    --text-figure--line-height: 1;
+
+    /* Surfaces: a warm off-white page, true white for raised cards */
     --color-canvas: #f7f6f3;
     --color-panel: #ffffff;
     --color-raised: #eeece7;
@@ -31,6 +43,9 @@
     --color-shade-ink: #f3f2ee;
     --color-shade-muted: #a3a19a;
     --color-shade-line: rgba(255, 255, 255, 0.12);
+
+    /* One depth recipe page-wide: a hairline plus this soft layered shadow */
+    --shadow-card: 0 1px 2px rgba(20, 19, 16, 0.05), 0 12px 32px -16px rgba(20, 19, 16, 0.18);
 
     /* One easing family for everything interactive: fast in, long settle. */
     --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
@@ -98,15 +113,35 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 .menu-open [data-mobile-panel] { opacity: 1; translate: 0 0; visibility: visible; backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); transition: opacity .32s var(--ease-out-quart), translate .32s var(--ease-out-quart), visibility 0s; }
 .menu-open { overflow: hidden; }
 
-/* Smooth <details> opening (Chrome; instant elsewhere). */
+/* Arrow nudge on links that carry one. */
+.arrow-link .arrow { transition: translate .22s var(--ease-out-quart); }
+.arrow-link:hover .arrow { translate: 3px 0; }
+
+/* Cards that link somewhere lift by a hair. */
+.lift { transition: translate .22s var(--ease-out-quart), box-shadow .22s var(--ease-out-quart), border-color .22s var(--ease-out-quart); }
+.lift:hover { translate: 0 -2px; box-shadow: var(--shadow-card); }
+
+/* Form fields: one recipe for every input on the site. */
+.field { transition: border-color .2s ease, box-shadow .2s ease; }
+.field:focus { outline: none; border-color: var(--color-line-strong); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+
+/* The announcement banner: main.js removes it when the dismiss button is pressed. */
+[data-banner] { transition: opacity .2s ease; }
+[data-banner].is-dismissed { display: none; }
+
+/* Smooth <details> opening (Chrome; instant elsewhere). The plus turns into a cross. */
 details.faq-item { interpolate-size: allow-keywords; }
 details.faq-item::details-content { block-size: 0; overflow: hidden; transition: block-size .35s var(--ease-out-quart), content-visibility .35s; transition-behavior: allow-discrete; }
 details.faq-item[open]::details-content { block-size: auto; }
 details.faq-item summary::-webkit-details-marker { display: none; }
+details.faq-item .faq-plus { transition: rotate .3s var(--ease-out-quart); }
+details.faq-item[open] .faq-plus { rotate: 45deg; }
 
 /* Reduced motion wins outright: everything visible, nothing moving. */
 @media (prefers-reduced-motion: reduce) {
     .js [data-reveal] { opacity: 1; translate: 0 0; filter: none; transition: none; }
     [data-dropdown-panel], [data-mobile-panel], details.faq-item::details-content { transition-duration: 0s; }
+    details.faq-item .faq-plus, .arrow-link .arrow, .lift, .field, [data-banner] { transition: none; }
+    .lift:hover, .arrow-link:hover .arrow { translate: 0 0; }
     ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
 }

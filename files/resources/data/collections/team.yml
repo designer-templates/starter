@@ -1,0 +1,5 @@
+# Column types for team.json — the people grid
+fields:
+    image: { type: image }
+    name: { type: text }
+    role: { type: text }

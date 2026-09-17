@@ -1,0 +1,53 @@
+title: Footer
+description: The mark, a tagline, link columns from site.json, social icons, and the legal line
+fields:
+    brand:
+        type: text
+        label: Brand name
+        default: "Starter"
+    tagline:
+        type: textarea
+        label: Tagline
+        rows: 2
+        default: "Rewrite this line in the product's voice."
+    columns:
+        type: repeater
+        label: Link columns
+        description: "Each top-level item is a column; its nested links are the rows. Stored in site.json."
+        source: site.footer_links
+        nestable: true
+        add_button_label: "Add column"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Text
+                default: "New link"
+            url:
+                type: url
+                label: Link
+                default: "/"
+    social:
+        type: repeater
+        label: Social links
+        source: site.social_links
+        add_button_label: "Add social link"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Name
+                default: "X"
+            url:
+                type: url
+                label: Link
+                default: "#"
+            icon:
+                type: textarea
+                label: Icon (inline SVG)
+                rows: 3
+                default: ""
+    legal:
+        type: text
+        label: Legal line
+        default: "© 2026 Starter. All rights reserved."

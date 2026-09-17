@@ -1,0 +1,29 @@
+title: Closing call to action
+description: A dark band with a statement and one primary action
+category: cta
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Start on the free plan today"
+    body:
+        type: textarea
+        label: Supporting copy
+        rows: 2
+        default: "No card, no call. Import your first project and see the difference this afternoon."
+    ctaText:
+        type: text
+        label: Primary button text
+        default: "Start free"
+    ctaLink:
+        type: url
+        label: Primary button link
+        default: "/pricing"
+    secondaryText:
+        type: text
+        label: Secondary button text
+        default: "Talk to us"
+    secondaryLink:
+        type: url
+        label: Secondary button link
+        default: "mailto:hello@example.com"

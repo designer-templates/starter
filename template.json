@@ -1,0 +1,12 @@
+{
+    "name": "Starter",
+    "dialect": "blade",
+    "description": "One evocative sentence naming the standout surfaces — rewrite before shipping.",
+    "icon": "✦",
+    "repo": "https://github.com/designerdotdev/starter",
+    "order": 99,
+    "category": "landing",
+    "theme": "light",
+    "accent": "#1d4ed8",
+    "pages": ["Home"]
+}

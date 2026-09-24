@@ -2,6 +2,7 @@
     'eyebrow' => 'Testimonials',
     'heading' => 'What teams say about Starter',
     'subheading' => 'Developers use Starter to ship marketing pages faster and hand the content to the people who write it. Here is how it fits real Laravel workflows.',
+    'headingLevel' => 2,
     'testimonials' => [],
     'outcomes' => [],
 ])
@@ -16,6 +17,7 @@
             :eyebrow="$eyebrow"
             :heading="$heading"
             :paragraph="$subheading"
+            :headingLevel="$headingLevel"
         />
 
         <div class="mt-12 grid gap-5 lg:grid-cols-2">

@@ -6,11 +6,11 @@
 -->
 <x-layouts.main title="The visual editor for marketing pages" description="Starter is a visual editor built for developers: build pages, edit content, and control layouts, with plain Blade underneath.">
 
-    <x-sections.hero-centered />
+    <x-sections.hero />
 
     <x-sections.logos :logos="$logos" />
 
-    <x-sections.features-grid :features="$features" />
+    <x-sections.features :features="$features" />
 
     <x-sections.testimonials :testimonials="$testimonials" :outcomes="$outcomes" />
 

@@ -2,6 +2,7 @@
     'eyebrow' => 'Features',
     'heading' => 'Everything a page needs, in one editor',
     'subheading' => 'Sections, content, and layout live side by side, so nobody waits on a developer to change a headline.',
+    'headingLevel' => 2,
     'features' => [],
 ])
 <!-- Centered heading over a three-column grid of icon features. Rows live in resources/data/collections/features.json; the icon column is inline SVG. -->
@@ -11,6 +12,7 @@
             :eyebrow="$eyebrow"
             :heading="$heading"
             :paragraph="$subheading"
+            :headingLevel="$headingLevel"
         />
 
         <div class="mt-14 grid gap-x-8 gap-y-12 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">

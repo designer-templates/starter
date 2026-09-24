@@ -48,7 +48,8 @@
 
             <!-- href="/" always points to the site's root, in preview and when published -->
             <a href="/" aria-label="Homepage" class="flex pr-16 shrink-0 items-center gap-2.5 text-ink">
-                <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-current" aria-hidden="true">
+                <!-- The mark launches up from behind its own edge on load (.logo-mark in site.css). -->
+                <svg viewBox="0 0 24 24" class="logo-mark size-5 shrink-0 fill-current" aria-hidden="true">
                     <path d="M12 1.9 21.4 21.4 12 16.9 2.6 21.4Z"/>
                 </svg>
                 <span class="text-[17px] font-semibold tracking-tight">{{ $brand }}</span>

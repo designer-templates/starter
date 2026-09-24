@@ -1,6 +1,5 @@
 @props([
-    'heading' => 'Your next great idea',
-    'headingLine2' => 'starts right here',
+    'heading' => 'Your next great idea starts right here',
     'text' => 'Build pages, edit content, and control layouts. All inside of our visual editor built for developers.',
     'buttonText' => 'Start building for free',
     'buttonLink' => '/pricing',
@@ -17,9 +16,8 @@
 -->
 <section class="px-6 pt-20 pb-12 sm:pt-28 sm:pb-16">
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8 text-center">
-        <h1 class="mx-auto max-w-3xl text-hero font-semibold tracking-[-0.04em] text-ink" data-reveal>
+        <h1 class="mx-auto max-w-3xl text-hero font-semibold tracking-[-0.04em] text-faint first-line:text-ink" data-reveal>
             {{ $heading }}
-            <span class="block text-faint">{{ $headingLine2 }}</span>
         </h1>
         <p class="reveal-1 mx-auto mt-6 max-w-[500px] text-lg/8 font-medium text-pretty text-muted sm:text-xl/8" data-reveal>{{ $text }}</p>
 

@@ -28,7 +28,7 @@
     <x-nav :links="$site->nav_links"/>
 
     <!-- The header sits in the flow above this; each page's opening section carries its own top padding. -->
-    <main class="relative divide-y divide-gray-100">
+    <main class="relative divide-y divide-gray-200">
         {{ $slot }}
     </main>
 

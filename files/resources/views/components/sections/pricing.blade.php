@@ -2,6 +2,7 @@
     'eyebrow' => 'Pricing',
     'heading' => 'Simple, transparent pricing',
     'subheading' => 'Start free and build for as long as you like. Upgrade when you are ready to build without limits. Yearly billing gets two months free.',
+    'headingLevel' => 2,
     'showToggle' => '1',
     'monthlyLabel' => 'Monthly',
     'yearlyLabel' => 'Yearly',
@@ -18,12 +19,13 @@
     with a badge. Rows live in resources/data/collections/plans.json; main.js flips data-billing on the section
     and site.css shows the matching price and note. Clear the toggle to show monthly prices only.
 -->
-<section id="pricing" class="scroll-mt-20 px-6 py-24 sm:py-32" data-pricing data-billing="monthly">
+<section id="pricing" class="scroll-mt-20 px-6 py-24 sm:py-32 sm:first:pt-20 first:pt-16" data-pricing data-billing="monthly">
     <div class="mx-auto w-full max-w-6xl">
         <x-heading 
             :eyebrow="$eyebrow"
             :heading="$heading"
             :paragraph="$subheading"
+            :headingLevel="$headingLevel"
         />
 
         @if ($showToggle)

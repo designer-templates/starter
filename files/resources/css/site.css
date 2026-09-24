@@ -89,6 +89,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 /* The header sticks by its bar: main.js writes the banner's height into --banner-h, so the banner scrolls out and the bar stays. */
 #header { top: calc(-1 * var(--banner-h, 0px)); }
 
+/* The logo mark launches up from behind an invisible edge when the page loads. */
+.logo-mark { overflow: hidden; }
+.logo-mark path { transform-box: fill-box; animation: launch-up 1s cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes launch-up { from { transform: translateY(120%); } }
+
 /* Nav dropdowns: in the DOM at full size, moved and faded from the trigger. Exit faster than entrance. */
 [data-dropdown-panel] {
     opacity: 0; translate: 0 6px; scale: .98; visibility: hidden;
@@ -149,4 +154,5 @@ details.faq-item[open] .faq-plus { rotate: 45deg; }
     details.faq-item .faq-plus, .arrow-link .arrow, .lift, .field, [data-banner], .billing-option { transition: none; }
     .lift:hover, .arrow-link:hover .arrow { translate: 0 0; }
     ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+    .logo-mark path { animation: none; }
 }

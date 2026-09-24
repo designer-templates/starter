@@ -1,5 +1,5 @@
-title: Features — card grid
-description: Centered heading with a three-column grid of bordered feature cards
+title: Features — icon grid
+description: Centered heading with a three-column grid of icon features
 category: features
 fields:
     eyebrow:
@@ -10,14 +10,14 @@ fields:
     heading:
         type: text
         label: Heading
-        default: "Everything a shift schedule needs"
+        default: "Everything a page needs, in one editor"
         required: true
     subheading:
         type: textarea
         label: Subheading
         description: Short line under the heading. Clear to hide.
         rows: 2
-        default: "The whole week in one screen, on every phone, with the busywork handled before it reaches you."
+        default: "Sections, content, and layout live side by side, so nobody waits on a developer to change a headline."
     features:
         type: repeater
         label: Features

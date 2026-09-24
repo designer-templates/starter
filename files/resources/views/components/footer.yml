@@ -1,5 +1,5 @@
 title: Footer
-description: The mark, a tagline, link columns from site.json, social icons, and the legal line
+description: The mark, a blurb and social icons beside link columns from site.json, with the legal line and a back-to-top link
 fields:
     brand:
         type: text
@@ -7,9 +7,9 @@ fields:
         default: "Starter"
     tagline:
         type: textarea
-        label: Tagline
+        label: Blurb
         rows: 2
-        default: "Shift scheduling for small hourly teams. Built in Columbus, OH."
+        default: "The visual editor for marketing pages. Build the page, hand over the content, and keep control of the layout."
     columns:
         type: repeater
         label: Link columns
@@ -50,4 +50,9 @@ fields:
     legal:
         type: text
         label: Legal line
-        default: "© 2026 Starter. All rights reserved."
+        default: "© 2026 Starter, Inc. All rights reserved."
+    backToTopText:
+        type: text
+        label: Back to top text
+        description: Clear to hide the link.
+        default: "Back to top"

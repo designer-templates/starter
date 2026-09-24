@@ -1,9 +1,11 @@
-# Column types for plans.json — the pricing tiers. Features are one per line.
+# Column types for plans.json — the pricing tiers. Features are one per line; the Yearly columns show when the toggle is flipped.
 fields:
     name: { type: text }
-    price: { type: text }
-    period: { type: text }
     description: { type: text }
+    price: { type: text }
+    priceYearly: { type: text }
+    note: { type: text }
+    noteYearly: { type: text }
     features: { type: textarea }
     ctaText: { type: text }
     ctaLink: { type: url }

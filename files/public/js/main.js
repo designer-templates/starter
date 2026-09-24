@@ -9,20 +9,27 @@ document.documentElement.classList.add('js');
 
 var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-headerState();
+bannerOffset();
 dropdowns();
 mobileMenu();
 markCurrentMenuItem();
 banners();
+pricingToggles();
 reveals(document);
 
-/* Transparent at the top; glass once content scrolls underneath (site.css #header rules). */
-function headerState() {
+/*
+    The sticky header (components/nav.blade.php) sticks by its bar: the banner's
+    height goes into --banner-h so the banner scrolls away and the bar stays. The
+    observer follows wrapping on narrow screens and the dismiss button.
+*/
+function bannerOffset() {
     var header = document.getElementById('header');
-    if (!header) return;
-    function evaluate() { header.toggleAttribute('data-scrolled', window.scrollY > 8); }
-    evaluate();
-    window.addEventListener('scroll', evaluate, { passive: true });
+    var banner = header && header.querySelector('[data-banner]');
+    if (!header || !banner) return;
+    function measure() { header.style.setProperty('--banner-h', banner.offsetHeight + 'px'); }
+    measure();
+    if ('ResizeObserver' in window) new ResizeObserver(measure).observe(banner);
+    else window.addEventListener('resize', measure);
 }
 
 /*
@@ -104,6 +111,22 @@ function banners() {
         var button = banner.querySelector('[data-banner-dismiss]');
         if (!button) return;
         button.addEventListener('click', function () { banner.classList.add('is-dismissed'); });
+    });
+}
+
+/* Pricing (sections/pricing.blade.php): the Monthly / Yearly buttons set data-billing on the section; site.css shows the matching price. */
+function pricingToggles() {
+    document.querySelectorAll('[data-pricing]').forEach(function (section) {
+        var options = section.querySelectorAll('[data-billing-option]');
+        options.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var billing = button.getAttribute('data-billing-option');
+                section.setAttribute('data-billing', billing);
+                options.forEach(function (other) {
+                    other.setAttribute('aria-pressed', other === button ? 'true' : 'false');
+                });
+            });
+        });
     });
 }
 

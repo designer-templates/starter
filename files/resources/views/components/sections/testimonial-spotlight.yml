@@ -1,0 +1,27 @@
+title: Testimonial — spotlight
+description: One large five-star quote with avatar attribution
+category: testimonials
+fields:
+    quote:
+        type: textarea
+        label: Quote
+        rows: 3
+        default: "We rebuilt our marketing site in a week and handed the keys to the content team. Six months later nobody has asked engineering to change a headline."
+        required: true
+    name:
+        type: text
+        label: Name
+        default: "Marisol Vega"
+    role:
+        type: text
+        label: Role
+        default: "Head of Growth"
+    company:
+        type: text
+        label: Company
+        description: Clear to show the role alone.
+        default: "Northwind"
+    avatar:
+        type: image
+        label: Avatar
+        default: "https://assets.ui.sh/avatars/8.webp?size=160"

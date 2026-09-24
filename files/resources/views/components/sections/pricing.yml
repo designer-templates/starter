@@ -1,56 +1,100 @@
 title: Pricing — tier cards
-description: Three bordered tier cards with feature checklists; the featured plan is outlined
+description: Centered heading, a Monthly / Yearly toggle, and three bordered tier cards; the featured plan is outlined with a badge
 category: pricing
 fields:
     eyebrow:
         type: text
         label: Eyebrow
         description: Small label above the heading. Clear to hide.
-        default: "Pricing"
+        default: ""
     heading:
         type: text
         label: Heading
-        default: "Simple, per-location pricing"
+        default: "Simple, transparent pricing"
         required: true
     subheading:
         type: textarea
         label: Subheading
         description: Short line under the heading. Clear to hide.
         rows: 2
-        default: "Three plans that grow with the roster. Switch or cancel from the billing page whenever you like."
+        default: "Start free and build for as long as you like. Upgrade when you are ready to build without limits. Yearly billing gets two months free."
+    showToggle:
+        type: toggle
+        label: Show the Monthly / Yearly toggle
+        default: "1"
+    monthlyLabel:
+        type: text
+        label: Monthly label
+        default: "Monthly"
+    yearlyLabel:
+        type: text
+        label: Yearly label
+        default: "Yearly"
+    yearlySavings:
+        type: text
+        label: Yearly savings pill
+        description: Clear to hide.
+        default: "−17%"
+    periodMonthly:
+        type: text
+        label: Monthly period text
+        default: "per month"
+    periodYearly:
+        type: text
+        label: Yearly period text
+        default: "per year"
+    badgeText:
+        type: text
+        label: Featured badge
+        description: Shown on the featured plan. Clear to hide.
+        default: "Most popular"
+    footnote:
+        type: textarea
+        label: Footnote
+        description: Under the cards. Clear to hide.
+        rows: 2
+        default: "Every plan includes the full section library, your code in your repo, and no lock-in. Secure checkout by Stripe. Cancel anytime."
     plans:
         type: repeater
         label: Plans
         source: "collections.plans"
         add_button_label: "Add plan"
         item_label: name
-        description: Features are one per line.
+        description: Features are one per line. The Yearly price and note show when the toggle is flipped.
         sub_fields:
             name:
                 type: text
                 label: Plan name
                 default: "New plan"
-            price:
-                type: text
-                label: Price
-                default: "$29"
-            period:
-                type: text
-                label: Period
-                default: "/month"
             description:
                 type: text
-                label: Description
+                label: Who it is for
                 default: "Who this plan is for."
+            price:
+                type: text
+                label: Monthly price
+                default: "$29"
+            priceYearly:
+                type: text
+                label: Yearly price
+                default: "$290"
+            note:
+                type: text
+                label: Note under the monthly price
+                default: "or $290/year — two months free"
+            noteYearly:
+                type: text
+                label: Note under the yearly price
+                default: "$24.17 a month, billed yearly"
             features:
                 type: textarea
                 label: Features (one per line)
                 rows: 5
-                default: "1 location\nUp to 10 people"
+                default: "Everything in Free\nUp to 10 sites"
             ctaText:
                 type: text
                 label: Button text
-                default: "Start free"
+                default: "Upgrade"
             ctaLink:
                 type: url
                 label: Button link

@@ -1,0 +1,4 @@
+# Column types for logos.json — the marks in the logo row and on testimonial cards
+fields:
+    name: { type: text }
+    icon: { type: textarea }

@@ -1,5 +1,5 @@
 @props([
-    'eyebrow' => 'Why it works',
+    'eyebrow' => 'How it works',
     'heading' => 'The schedule and the people on it, in one place',
     'description' => 'Availability, hours caps and training live next to the shifts, so the week you publish is one everyone can actually work.',
     'features' => [],

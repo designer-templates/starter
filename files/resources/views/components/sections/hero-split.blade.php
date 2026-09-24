@@ -9,7 +9,7 @@
     'imageAlt' => 'A weekly schedule with shifts for eight people',
 ])
 <!-- Split hero: heading and buttons on the left, a 4:3 image on the right. Clear a button's text to hide it. -->
-<section class="px-6 pt-32 pb-20 sm:pt-40 sm:pb-28">
+<section class="px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
     <div class="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
             <h1 class="max-w-[16ch] text-hero font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h1>

@@ -4,7 +4,7 @@
     'text' => 'Every plan includes the weekly schedule, swaps and the mobile app. Pay monthly, cancel any time.',
 ])
 <!-- Page header: an eyebrow, a heading and one line of copy. Opens a page below the fixed nav. Clear the eyebrow or the text to hide it. -->
-<section class="px-6 pt-32 pb-12 sm:pt-40 sm:pb-16">
+<section class="px-6 pt-16 pb-12 sm:pt-24 sm:pb-16">
     <div class="mx-auto w-full max-w-6xl">
         <div class="mx-auto max-w-2xl text-center">
             @if ($eyebrow)

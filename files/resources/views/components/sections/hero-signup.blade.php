@@ -8,7 +8,7 @@
     'imageAlt' => 'A published weekly schedule for six people',
 ])
 <!-- Signup hero: centered heading, an email row, then a wide 2:1 image. The form is static markup; wire it to your list. Clear the note to hide it. -->
-<section class="px-6 pt-32 pb-20 sm:pt-40 sm:pb-28">
+<section class="px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
     <div class="mx-auto w-full max-w-6xl">
         <div class="mx-auto max-w-3xl text-center">
             <h1 class="text-hero font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h1>

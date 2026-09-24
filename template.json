@@ -2,13 +2,18 @@
     "name": "Starter",
     "active": true,
     "dialect": "blade",
-    "description": "A neutral, light starter site with a library of 20 general-purpose sections — four heroes, three feature layouts, three calls to action, pricing, FAQ, stats, team, testimonials, newsletter, contact, prose and a banner — composed into four pages: Home, Pricing, About and Contact.",
-    "tagline": "A neutral light starter with 20 sections",
+    "description": "A neutral, light starter site with a library of 23 general-purpose sections — four heroes, three feature layouts, four calls to action, a logo row, pricing with a billing toggle, FAQ, stats, team, two testimonial layouts, newsletter, contact, prose and a banner — composed into four pages: Home, Pricing, About and Contact.",
+    "tagline": "A neutral light starter with 23 sections",
     "icon": "▢",
     "repo": "https://github.com/designer-templates/starter",
     "order": 2,
     "category": "starter",
     "theme": "light",
-    "accent": "#1d4ed8",
-    "pages": ["Home", "Pricing", "About", "Contact"]
+    "accent": "#0a0a0a",
+    "pages": [
+        "Home",
+        "Pricing",
+        "About",
+        "Contact"
+    ]
 }

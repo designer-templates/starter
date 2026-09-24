@@ -1,22 +1,27 @@
 title: Hero — centered
-description: Centered heading with a paragraph and two buttons
+description: Two-line headline, description, two buttons, a social proof row, and a drawn dashboard window
 category: heroes
 fields:
     heading:
         type: text
-        label: Heading
-        default: "The week, scheduled before Friday"
+        label: Heading line 1
+        default: "Build faster."
         required: true
+    headingLine2:
+        type: text
+        label: Heading line 2
+        description: Set in the faint tier under the first line. Clear to run one line.
+        default: "Ship smarter."
     text:
         type: textarea
         label: Description
         rows: 3
-        default: "Build next week from this week, publish it to every phone on the team, and let shift swaps sort themselves out."
+        default: "Build pages, edit content, and control layouts. All inside of our visual editor built for developers."
     buttonText:
         type: text
         label: Primary button text
         description: Clear to hide.
-        default: "Start free"
+        default: "Start building for free"
     buttonLink:
         type: url
         label: Primary button link
@@ -25,8 +30,22 @@ fields:
         type: text
         label: Secondary button text
         description: Clear to hide.
-        default: "See how it works"
+        default: "Watch demo"
     buttonLink2:
         type: url
         label: Secondary button link
         default: "/#features"
+    socialProofText:
+        type: text
+        label: Social proof text
+        description: Clear to hide the avatars and stars row.
+        default: "Loved by 2,000+ developers"
+    showMockup:
+        type: toggle
+        label: Show dashboard window
+        default: "1"
+    mockupUrl:
+        type: text
+        label: Window address
+        description: The address shown in the drawn window's bar.
+        default: "app.starter.dev/dashboard"

@@ -4,20 +4,18 @@
     attributes and the bound collections in resources/data/collections/.
     In Visual mode you can select, reorder and edit them on the canvas.
 -->
-<x-layouts.main title="Shift scheduling for small teams" description="Starter builds the week's schedule from the last one, publishes it to every phone on the team, and approves the shift swaps that fit.">
+<x-layouts.main title="The visual editor for marketing pages" description="Starter is a visual editor built for developers: build pages, edit content, and control layouts, with plain Blade underneath.">
 
-    <x-sections.hero-split />
+    <x-sections.hero-centered />
+
+    <x-sections.logos :logos="$logos" />
 
     <x-sections.features-grid :features="$features" />
 
-    <x-sections.stats :stats="$stats" />
-
-    <x-sections.testimonials :testimonials="$testimonials" />
+    <x-sections.testimonials :testimonials="$testimonials" :outcomes="$outcomes" />
 
     <x-sections.pricing :plans="$plans" />
 
-    <x-sections.faq :faqs="$faqs" />
-
-    <x-sections.cta-band />
+    <x-sections.cta-simple />
 
 </x-layouts.main>

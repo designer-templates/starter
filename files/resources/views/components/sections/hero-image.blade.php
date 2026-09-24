@@ -10,7 +10,7 @@
     'stats' => [],
 ])
 <!-- Left-aligned hero over a wide 12:5 image and a row of figures. The figures come from resources/data/collections/stats.json. -->
-<section class="px-6 pt-32 pb-20 sm:pt-40 sm:pb-28">
+<section class="px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
     <div class="mx-auto w-full max-w-6xl">
         <div class="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
             <h1 class="max-w-[16ch] text-hero font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h1>

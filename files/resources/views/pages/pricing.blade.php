@@ -2,7 +2,7 @@
 
     <x-sections.hero-minimal />
 
-    <x-sections.pricing eyebrow="" heading="Pick a plan" subheading="Every account starts with a 30-day trial of Team. No card needed, and the Free plan stays free." :plans="$plans" />
+    <x-sections.pricing heading="Pick a plan" subheading="Start on Free with no card. Move up when the sites and domains outgrow it. Yearly billing gets two months free." :plans="$plans" />
 
     <x-sections.faq :faqs="$faqs" />
 

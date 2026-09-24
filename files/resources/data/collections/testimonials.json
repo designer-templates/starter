@@ -1,5 +1,18 @@
 [
-    { "quote": "I used to build the week in a spreadsheet on Sunday night. Now it takes ten minutes on Thursday and the whole crew has it on their phones before I leave.", "name": "Renee Calloway", "role": "Owner, Copperleaf Coffee" },
-    { "quote": "Swap requests used to come through the group chat at all hours. Now they approve themselves and I only hear about the ones that would push someone into overtime.", "name": "Marcus Delgado", "role": "General Manager, Millbrook Climbing" },
-    { "quote": "The clock-in pinned to our address ended the buddy-punching conversation for good. Payroll takes twenty minutes instead of a morning.", "name": "Priya Natarajan", "role": "Office Manager, Sunstone Dental" }
+    {
+        "quote": "What I like most is having the sections and the content in one place. It is ten times more straightforward than stitching together a page builder, a CMS, and a deploy script.",
+        "name": "Morgan Ellis",
+        "role": "CTO, Arcline",
+        "avatar": "https://assets.ui.sh/avatars/3.webp?size=160",
+        "company": "Arcline",
+        "logo": "<svg viewBox='0 0 24 24' class='size-6' fill='none' stroke='currentColor' stroke-width='2.25' stroke-linecap='round' aria-hidden='true'><path d='M3.5 17a8.5 8.5 0 0 1 17 0'/><path d='M8 17a4 4 0 0 1 8 0'/></svg>"
+    },
+    {
+        "quote": "We dropped the sections into our Laravel app next to our own components. They picked up our tokens, and we did not need a separate design tool for the first launch.",
+        "name": "Riley Park",
+        "role": "Engineering lead, fathom",
+        "avatar": "https://assets.ui.sh/avatars/5.webp?size=160",
+        "company": "fathom",
+        "logo": "<svg viewBox='0 0 24 24' class='size-6 fill-current' aria-hidden='true'><rect x='3' y='4.5' width='18' height='3.75' rx='1.875'/><rect x='7.5' y='10.125' width='13.5' height='3.75' rx='1.875'/><rect x='3' y='15.75' width='11' height='3.75' rx='1.875'/></svg>"
+    }
 ]

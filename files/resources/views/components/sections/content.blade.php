@@ -6,7 +6,7 @@
     'paragraph3' => 'So that is what we built. Starter runs 2,140 schedules a week now, most of them for teams under twenty, and the whole company still fits around one table in Columbus.',
 ])
 <!-- A single prose column: eyebrow, heading, and up to three paragraphs. Opens a page below the fixed nav. Clear a paragraph to hide it. -->
-<section class="px-6 pt-32 pb-20 sm:pt-40 sm:pb-28">
+<section class="px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
     <div class="mx-auto w-full max-w-6xl">
         <div class="mx-auto max-w-2xl" data-reveal>
             @if ($eyebrow)

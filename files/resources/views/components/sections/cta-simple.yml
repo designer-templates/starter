@@ -1,0 +1,36 @@
+title: CTA — simple
+description: Centered heading, one line of copy, a pair of buttons, and a footnote
+category: cta
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Ready when you are"
+        required: true
+    text:
+        type: textarea
+        label: Supporting text
+        rows: 2
+        default: "Start on the free plan and invite your team when it clicks. Most teams have a page live by the end of the day."
+    buttonText:
+        type: text
+        label: Primary button text
+        default: "Create your workspace"
+    buttonLink:
+        type: url
+        label: Primary button link
+        default: "/pricing"
+    buttonText2:
+        type: text
+        label: Secondary button text
+        description: Clear to hide.
+        default: "Talk to sales"
+    buttonLink2:
+        type: url
+        label: Secondary button link
+        default: "/contact"
+    footnote:
+        type: text
+        label: Footnote
+        description: Clear to hide.
+        default: "Setup takes about four minutes."

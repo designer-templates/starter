@@ -1,0 +1,6 @@
+[
+    { "name": "Arcline", "icon": "<svg viewBox='0 0 24 24' class='size-6' fill='none' stroke='currentColor' stroke-width='2.25' stroke-linecap='round' aria-hidden='true'><path d='M3.5 17a8.5 8.5 0 0 1 17 0'/><path d='M8 17a4 4 0 0 1 8 0'/></svg>" },
+    { "name": "fathom", "icon": "<svg viewBox='0 0 24 24' class='size-6 fill-current' aria-hidden='true'><rect x='3' y='4.5' width='18' height='3.75' rx='1.875'/><rect x='7.5' y='10.125' width='13.5' height='3.75' rx='1.875'/><rect x='3' y='15.75' width='11' height='3.75' rx='1.875'/></svg>" },
+    { "name": "MERIDIAN", "icon": "<svg viewBox='0 0 24 24' class='size-6' fill='none' stroke='currentColor' stroke-width='1.75' aria-hidden='true'><circle cx='12' cy='12' r='8.75'/><ellipse cx='12' cy='12' rx='3.75' ry='8.75'/><path d='M3.25 12h17.5'/></svg>" },
+    { "name": "northwind", "icon": "<svg viewBox='0 0 24 24' class='size-6 fill-current' aria-hidden='true'><path d='M3.5 19.5 12 3.5v16H3.5Z'/><path d='M14 19.5h6.5L14 9.75v9.75Z' opacity='.55'/></svg>" }
+]

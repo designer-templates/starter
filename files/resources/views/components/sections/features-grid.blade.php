@@ -1,30 +1,26 @@
 @props([
     'eyebrow' => 'Features',
-    'heading' => 'Everything a shift schedule needs',
-    'subheading' => 'The whole week in one screen, on every phone, with the busywork handled before it reaches you.',
+    'heading' => 'Everything a page needs, in one editor',
+    'subheading' => 'Sections, content, and layout live side by side, so nobody waits on a developer to change a headline.',
     'features' => [],
 ])
-<!-- Centered heading over a grid of bordered feature cards. Rows live in resources/data/collections/features.json; the icon column is inline SVG. -->
-<section id="features" class="scroll-mt-20 px-6 py-20 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
-        <div class="mx-auto max-w-2xl text-center" data-reveal>
-            @if ($eyebrow)
-            <p class="font-mono text-[11px] tracking-widest text-faint uppercase">{{ $eyebrow }}</p>
-            @endif
-            <h2 class="mt-4 text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
-            @if ($subheading)
-            <p class="mx-auto mt-5 max-w-[52ch] text-[17px]/7 text-pretty text-lede">{{ $subheading }}</p>
-            @endif
-        </div>
+<!-- Centered heading over a three-column grid of icon features. Rows live in resources/data/collections/features.json; the icon column is inline SVG. -->
+<section id="features" class="scroll-mt-20 px-6 py-24 sm:py-32">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
+        <x-heading
+            :eyebrow="$eyebrow"
+            :heading="$heading"
+            :paragraph="$subheading"
+        />
 
-        <div class="mt-14 grid gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="mt-14 grid gap-x-8 gap-y-12 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($features as $item)
-            <div class="lift rounded-2xl border border-line bg-panel p-6 reveal-{{ min($loop->iteration, 6) }}" data-reveal>
-                <div class="flex size-10 items-center justify-center rounded-lg border border-line bg-raised text-ink">
+            <div class="reveal-{{ min($loop->iteration, 6) }}" data-reveal>
+                <div class="flex size-10 items-center justify-center rounded-xl bg-raised text-lede">
                     {!! $item->icon !!}
                 </div>
-                <h3 class="mt-5 text-[17px] font-semibold tracking-tight text-ink">{{ $item->title }}</h3>
-                <p class="mt-2 text-[15px]/6 text-pretty text-muted">{{ $item->description }}</p>
+                <h3 class="mt-4 text-base font-medium text-ink">{{ $item->title }}</h3>
+                <p class="mt-2 text-[14px]/6 text-pretty text-muted">{{ $item->description }}</p>
             </div>
             @endforeach
         </div>

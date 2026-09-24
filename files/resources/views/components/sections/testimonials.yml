@@ -1,24 +1,25 @@
-title: Testimonials — quote cards
-description: Three-column grid of quote cards with a name and role
+title: Testimonials — quotes and numbers
+description: A left-aligned heading, two wide quote cards with company marks, and three outcome cards with big figures
 category: testimonials
 fields:
     heading:
         type: text
         label: Heading
-        default: "What managers are saying"
+        default: "What teams say about Starter"
         required: true
     subheading:
         type: textarea
         label: Subheading
-        description: Short line under the heading. Clear to hide.
+        description: One or two lines under the heading. Clear to hide.
         rows: 2
-        default: "Notes from people who moved their week off the spreadsheet."
+        default: "Developers use Starter to ship marketing pages faster and hand the content to the people who write it. Here is how it fits real Laravel workflows."
     testimonials:
         type: repeater
-        label: Testimonials
+        label: Quotes
         source: "collections.testimonials"
-        add_button_label: "Add testimonial"
+        add_button_label: "Add quote"
         item_label: name
+        description: Two quotes fill the row. The company mark is inline SVG on currentColor.
         sub_fields:
             quote:
                 type: textarea
@@ -33,3 +34,41 @@ fields:
                 type: text
                 label: Role
                 default: "Role, Company"
+            avatar:
+                type: image
+                label: Avatar
+                default: "https://assets.ui.sh/avatars/1.webp?size=160"
+            company:
+                type: text
+                label: Company name
+                default: "Company"
+            logo:
+                type: textarea
+                label: Company mark (inline SVG)
+                rows: 3
+                default: "<svg viewBox='0 0 24 24' class='size-6 fill-current' aria-hidden='true'><rect x='3' y='3' width='18' height='18' rx='5'/></svg>"
+    outcomes:
+        type: repeater
+        label: Outcomes
+        source: "collections.outcomes"
+        add_button_label: "Add outcome"
+        item_label: value
+        description: Three cards fill the row. The illustration is inline SVG on currentColor.
+        sub_fields:
+            value:
+                type: text
+                label: Figure
+                default: "2x"
+            label:
+                type: text
+                label: Caption
+                default: "what the figure measures"
+            title:
+                type: text
+                label: Story
+                default: "One line on what changed"
+            icon:
+                type: textarea
+                label: Illustration (inline SVG)
+                rows: 3
+                default: "<svg viewBox='0 0 120 120' class='h-28 w-28' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round' aria-hidden='true'><path d='M60 18 96 36v48L60 102 24 84V36Z'/><path d='M24 36l36 18 36-18M60 54v48'/></svg>"

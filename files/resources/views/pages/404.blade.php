@@ -1,5 +1,5 @@
 <x-layouts.main title="Page not found">
-    <section class="flex min-h-[70vh] items-center px-6 pt-32 pb-24">
+    <section class="flex min-h-[70vh] items-center px-6 pt-16 pb-24">
         <div class="mx-auto w-full max-w-6xl">
             <p class="font-mono text-[11px] tracking-widest text-faint uppercase">404</p>
             <h1 class="mt-4 text-5xl leading-[1.02] tracking-[-0.03em] text-balance sm:text-6xl">That page has moved on.</h1>

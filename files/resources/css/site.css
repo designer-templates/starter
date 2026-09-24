@@ -7,8 +7,8 @@
     bg-canvas, text-ink, text-muted, border-line, bg-panel, bg-shade…
     (contract: the designer-craft skill, references/tokens.md)
 
-    The mood: a warm off-white page, white cards, one blue for the actions
-    that matter. Inter for everything, so the sections read as a neutral kit.
+    The mood: a near-white page, hairlines, soft black for the actions that
+    matter. Inter for everything, so the sections read as a neutral kit.
 */
 @theme {
     --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -16,36 +16,40 @@
     --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
     /* Type scale: the hero, section headings, and the big figures */
-    --text-hero: clamp(2.5rem, 1.5rem + 3.6vw, 4.25rem);
-    --text-hero--line-height: 1.06;
-    --text-h2: clamp(1.875rem, 1.35rem + 1.9vw, 2.75rem);
+    --text-hero: clamp(2.75rem, 1.5rem + 4.4vw, 4.75rem);
+    --text-hero--line-height: 1.02;
+    --text-h2: clamp(1.875rem, 1.35rem + 1.9vw, 2.5rem);
     --text-h2--line-height: 1.1;
     --text-figure: clamp(2.25rem, 1.75rem + 1.8vw, 3.25rem);
     --text-figure--line-height: 1;
 
-    /* Surfaces: a warm off-white page, true white for raised cards */
-    --color-canvas: #f7f6f3;
+    /* Surfaces: a near-white page, true white for raised cards */
+    --color-canvas: #fbfbfb;
     --color-panel: #ffffff;
-    --color-raised: #eeece7;
-    --color-line: rgba(20, 19, 16, 0.10);
-    --color-line-strong: rgba(20, 19, 16, 0.20);
+    --color-raised: #f2f2f2;
+    --color-line: rgba(10, 10, 10, 0.08);
+    --color-line-strong: rgba(10, 10, 10, 0.16);
 
-    --color-ink: #141310;
-    --color-lede: #3b3a36;
-    --color-muted: #6b6a64;
-    --color-faint: #9a9891;
+    --color-ink: #0a0a0a;
+    --color-lede: #404040;
+    --color-muted: #737373;
+    --color-faint: #8f8f8f;
 
     --color-accent: #1d4ed8;
-    --color-accent-ink: #f7f6f3;
+    --color-accent-ink: #fbfbfb;
     --color-accent-soft: rgba(29, 78, 216, 0.08);
 
-    --color-shade: #1b1a17;
-    --color-shade-ink: #f3f2ee;
-    --color-shade-muted: #a3a19a;
+    /* Two named colours the drawn UI needs: star ratings and an upward delta */
+    --color-star: #fbbf24;
+    --color-up: #059669;
+
+    --color-shade: #0a0a0a;
+    --color-shade-ink: #fafafa;
+    --color-shade-muted: #a3a3a3;
     --color-shade-line: rgba(255, 255, 255, 0.12);
 
     /* One depth recipe page-wide: a hairline plus this soft layered shadow */
-    --shadow-card: 0 1px 2px rgba(20, 19, 16, 0.05), 0 12px 32px -16px rgba(20, 19, 16, 0.18);
+    --shadow-card: 0 1px 2px rgba(10, 10, 10, 0.05), 0 12px 32px -16px rgba(10, 10, 10, 0.18);
 
     /* One easing family for everything interactive: fast in, long settle. */
     --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
@@ -82,14 +86,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 .reveal-5 { --reveal-delay: 350ms; }
 .reveal-6 { --reveal-delay: 420ms; }
 
-/* The header: transparent at rest; once scrolled, main.js sets data-scrolled and it becomes glass. */
-#header { border-bottom: 1px solid transparent; transition: background-color .4s ease, border-color .4s ease, backdrop-filter .4s ease; }
-#header[data-scrolled] {
-    background-color: color-mix(in oklab, var(--color-canvas) 72%, transparent);
-    border-bottom-color: var(--color-line);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-}
+/* The header sticks by its bar: main.js writes the banner's height into --banner-h, so the banner scrolls out and the bar stays. */
+#header { top: calc(-1 * var(--banner-h, 0px)); }
 
 /* Nav dropdowns: in the DOM at full size, moved and faded from the trigger. Exit faster than entrance. */
 [data-dropdown-panel] {
@@ -104,13 +102,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 [data-dropdown] .dropdown-caret { transition: rotate .25s var(--ease-out-quart); }
 [data-dropdown].is-open .dropdown-caret { rotate: 180deg; }
 
-/* The mobile sheet slides down under the header. */
+/* The mobile sheet slides down under the header bar. */
 [data-mobile-panel] {
     opacity: 0; translate: 0 -8px; visibility: hidden;
-    backdrop-filter: none;
     transition: opacity .28s var(--ease-out-quart), translate .28s var(--ease-out-quart), visibility 0s linear .28s;
 }
-.menu-open [data-mobile-panel] { opacity: 1; translate: 0 0; visibility: visible; backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); transition: opacity .32s var(--ease-out-quart), translate .32s var(--ease-out-quart), visibility 0s; }
+.menu-open [data-mobile-panel] { opacity: 1; translate: 0 0; visibility: visible; transition: opacity .32s var(--ease-out-quart), translate .32s var(--ease-out-quart), visibility 0s; }
 .menu-open { overflow: hidden; }
 
 /* Arrow nudge on links that carry one. */
@@ -125,9 +122,17 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 .field { transition: border-color .2s ease, box-shadow .2s ease; }
 .field:focus { outline: none; border-color: var(--color-line-strong); box-shadow: 0 0 0 3px var(--color-accent-soft); }
 
-/* The announcement banner: main.js removes it when the dismiss button is pressed. */
+/* The announcement banner (in the nav, and sections/banner.blade.php): main.js removes it when the dismiss button is pressed. */
 [data-banner] { transition: opacity .2s ease; }
 [data-banner].is-dismissed { display: none; }
+
+/* Pricing: the section's data-billing decides which price shows; the pressed toggle option sits on a white pill. */
+[data-pricing]:not([data-billing="yearly"]) [data-price="yearly"] { display: none; }
+[data-pricing][data-billing="yearly"] [data-price="monthly"] { display: none; }
+.billing-option[aria-pressed="true"] { background-color: var(--color-panel); color: var(--color-ink); box-shadow: 0 1px 2px rgba(10, 10, 10, 0.08); }
+
+/* The closing panel's dot grid — faint shade-ink points on the shade surface. */
+.dot-grid { background-image: radial-gradient(circle, var(--color-shade-line) 1px, transparent 1px); background-size: 24px 24px; }
 
 /* Smooth <details> opening (Chrome; instant elsewhere). The plus turns into a cross. */
 details.faq-item { interpolate-size: allow-keywords; }
@@ -141,7 +146,7 @@ details.faq-item[open] .faq-plus { rotate: 45deg; }
 @media (prefers-reduced-motion: reduce) {
     .js [data-reveal] { opacity: 1; translate: 0 0; filter: none; transition: none; }
     [data-dropdown-panel], [data-mobile-panel], details.faq-item::details-content { transition-duration: 0s; }
-    details.faq-item .faq-plus, .arrow-link .arrow, .lift, .field, [data-banner] { transition: none; }
+    details.faq-item .faq-plus, .arrow-link .arrow, .lift, .field, [data-banner], .billing-option { transition: none; }
     .lift:hover, .arrow-link:hover .arrow { translate: 0 0; }
     ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
 }

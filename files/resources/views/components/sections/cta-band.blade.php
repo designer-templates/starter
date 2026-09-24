@@ -1,19 +1,30 @@
 @props([
-    'heading' => 'Publish next week today',
-    'body' => 'No card, no call. Import your roster and have the first schedule on everyone\'s phone this afternoon.',
-    'ctaText' => 'Start free',
+    'heading' => 'Ship the page this afternoon',
+    'body' => 'Start on the free plan, drop in your sections, and hand the content to the people who write it.',
+    'ctaText' => 'Start building for free',
     'ctaLink' => '/pricing',
-    'secondaryText' => 'Talk to us',
+    'secondaryText' => 'Watch a 3-minute demo',
     'secondaryLink' => '/contact',
 ])
-<!-- The closing band: the one dark surface on the page, a statement, and a primary action. -->
+<!-- The closing panel: the one dark surface on the page — a soft accent glow, a dot grid, a statement, and two actions. Clear the secondary text to show one button. -->
 <section id="cta" class="px-6 py-20 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl overflow-hidden rounded-3xl bg-shade px-8 py-16 text-center sm:px-16 sm:py-24" data-reveal>
-        <h2 class="mx-auto max-w-[18ch] text-h2 font-semibold tracking-tight text-balance text-shade-ink">{{ $heading }}</h2>
-        <p class="mx-auto mt-6 max-w-[46ch] text-lg/8 text-pretty text-shade-muted">{{ $body }}</p>
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <a href="{{ $ctaLink }}" class="rounded-full bg-accent px-6 py-3.5 text-[15px] font-medium text-accent-ink transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $ctaText }}</a>
-            <a href="{{ $secondaryLink }}" class="rounded-full border border-shade-line px-6 py-3.5 text-[15px] font-medium text-shade-ink transition-colors duration-200 hover:bg-shade-line">{{ $secondaryText }}</a>
+    <div class="mx-auto w-full max-w-6xl">
+        <div class="relative overflow-hidden rounded-[2.5rem] bg-shade px-6 py-20 sm:px-16 sm:py-24" data-reveal>
+            <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+                <div class="absolute top-[-160px] left-1/2 h-[380px] w-[640px] -translate-x-1/2 rounded-full bg-accent opacity-25 blur-3xl"></div>
+                <div class="dot-grid absolute inset-0"></div>
+            </div>
+
+            <div class="relative mx-auto max-w-2xl text-center">
+                <h2 class="text-h2 font-semibold tracking-tight text-balance text-shade-ink sm:text-5xl/[1.05]">{{ $heading }}</h2>
+                <p class="mx-auto mt-5 max-w-xl text-lg/8 text-pretty text-shade-muted">{{ $body }}</p>
+                <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                    <a href="{{ $ctaLink }}" class="inline-flex w-full items-center justify-center rounded-xl bg-shade-ink px-6 py-3 text-[15px] font-semibold text-shade shadow-lg shadow-shade-ink/10 transition-opacity duration-200 hover:opacity-90 active:scale-[.98] sm:w-auto">{{ $ctaText }}</a>
+                    @if ($secondaryText)
+                    <a href="{{ $secondaryLink }}" class="inline-flex w-full items-center justify-center rounded-xl border border-shade-line px-6 py-3 text-[15px] font-medium text-shade-ink transition-colors duration-200 hover:border-shade-ink/25 hover:bg-shade-line active:scale-[.98] sm:w-auto">{{ $secondaryText }}</a>
+                    @endif
+                </div>
+            </div>
         </div>
     </div>
 </section>

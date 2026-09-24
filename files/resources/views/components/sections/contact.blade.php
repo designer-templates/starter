@@ -10,7 +10,7 @@
     'buttonText' => 'Send message',
 ])
 <!-- Contact details on the left, a static form on the right (wire the form to your handler). Opens a page below the fixed nav. Clear a detail to hide its row. -->
-<section class="px-6 pt-32 pb-20 sm:pt-40 sm:pb-28">
+<section class="px-6 pt-16 pb-20 sm:pt-24 sm:pb-28">
     <div class="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-2 lg:gap-16">
         <div data-reveal>
             <h1 class="text-hero font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h1>

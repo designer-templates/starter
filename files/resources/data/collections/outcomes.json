@@ -1,0 +1,20 @@
+[
+    {
+        "value": "10x",
+        "label": "faster handoff on new sections",
+        "title": "How one team moved pages from Figma to production in a week",
+        "icon": "<svg viewBox='0 0 120 120' class='h-28 w-28' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round' aria-hidden='true'><path d='M60 18 96 36v48L60 102 24 84V36Z'/><path d='M24 36l36 18 36-18M60 54v48'/><path d='M30 41v40M36 44v40M42 47v40M48 50v40M54 53v40' stroke-dasharray='2 3'/></svg>"
+    },
+    {
+        "value": "80%",
+        "label": "less one-off CSS per page",
+        "title": "Tighter layout consistency across the whole marketing site",
+        "icon": "<svg viewBox='0 0 120 120' class='h-28 w-28' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round' aria-hidden='true'><path d='M60 18 96 36v48L60 102 24 84V36Z'/><path d='M24 36l36 18 36-18M60 54v48'/><path d='M68 62l20-10v26l-20 10z'/><path d='M26 46l30 15M26 56l30 15M26 66l30 15M26 76l30 15' stroke-dasharray='3 4'/></svg>"
+    },
+    {
+        "value": "25k+",
+        "label": "pages published in the first month",
+        "title": "From a blank repo to a credible landing page in one sprint",
+        "icon": "<svg viewBox='0 0 120 120' class='h-28 w-28' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round' aria-hidden='true'><path d='M60 18 96 36v48L60 102 24 84V36Z'/><path d='M24 36l36 18 36-18M60 54v48'/><path d='M60 30 84 42 60 54 36 42Z'/><path d='M66 62v28M72 59v28M78 56v28M84 53v28M90 50v28'/></svg>"
+    }
+]

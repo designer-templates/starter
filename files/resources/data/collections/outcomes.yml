@@ -1,0 +1,6 @@
+# Column types for outcomes.json — the headline numbers under the testimonial quotes
+fields:
+    value: { type: text }
+    label: { type: text }
+    title: { type: text }
+    icon: { type: textarea }

@@ -1,5 +1,8 @@
-# Column types for testimonials.json — quote cards
+# Column types for testimonials.json — quote cards with an avatar and a company mark
 fields:
     quote: { type: textarea }
     name: { type: text }
     role: { type: text }
+    avatar: { type: image }
+    company: { type: text }
+    logo: { type: textarea }

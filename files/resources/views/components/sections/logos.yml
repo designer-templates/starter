@@ -1,0 +1,26 @@
+title: Logos — row
+description: A trust line on the left with a row of marks and wordmarks on the right
+category: logos
+fields:
+    heading:
+        type: text
+        label: Heading
+        description: The short line beside the logos. Clear to hide.
+        default: "Trusted by these companies"
+    logos:
+        type: repeater
+        label: Logos
+        source: "collections.logos"
+        add_button_label: "Add logo"
+        item_label: name
+        description: Each mark is inline SVG — a 24×24 viewBox on currentColor keeps them consistent.
+        sub_fields:
+            name:
+                type: text
+                label: Company name
+                default: "Company"
+            icon:
+                type: textarea
+                label: Mark (inline SVG)
+                rows: 3
+                default: "<svg viewBox='0 0 24 24' class='size-6 fill-current' aria-hidden='true'><rect x='3' y='3' width='18' height='18' rx='5'/></svg>"

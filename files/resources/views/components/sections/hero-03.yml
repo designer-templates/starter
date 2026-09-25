@@ -1,0 +1,84 @@
+title: Hero — type-led
+description: Eyebrow, an oversized headline, intro, one button and an arrow link; below, a hairline strip of three benefits and a row of three figures, the first counting up once
+category: heroes
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Clear to hide.
+        default: "Uptime monitoring"
+    heading:
+        type: text
+        label: Heading
+        default: "Find out before your customers do"
+        required: true
+    text:
+        type: textarea
+        label: Intro
+        rows: 3
+        default: "Vessel checks every endpoint from 14 US cities every 30 seconds, pages whoever is on call, and keeps a status page your customers can trust."
+    buttonText:
+        type: text
+        label: Button text
+        description: Clear to hide.
+        default: "Start monitoring free"
+    buttonLink:
+        type: url
+        label: Button link
+        default: "/signup"
+    linkText:
+        type: text
+        label: Text link
+        description: Clear to hide.
+        default: "See a live status page"
+    linkUrl:
+        type: url
+        label: Text link URL
+        default: "/status"
+    benefits:
+        type: repeater
+        label: Benefits
+        source: collections.features
+        add_button_label: Add benefit
+        item_label: title
+        sub_fields:
+            icon:
+                type: textarea
+                label: Icon (inline SVG)
+                rows: 3
+            title:
+                type: text
+                label: Title
+            description:
+                type: text
+                label: One line
+        default:
+            - icon: "<svg viewBox='0 0 24 24' class='size-5' fill='none' stroke='currentColor' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z'/><path stroke-linecap='round' stroke-linejoin='round' d='M3.6 9h16.8M3.6 15h16.8M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18'/></svg>"
+              title: "Checks from 14 cities"
+              description: "HTTP, TCP and heartbeat checks from Denver to Raleigh, every 30 seconds."
+            - icon: "<svg viewBox='0 0 24 24' class='size-5' fill='none' stroke='currentColor' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0'/></svg>"
+              title: "Pages the right person"
+              description: "Escalates through the on-call rota by text, phone and chat until someone acknowledges."
+            - icon: "<svg viewBox='0 0 24 24' class='size-5' fill='none' stroke='currentColor' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'/></svg>"
+              title: "A status page that writes itself"
+              description: "Incidents open, update and close from your alerts, on your own domain."
+    stats:
+        type: repeater
+        label: Figures
+        source: collections.stats
+        add_button_label: Add figure
+        item_label: label
+        sub_fields:
+            value:
+                type: text
+                label: Value
+            label:
+                type: text
+                label: Label
+        default:
+            - value: "99.98%"
+              label: "of checks delivered on schedule"
+            - value: "31 s"
+              label: "median time to first alert"
+            - value: "2,140"
+              label: "teams on call with Vessel"

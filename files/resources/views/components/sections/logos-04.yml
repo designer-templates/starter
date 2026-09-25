@@ -1,0 +1,51 @@
+title: Logos — stat and grid
+description: A big figure that counts up beside a hairline-ruled grid of wordmarks
+category: logos
+fields:
+    figure:
+        type: text
+        label: Figure
+        description: The big number. Commas and any prefix or suffix are kept while it counts up.
+        default: "1,180"
+    caption:
+        type: text
+        label: Caption
+        default: "dental practices book through Slotwise"
+    text:
+        type: text
+        label: Supporting line
+        default: "Recall reminders go out on each practice's own schedule, in 44 states, and the front desk stops making the Monday calls."
+    items:
+        type: repeater
+        label: Logos
+        source: "collections.logos"
+        add_button_label: "Add logo"
+        item_label: name
+        description: Each mark is inline SVG — a 24×24 viewBox on currentColor keeps them consistent. The grid runs two across on phones and four on larger screens.
+        sub_fields:
+            name:
+                type: text
+                label: Company name
+                default: "Company"
+            icon:
+                type: textarea
+                label: Mark (inline SVG)
+                rows: 3
+                default: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><rect x='3' y='3' width='18' height='18' rx='5'/></svg>"
+        default:
+            - name: "Vireo"
+              icon: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round' aria-hidden='true'><path d='M2.5 15c2.4-6 4.8-6 7.2 0s4.8 6 7.2 0 3.5-6 4.6-6'/></svg>"
+            - name: "Waypoint"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><path fill-rule='evenodd' d='M12 22s-7.5-6.6-7.5-12a7.5 7.5 0 0 1 15 0c0 5.4-7.5 12-7.5 12Zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'/></svg>"
+            - name: "Yarrow"
+              icon: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M12 21v-8.5M12 12.5 4.5 5M12 12.5 19.5 5'/></svg>"
+            - name: "Ashlar"
+              icon: "<svg viewBox='0 0 24 24' aria-hidden='true'><rect x='3' y='3' width='18' height='18' rx='5' fill='none' stroke='currentColor' stroke-width='1.75'/><circle cx='12' cy='12' r='3' fill='currentColor'/></svg>"
+            - name: "Alder"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><path d='M8.5 3.5h7L21 20.5H3Z'/></svg>"
+            - name: "Jetty"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><rect x='3' y='4.5' width='18' height='3.5' rx='1.75'/><rect x='3' y='10.25' width='12' height='3.5' rx='1.75'/><rect x='3' y='16' width='6' height='3.5' rx='1.75'/></svg>"
+            - name: "Lodestar"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><path d='M12 2c.6 5.4 4.6 9.4 10 10-5.4.6-9.4 4.6-10 10-.6-5.4-4.6-9.4-10-10 5.4-.6 9.4-4.6 10-10Z'/></svg>"
+            - name: "Wharf"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><path d='M3 13.5a9 9 0 0 1 18 0Z'/><rect x='3' y='16' width='18' height='4' rx='2'/></svg>"

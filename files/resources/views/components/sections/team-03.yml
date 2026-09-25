@@ -1,0 +1,72 @@
+title: Team — founder and team
+description: A tall founder portrait with a quote beside a heading and a grid of small portraits
+category: team
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Built by people who have counted the shelf"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two sentences under the heading. Clear to hide.
+        rows: 3
+        default: "Lumen started in a two-register pharmacy in Tucson. The seven of us still spend one Friday a month behind a counter."
+    founderImage:
+        type: image
+        label: Founder portrait
+        description: A tall portrait, 4:5 or taller works best.
+        default: "/images/blocks/portrait-01.jpg"
+    founderName:
+        type: text
+        label: Founder name
+        default: "Jamie Nakamura"
+    founderRole:
+        type: text
+        label: Founder role
+        default: "Co-founder and CEO"
+    quote:
+        type: textarea
+        label: Founder quote
+        description: One or two sentences in the founder’s words. Clear to hide.
+        rows: 3
+        default: "We wrote the first version on a pharmacy laptop between refills. Three years and 1,900 stores later, it still runs on one."
+    members:
+        type: repeater
+        label: People
+        source: "collections.team"
+        add_button_label: "Add person"
+        item_label: name
+        sub_fields:
+            image:
+                type: image
+                label: Portrait
+                default: "https://assets.ui.sh/avatars/4.webp?size=160"
+            name:
+                type: text
+                label: Name
+                default: "A name"
+            role:
+                type: text
+                label: Role
+                default: "Role"
+        default:
+            - image: "https://assets.ui.sh/avatars/4.webp?size=160"
+              name: "Alex Patel"
+              role: "Co-founder and CTO"
+            - image: "https://assets.ui.sh/avatars/8.webp?size=160"
+              name: "Sage Rivera"
+              role: "Head of Product"
+            - image: "https://assets.ui.sh/avatars/12.webp?size=160"
+              name: "Robin Hayes"
+              role: "Engineering"
+            - image: "https://assets.ui.sh/avatars/1.webp?size=160"
+              name: "Kai Brooks"
+              role: "Engineering"
+            - image: "https://assets.ui.sh/avatars/15.webp?size=160"
+              name: "Morgan Ellis"
+              role: "Pharmacist in residence"
+            - image: "https://assets.ui.sh/avatars/6.webp?size=160"
+              name: "Avery Okafor"
+              role: "Customer success"

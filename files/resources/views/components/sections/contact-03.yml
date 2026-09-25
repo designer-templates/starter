@@ -1,0 +1,73 @@
+title: Contact — method cards
+description: A left opener over four linked cards for email, chat, phone and a visit
+category: contact
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Contact"
+    heading:
+        type: text
+        label: Heading
+        default: "Pick the way that suits you"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: Line under the heading. Clear to hide.
+        rows: 2
+        default: "Four ways to reach the Rookery team. Each one ends with a bookkeeper who knows your clinic’s books."
+    methods:
+        type: repeater
+        label: Ways to reach you
+        add_button_label: "Add a way"
+        item_label: title
+        sub_fields:
+            icon:
+                type: select
+                label: Icon
+                default: mail
+                options:
+                    mail: Envelope
+                    chat: Chat bubble
+                    phone: Phone
+                    pin: Map pin
+            title:
+                type: text
+                label: Title
+                default: "Email"
+            text:
+                type: textarea
+                label: Text
+                rows: 2
+                default: "One line on what to expect."
+            linkText:
+                type: text
+                label: Link text
+                default: "hello@rookery.app"
+            linkUrl:
+                type: url
+                label: Link
+                default: "mailto:hello@rookery.app"
+        default:
+            - icon: mail
+              title: "Email"
+              text: "A reply from a bookkeeper, not a bot, within one business day."
+              linkText: "hello@rookery.app"
+              linkUrl: "mailto:hello@rookery.app"
+            - icon: chat
+              title: "Live chat"
+              text: "Weekdays 9:00 AM–6:00 PM ET, from inside the app or right here."
+              linkText: "Start a chat"
+              linkUrl: "#"
+            - icon: phone
+              title: "Phone"
+              text: "For anything urgent about payroll or a filing deadline."
+              linkText: "+1 (520) 555-0142"
+              linkUrl: "tel:+15205550142"
+            - icon: pin
+              title: "Visit"
+              text: "44 E Broadway Blvd, Suite 300, Tucson, AZ 85701. Coffee’s on."
+              linkText: "Get directions"
+              linkUrl: "#"

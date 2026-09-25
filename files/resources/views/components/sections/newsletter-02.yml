@@ -1,0 +1,65 @@
+title: Newsletter — split card
+description: Heading and three "what you get" rows on the left, a bordered card with the stacked form on the right
+category: newsletter
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "The Anvil letter"
+    heading:
+        type: text
+        label: Heading
+        default: "What broke last month, and why"
+        required: true
+    text:
+        type: textarea
+        label: Text
+        description: One or two lines under the heading. Clear to hide.
+        rows: 2
+        default: "Anvil watches 1,900 services. Once a month we write up the outages worth learning from, in about six minutes of reading."
+    items:
+        type: repeater
+        label: What you get
+        item_label: text
+        add_button_label: Add a line
+        sub_fields:
+            text:
+                type: text
+                label: Line
+        default:
+            - text: "Three incidents, each with the root cause in two lines"
+            - text: "One runbook change a customer shipped, with the diff"
+            - text: "Nothing about Anvil unless something changed"
+    formHeading:
+        type: text
+        label: Form heading
+        description: Small title at the top of the card. Clear to hide.
+        default: "Join 3,140 on-call engineers"
+    action:
+        type: url
+        label: Form action
+        description: Where the form posts. Point it at your list.
+        default: "#"
+    inputLabel:
+        type: text
+        label: Input label
+        default: "Work email"
+    inputPlaceholder:
+        type: text
+        label: Input hint
+        default: "you@yourcompany.com"
+    checkboxLabel:
+        type: text
+        label: Checkbox label
+        description: The opt-in line under the email field. Clear to hide.
+        default: "Also send the weekly digest, every Monday at 7:00 AM ET"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Get the letter"
+    finePrint:
+        type: text
+        label: Fine print
+        description: Small line under the button. Clear to hide.
+        default: "No sales email, ever. Unsubscribe in one click."

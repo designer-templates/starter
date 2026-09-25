@@ -1,0 +1,44 @@
+title: Stats — dark band
+description: A rounded dark band with an eyebrow and heading, four giant figures divided by hairlines, and a one-line source note
+category: stats
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Short label above the heading. Clear to hide.
+        default: "By the numbers"
+    heading:
+        type: text
+        label: Heading
+        required: true
+        default: "A year of Skiff on the road"
+    figures:
+        type: repeater
+        label: Figures
+        source: "collections.stats"
+        add_button_label: "Add figure"
+        item_label: label
+        description: Four figures fill the row. The first one counts up once as it scrolls into view.
+        sub_fields:
+            value:
+                type: text
+                label: Value
+                default: "2,318"
+            label:
+                type: text
+                label: Label
+                default: "Crews dispatched every weekday"
+        default:
+            - value: "2,318"
+              label: "Crews dispatched every weekday"
+            - value: "14 min"
+              label: "From the call to a truck on the way"
+            - value: "99.97%"
+              label: "Jobs kept on the day they were booked"
+            - value: "4.9"
+              label: "Average technician rating from customers"
+    note:
+        type: text
+        label: Source note
+        description: One line under the figures saying where they come from. Clear to hide.
+        default: "Across every Skiff account from Sep 1, 2025 to Aug 31, 2026. Ratings from 61,412 completed jobs."

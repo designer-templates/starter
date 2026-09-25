@@ -1,0 +1,88 @@
+title: Features — bento
+description: Left opener over a bento grid — one wide cell with a product screenshot and a payment toast, four small cells each with a small screenshot, a title and a line
+category: features
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Invoicing"
+    heading:
+        type: text
+        label: Heading
+        default: "Every invoice, chased and closed"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        rows: 3
+        default: "Tiller drafts the invoice from tracked hours, sends the reminders on the client’s business days, and posts the payment the day it lands."
+    linkText:
+        type: text
+        label: Link text
+        description: Arrow link under the intro. Clear to hide.
+        default: "See how billing works"
+    linkUrl:
+        type: url
+        label: Link URL
+        default: "#"
+    mainTitle:
+        type: text
+        label: Wide cell title
+        default: "One ledger for every open invoice"
+    mainText:
+        type: textarea
+        label: Wide cell text
+        rows: 2
+        default: "Sent, viewed, partly paid, or 11 days late — each invoice carries its own history, so nobody has to ask."
+    mainImage:
+        type: image
+        label: Wide cell image
+        description: Your screenshot; its top-left corner shows, the rest is cropped by the cell.
+        default: "/images/blocks/dashboard-invoices.jpg"
+    mainImageAlt:
+        type: text
+        label: Wide cell image alt text
+        default: "The Tiller invoices page: outstanding, overdue and paid totals over the September invoice list"
+    toastTitle:
+        type: text
+        label: Toast title
+        description: The small card overlapping the screenshot. Clear to hide.
+        default: "Payment received"
+    toastText:
+        type: text
+        label: Toast text
+        default: "$4,860.00 from Pinebrook Dental"
+    cells:
+        type: repeater
+        label: Small cells
+        description: Each cell shows a zoomed detail of its screenshot (the top-left, past any sidebar) over a title and a line. Clear the image to show the copy alone.
+        add_button_label: "Add cell"
+        item_label: title
+        sub_fields:
+            image:
+                type: image
+                label: Image
+                default: "/images/blocks/dashboard-settings.jpg"
+            title:
+                type: text
+                label: Title
+                default: "A feature"
+            text:
+                type: textarea
+                label: Text
+                rows: 2
+                default: "One sentence on what it does."
+        default:
+            - image: "/images/blocks/dashboard-settings.jpg"
+              title: "Reminders that read the room"
+              text: "Three tones, sent on the client’s business days, never on a holiday."
+            - image: "/images/blocks/dashboard-report.jpg"
+              title: "Collected, week by week"
+              text: "See what landed and what is still out, without opening the bank."
+            - image: "/images/blocks/dashboard-notifications.jpg"
+              title: "Approvals before send"
+              text: "A second pair of eyes on anything over $5,000, right in the thread."
+            - image: "/images/blocks/dashboard-board.jpg"
+              title: "Fast enough to live in"
+              text: "Every action has a key, so Friday billing is a few minutes, not an afternoon."

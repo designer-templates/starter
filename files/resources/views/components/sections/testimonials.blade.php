@@ -11,7 +11,7 @@
     then three outcome cards: a big figure, its caption, a drawn illustration, and a one-line story.
     Rows live in resources/data/collections/testimonials.json and outcomes.json; icon and logo columns are inline SVG.
 -->
-<section id="testimonials" class="scroll-mt-20 px-6 py-24 sm:py-32">
+<section id="testimonials" class="scroll-mt-20 px-6 py-16 sm:py-28">
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <x-heading
             :eyebrow="$eyebrow"

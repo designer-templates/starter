@@ -1,0 +1,67 @@
+title: Hero — split with product window
+description: Badge, two-line headline, intro, two buttons and a proof row on the left; a product screenshot framed as a window that bleeds off the right edge, with a stat card overlapping its corner
+category: heroes
+fields:
+    showBadge:
+        type: toggle
+        label: Show badge
+        default: "1"
+    badgeText:
+        type: text
+        label: Badge text
+        default: "Now syncing with QuickBooks"
+    heading:
+        type: text
+        label: Heading
+        default: "Know what every job costs"
+        required: true
+    text:
+        type: textarea
+        label: Intro
+        rows: 3
+        default: "Corbel pulls hours, materials and subs into one live margin per job, so you catch a job slipping on Tuesday, not at the final invoice."
+    buttonText:
+        type: text
+        label: Primary button text
+        description: Clear to hide.
+        default: "Start free"
+    buttonLink:
+        type: url
+        label: Primary button link
+        default: "/signup"
+    buttonText2:
+        type: text
+        label: Secondary button text
+        description: Clear to hide.
+        default: "Book a demo"
+    buttonLink2:
+        type: url
+        label: Secondary button link
+        default: "/demo"
+    proofText:
+        type: text
+        label: Proof line
+        description: Shown beside three avatars and five stars. Clear to hide the row.
+        default: "4.9 from 312 crews"
+    image:
+        type: image
+        label: Product image
+        description: Your screenshot, framed as a window that runs off the right edge on desktop. 4:3 works best; keep what matters in the left two-thirds.
+        default: "/images/blocks/dashboard-projects.jpg"
+    imageAlt:
+        type: text
+        label: Image alt text
+        default: "The Corbel projects page: billed this month, and every open job with its margin"
+    statLabel:
+        type: text
+        label: Stat card label
+        default: "Margin, all jobs"
+    statValue:
+        type: text
+        label: Stat card figure
+        description: Clear to hide the card.
+        default: "31.4%"
+    statDelta:
+        type: text
+        label: Stat card delta
+        default: "+2.1 pts since Aug"

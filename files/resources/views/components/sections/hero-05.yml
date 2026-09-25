@@ -1,0 +1,54 @@
+title: Hero — signup with product image
+description: Headline, intro, an inline email form with fine print and a three-line checklist on the left; on the right a product screenshot framed as a window on a raised stage
+category: heroes
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Booked and paid from one page"
+        required: true
+    text:
+        type: textarea
+        label: Intro
+        rows: 3
+        default: "Cove gives your studio a booking page, sends the deposit invoice the moment a date is held, and chases the balance so you never have to."
+    formAction:
+        type: url
+        label: Form action URL
+        description: Where the email form posts.
+        default: "/signup"
+    inputLabel:
+        type: text
+        label: Input label
+        default: "Your email"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Create your page"
+    finePrint:
+        type: text
+        label: Fine print
+        description: Clear to hide.
+        default: "Free for your first 25 bookings. No card needed."
+    points:
+        type: repeater
+        label: Checklist
+        add_button_label: Add line
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Line
+        default:
+            - text: "Deposit invoices sent the moment a date is held"
+            - text: "Reminders 3 days before the balance is due"
+            - text: "Payouts every Friday, straight to your bank"
+    image:
+        type: image
+        label: Product image
+        description: Your screenshot, framed as a window that runs off the right edge on desktop. 4:3 works best; keep what matters in the left two-thirds.
+        default: "/images/blocks/dashboard-bookings.jpg"
+    imageAlt:
+        type: text
+        label: Image alt text
+        default: "The Cove bookings calendar for September, with the month’s takings beside it"

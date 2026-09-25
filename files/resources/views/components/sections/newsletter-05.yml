@@ -1,0 +1,52 @@
+title: Newsletter — dark band
+description: A rounded dark band with a mono issue line, heading and text on the left and the form with a link to the last issue on the right
+category: newsletter
+fields:
+    eyebrow:
+        type: text
+        label: Issue line
+        description: Mono line above the heading. Clear to hide.
+        default: "Issue 41 · Sep 12, 2026"
+    heading:
+        type: text
+        label: Heading
+        default: "Notes from the loading dock"
+        required: true
+    text:
+        type: textarea
+        label: Text
+        description: One or two lines under the heading. Clear to hide.
+        rows: 2
+        default: "Receiving and put-away, with the numbers behind them, from the 380 warehouses on Osprey. Twice a month, six minutes."
+    action:
+        type: url
+        label: Form action
+        description: Where the form posts. Point it at your list.
+        default: "#"
+    inputLabel:
+        type: text
+        label: Input label
+        description: Read by screen readers.
+        default: "Email address"
+    inputPlaceholder:
+        type: text
+        label: Input hint
+        default: "you@yourwarehouse.com"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Subscribe"
+    linkText:
+        type: text
+        label: Link text
+        description: Text link under the form. Clear to hide.
+        default: "Read the last issue"
+    linkUrl:
+        type: url
+        label: Link
+        default: "#"
+    finePrint:
+        type: text
+        label: Fine print
+        description: Small line beside the link. Clear to hide.
+        default: "One email every two weeks. Unsubscribe any time."

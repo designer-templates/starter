@@ -1,0 +1,73 @@
+title: Testimonials — pull-quote carousel
+description: One large quote at a time with a portrait, name and company mark, prev/next buttons and a counter
+category: testimonials
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Customers"
+    heading:
+        type: text
+        label: Heading
+        default: "Front desks that stopped chasing no-shows"
+        required: true
+    testimonials:
+        type: repeater
+        label: Quotes
+        source: "collections.testimonials"
+        add_button_label: "Add quote"
+        item_label: name
+        description: One quote per slide. The company mark is inline SVG on currentColor.
+        sub_fields:
+            quote:
+                type: textarea
+                label: Quote
+                rows: 3
+                default: "A short quote about the product."
+            name:
+                type: text
+                label: Name
+                default: "A name"
+            role:
+                type: text
+                label: Role
+                default: "Role, Company"
+            avatar:
+                type: image
+                label: Portrait
+                default: "https://assets.ui.sh/avatars/1.webp?size=160"
+            company:
+                type: text
+                label: Company name
+                default: "Company"
+            logo:
+                type: textarea
+                label: Company mark (inline SVG)
+                rows: 3
+                default: "<svg viewBox='0 0 24 24' class='size-5 fill-current' aria-hidden='true'><rect x='3' y='3' width='18' height='18' rx='5'/></svg>"
+        default:
+            - quote: "No-shows dropped from 14% to 6% in the first quarter. Corva texts the reminder, fills the gap from the waitlist, and nobody at the front desk touches it."
+              name: "Morgan Ellis"
+              role: "Practice manager, Inkwell & Finch"
+              avatar: "https://assets.ui.sh/avatars/3.webp?size=160"
+              company: "Inkwell & Finch"
+              logo: "<svg viewBox='0 0 24 24' class='size-5 fill-current' aria-hidden='true'><path fill-rule='evenodd' d='M12 2.5 21.5 12 12 21.5 2.5 12Zm0 5L7.5 12l4.5 4.5 4.5-4.5Z'/></svg>"
+            - quote: "We run three locations on one calendar now. Moving a provider between our two Boise offices is one drag, and the confirmations go out on their own."
+              name: "Jordan Okafor"
+              role: "Operations lead, Pell Family Medicine"
+              avatar: "https://assets.ui.sh/avatars/7.webp?size=160"
+              company: "Pell"
+              logo: "<svg viewBox='0 0 24 24' class='size-5' fill='none' stroke='currentColor' stroke-width='2.25' stroke-linecap='round' aria-hidden='true'><circle cx='12' cy='12' r='9'/><path d='M12 7.5v9M7.5 12h9'/></svg>"
+            - quote: "The waitlist alone paid for it. Corva filled 212 cancelled slots last year that we would simply have lost."
+              name: "Riley Chen"
+              role: "Owner, Windrow Physical Therapy"
+              avatar: "https://assets.ui.sh/avatars/11.webp?size=160"
+              company: "Windrow"
+              logo: "<svg viewBox='0 0 24 24' class='size-5' fill='none' stroke='currentColor' stroke-width='2.25' stroke-linecap='round' aria-hidden='true'><path d='M3 8.5c3 0 3 2.5 6 2.5s3-2.5 6-2.5 3 2.5 6 2.5M3 15.5c3 0 3 2.5 6 2.5s3-2.5 6-2.5 3 2.5 6 2.5'/></svg>"
+            - quote: "Setup took an afternoon, including 9,400 patient records. The team in Raleigh answered every question the same day."
+              name: "Avery Kim"
+              role: "Office administrator, Fairbanks Pediatrics"
+              avatar: "https://assets.ui.sh/avatars/14.webp?size=160"
+              company: "Fairbanks"
+              logo: "<svg viewBox='0 0 24 24' class='size-5 fill-current' aria-hidden='true'><rect x='3' y='3' width='8' height='8' rx='2'/><rect x='13' y='3' width='8' height='8' rx='4'/><rect x='3' y='13' width='8' height='8' rx='4'/><rect x='13' y='13' width='8' height='8' rx='2'/></svg>"

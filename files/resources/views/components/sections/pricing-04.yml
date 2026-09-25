@@ -1,0 +1,205 @@
+title: Pricing — comparison table
+description: A left opener over one table; plan prices and buttons in a sticky head row, feature rows grouped under mono labels, and a Compare everything button that reveals more rows in place
+category: pricing
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Compare plans"
+    heading:
+        type: text
+        label: Heading
+        default: "Every plan, row by row"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two short sentences under the heading. Clear to hide.
+        rows: 2
+        default: "Three plans for shops that answer their own tickets. Start on Shop and move up when the inbox does."
+    period:
+        type: text
+        label: Period text after each price
+        default: "per month"
+    moreLabel:
+        type: text
+        label: Reveal button text
+        default: "Compare everything"
+    lessLabel:
+        type: text
+        label: Reveal button text once open
+        default: "Show fewer rows"
+    plans:
+        type: repeater
+        label: Plans
+        source: "collections.plans"
+        add_button_label: "Add plan"
+        item_label: name
+        description: One column per plan, in this order. The featured plan's column is tinted and gets the filled button.
+        sub_fields:
+            name:
+                type: text
+                label: Plan name
+                default: "New plan"
+            price:
+                type: text
+                label: Price
+                default: "$29"
+            ctaText:
+                type: text
+                label: Button text
+                default: "Start a trial"
+            ctaLink:
+                type: url
+                label: Button link
+                default: "#"
+            featured:
+                type: select
+                label: Featured plan
+                default: "no"
+                options:
+                    yes: "Yes"
+                    no: "No"
+        default:
+            - name: "Shop"
+              price: "$27"
+              ctaText: "Start a trial"
+              ctaLink: "#"
+              featured: "no"
+            - name: "Growth"
+              price: "$79"
+              ctaText: "Start a trial"
+              ctaLink: "#"
+              featured: "yes"
+            - name: "Scale"
+              price: "$214"
+              ctaText: "Talk to sales"
+              ctaLink: "#"
+              featured: "no"
+    rows:
+        type: repeater
+        label: Feature rows
+        add_button_label: "Add row"
+        item_label: feature
+        description: Always shown. A group label starts a new group when it changes. Per column, yes shows a check, no shows a dash, anything else shows as written.
+        sub_fields:
+            group:
+                type: text
+                label: Group
+                default: "Inbox"
+            feature:
+                type: text
+                label: Feature
+                default: "New feature"
+            plan1:
+                type: text
+                label: First plan
+                default: "yes"
+            plan2:
+                type: text
+                label: Second plan
+                default: "yes"
+            plan3:
+                type: text
+                label: Third plan
+                default: "yes"
+        default:
+            - group: "Inbox"
+              feature: "Shared inbox for email and chat"
+              plan1: "yes"
+              plan2: "yes"
+              plan3: "yes"
+            - group: "Inbox"
+              feature: "Order lookup inside a ticket"
+              plan1: "yes"
+              plan2: "yes"
+              plan3: "yes"
+            - group: "Inbox"
+              feature: "Seats"
+              plan1: "3"
+              plan2: "10"
+              plan3: "Unlimited"
+            - group: "Automation"
+              feature: "Saved replies"
+              plan1: "25"
+              plan2: "Unlimited"
+              plan3: "Unlimited"
+            - group: "Automation"
+              feature: "Rules and routing"
+              plan1: "no"
+              plan2: "yes"
+              plan3: "yes"
+            - group: "Automation"
+              feature: "Auto-tagging by order status"
+              plan1: "no"
+              plan2: "yes"
+              plan3: "yes"
+            - group: "Support"
+              feature: "Email support"
+              plan1: "yes"
+              plan2: "yes"
+              plan3: "yes"
+            - group: "Support"
+              feature: "Phone support, 9 AM to 6 PM ET"
+              plan1: "no"
+              plan2: "no"
+              plan3: "yes"
+    moreRows:
+        type: repeater
+        label: More rows
+        add_button_label: "Add row"
+        item_label: feature
+        description: Shown once Compare everything is pressed. Same rules as the feature rows.
+        sub_fields:
+            group:
+                type: text
+                label: Group
+                default: "Channels"
+            feature:
+                type: text
+                label: Feature
+                default: "New feature"
+            plan1:
+                type: text
+                label: First plan
+                default: "no"
+            plan2:
+                type: text
+                label: Second plan
+                default: "yes"
+            plan3:
+                type: text
+                label: Third plan
+                default: "yes"
+        default:
+            - group: "Channels"
+              feature: "Instagram and Facebook messages"
+              plan1: "no"
+              plan2: "yes"
+              plan3: "yes"
+            - group: "Channels"
+              feature: "SMS replies"
+              plan1: "no"
+              plan2: "no"
+              plan3: "yes"
+            - group: "Reporting"
+              feature: "Reply-time reports"
+              plan1: "yes"
+              plan2: "yes"
+              plan3: "yes"
+            - group: "Reporting"
+              feature: "CSV export"
+              plan1: "no"
+              plan2: "yes"
+              plan3: "yes"
+            - group: "Security"
+              feature: "Two-factor sign-in"
+              plan1: "yes"
+              plan2: "yes"
+              plan3: "yes"
+            - group: "Security"
+              feature: "SAML SSO"
+              plan1: "no"
+              plan2: "no"
+              plan3: "yes"

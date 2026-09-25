@@ -1,0 +1,106 @@
+title: Team — directory
+description: Hairline rows of people with a small portrait, role, location and link, grouped by department
+category: team
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Directory"
+    heading:
+        type: text
+        label: Heading
+        default: "Everyone at Moraine"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two sentences under the heading. Clear to hide.
+        rows: 3
+        default: "Eight of us in five cities, and one Slack channel called #receipts. Each name links to what that person is working on this quarter."
+    summary:
+        type: text
+        label: Summary line
+        description: Short mono line at the right of the opener. Clear to hide.
+        default: "8 people · 5 cities"
+    members:
+        type: repeater
+        label: People
+        description: Keep people in the same department next to each other; a department label prints whenever it changes.
+        source: "collections.team"
+        add_button_label: "Add person"
+        item_label: name
+        sub_fields:
+            image:
+                type: image
+                label: Portrait
+                default: "https://assets.ui.sh/avatars/5.webp?size=160"
+            name:
+                type: text
+                label: Name
+                default: "A name"
+            role:
+                type: text
+                label: Role
+                default: "Role"
+            location:
+                type: text
+                label: Location
+                default: "Denver, CO"
+            department:
+                type: text
+                label: Department
+                default: "Engineering"
+            linkUrl:
+                type: url
+                label: Link
+                default: "#"
+        default:
+            - image: "https://assets.ui.sh/avatars/5.webp?size=160"
+              name: "Jordan Chen"
+              role: "Head of Engineering"
+              location: "Denver, CO"
+              department: "Engineering"
+              linkUrl: "/team/jordan-chen"
+            - image: "https://assets.ui.sh/avatars/10.webp?size=160"
+              name: "Casey Nakamura"
+              role: "Backend, card issuing"
+              location: "Pittsburgh, PA"
+              department: "Engineering"
+              linkUrl: "/team/casey-nakamura"
+            - image: "https://assets.ui.sh/avatars/13.webp?size=160"
+              name: "Riley Alvarez"
+              role: "Mobile"
+              location: "Columbus, OH"
+              department: "Engineering"
+              linkUrl: "/team/riley-alvarez"
+            - image: "https://assets.ui.sh/avatars/2.webp?size=160"
+              name: "Reese Kim"
+              role: "Head of Design"
+              location: "Portland, OR"
+              department: "Design"
+              linkUrl: "/team/reese-kim"
+            - image: "https://assets.ui.sh/avatars/16.webp?size=160"
+              name: "Parker Okafor"
+              role: "Product designer"
+              location: "Denver, CO"
+              department: "Design"
+              linkUrl: "/team/parker-okafor"
+            - image: "https://assets.ui.sh/avatars/7.webp?size=160"
+              name: "Sam Hayes"
+              role: "Sales, construction"
+              location: "Tucson, AZ"
+              department: "Go-to-market"
+              linkUrl: "/team/sam-hayes"
+            - image: "https://assets.ui.sh/avatars/11.webp?size=160"
+              name: "Quinn Brooks"
+              role: "Customer success"
+              location: "Pittsburgh, PA"
+              department: "Go-to-market"
+              linkUrl: "/team/quinn-brooks"
+            - image: "https://assets.ui.sh/avatars/3.webp?size=160"
+              name: "Emery Patel"
+              role: "Marketing"
+              location: "Portland, OR"
+              department: "Go-to-market"
+              linkUrl: "/team/emery-patel"

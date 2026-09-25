@@ -1,0 +1,33 @@
+title: CTA — panel with email input
+description: A bordered panel with a centered heading, one line, an email input beside a button, and a privacy line
+category: cta
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Send the 40 GB folder today"
+        required: true
+    text:
+        type: textarea
+        label: Supporting text
+        description: One line under the heading. Clear to hide.
+        rows: 2
+        default: "Drop the folder in Ferry, send the client one link, and let it expire on the date you set. Nothing to install on their side."
+    action:
+        type: url
+        label: Form action
+        description: Where the email is posted.
+        default: "/signup"
+    inputPlaceholder:
+        type: text
+        label: Input placeholder
+        default: "you@studio.com"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Create my workspace"
+    finePrint:
+        type: text
+        label: Fine print
+        description: Small line under the form. Clear to hide.
+        default: "One sign-in link, no newsletter. The first 5 GB a month are free."

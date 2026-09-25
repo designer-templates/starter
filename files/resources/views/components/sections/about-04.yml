@@ -1,0 +1,60 @@
+title: About — staggered photos and values
+description: Two portrait-cropped photographs on the left, the second dropped lower; an eyebrow, heading, paragraph and a hairline list of four values on the right
+category: content
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "What we believe"
+    heading:
+        type: text
+        label: Heading
+        default: "Run by people who still throw on Sundays"
+        required: true
+    paragraph:
+        type: textarea
+        label: Paragraph
+        description: Clear to hide.
+        rows: 4
+        default: "I opened a 14-wheel studio in Pittsburgh in 2017 and spent more evenings on the membership spreadsheet than at the wheel. Avery had just left a job in Austin building booking software. Glaze is the tool we wished we had: firings scheduled, shelves tracked, members billed, and 640 studios on it today."
+    image1:
+        type: image
+        label: First photo
+        default: "/images/blocks/workspace-01.jpg"
+    image1Alt:
+        type: text
+        label: First photo description
+        default: "The Glaze team at their desks in the Pittsburgh studio"
+    image2:
+        type: image
+        label: Second photo
+        default: "/images/blocks/workspace-03.jpg"
+    image2Alt:
+        type: text
+        label: Second photo description
+        default: "A quiet corner of the Pittsburgh studio with plants on the sill"
+    values:
+        type: repeater
+        label: Values
+        add_button_label: "Add value"
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Title
+                default: "Ship the small thing"
+            description:
+                type: textarea
+                label: One line
+                rows: 2
+                default: "A fix for one studio’s Tuesday problem beats a feature for a studio that does not exist yet."
+        default:
+            - title: "Ship the small thing"
+              description: "A fix for one studio’s Tuesday problem beats a feature for a studio that does not exist yet."
+            - title: "Price like a member"
+              description: "One flat rate per studio, and it has moved once in seven years."
+            - title: "Answer the phone"
+              description: "Every support call goes to someone who has loaded a kiln. The median reply is 11 minutes."
+            - title: "Stay small on purpose"
+              description: "We are 19 people across Pittsburgh and Austin, and we plan to stay under 30."

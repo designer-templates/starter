@@ -1,0 +1,65 @@
+title: Contact — centred card
+description: One bordered card with an icon, a heading and a full form
+category: contact
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Send us a note"
+        required: true
+    text:
+        type: textarea
+        label: Text
+        description: Line under the heading. Clear to hide.
+        rows: 2
+        default: "Billing, a move from another help desk, or a bug you’d like a person to see. Every note lands with the team in Boise."
+    action:
+        type: url
+        label: Form action URL
+        description: Where the form posts. Wire it to your form handler.
+        default: "#"
+    fieldFirst:
+        type: text
+        label: First name field label
+        default: "First name"
+    fieldLast:
+        type: text
+        label: Last name field label
+        default: "Last name"
+    fieldEmail:
+        type: text
+        label: Email field label
+        default: "Email"
+    fieldTopic:
+        type: text
+        label: Topic field label
+        default: "Topic"
+    topics:
+        type: repeater
+        label: Topic options
+        add_button_label: "Add topic"
+        item_label: label
+        sub_fields:
+            label:
+                type: text
+                label: Option
+                default: "A topic"
+        default:
+            - label: "Plans and billing"
+            - label: "Moving from another help desk"
+            - label: "Something looks broken"
+            - label: "Partnerships"
+            - label: "Something else"
+    fieldMessage:
+        type: text
+        label: Message field label
+        default: "Message"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Send note"
+    replyLine:
+        type: text
+        label: Reply line
+        description: Line under the button. Clear to hide.
+        default: "We reply within one business day, usually sooner."

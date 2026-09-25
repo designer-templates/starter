@@ -1,0 +1,89 @@
+title: Team — people strip and hiring card
+description: A row of round portraits with names under, beside a raised card with the open roles and a button
+category: team
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Team"
+    heading:
+        type: text
+        label: Heading
+        default: "A small crew, mostly former schedulers"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two sentences under the heading. Clear to hide.
+        rows: 3
+        default: "Six people across three time zones. Every one of us has built a week of home visits by hand, which is why Ballast never asks you to."
+    members:
+        type: repeater
+        label: People
+        source: "collections.team"
+        add_button_label: "Add person"
+        item_label: name
+        sub_fields:
+            image:
+                type: image
+                label: Portrait
+                default: "https://assets.ui.sh/avatars/3.webp?size=160"
+            name:
+                type: text
+                label: Name
+                default: "A name"
+            role:
+                type: text
+                label: Role
+                default: "Role"
+        default:
+            - image: "https://assets.ui.sh/avatars/3.webp?size=160"
+              name: "Taylor Rivera"
+              role: "Co-founder, CEO"
+            - image: "https://assets.ui.sh/avatars/7.webp?size=160"
+              name: "Drew Kim"
+              role: "Co-founder, CTO"
+            - image: "https://assets.ui.sh/avatars/11.webp?size=160"
+              name: "Emery Brooks"
+              role: "Design"
+            - image: "https://assets.ui.sh/avatars/2.webp?size=160"
+              name: "Parker Chen"
+              role: "Engineering"
+            - image: "https://assets.ui.sh/avatars/14.webp?size=160"
+              name: "Skyler Okafor"
+              role: "Clinical partnerships"
+            - image: "https://assets.ui.sh/avatars/9.webp?size=160"
+              name: "Rowan Alvarez"
+              role: "Support"
+    showHiring:
+        type: toggle
+        label: Show hiring card
+        default: "1"
+    hiringLabel:
+        type: text
+        label: Card label
+        description: Small pill at the top of the card. Clear to hide.
+        default: "3 open roles"
+    hiringHeading:
+        type: text
+        label: Card heading
+        default: "We’re hiring in Denver and remote"
+    hiringText:
+        type: textarea
+        label: Card text
+        rows: 3
+        default: "A senior engineer, a product designer and an implementation lead. Four-day weeks, and the salary is on every listing."
+    ctaText:
+        type: text
+        label: Button text
+        default: "See open roles"
+    ctaLink:
+        type: url
+        label: Button link
+        default: "/careers"
+    hiringNote:
+        type: text
+        label: Card note
+        description: Small line under the button. Clear to hide.
+        default: "Remote across US time zones · Denver office"

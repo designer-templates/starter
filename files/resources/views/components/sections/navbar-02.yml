@@ -1,0 +1,67 @@
+title: Header — floating pill
+description: A glass pill floating below the top of the page with the brand, links, Log in and one compact action; it tightens once the page scrolls
+category: headers
+fields:
+    brand:
+        type: text
+        label: Brand name
+        default: "Ambit"
+    links:
+        type: repeater
+        label: Navigation links
+        description: "Nest links under an item to turn it into a dropdown. Stored in site.json."
+        source: site.nav_links
+        nestable: true
+        add_button_label: "Add link"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Text
+                default: "New link"
+            url:
+                type: url
+                label: Link
+                default: "/"
+            description:
+                type: text
+                label: Description
+                description: Shown under the title inside a dropdown.
+                default: ""
+        default:
+            - text: "Product"
+              url: "#"
+              children:
+                  - text: "Monitors"
+                    url: "/product/monitors"
+                    description: "30-second checks from 14 US regions"
+                  - text: "Status pages"
+                    url: "/product/status"
+                    description: "A public page on your own domain"
+                  - text: "Alerts"
+                    url: "/product/alerts"
+                    description: "Slack, SMS and on-call rotations"
+            - text: "Pricing"
+              url: "/pricing"
+            - text: "Changelog"
+              url: "/changelog"
+            - text: "Docs"
+              url: "/docs"
+    signInText:
+        type: text
+        label: Log in text
+        description: Clear to hide.
+        default: "Log in"
+    signInLink:
+        type: url
+        label: Log in link
+        default: "#"
+    ctaText:
+        type: text
+        label: Button text
+        description: Clear to hide.
+        default: "Start free"
+    ctaLink:
+        type: url
+        label: Button link
+        default: "/pricing"

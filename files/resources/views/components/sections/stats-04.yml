@@ -1,0 +1,81 @@
+title: Stats — chart card and three
+description: A wide card with a title, a headline figure and a drawn line chart over a dashed baseline, beside three stacked figure cards
+category: stats
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Short label above the heading. Clear to hide.
+        default: "Deliverability"
+    heading:
+        type: text
+        label: Heading
+        required: true
+        default: "Delivered, and actually in the inbox"
+    intro:
+        type: textarea
+        label: Intro
+        description: Sits to the right of the heading on desktop. Clear to hide.
+        rows: 2
+        default: "Foxglove measures placement with seed inboxes at 14 mailbox providers, so the figure counts mail people can see, not mail a server accepted."
+    chartTitle:
+        type: text
+        label: Chart title
+        default: "Inbox placement, last 90 days"
+    chartMeta:
+        type: text
+        label: Chart meta
+        description: Small mono line at the top right of the chart card. Clear to hide.
+        default: "Seed inboxes · 14 providers"
+    chartValue:
+        type: text
+        label: Chart figure
+        default: "98.6%"
+    chartDelta:
+        type: text
+        label: Chart figure note
+        description: A short line beside the figure. Clear to hide.
+        default: "+1.4 pt since June"
+    baselineLabel:
+        type: text
+        label: Baseline label
+        description: Names the dashed line on the chart. Clear to hide.
+        default: "Industry average 84.1%"
+    axisStart:
+        type: text
+        label: Axis start
+        default: "Jun 15"
+    axisEnd:
+        type: text
+        label: Axis end
+        default: "Sep 12, 2026"
+    figures:
+        type: repeater
+        label: Figure cards
+        source: "collections.stats"
+        add_button_label: "Add figure"
+        item_label: label
+        description: Three cards stack beside the chart. The note is one short line of context under the figure.
+        sub_fields:
+            value:
+                type: text
+                label: Value
+                default: "1.94M"
+            label:
+                type: text
+                label: Label
+                default: "Messages delivered this month"
+            note:
+                type: text
+                label: Note
+                default: "Across 2,140 sending domains"
+        default:
+            - value: "1.94M"
+              label: "Messages delivered this month"
+              note: "Across 2,140 sending domains"
+            - value: "212 ms"
+              label: "Median time to accepted"
+              note: "p95 held under 900 ms all month"
+            - value: "0.03%"
+              label: "Hard bounce rate"
+              note: "Suppression lists sync every 5 minutes"

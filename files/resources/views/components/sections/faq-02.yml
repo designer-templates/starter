@@ -1,0 +1,62 @@
+title: FAQ — cards
+description: Centered narrow column of bordered question cards, one open at a time
+category: faq
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Before your first check"
+    heading:
+        type: text
+        label: Heading
+        default: "Questions about running Cairn"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two lines under the heading. Clear to hide.
+        rows: 2
+        default: "Plans, billing, moving off your current monitor, and what happens at 3:00 AM when a check fails."
+    supportText:
+        type: text
+        label: Support line
+        description: Short line under the questions, before the link. Clear to hide the line.
+        default: "Didn’t find it?"
+    supportLinkText:
+        type: text
+        label: Support link text
+        default: "Ask on chat, 7:00 AM to 9:00 PM ET"
+    supportLinkUrl:
+        type: url
+        label: Support link URL
+        default: "/contact"
+    faqs:
+        type: repeater
+        label: Questions
+        source: "collections.faqs"
+        add_button_label: "Add question"
+        item_label: question
+        sub_fields:
+            question:
+                type: text
+                label: Question
+                default: "A question"
+            answer:
+                type: textarea
+                label: Answer
+                rows: 3
+                default: "A clear, direct answer."
+        default:
+            - question: "How much does Cairn cost?"
+              answer: "Solo is $19 a month for 25 checks at a one-minute interval. Team is $59 a month for 200 checks, three regions, and on-call schedules for up to 15 people."
+            - question: "Is there a free trial?"
+              answer: "Every account starts on Team for 14 days with no card on file. When it ends you choose a plan, and nothing you set up is lost."
+            - question: "Can I import checks from my current monitor?"
+              answer: "Yes. Upload a CSV of URLs, intervals, and expected status codes and Cairn creates the checks in one pass. Most teams finish the move in under an hour."
+            - question: "Where do the checks run from?"
+              answer: "Probes run from Ashburn, Dallas, and Portland, and an incident opens only when two regions agree. A single bad network path never wakes you up."
+            - question: "How do we get paged?"
+              answer: "Alerts go out by SMS, phone call, email, or a webhook into your chat tool. Each escalation step waits 5 to 30 minutes, your choice, before moving to the next person."
+            - question: "Is our data encrypted?"
+              answer: "All traffic uses TLS 1.3 and check results sit encrypted at rest in a US region. Cairn holds a SOC 2 Type II report and keeps 13 months of history on every plan."

@@ -1,0 +1,79 @@
+title: FAQ — with contact card
+description: Accordion on the left, a sticky "still have questions" card on the right
+category: faq
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Support"
+    heading:
+        type: text
+        label: Heading
+        default: "Running your studio on Alcove"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two lines under the heading. Clear to hide.
+        rows: 2
+        default: "Plans, billing, moving your calendar over, and how deposits are handled."
+    cardHeading:
+        type: text
+        label: Card heading
+        default: "Still have questions?"
+    cardText:
+        type: textarea
+        label: Card text
+        description: One or two lines under the card heading. Clear to hide.
+        rows: 3
+        default: "Talk to someone who has set up a studio before. Weekdays 9:00 AM to 6:00 PM ET, and a reply within the hour."
+    cardButtonText:
+        type: text
+        label: Card button text
+        default: "Talk to support"
+    cardButtonUrl:
+        type: url
+        label: Card button URL
+        default: "/contact"
+    avatarOne:
+        type: image
+        label: First avatar
+        default: "https://assets.ui.sh/avatars/3.webp?size=160"
+    avatarTwo:
+        type: image
+        label: Second avatar
+        default: "https://assets.ui.sh/avatars/8.webp?size=160"
+    avatarThree:
+        type: image
+        label: Third avatar
+        default: "https://assets.ui.sh/avatars/12.webp?size=160"
+    faqs:
+        type: repeater
+        label: Questions
+        source: "collections.faqs"
+        add_button_label: "Add question"
+        item_label: question
+        sub_fields:
+            question:
+                type: text
+                label: Question
+                default: "A question"
+            answer:
+                type: textarea
+                label: Answer
+                rows: 3
+                default: "A clear, direct answer."
+        default:
+            - question: "What does Alcove cost?"
+              answer: "Room is $29 a month for one bookable space, and Studio is $79 for up to eight spaces with staff logins. Both include online payments with no per-booking fee from us."
+            - question: "How are card fees handled?"
+              answer: "Card payments carry the processor’s 2.9% plus 30 cents, paid out to your bank every business day. You can add a booking fee of your own to cover it."
+            - question: "Can we move bookings from our old calendar?"
+              answer: "Yes. Connect the calendar you use today and Alcove imports the next 12 months of bookings with client names and notes. Every slot is checked on the way in, so nothing ends up double-booked."
+            - question: "How do deposits and cancellations work?"
+              answer: "Set a deposit of any percentage and a cancellation window per space. A client who cancels inside the window forfeits the deposit automatically, with the receipt sent to both of you."
+            - question: "Is client card data stored on Alcove?"
+              answer: "No. Card details go straight to the payment processor and Alcove keeps only a token, so a card number never touches our servers. Your own login is protected by two-factor authentication."
+            - question: "What if we need help on a shoot day?"
+              answer: "Support answers chat and phone 9:00 AM to 6:00 PM ET seven days a week, because shoots happen on weekends. Studio plans get a direct line that reaches a person in under two minutes."

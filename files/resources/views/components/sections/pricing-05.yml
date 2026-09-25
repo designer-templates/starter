@@ -1,0 +1,149 @@
+title: Pricing — usage slider
+description: A left opener, a card with a volume slider that sets the price, three included rows and a button; beside it three questions in native details and an arrow link
+category: pricing
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Pricing"
+    heading:
+        type: text
+        label: Heading
+        default: "Pay for the invoices you send"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two short sentences under the heading. Clear to hide.
+        rows: 2
+        default: "Slide to your volume. Every tier has the same features; only the number of invoices changes."
+    sliderHint:
+        type: text
+        label: Hint beside the volume line
+        description: Clear to hide.
+        default: "Drag to set your volume"
+    period:
+        type: text
+        label: Period text after the price
+        default: "per month"
+    note:
+        type: text
+        label: Note under the price
+        description: Clear to hide.
+        default: "Overage is $0.04 an invoice, never a forced upgrade."
+    ctaText:
+        type: text
+        label: Button text
+        default: "Start with 500 free"
+    ctaLink:
+        type: url
+        label: Button link
+        default: "#"
+    questionsHeading:
+        type: text
+        label: Heading above the questions
+        default: "Before you pick a tier"
+    contactText:
+        type: text
+        label: Link under the questions
+        description: Clear to hide.
+        default: "Over 25,000 a month? Talk to us"
+    contactLink:
+        type: url
+        label: Link target
+        default: "#"
+    tiers:
+        type: repeater
+        label: Volume tiers
+        add_button_label: "Add tier"
+        item_label: label
+        description: In order from smallest to largest. The tick label sits under the slider; the tier marked as the start shows first.
+        sub_fields:
+            volume:
+                type: text
+                label: Tick label
+                default: "1k"
+            label:
+                type: text
+                label: Volume line
+                default: "Up to 1,000 invoices a month"
+            price:
+                type: text
+                label: Price
+                default: "$52"
+            start:
+                type: select
+                label: Show this tier first
+                default: "no"
+                options:
+                    yes: "Yes"
+                    no: "No"
+        default:
+            - volume: "500"
+              label: "Up to 500 invoices a month"
+              price: "$31"
+              start: "no"
+            - volume: "1k"
+              label: "Up to 1,000 invoices a month"
+              price: "$52"
+              start: "no"
+            - volume: "2.5k"
+              label: "Up to 2,500 invoices a month"
+              price: "$94"
+              start: "yes"
+            - volume: "5k"
+              label: "Up to 5,000 invoices a month"
+              price: "$161"
+              start: "no"
+            - volume: "10k"
+              label: "Up to 10,000 invoices a month"
+              price: "$268"
+              start: "no"
+            - volume: "25k"
+              label: "Up to 25,000 invoices a month"
+              price: "$497"
+              start: "no"
+    included:
+        type: repeater
+        label: Included with every tier
+        add_button_label: "Add row"
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Title
+                default: "Included feature"
+            text:
+                type: text
+                label: One line
+                default: "What this means for you."
+        default:
+            - title: "Card, ACH and wire"
+              text: "Processor fees pass through at cost. We add nothing on top."
+            - title: "Sales tax on every line"
+              text: "Rates for 11,400 US jurisdictions, filed by you or by us."
+            - title: "Reminders that know when to stop"
+              text: "Three nudges over 21 days, then a pause, never a fourth."
+    questions:
+        type: repeater
+        label: Questions
+        add_button_label: "Add question"
+        item_label: question
+        sub_fields:
+            question:
+                type: text
+                label: Question
+                default: "New question?"
+            answer:
+                type: textarea
+                label: Answer
+                rows: 3
+                default: "The answer, in two sentences."
+        default:
+            - question: "What counts as an invoice?"
+              answer: "One document sent to one customer, whether it is paid, voided or resent. Drafts and previews are free."
+            - question: "What happens when I go over?"
+              answer: "Nothing stops. Each invoice past your tier is $0.04, itemized on your next bill, and we email you at 80 percent."
+            - question: "Can I change tiers mid-month?"
+              answer: "Yes. Moving up applies at once and is prorated; moving down takes effect on the first of the next month."

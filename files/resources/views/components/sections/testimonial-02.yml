@@ -1,0 +1,79 @@
+title: Testimonials — review wall
+description: A centred opener over a masonry wall of star-rated quote cards that fades into a link to the full list
+category: testimonials
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Reviews"
+    heading:
+        type: text
+        label: Heading
+        default: "Proposals that get signed"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One line under the heading. Clear to hide.
+        rows: 2
+        default: "Written by the people who send them. 212 reviews, a 4.9 average, none of them edited."
+    ctaText:
+        type: text
+        label: Link text
+        description: The link under the wall. Clear to hide.
+        default: "Read all 212 reviews"
+    ctaLink:
+        type: url
+        label: Link URL
+        default: "#"
+    testimonials:
+        type: repeater
+        label: Reviews
+        source: "collections.testimonials"
+        add_button_label: "Add review"
+        item_label: name
+        description: Cards flow into columns by length; six or nine fill the wall well.
+        sub_fields:
+            quote:
+                type: textarea
+                label: Quote
+                rows: 3
+                default: "A short quote about the product."
+            name:
+                type: text
+                label: Name
+                default: "A name"
+            role:
+                type: text
+                label: Role
+                default: "Role, Company"
+            avatar:
+                type: image
+                label: Avatar
+                default: "https://assets.ui.sh/avatars/1.webp?size=160"
+        default:
+            - quote: "Signed in 40 minutes. Our old average was 9 days."
+              name: "Sam Rivera"
+              role: "Founder, Sundry Studio"
+              avatar: "https://assets.ui.sh/avatars/1.webp?size=160"
+            - quote: "Clients open the proposal on a phone, tap the plan they want, and sign. We stopped exporting PDFs entirely in March."
+              name: "Casey Nakamura"
+              role: "Managing partner, Kelso & Rowe"
+              avatar: "https://assets.ui.sh/avatars/4.webp?size=160"
+            - quote: "We send about 60 proposals a month. Trellis shows which were opened, how long each section was read, and when to follow up. Close rate is up 11 points."
+              name: "Reese Hayes"
+              role: "Studio director, Hollis Press"
+              avatar: "https://assets.ui.sh/avatars/6.webp?size=160"
+            - quote: "The pricing table with optional add-ons is the best thing in it. Average deal size went from $4,200 to $5,900."
+              name: "Drew Patel"
+              role: "Creative director, Coppice"
+              avatar: "https://assets.ui.sh/avatars/9.webp?size=160"
+            - quote: "One layout for each of the 5 kinds of work we do. A new proposal takes 12 minutes instead of a morning."
+              name: "Quinn Alvarez"
+              role: "Principal, Harrow Creative"
+              avatar: "https://assets.ui.sh/avatars/12.webp?size=160"
+            - quote: "Reminders go out on our schedule and skip the client’s holidays. It reads the room better than I do on a Friday."
+              name: "Taylor Brooks"
+              role: "Account lead, Juniper Works"
+              avatar: "https://assets.ui.sh/avatars/15.webp?size=160"

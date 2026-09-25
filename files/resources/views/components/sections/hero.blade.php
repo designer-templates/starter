@@ -1,20 +1,22 @@
 @props([
-    'heading' => 'Your next great idea starts right here',
-    'text' => 'Build pages, edit content, and control layouts. All inside of our visual editor built for developers.',
+    'heading' => 'Start building your next great idea.',
+    'text' => 'Build pages, content, and layouts with the visual design tool built for Laravel applications.',
     'buttonText' => 'Start building for free',
     'buttonLink' => '/pricing',
     'buttonText2' => 'Watch demo',
     'buttonLink2' => '/#features',
     'socialProofText' => 'Loved by 2,000+ developers',
     'showMockup' => '1',
-    'mockupUrl' => 'app.starter.dev/dashboard',
+    'mockupImage' => '/images/mockup.png',
+    'mockupAlt' => 'The Starter dashboard: page views, conversions and top pages',
 ])
 <!--
     Centered hero: a two-line headline (the second line in the faint tier), one paragraph,
-    two buttons, a row of avatars with five stars, and a drawn dashboard window. Clear a
-    button's text to hide it; clear the social proof text to drop that row; the toggle hides the window.
+    two buttons, a row of avatars with five stars, and a product screenshot framed as a window. Swap the
+    image for your own screenshot (16:10 works best). Clear a button's text to hide it; clear the social
+    proof text to drop that row; the toggle hides the window.
 -->
-<section class="px-6 pt-20 pb-12 sm:pt-28 sm:pb-16">
+<section class="px-6 py-16 sm:py-28">
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8 text-center">
         <h1 class="mx-auto max-w-3xl text-hero font-semibold tracking-[-0.04em] text-faint first-line:text-ink" data-reveal>
             {{ $heading }}
@@ -63,13 +65,10 @@
 
         @if ($showMockup)
         <div class="reveal-4 mt-14" data-reveal>
-            <!-- The product window: drawn in markup, so it takes the palette and never blurs. -->
-            <div class="w-full rounded-xl bg-raised p-10 lg:rounded-3xl lg:p-1">
-                <div class="relative overflow-hidden rounded-[20px] border border-line bg-panel shadow-2xl shadow-ink/5">
-                    
-                    <div class="bg-canvas/60 text-left aspect-[16/10]" aria-hidden="true">
-                        <img src="/images/mockup.png" class="w-full h-full" />
-                    </div>
+            <!-- The product image, framed as a window on a raised stage. -->
+            <div class="w-full rounded-xl bg-raised p-1 lg:rounded-3xl lg:p-2">
+                <div class="overflow-hidden rounded-[20px] border border-line bg-panel shadow-2xl shadow-ink/5">
+                    <img src="{{ $mockupImage }}" alt="{{ $mockupAlt }}" width="1586" height="992" class="block h-auto w-full">
                 </div>
             </div>
         </div>

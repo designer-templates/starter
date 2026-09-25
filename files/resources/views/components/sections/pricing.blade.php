@@ -19,7 +19,7 @@
     with a badge. Rows live in resources/data/collections/plans.json; main.js flips data-billing on the section
     and site.css shows the matching price and note. Clear the toggle to show monthly prices only.
 -->
-<section id="pricing" class="scroll-mt-20 px-6 py-24 sm:py-32 sm:first:pt-20 first:pt-16" data-pricing data-billing="monthly">
+<section id="pricing" class="scroll-mt-20 px-6 py-16 sm:py-28 sm:first:pt-24" data-pricing data-billing="monthly">
     <div class="mx-auto w-full max-w-6xl">
         <x-heading 
             :eyebrow="$eyebrow"

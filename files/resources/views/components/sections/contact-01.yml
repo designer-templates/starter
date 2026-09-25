@@ -1,0 +1,89 @@
+title: Contact — split with details
+description: Heading and a hairline details list beside a bordered form
+category: contact
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Let’s talk about your invoicing"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: Short paragraph under the heading. Clear to hide.
+        rows: 3
+        default: "Questions about plans, moving 2,300 open invoices over from a spreadsheet, or a walkthrough for your dispatch team. A person replies within one business day."
+    emailLabel:
+        type: text
+        label: Email row label
+        default: "Email"
+    emailText:
+        type: text
+        label: Email address
+        description: Clear to hide the email row.
+        default: "hello@quarry.app"
+    emailUrl:
+        type: url
+        label: Email link
+        default: "mailto:hello@quarry.app"
+    phoneLabel:
+        type: text
+        label: Phone row label
+        default: "Phone"
+    phoneText:
+        type: text
+        label: Phone number
+        description: Clear to hide the phone row.
+        default: "+1 (412) 555-0161"
+    phoneUrl:
+        type: url
+        label: Phone link
+        default: "tel:+14125550161"
+    addressLabel:
+        type: text
+        label: Office row label
+        default: "Office"
+    address:
+        type: text
+        label: Office address
+        description: Clear to hide the office row.
+        default: "119 Smithfield St, Floor 6, Pittsburgh, PA 15222"
+    hoursLabel:
+        type: text
+        label: Hours row label
+        default: "Hours"
+    hours:
+        type: text
+        label: Hours
+        description: Clear to hide the hours row.
+        default: "Mon–Fri, 9:00 AM–6:00 PM ET"
+    action:
+        type: url
+        label: Form action URL
+        description: Where the form posts. Wire it to your form handler.
+        default: "#"
+    fieldName:
+        type: text
+        label: Name field label
+        default: "Name"
+    fieldEmail:
+        type: text
+        label: Email field label
+        default: "Work email"
+    fieldCompany:
+        type: text
+        label: Company field label
+        default: "Company"
+    fieldMessage:
+        type: text
+        label: Message field label
+        default: "How can we help?"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Send message"
+    finePrint:
+        type: text
+        label: Fine print
+        description: Line under the button. Clear to hide.
+        default: "No auto-replies. A person writes back."

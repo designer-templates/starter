@@ -1,17 +1,12 @@
 title: Hero — centered
-description: Two-line headline, description, two buttons, a social proof row, and a drawn dashboard window
+description: Two-line headline, description, two buttons, a social proof row, and a product screenshot framed as a window
 category: heroes
 fields:
     heading:
         type: text
-        label: Heading line 1
-        default: "Build faster."
+        label: Heading
+        default: "Start building your next great idea"
         required: true
-    headingLine2:
-        type: text
-        label: Heading line 2
-        description: Set in the faint tier under the first line. Clear to run one line.
-        default: "Ship smarter."
     text:
         type: textarea
         label: Description
@@ -44,8 +39,12 @@ fields:
         type: toggle
         label: Show dashboard window
         default: "1"
-    mockupUrl:
+    mockupImage:
+        type: image
+        label: Dashboard image
+        description: Your screenshot, framed as a window. 16:10 works best.
+        default: "/images/mockup.png"
+    mockupAlt:
         type: text
-        label: Window address
-        description: The address shown in the drawn window's bar.
-        default: "app.starter.dev/dashboard"
+        label: Dashboard image alt text
+        default: "The Starter dashboard: page views, conversions and top pages"

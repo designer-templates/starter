@@ -1,0 +1,38 @@
+title: Newsletter — centered
+description: Heading, one line, an email field with the button set inside it, and a fine-print line
+category: newsletter
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "One email, every other Tuesday"
+        required: true
+    text:
+        type: textarea
+        label: Text
+        description: One line under the heading. Clear to hide.
+        rows: 2
+        default: "What changed in Plinth, one bookkeeping habit from a restaurant that closes its month in 3 days, and nothing else."
+    action:
+        type: url
+        label: Form action
+        description: Where the form posts. Point it at your list.
+        default: "#"
+    inputLabel:
+        type: text
+        label: Input label
+        description: Read by screen readers.
+        default: "Email address"
+    inputPlaceholder:
+        type: text
+        label: Input hint
+        default: "you@restaurant.com"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Subscribe"
+    finePrint:
+        type: text
+        label: Fine print
+        description: Small line under the form. Clear to hide.
+        default: "Read by 4,218 restaurant owners. Unsubscribe in one click."

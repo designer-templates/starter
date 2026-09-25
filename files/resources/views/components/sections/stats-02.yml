@@ -1,0 +1,62 @@
+title: Stats — figures beside a paragraph
+description: A heading, two short paragraphs and a link on the left; a two-by-two grid of figures with hairlines on the right
+category: stats
+fields:
+    heading:
+        type: text
+        label: Heading
+        required: true
+        default: "Payroll that closes on Tuesday, not Friday"
+    body:
+        type: textarea
+        label: First paragraph
+        rows: 3
+        default: "Elkhorn pulls every shift from the POS, splits the tip pool by the house rules, and files in all 50 states. Managers approve from a phone between the lunch and dinner rush."
+    detail:
+        type: textarea
+        label: Second paragraph
+        description: A shorter line that says where the numbers come from. Clear to hide.
+        rows: 2
+        default: "The figures are the average across 612 restaurant groups over the last four pay periods, not a launch-week best."
+    linkText:
+        type: text
+        label: Link text
+        description: Clear to hide the link.
+        default: "Read the customer stories"
+    linkUrl:
+        type: url
+        label: Link
+        default: "/customers"
+    figures:
+        type: repeater
+        label: Figures
+        source: "collections.stats"
+        add_button_label: "Add figure"
+        item_label: label
+        description: Four figures fill the grid, two to a row. The note is one short line of context under each label.
+        sub_fields:
+            value:
+                type: text
+                label: Value
+                default: "3.1 hrs"
+            label:
+                type: text
+                label: Label
+                default: "To close a pay run"
+            note:
+                type: text
+                label: Note
+                default: "Down from 11.4 hours on spreadsheets"
+        default:
+            - value: "3.1 hrs"
+              label: "To close a pay run"
+              note: "Down from 11.4 hours on spreadsheets"
+            - value: "$41,700"
+              label: "Tips reconciled per location each month"
+              note: "Split to the cent by the house rules"
+            - value: "0.04%"
+              label: "Pay runs corrected after filing"
+              note: "Across 18,300 runs so far this year"
+            - value: "6,120"
+              label: "Workers paid in the last cycle"
+              note: "Direct deposit lands by 6:00 AM ET Friday"

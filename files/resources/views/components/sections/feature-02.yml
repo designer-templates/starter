@@ -1,0 +1,75 @@
+title: Features — alternating rows
+description: Left opener, then three split rows that alternate sides — copy with a checklist beside a product screenshot
+category: features
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Shift schedules that survive the week"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        rows: 3
+        default: "Linden builds the roster from your rules, fills the gaps when someone calls out, and tells the right people — not everyone."
+    rows:
+        type: repeater
+        label: Rows
+        description: Rows alternate sides automatically. Points go one per line; each row has its own screenshot, which runs off the outer edge on desktop (keep what matters in the inner two-thirds).
+        add_button_label: "Add row"
+        item_label: title
+        sub_fields:
+            label:
+                type: text
+                label: Small label
+                default: "Feature"
+            title:
+                type: text
+                label: Title
+                default: "What this feature does"
+            body:
+                type: textarea
+                label: Body
+                rows: 3
+                default: "One or two sentences on what changes for the team."
+            points:
+                type: textarea
+                label: Checklist (one per line)
+                rows: 3
+                default: "First point\nSecond point\nThird point"
+            image:
+                type: image
+                label: Image
+                default: "/images/blocks/dashboard-settings.jpg"
+            imageAlt:
+                type: text
+                label: Image alt text
+                default: "A screenshot of the feature"
+        default:
+            - label: "Rules"
+              title: "Write the rules once"
+              body: "Minimum rest, nights in a row, who can cover the front desk — set them in plain fields and Linden refuses to build a roster that breaks them."
+              points: |-
+                  11-hour minimum rest, enforced
+                  Skills and certifications per role
+                  State overtime rules built in
+              image: "/images/blocks/dashboard-settings.jpg"
+              imageAlt: "The scheduling rules page: rest, nights in a row and auto-fill switches"
+            - label: "Coverage"
+              title: "Fill a call-out in minutes, not calls"
+              body: "When someone drops a shift, Linden offers it to the three people who are qualified, rested, and under their hours — in that order."
+              points: |-
+                  Offers go out by text and in the app
+                  First qualified yes wins
+                  Managers see who was asked
+              image: "/images/blocks/dashboard-notifications.jpg"
+              imageAlt: "The activity feed: a call-out, the offer to three staff, and the first yes"
+            - label: "The week"
+              title: "A week you can read at a glance"
+              body: "Every location on one week view, with gaps in the faint tier and overtime flagged before payroll finds it."
+              points: |-
+                  Drag a shift to move it
+                  Publish to the whole team at once
+                  Export hours to payroll on Friday
+              image: "/images/blocks/dashboard-schedule.jpg"
+              imageAlt: "The week of Sep 14: every shift on one grid, one open shift, one overtime flag"

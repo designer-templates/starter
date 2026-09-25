@@ -1,0 +1,116 @@
+title: Pricing — two plans and an enterprise band
+description: A centred heading, two plan cards side by side, then a full-width bordered band with an enterprise checklist and a Talk to sales button
+category: pricing
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Two plans. One number for everything else."
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One short line under the heading. Clear to hide.
+        rows: 2
+        default: "Every plan checks from 11 US regions every 30 seconds and hosts a status page on your own domain."
+    period:
+        type: text
+        label: Period text after each price
+        default: "per month"
+    showEnterprise:
+        type: toggle
+        label: Show the enterprise band
+        default: "1"
+    enterpriseTitle:
+        type: text
+        label: Enterprise band title
+        default: "Enterprise"
+    enterpriseText:
+        type: textarea
+        label: Enterprise band text
+        rows: 2
+        default: "Single sign-on, a signed DPA, private status pages and a 99.99% commitment you can hold us to."
+    enterpriseCtaText:
+        type: text
+        label: Enterprise button text
+        default: "Talk to sales"
+    enterpriseCtaLink:
+        type: url
+        label: Enterprise button link
+        default: "#"
+    enterpriseFeatures:
+        type: repeater
+        label: Enterprise checklist
+        add_button_label: "Add item"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Item
+                default: "Included with enterprise"
+        default:
+            - text: "SAML SSO and SCIM"
+            - text: "Signed DPA, 99.99% SLA"
+            - text: "Private status pages"
+            - text: "A named engineer in Slack"
+    plans:
+        type: repeater
+        label: Plans
+        source: "collections.plans"
+        add_button_label: "Add plan"
+        item_label: name
+        description: Features are one per line. The featured plan gets the filled button.
+        sub_fields:
+            name:
+                type: text
+                label: Plan name
+                default: "New plan"
+            description:
+                type: text
+                label: Who it is for
+                default: "Who this plan is for."
+            price:
+                type: text
+                label: Price
+                default: "$29"
+            note:
+                type: text
+                label: Note under the price
+                default: "Billed monthly. First 14 days free."
+            features:
+                type: textarea
+                label: Features (one per line)
+                rows: 5
+                default: "Everything in Team\n150 monitors"
+            ctaText:
+                type: text
+                label: Button text
+                default: "Start free"
+            ctaLink:
+                type: url
+                label: Button link
+                default: "#"
+            featured:
+                type: select
+                label: Featured plan
+                default: "no"
+                options:
+                    yes: "Yes"
+                    no: "No"
+        default:
+            - name: "Team"
+              description: "For one product and the people who wake up for it."
+              price: "$23"
+              note: "Billed monthly. First 14 days free."
+              features: "25 monitors, 30-second checks\nStatus page on your domain\nAlerts by text, email and Slack\n3 on-call schedules\nEmail support"
+              ctaText: "Start free"
+              ctaLink: "#"
+              featured: "no"
+            - name: "Business"
+              description: "For a few products, with rotations and an audit trail."
+              price: "$74"
+              note: "Billed monthly. First 14 days free."
+              features: "Everything in Team\n150 monitors, 10-second checks\nUnlimited status pages and subscribers\nEscalation rotations and overrides\nPhone support, around the clock"
+              ctaText: "Start free"
+              ctaLink: "#"
+              featured: "yes"

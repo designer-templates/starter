@@ -1,0 +1,38 @@
+title: Newsletter — muted band
+description: A rounded tinted band with the heading on the left and the form on the right, on one row on desktop
+category: newsletter
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Crew notes, twice a month"
+        required: true
+    text:
+        type: textarea
+        label: Text
+        description: One line under the heading. Clear to hide.
+        rows: 2
+        default: "Scheduling tricks from the 640 landscaping crews on Bramwell, in five minutes of reading. Sent on the 1st and the 15th."
+    action:
+        type: url
+        label: Form action
+        description: Where the form posts. Point it at your list.
+        default: "#"
+    inputLabel:
+        type: text
+        label: Input label
+        description: Read by screen readers.
+        default: "Email address"
+    inputPlaceholder:
+        type: text
+        label: Input hint
+        default: "you@yourcrew.com"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Join"
+    finePrint:
+        type: text
+        label: Fine print
+        description: Small line under the form. Clear to hide.
+        default: "No sales email. Unsubscribe any time."

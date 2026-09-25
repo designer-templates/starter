@@ -1,0 +1,111 @@
+title: Text-only post index
+description: A narrow column of posts with the date in mono on the left, a filter row of categories above
+category: blog
+fields:
+    heading:
+        type: text
+        label: Heading
+        required: true
+        default: "Writing"
+    intro:
+        type: textarea
+        label: Intro
+        rows: 2
+        default: "Notes on hiring from the Winnow team, published when there is something worth saying. Usually twice a month."
+    filters:
+        type: repeater
+        label: Filters
+        add_button_label: Add filter
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Label
+            url:
+                type: url
+                label: Link
+            current:
+                type: select
+                label: Selected
+                options:
+                    "no": "No"
+                    "yes": "Yes"
+        default:
+            - text: "All posts"
+              url: "/blog"
+              current: "yes"
+            - text: "Hiring"
+              url: "/blog/hiring"
+              current: "no"
+            - text: "Interviews"
+              url: "/blog/interviews"
+              current: "no"
+            - text: "Product"
+              url: "/blog/product"
+              current: "no"
+            - text: "Customers"
+              url: "/blog/customers"
+              current: "no"
+    posts:
+        type: repeater
+        label: Posts
+        source: collections.posts
+        add_button_label: Add post
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Title
+            excerpt:
+                type: textarea
+                label: Excerpt
+                rows: 3
+            url:
+                type: url
+                label: Link
+            date:
+                type: text
+                label: Date
+            readTime:
+                type: text
+                label: Read time
+            category:
+                type: text
+                label: Category
+        default:
+            - title: "Stop scoring resumes out of ten"
+              excerpt: "A ten-point scale hides the one question that matters. We replaced it with three yes-or-no checks and hiring managers agreed with each other 84% of the time."
+              url: "/blog/stop-scoring-resumes"
+              date: "Sep 15, 2026"
+              readTime: "6 min"
+              category: "Interviews"
+            - title: "A scorecard that survives a second interviewer"
+              excerpt: "The same four attributes, defined in a sentence each, so two people in two cities write down the same thing."
+              url: "/blog/scorecard-second-interviewer"
+              date: "Sep 8, 2026"
+              readTime: "5 min"
+              category: "Hiring"
+            - title: "What 1,300 rejections taught us about the rejection email"
+              excerpt: "Send it within 48 hours, name the stage they reached, and never say the pool was strong."
+              url: "/blog/rejection-email"
+              date: "Aug 29, 2026"
+              readTime: "7 min"
+              category: "Hiring"
+            - title: "Scheduling loops across ET and PT without the reply-all"
+              excerpt: "Candidates pick from open slots that already respect every interviewer’s calendar. The thread with nine people on it is gone."
+              url: "/blog/scheduling-loops"
+              date: "Aug 20, 2026"
+              readTime: "4 min"
+              category: "Product"
+            - title: "Offer letters that go out the same afternoon"
+              excerpt: "Salary bands, start dates and equity approved once, so the offer is a button and not a week."
+              url: "/blog/same-afternoon-offers"
+              date: "Aug 12, 2026"
+              readTime: "3 min"
+              category: "Product"
+            - title: "How Ridgeway Dental hired four hygienists in 31 days"
+              excerpt: "A three-office practice in Raleigh with no recruiter and a front desk that answers the phone."
+              url: "/blog/ridgeway-dental"
+              date: "Aug 3, 2026"
+              readTime: "6 min"
+              category: "Customers"

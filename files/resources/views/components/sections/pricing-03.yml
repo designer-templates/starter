@@ -1,0 +1,97 @@
+title: Pricing — single plan spotlight
+description: A left opener and a billed-yearly switch over one bordered container; the plan and its price on the left, a recessed two-column grid of everything included on the right
+category: pricing
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Pricing"
+    heading:
+        type: text
+        label: Heading
+        default: "One plan, and every client is included"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two short sentences under the heading. Clear to hide.
+        rows: 2
+        default: "Vellum is one flat price for the whole firm. No seats, no client caps, and no surprise line on the renewal."
+    showToggle:
+        type: toggle
+        label: Show the billed-yearly switch
+        default: "1"
+    toggleLabel:
+        type: text
+        label: Switch label
+        default: "Billed yearly"
+    savingsText:
+        type: text
+        label: Savings pill
+        description: Small pill beside the switch label. Clear to hide.
+        default: "save $91"
+    planName:
+        type: text
+        label: Plan name
+        default: "Vellum for firms"
+    planText:
+        type: textarea
+        label: Plan description
+        rows: 2
+        default: "Document requests, e-signatures, messaging and invoicing in one portal your clients sign into once."
+    price:
+        type: text
+        label: Monthly price
+        default: "$38"
+    priceYearly:
+        type: text
+        label: Yearly price
+        default: "$365"
+    periodMonthly:
+        type: text
+        label: Monthly period text
+        default: "per month"
+    periodYearly:
+        type: text
+        label: Yearly period text
+        default: "per year"
+    note:
+        type: text
+        label: Note under the monthly price
+        default: "Billed monthly. Cancel from the portal any time."
+    noteYearly:
+        type: text
+        label: Note under the yearly price
+        default: "That’s $30.42 a month, paid once a year."
+    ctaText:
+        type: text
+        label: Button text
+        default: "Start a 30-day trial"
+    ctaLink:
+        type: url
+        label: Button link
+        default: "#"
+    includedLabel:
+        type: text
+        label: Label above the feature grid
+        default: "Everything included"
+    included:
+        type: repeater
+        label: Included features
+        add_button_label: "Add feature"
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Feature
+                default: "Included in the plan"
+        default:
+            - title: "Unlimited clients and staff"
+            - title: "Secure document requests"
+            - title: "E-signed engagement letters"
+            - title: "Messaging with read receipts"
+            - title: "Invoices with card and ACH"
+            - title: "Deadline reminders by text"
+            - title: "Your domain and firm branding"
+            - title: "Phone support, 8 AM to 8 PM ET"

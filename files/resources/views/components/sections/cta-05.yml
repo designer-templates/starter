@@ -1,0 +1,63 @@
+title: CTA — team
+description: Five overlapping portraits over a centered heading, one line, two buttons and a small note
+category: cta
+fields:
+    people:
+        type: repeater
+        label: People
+        add_button_label: "Add person"
+        item_label: name
+        sub_fields:
+            image:
+                type: image
+                label: Portrait
+            name:
+                type: text
+                label: Name
+        default:
+            - image: "https://assets.ui.sh/avatars/3.webp?size=160"
+              name: "Morgan Alvarez"
+            - image: "https://assets.ui.sh/avatars/7.webp?size=160"
+              name: "Riley Chen"
+            - image: "https://assets.ui.sh/avatars/11.webp?size=160"
+              name: "Jordan Okafor"
+            - image: "https://assets.ui.sh/avatars/2.webp?size=160"
+              name: "Sage Patel"
+            - image: "https://assets.ui.sh/avatars/14.webp?size=160"
+              name: "Parker Hayes"
+    heading:
+        type: text
+        label: Heading
+        default: "Join the 1,400 shops on Rill"
+        required: true
+    text:
+        type: textarea
+        label: Supporting text
+        description: One line under the heading. Clear to hide.
+        rows: 2
+        default: "The week’s schedule, swaps and payroll hours in one place. Most owners publish their first week in about 40 minutes."
+    primaryText:
+        type: text
+        label: Primary button text
+        default: "Start free"
+    primaryUrl:
+        type: url
+        label: Primary button link
+        default: "/signup"
+    showSecondary:
+        type: toggle
+        label: Show secondary button
+        default: "1"
+    secondaryText:
+        type: text
+        label: Secondary button text
+        default: "See pricing"
+    secondaryUrl:
+        type: url
+        label: Secondary button link
+        default: "/pricing"
+    note:
+        type: text
+        label: Note
+        description: Small line under the buttons. Clear to hide.
+        default: "No card. Cancel in one click."

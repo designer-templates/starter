@@ -1,0 +1,90 @@
+title: Team — four-up grid
+description: A centered opener over a four-column grid of square portraits with a name, role and one-line bio
+category: team
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "The team"
+    heading:
+        type: text
+        label: Heading
+        default: "The people behind Ridgeline"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two sentences under the heading. Clear to hide.
+        rows: 3
+        default: "Eight of us across six cities. Most of us have closed out a register at 1:00 AM, which is why the books now close themselves."
+    members:
+        type: repeater
+        label: People
+        source: "collections.team"
+        add_button_label: "Add person"
+        item_label: name
+        sub_fields:
+            image:
+                type: image
+                label: Portrait
+                default: "https://assets.ui.sh/avatars/1.webp?size=160"
+            name:
+                type: text
+                label: Name
+                default: "A name"
+            role:
+                type: text
+                label: Role
+                default: "Role"
+            bio:
+                type: textarea
+                label: Bio
+                description: One line about the person.
+                rows: 2
+                default: ""
+        default:
+            - image: "https://assets.ui.sh/avatars/1.webp?size=160"
+              name: "Avery Nakamura"
+              role: "Co-founder and CEO"
+              bio: "Ran the books for a four-location taqueria group in Austin before starting Ridgeline."
+            - image: "https://assets.ui.sh/avatars/2.webp?size=160"
+              name: "Jordan Okafor"
+              role: "Co-founder and CTO"
+              bio: "Built the ledger engine and still reviews every reconciliation rule by hand."
+            - image: "https://assets.ui.sh/avatars/3.webp?size=160"
+              name: "Riley Chen"
+              role: "Head of Design"
+              bio: "Designs the month-end close so a manager can finish it between lunch and dinner."
+            - image: "https://assets.ui.sh/avatars/4.webp?size=160"
+              name: "Sam Alvarez"
+              role: "Engineering"
+              bio: "Owns the bank feeds: 2,300 institutions, one import every Monday at 6:00 AM ET."
+            - image: "https://assets.ui.sh/avatars/5.webp?size=160"
+              name: "Morgan Hayes"
+              role: "Customer success"
+              bio: "First call for the 412 restaurants on Ridgeline, and answers inside the hour."
+            - image: "https://assets.ui.sh/avatars/6.webp?size=160"
+              name: "Quinn Patel"
+              role: "Engineering"
+              bio: "Payroll integrations, tip pooling and the reports accountants keep asking for."
+            - image: "https://assets.ui.sh/avatars/7.webp?size=160"
+              name: "Reese Brooks"
+              role: "Sales"
+              bio: "Talks to owners in Raleigh, Nashville and Atlanta about the line items they dread."
+            - image: "https://assets.ui.sh/avatars/8.webp?size=160"
+              name: "Casey Ellis"
+              role: "Operations"
+              bio: "Keeps the company running from Boise, including its own books, obviously."
+    showLink:
+        type: toggle
+        label: Show link under the grid
+        default: "1"
+    linkText:
+        type: text
+        label: Link text
+        default: "See the 4 open roles"
+    linkUrl:
+        type: url
+        label: Link URL
+        default: "/careers"

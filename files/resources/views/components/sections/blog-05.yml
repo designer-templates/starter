@@ -1,0 +1,154 @@
+title: Horizontal cards with sidebar
+description: A category list and a small newsletter form on the left, stacked horizontal post cards on the right
+category: blog
+fields:
+    heading:
+        type: text
+        label: Heading
+        required: true
+        default: "The Rafter blog"
+    intro:
+        type: textarea
+        label: Intro
+        rows: 2
+        default: "Support, firmware and the small decisions that keep a hardware company’s inbox quiet."
+    categoriesLabel:
+        type: text
+        label: Categories label
+        default: "Topics"
+    categories:
+        type: repeater
+        label: Categories
+        add_button_label: Add category
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Label
+            url:
+                type: url
+                label: Link
+            current:
+                type: select
+                label: Selected
+                options:
+                    "no": "No"
+                    "yes": "Yes"
+        default:
+            - text: "All posts"
+              url: "/blog"
+              current: "yes"
+            - text: "Product"
+              url: "/blog/product"
+              current: "no"
+            - text: "Support"
+              url: "/blog/support"
+              current: "no"
+            - text: "Engineering"
+              url: "/blog/engineering"
+              current: "no"
+            - text: "Customers"
+              url: "/blog/customers"
+              current: "no"
+    newsletterHeading:
+        type: text
+        label: Newsletter heading
+        default: "One email a month"
+    newsletterText:
+        type: textarea
+        label: Newsletter text
+        rows: 2
+        default: "The posts, the release notes and nothing else. 3,200 support leads read it."
+    formAction:
+        type: url
+        label: Form action URL
+        default: "/subscribe"
+    emailLabel:
+        type: text
+        label: Email field label
+        default: "Work email"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Subscribe"
+    posts:
+        type: repeater
+        label: Posts
+        source: collections.posts
+        add_button_label: Add post
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Title
+            excerpt:
+                type: textarea
+                label: Excerpt
+                rows: 3
+            image:
+                type: image
+                label: Cover image
+            url:
+                type: url
+                label: Link
+            date:
+                type: text
+                label: Date
+            readTime:
+                type: text
+                label: Read time
+            category:
+                type: text
+                label: Category
+            author:
+                type: text
+                label: Author
+            avatar:
+                type: image
+                label: Author photo
+        default:
+            - title: "The RMA that never needed a ticket"
+              excerpt: "When a serial number arrives with the first message, Rafter pulls the warranty, the firmware version and the last three conversations before an agent opens it."
+              image: "/images/blocks/cover-02.jpg"
+              url: "/blog/rma-without-a-ticket"
+              date: "Sep 17, 2026"
+              readTime: "5 min"
+              category: "Product"
+              author: "Emery Rivera"
+              avatar: "https://assets.ui.sh/avatars/6.webp?size=160"
+            - title: "Serial numbers as the first field, not the last"
+              excerpt: "Asking for it up front cut the average back-and-forth from 4.1 replies to 1.8 across our customers."
+              image: "/images/blocks/cover-04.jpg"
+              url: "/blog/serial-number-first"
+              date: "Sep 10, 2026"
+              readTime: "4 min"
+              category: "Support"
+              author: "Kai Patel"
+              avatar: "https://assets.ui.sh/avatars/10.webp?size=160"
+            - title: "How Bluefin Audio answers 92% of tickets in one reply"
+              excerpt: "A 14-person team in Portland, 2,600 conversations a month, and a knowledge base that is actually read."
+              image: "/images/blocks/workspace-02.jpg"
+              url: "/blog/bluefin-audio"
+              date: "Sep 3, 2026"
+              readTime: "6 min"
+              category: "Customers"
+              author: "Rowan Ellis"
+              avatar: "https://assets.ui.sh/avatars/13.webp?size=160"
+            - title: "Firmware questions belong next to the device, not in a thread"
+              excerpt: "Why we moved release notes into the device record and what changed in the first month."
+              image: "/images/blocks/cover-05.jpg"
+              url: "/blog/firmware-next-to-device"
+              date: "Aug 26, 2026"
+              readTime: "7 min"
+              category: "Engineering"
+              author: "Sage Nakamura"
+              avatar: "https://assets.ui.sh/avatars/1.webp?size=160"
+            - title: "A quieter inbox: the rules we shipped in August"
+              excerpt: "Auto-merge for duplicate reports, a snooze that respects Pacific time, and a way to hush the shipping notifications."
+              image: "/images/blocks/workspace-03.jpg"
+              url: "/blog/quieter-inbox-august"
+              date: "Aug 19, 2026"
+              readTime: "3 min"
+              category: "Product"
+              author: "Emery Rivera"
+              avatar: "https://assets.ui.sh/avatars/6.webp?size=160"

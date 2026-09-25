@@ -1,0 +1,78 @@
+title: Testimonials — scrolling row
+description: A centred opener over a full-width row of quote cards that drifts slowly, fades at the edges and pauses on hover
+category: testimonials
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Customers"
+    heading:
+        type: text
+        label: Heading
+        default: "Shops that count on Ferrule"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One line under the heading. Clear to hide.
+        rows: 2
+        default: "1,140 independent bike shops, from one-bench repair rooms to three-store chains."
+    testimonials:
+        type: repeater
+        label: Quotes
+        source: "collections.testimonials"
+        add_button_label: "Add quote"
+        item_label: name
+        description: Short quotes, twenty words or fewer, so the cards stay one height. Eight or more make a full loop.
+        sub_fields:
+            quote:
+                type: textarea
+                label: Quote
+                rows: 2
+                default: "A short quote about the product."
+            name:
+                type: text
+                label: Name
+                default: "A name"
+            role:
+                type: text
+                label: Role
+                default: "Role, Company"
+            avatar:
+                type: image
+                label: Avatar
+                default: "https://assets.ui.sh/avatars/1.webp?size=160"
+        default:
+            - quote: "Counted 4,300 SKUs in a weekend with the scanner. The old spreadsheet took a month."
+              name: "Jamie Rivera"
+              role: "Owner, Paddock Cycles"
+              avatar: "https://assets.ui.sh/avatars/2.webp?size=160"
+            - quote: "Special orders stopped falling through the cracks. Every one has a status the customer can see."
+              name: "Alex Chen"
+              role: "Service manager, Tamarack & Spoke"
+              avatar: "https://assets.ui.sh/avatars/4.webp?size=160"
+            - quote: "Ferrule flags a tire we sell 30 of a month before we run out. Reorders write themselves."
+              name: "Morgan Brooks"
+              role: "Co-owner, Rook Bikes"
+              avatar: "https://assets.ui.sh/avatars/6.webp?size=160"
+            - quote: "Work orders, parts, and the register in one tab. Our Saturday line moves twice as fast."
+              name: "Casey Okafor"
+              role: "Shop lead, Tenor Cyclery"
+              avatar: "https://assets.ui.sh/avatars/8.webp?size=160"
+            - quote: "Three stores, one stock count. I can see the Boise inventory from the Tucson bench."
+              name: "Parker Hayes"
+              role: "General manager, Foundry Bike Co."
+              avatar: "https://assets.ui.sh/avatars/10.webp?size=160"
+            - quote: "Moved 11 years of history over in an afternoon. Nothing was lost, not one serial number."
+              name: "Riley Patel"
+              role: "Owner, Wheelhouse"
+              avatar: "https://assets.ui.sh/avatars/12.webp?size=160"
+            - quote: "The margin report told us to stop stocking 2 brands. Best decision we made last year."
+              name: "Sage Kim"
+              role: "Owner, Crank Works"
+              avatar: "https://assets.ui.sh/avatars/14.webp?size=160"
+            - quote: "Support picked up on the second ring and fixed it while I watched."
+              name: "Drew Alvarez"
+              role: "Buyer, Pannier Supply"
+              avatar: "https://assets.ui.sh/avatars/16.webp?size=160"

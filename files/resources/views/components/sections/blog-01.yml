@@ -1,0 +1,107 @@
+title: Featured post and list
+description: One featured post with its cover on the left, four more as a hairline-divided list on the right
+category: blog
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "Blog"
+    heading:
+        type: text
+        label: Heading
+        required: true
+        default: "Writing on pay, tips and the back office"
+    intro:
+        type: textarea
+        label: Intro
+        rows: 2
+        default: "What the Outset team learns running payroll for 1,140 restaurants, written down before we forget it."
+    linkText:
+        type: text
+        label: Link text
+        default: "View all posts"
+    linkUrl:
+        type: url
+        label: Link URL
+        default: "/blog"
+    posts:
+        type: repeater
+        label: Posts
+        source: collections.posts
+        add_button_label: Add post
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Title
+            excerpt:
+                type: textarea
+                label: Excerpt
+                rows: 3
+            image:
+                type: image
+                label: Cover image
+            url:
+                type: url
+                label: Link
+            date:
+                type: text
+                label: Date
+            readTime:
+                type: text
+                label: Read time
+            category:
+                type: text
+                label: Category
+            author:
+                type: text
+                label: Author
+            avatar:
+                type: image
+                label: Author photo
+        default:
+            - title: "Tip pooling, explained for the people doing the pooling"
+              excerpt: "Every state draws the line somewhere different between who can share and who cannot. Here is the version we hand to a new manager on day one, with the three mistakes we see most."
+              image: "/images/blocks/cover-01.jpg"
+              url: "/blog/tip-pooling-explained"
+              date: "Sep 12, 2026"
+              readTime: "7 min"
+              category: "Operations"
+              author: "Jordan Rivera"
+              avatar: "https://assets.ui.sh/avatars/4.webp?size=160"
+            - title: "What changed in Colorado overtime rules this fall"
+              excerpt: "The daily threshold moved and the meal-break credit went away. What it means for a 28-person kitchen."
+              image: "/images/blocks/cover-02.jpg"
+              url: "/blog/colorado-overtime-fall"
+              date: "Sep 4, 2026"
+              readTime: "5 min"
+              category: "Compliance"
+              author: "Morgan Chen"
+              avatar: "https://assets.ui.sh/avatars/7.webp?size=160"
+            - title: "How Pearl Street Diner cut payroll day to 40 minutes"
+              excerpt: "Two locations, 61 people, one owner who used to lose every other Monday to a spreadsheet."
+              image: "/images/blocks/cover-03.jpg"
+              url: "/blog/pearl-street-diner"
+              date: "Aug 27, 2026"
+              readTime: "6 min"
+              category: "Customers"
+              author: "Avery Okafor"
+              avatar: "https://assets.ui.sh/avatars/2.webp?size=160"
+            - title: "The case for a mid-week pay run"
+              excerpt: "Tuesday deposits clear before the weekend rush, and the overtime math is already settled."
+              image: "/images/blocks/cover-04.jpg"
+              url: "/blog/mid-week-pay-run"
+              date: "Aug 19, 2026"
+              readTime: "4 min"
+              category: "Product"
+              author: "Reese Patel"
+              avatar: "https://assets.ui.sh/avatars/9.webp?size=160"
+            - title: "Onboarding a line cook in nine fields, not thirty"
+              excerpt: "We removed every question the I-9 already answers and the form now takes under four minutes on a phone."
+              image: "/images/blocks/cover-05.jpg"
+              url: "/blog/onboarding-nine-fields"
+              date: "Aug 11, 2026"
+              readTime: "5 min"
+              category: "Product"
+              author: "Jamie Brooks"
+              avatar: "https://assets.ui.sh/avatars/12.webp?size=160"

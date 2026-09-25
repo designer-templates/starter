@@ -1,0 +1,56 @@
+title: Features — tabbed previews
+description: Centred opener over pill tabs; each tab shows a line of copy and a product screenshot on a raised stage
+category: features
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Month-end close"
+    heading:
+        type: text
+        label: Heading
+        default: "Close the books by the third"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        rows: 3
+        default: "Hearth pulls every receipt, matches it to the bank feed, and writes the audit trail as you go — so the close is a report, not a hunt."
+    tabs:
+        type: repeater
+        label: Tabs
+        description: Each row is one tab and its panel, with its own screenshot (16:9 works best).
+        add_button_label: "Add tab"
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Tab label
+                default: "Tab"
+            description:
+                type: textarea
+                label: Panel copy
+                rows: 2
+                default: "One line on what this view shows."
+            image:
+                type: image
+                label: Image
+                default: "/images/blocks/dashboard-report.jpg"
+            imageAlt:
+                type: text
+                label: Image alt text
+                default: "A screenshot of this view"
+        default:
+            - title: "Report"
+              description: "The profit and loss updates as receipts are matched. What you see on the 3rd is what the accountant gets."
+              image: "/images/blocks/dashboard-report.jpg"
+              imageAlt: "The September profit and loss, 94% matched"
+            - title: "Inbox"
+              description: "Receipts arrive by email, photo, or card feed and wait in one queue, each with a suggested category."
+              image: "/images/blocks/dashboard-receipts.jpg"
+              imageAlt: "The receipts queue: five waiting, each with a suggested category"
+            - title: "Audit log"
+              description: "Every match, split, and override is stamped with who, when, and why — and exports in one file for the auditor."
+              image: "/images/blocks/dashboard-audit.jpg"
+              imageAlt: "The September audit log, one stamped line per change"

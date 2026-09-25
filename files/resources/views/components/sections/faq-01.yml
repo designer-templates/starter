@@ -1,0 +1,58 @@
+title: FAQ — two columns
+description: Heading and an email link on the left, a hairline accordion on the right
+category: faq
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Questions"
+    heading:
+        type: text
+        label: Heading
+        default: "What studios ask before they switch"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two lines under the heading. Clear to hide.
+        rows: 2
+        default: "Straight answers on plans, billing, moving your books over, and how Halyard keeps them safe."
+    linkText:
+        type: text
+        label: Link text
+        description: Arrow link under the intro. Clear to hide.
+        default: "Still stuck? Email us"
+    linkUrl:
+        type: url
+        label: Link URL
+        default: "mailto:support@halyard.co"
+    faqs:
+        type: repeater
+        label: Questions
+        source: "collections.faqs"
+        add_button_label: "Add question"
+        item_label: question
+        sub_fields:
+            question:
+                type: text
+                label: Question
+                default: "A question"
+            answer:
+                type: textarea
+                label: Answer
+                rows: 3
+                default: "A clear, direct answer."
+        default:
+            - question: "Which plan fits a studio of eight?"
+              answer: "Studio covers up to 10 people at $89 a month and includes project budgets and time entry. Practice starts at 11 seats and adds multi-entity books and a quarterly review with a Halyard accountant."
+            - question: "How does billing work?"
+              answer: "Plans bill monthly on the day you started, and yearly billing saves two months. A seat added mid-cycle is prorated to the day on your next invoice."
+            - question: "Can we move our existing books over?"
+              answer: "Yes. Export a trial balance and your open invoices from the ledger you use today, upload them, and Halyard maps the accounts in about 20 minutes with a review step before anything posts."
+            - question: "Where is our data stored, and who can see it?"
+              answer: "Books live in encrypted storage in a US data center, with access set by role down to a single project. Halyard holds a SOC 2 Type II report and a full audit log ships with every plan."
+            - question: "Can our outside CPA log in?"
+              answer: "Every plan includes unlimited accountant seats at no charge. Your CPA gets read access, a year-end package, and can leave a note on any entry."
+            - question: "When is support available?"
+              answer: "Chat and email run 8:00 AM to 7:00 PM ET on weekdays, with a reply in under an hour during those hours. Practice plans add a phone line and a named onboarding lead for the first 60 days."

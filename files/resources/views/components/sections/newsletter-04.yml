@@ -1,0 +1,57 @@
+title: Newsletter — with a preview
+description: Heading, a line and the form on the left; a screenshot of one issue, framed as a card, on the right
+category: newsletter
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "The Dovetail letter"
+    heading:
+        type: text
+        label: Heading
+        default: "Read one before you subscribe"
+        required: true
+    text:
+        type: textarea
+        label: Text
+        description: One or two lines under the heading. Clear to hide.
+        rows: 2
+        default: "Every other Thursday: what we learned from 212,000 dental appointments, and what changed in Dovetail because of it."
+    action:
+        type: url
+        label: Form action
+        description: Where the form posts. Point it at your list.
+        default: "#"
+    inputLabel:
+        type: text
+        label: Input label
+        description: Read by screen readers.
+        default: "Email address"
+    inputPlaceholder:
+        type: text
+        label: Input hint
+        default: "you@yourpractice.com"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Subscribe"
+    finePrint:
+        type: text
+        label: Fine print
+        description: Small line under the form. Clear to hide.
+        default: "Sent to 2,960 practices. Unsubscribe in one click."
+    image:
+        type: image
+        label: Issue image
+        description: A capture of one issue, framed as a card. 5:4 works best.
+        default: "/images/blocks/email-preview.jpg"
+    imageAlt:
+        type: text
+        label: Image alt text
+        default: "Issue 38 of the Dovetail letter, as it lands in the inbox"
+    toast:
+        type: text
+        label: Overlapping badge
+        description: The small badge over the card's corner. Clear to hide.
+        default: "Delivered to 2,960 inboxes"

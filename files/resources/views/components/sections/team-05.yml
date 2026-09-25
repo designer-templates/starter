@@ -1,0 +1,131 @@
+title: Team — bordered cards
+description: Three-up cards with a portrait, name, role, bio and two small links, plus a join-us card at the end
+category: team
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Who we are"
+    heading:
+        type: text
+        label: Heading
+        default: "Nine people who hate no-shows"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two sentences under the heading. Clear to hide.
+        rows: 3
+        default: "Oriole sends 1.2 million appointment reminders a month for 640 dental offices. These are the people who pick up when one of them calls."
+    members:
+        type: repeater
+        label: People
+        source: "collections.team"
+        add_button_label: "Add person"
+        item_label: name
+        sub_fields:
+            image:
+                type: image
+                label: Portrait
+                default: "https://assets.ui.sh/avatars/14.webp?size=160"
+            name:
+                type: text
+                label: Name
+                default: "A name"
+            role:
+                type: text
+                label: Role
+                default: "Role"
+            bio:
+                type: textarea
+                label: Bio
+                description: One line about the person.
+                rows: 2
+                default: ""
+            email:
+                type: text
+                label: Email address
+                default: ""
+            linkUrl:
+                type: url
+                label: Profile link
+                default: "#"
+        default:
+            - image: "https://assets.ui.sh/avatars/14.webp?size=160"
+              name: "Morgan Rivera"
+              role: "Co-founder and CEO"
+              bio: "Ran the front desk at a three-chair practice for six years before Oriole."
+              email: "morgan@oriole.team"
+              linkUrl: "/team/morgan-rivera"
+            - image: "https://assets.ui.sh/avatars/6.webp?size=160"
+              name: "Drew Ellis"
+              role: "Co-founder and CTO"
+              bio: "Wrote the first scheduler in a weekend; it now sends 40,000 texts an hour."
+              email: "drew@oriole.team"
+              linkUrl: "/team/drew-ellis"
+            - image: "https://assets.ui.sh/avatars/9.webp?size=160"
+              name: "Skyler Chen"
+              role: "Head of Design"
+              bio: "Designs the confirmation flow patients finish in under nine seconds."
+              email: "skyler@oriole.team"
+              linkUrl: "/team/skyler-chen"
+            - image: "https://assets.ui.sh/avatars/2.webp?size=160"
+              name: "Avery Brooks"
+              role: "Engineering"
+              bio: "Owns the practice-management integrations, all 11 of them."
+              email: "avery@oriole.team"
+              linkUrl: "/team/avery-brooks"
+            - image: "https://assets.ui.sh/avatars/12.webp?size=160"
+              name: "Rowan Patel"
+              role: "Engineering"
+              bio: "Deliverability: the reason reminders land in inboxes and not in spam."
+              email: "rowan@oriole.team"
+              linkUrl: "/team/rowan-patel"
+            - image: "https://assets.ui.sh/avatars/4.webp?size=160"
+              name: "Taylor Okafor"
+              role: "Customer success"
+              bio: "Onboards every new office personally, usually in under a day."
+              email: "taylor@oriole.team"
+              linkUrl: "/team/taylor-okafor"
+            - image: "https://assets.ui.sh/avatars/16.webp?size=160"
+              name: "Kai Hayes"
+              role: "Sales"
+              bio: "Talks to office managers from Raleigh to Boise about their no-show rate."
+              email: "kai@oriole.team"
+              linkUrl: "/team/kai-hayes"
+            - image: "https://assets.ui.sh/avatars/8.webp?size=160"
+              name: "Jamie Alvarez"
+              role: "Operations"
+              bio: "Runs billing, compliance and the Columbus office."
+              email: "jamie@oriole.team"
+              linkUrl: "/team/jamie-alvarez"
+    emailLabel:
+        type: text
+        label: Email link text
+        default: "Email"
+    profileLabel:
+        type: text
+        label: Profile link text
+        default: "Profile"
+    showJoin:
+        type: toggle
+        label: Show join-us card
+        default: "1"
+    joinHeading:
+        type: text
+        label: Join card heading
+        default: "Join us"
+    joinText:
+        type: textarea
+        label: Join card text
+        rows: 3
+        default: "Two open roles in Columbus and one remote. We reply to every application within a week."
+    joinCtaText:
+        type: text
+        label: Join card button text
+        default: "See open roles"
+    joinCtaLink:
+        type: url
+        label: Join card button link
+        default: "/careers"

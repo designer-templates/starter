@@ -1,0 +1,44 @@
+title: About — mission panel and stats
+description: A soft well holding an eyebrow, a large statement and one paragraph; beneath it a row of four figures separated by hairlines
+category: content
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the statement. Clear to hide.
+        default: "Our mission"
+    statement:
+        type: text
+        label: Statement
+        default: "The house call that shows up on time."
+        required: true
+    paragraph:
+        type: textarea
+        label: Paragraph
+        rows: 5
+        default: "I spent eight years as a mobile vet in Raleigh, and the hardest part was never the medicine. It was the 4:15 PM call to say I was running an hour late again. In 2019 a friend in Boise who builds routing software rode along for a week, 22 visits, and we sketched Camber on the drive back. It plans the day around traffic, the size of the animal and the appointments that always run long."
+        required: true
+    figures:
+        type: repeater
+        label: Figures
+        source: "collections.stats"
+        add_button_label: "Add figure"
+        item_label: label
+        sub_fields:
+            value:
+                type: text
+                label: Value
+                default: "41,200"
+            label:
+                type: text
+                label: Label
+                default: "House calls scheduled a month"
+        default:
+            - value: "41,200"
+              label: "House calls scheduled a month"
+            - value: "96.3%"
+              label: "Arrive inside the promised window"
+            - value: "2019"
+              label: "Founded in Raleigh"
+            - value: "18"
+              label: "People across two cities"

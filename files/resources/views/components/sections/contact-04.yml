@@ -1,0 +1,99 @@
+title: Contact — demo booking
+description: A short demo form beside a customer quote and three wordmarks
+category: contact
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "See it on your own schedule"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: Line under the heading. Clear to hide.
+        rows: 2
+        default: "A 25-minute walkthrough of Cobble on a live account — your yard’s SKUs if you send them ahead, ours if not."
+    action:
+        type: url
+        label: Form action URL
+        description: Where the form posts. Wire it to your form handler.
+        default: "#"
+    fieldEmail:
+        type: text
+        label: Email field label
+        default: "Work email"
+    fieldSize:
+        type: text
+        label: Company size field label
+        default: "Company size"
+    sizes:
+        type: repeater
+        label: Company size options
+        add_button_label: "Add option"
+        item_label: label
+        sub_fields:
+            label:
+                type: text
+                label: Option
+                default: "1–10 people"
+        default:
+            - label: "1–10 people"
+            - label: "11–50 people"
+            - label: "51–200 people"
+            - label: "201+ people"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Book a demo"
+    finePrint:
+        type: text
+        label: Fine print
+        description: Line under the button. Clear to hide.
+        default: "No slides, no pressure. A calendar link arrives by email."
+    quote:
+        type: textarea
+        label: Customer quote
+        description: Written without quotation marks — the block draws them.
+        rows: 3
+        default: "We stopped counting the yard by hand in the first week. The demo was the real product, on our SKUs, and it took 25 minutes."
+    name:
+        type: text
+        label: Customer name
+        default: "Morgan Okafor"
+    role:
+        type: text
+        label: Role and company
+        default: "Operations lead, Timberline Supply"
+    avatar:
+        type: image
+        label: Customer photo
+        default: "https://assets.ui.sh/avatars/7.webp?size=160"
+    logosLabel:
+        type: text
+        label: Wordmarks label
+        description: Line above the wordmarks. Clear to hide.
+        default: "Also running on Cobble"
+    logos:
+        type: repeater
+        label: Wordmarks
+        source: "collections.logos"
+        add_button_label: "Add wordmark"
+        item_label: name
+        description: The mark is inline SVG — a 24×24 viewBox filled with currentColor.
+        sub_fields:
+            name:
+                type: text
+                label: Name
+                default: "A customer"
+            icon:
+                type: textarea
+                label: Mark (inline SVG)
+                rows: 3
+                default: "<svg viewBox='0 0 24 24' class='size-5' fill='currentColor' aria-hidden='true'><path d='M12 2 22 12 12 22 2 12Z'/></svg>"
+        default:
+            - name: "Pine & Post"
+              icon: "<svg viewBox='0 0 24 24' class='size-5' fill='currentColor' aria-hidden='true'><path d='M12 2 22 12 12 22 2 12Z'/></svg>"
+            - name: "Redlane Yards"
+              icon: "<svg viewBox='0 0 24 24' class='size-5' fill='currentColor' aria-hidden='true'><path fill-rule='evenodd' d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z'/></svg>"
+            - name: "Haverly Timber"
+              icon: "<svg viewBox='0 0 24 24' class='size-5' fill='currentColor' aria-hidden='true'><path d='M12 2 20.66 7v10L12 22 3.34 17V7Z'/></svg>"

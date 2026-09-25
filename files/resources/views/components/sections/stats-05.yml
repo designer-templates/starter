@@ -1,0 +1,75 @@
+title: Stats — centered three
+description: A centered heading over three figures with bold labels and two-line explanations, divided by hairlines, with a row of source wordmarks underneath
+category: stats
+fields:
+    heading:
+        type: text
+        label: Heading
+        required: true
+        default: "Interviews on the calendar the same day"
+    intro:
+        type: textarea
+        label: Intro
+        description: One line under the heading. Clear to hide.
+        rows: 2
+        default: "Foxhollow finds a slot across every panelist’s calendar and holds it before the candidate closes the tab."
+    figures:
+        type: repeater
+        label: Figures
+        source: "collections.stats"
+        add_button_label: "Add figure"
+        item_label: label
+        description: Three figures fill the row. The note is a two-line explanation under the bold label.
+        sub_fields:
+            value:
+                type: text
+                label: Value
+                default: "11 days"
+            label:
+                type: text
+                label: Label
+                default: "Shorter time to hire"
+            note:
+                type: textarea
+                label: Explanation
+                rows: 2
+                default: "From application to signed offer, down from 34 days a year earlier."
+        default:
+            - value: "11 days"
+              label: "Shorter time to hire"
+              note: "From application to signed offer, down from 34 days a year earlier."
+            - value: "4.9"
+              label: "Candidate rating of the process"
+              note: "From 12,318 surveys sent after the final round so far in 2026."
+            - value: "63%"
+              label: "Fewer reschedules"
+              note: "Booked only where every panelist is free, so the first slot holds."
+    sourceText:
+        type: text
+        label: Source line
+        description: The short line before the wordmarks. Clear to hide.
+        default: "As measured across"
+    sources:
+        type: repeater
+        label: Source wordmarks
+        source: "collections.logos"
+        add_button_label: "Add wordmark"
+        item_label: name
+        description: Three small wordmarks name where the figures come from. Each mark is inline SVG on currentColor.
+        sub_fields:
+            name:
+                type: text
+                label: Name
+                default: "Greyhaven"
+            icon:
+                type: textarea
+                label: Mark (inline SVG)
+                rows: 3
+                default: "<svg viewBox='0 0 24 24' class='size-4 fill-current' aria-hidden='true'><path d='M12 2l9 5v10l-9 5-9-5V7l9-5zm0 2.3L5 8.2v7.6l7 3.9 7-3.9V8.2l-7-3.9z'/></svg>"
+        default:
+            - name: "Greyhaven"
+              icon: "<svg viewBox='0 0 24 24' class='size-4 fill-current' aria-hidden='true'><path d='M12 2l9 5v10l-9 5-9-5V7l9-5zm0 2.3L5 8.2v7.6l7 3.9 7-3.9V8.2l-7-3.9z'/></svg>"
+            - name: "Bellhop"
+              icon: "<svg viewBox='0 0 24 24' class='size-4 fill-current' aria-hidden='true'><path d='M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 2.2a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z'/></svg>"
+            - name: "Coldwater"
+              icon: "<svg viewBox='0 0 24 24' class='size-4 fill-current' aria-hidden='true'><path d='M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z'/></svg>"

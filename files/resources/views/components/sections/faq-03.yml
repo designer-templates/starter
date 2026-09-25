@@ -1,0 +1,49 @@
+title: FAQ — numbered grid
+description: Centered opener over two columns of numbered, open answers
+category: faq
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Questions"
+    heading:
+        type: text
+        label: Heading
+        default: "Payroll for crews, answered"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two lines under the heading. Clear to hide.
+        rows: 2
+        default: "Six things landscaping companies ask before they run a first payroll on Quarry."
+    faqs:
+        type: repeater
+        label: Questions
+        source: "collections.faqs"
+        add_button_label: "Add question"
+        item_label: question
+        sub_fields:
+            question:
+                type: text
+                label: Question
+                default: "A question"
+            answer:
+                type: textarea
+                label: Answer
+                rows: 3
+                default: "A clear, direct answer."
+        default:
+            - question: "What does Quarry cost?"
+              answer: "Quarry is $39 a month plus $6 per worker paid. There are no setup fees, and a crew that only works April through November pays nothing in the months it is off."
+            - question: "How does the monthly bill work?"
+              answer: "You are billed on the first of the month for the workers paid in the month before. The invoice lists each person by name so your bookkeeper can match it to the ledger."
+            - question: "Can we bring over year-to-date figures?"
+              answer: "Yes. Upload the last payroll register from your current provider and Quarry loads gross pay, withholdings, and PTO balances for every worker. Nothing runs until you approve the totals."
+            - question: "Does it handle prevailing-wage jobs?"
+              answer: "Assign a rate to a job and hours logged against it pay at that rate. The certified payroll report is generated with each run, ready to file."
+            - question: "How is worker data protected?"
+              answer: "Social Security numbers and bank details are encrypted with keys rotated every 90 days, and office staff never see a full account number. Quarry is SOC 2 Type II audited each year."
+            - question: "Who do we call when a check is wrong?"
+              answer: "A payroll specialist answers the phone 7:00 AM to 8:00 PM ET on weekdays, and a same-day correction is free. Off-cycle runs go out within two hours of approval."

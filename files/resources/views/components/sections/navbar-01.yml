@@ -1,0 +1,67 @@
+title: Header — classic bar
+description: Brand left, links centered with dropdown menus, Log in and one compact filled action right; a sheet under the bar on phones
+category: headers
+fields:
+    brand:
+        type: text
+        label: Brand name
+        default: "Saltbrook"
+    links:
+        type: repeater
+        label: Navigation links
+        description: "Nest links under an item to turn it into a dropdown. Stored in site.json."
+        source: site.nav_links
+        nestable: true
+        add_button_label: "Add link"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Text
+                default: "New link"
+            url:
+                type: url
+                label: Link
+                default: "/"
+            description:
+                type: text
+                label: Description
+                description: Shown under the title inside a dropdown.
+                default: ""
+        default:
+            - text: "Product"
+              url: "#"
+              children:
+                  - text: "Invoicing"
+                    url: "/product/invoicing"
+                    description: "Estimates, invoices and change orders"
+                  - text: "Payments"
+                    url: "/product/payments"
+                    description: "Card, ACH and checks, matched to the job"
+                  - text: "Reminders"
+                    url: "/product/reminders"
+                    description: "Sent on business days, never holidays"
+            - text: "Customers"
+              url: "/customers"
+            - text: "Pricing"
+              url: "/pricing"
+            - text: "Docs"
+              url: "/docs"
+    signInText:
+        type: text
+        label: Log in text
+        description: Clear to hide.
+        default: "Log in"
+    signInLink:
+        type: url
+        label: Log in link
+        default: "#"
+    ctaText:
+        type: text
+        label: Button text
+        description: Clear to hide.
+        default: "Start free"
+    ctaLink:
+        type: url
+        label: Button link
+        default: "/pricing"

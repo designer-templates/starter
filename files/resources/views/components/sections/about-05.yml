@@ -1,0 +1,55 @@
+title: About — timeline
+description: An eyebrow, heading and intro on the left, sticky on desktop; five milestones down a hairline spine on the right, each with a year, a title and one line
+category: content
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Our story"
+    heading:
+        type: text
+        label: Heading
+        default: "From four units to 28,400"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: Clear to hide.
+        rows: 4
+        default: "I bought a duplex in Columbus in 2018 and kept its books in a spreadsheet with 40 tabs. Penrose is what replaced it, one landlord at a time. Here is how it went."
+    milestones:
+        type: repeater
+        label: Milestones
+        add_button_label: "Add milestone"
+        item_label: title
+        sub_fields:
+            year:
+                type: text
+                label: Year
+                default: "2019"
+            title:
+                type: text
+                label: Title
+                default: "A ledger for four units"
+            description:
+                type: textarea
+                label: One line
+                rows: 2
+                default: "Sam and I built the first version for my own two buildings over a winter in Columbus."
+        default:
+            - year: "2019"
+              title: "A ledger for four units"
+              description: "Sam and I built the first version for my own two buildings over a winter in Columbus."
+            - year: "2020"
+              title: "Twelve landlords in a group text"
+              description: "Rent, deposits and repairs reconciled every night. Our first paying customer owned six units in Dayton."
+            - year: "2022"
+              title: "A second office in Denver"
+              description: "Jamie joined from a property management firm and opened the Denver office. 3,100 units by December."
+            - year: "2024"
+              title: "Tax season without the shoebox"
+              description: "Schedule E ready by the first week of March, for 11,600 units."
+            - year: "2026"
+              title: "28,400 units, 21 people"
+              description: "Still two offices, still one flat price, still no spreadsheet."

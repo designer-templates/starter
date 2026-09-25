@@ -1,0 +1,54 @@
+title: Hero — product first
+description: A product screenshot framed as a window comes first, with a floating Sent toast; centered beneath it an announcement pill, headline, intro, a primary button and a tour link with a play glyph
+category: heroes
+fields:
+    image:
+        type: image
+        label: Product image
+        description: Your screenshot, framed as a window. 3:2 or 16:10 works best.
+        default: "/images/blocks/dashboard-inbox.jpg"
+    imageAlt:
+        type: text
+        label: Image alt text
+        default: "The Plume shared inbox: the conversation list beside an open customer message"
+    toastText:
+        type: text
+        label: Toast text
+        description: The small card over the window's corner. Clear to hide.
+        default: "Sent · Reply to Jordan Rivera"
+    showPill:
+        type: toggle
+        label: Show announcement pill
+        default: "1"
+    pillText:
+        type: text
+        label: Announcement pill text
+        default: "New: shared drafts"
+    heading:
+        type: text
+        label: Heading
+        default: "One inbox your whole team can answer"
+        required: true
+    text:
+        type: textarea
+        label: Intro
+        rows: 3
+        default: "Plume turns support@ and hello@ into one shared inbox with assignments, private notes and a promise: every customer hears back within one business day."
+    buttonText:
+        type: text
+        label: Primary button text
+        description: Clear to hide.
+        default: "Start free"
+    buttonLink:
+        type: url
+        label: Primary button link
+        default: "/signup"
+    buttonText2:
+        type: text
+        label: Tour button text
+        description: Clear to hide.
+        default: "Watch the 2-minute tour"
+    buttonLink2:
+        type: url
+        label: Tour button link
+        default: "/tour"

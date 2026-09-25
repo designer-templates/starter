@@ -1,0 +1,87 @@
+title: Magazine lead and stack
+description: A big lead tile with the title over its cover, beside a stack of mini posts with square thumbnails
+category: blog
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        default: "Journal"
+    heading:
+        type: text
+        label: Heading
+        required: true
+        default: "Field notes from crews who plan ahead"
+    intro:
+        type: textarea
+        label: Intro
+        rows: 2
+        default: "Scheduling, weather and the business of keeping 11 trucks busy, from the team behind Almanac."
+    readText:
+        type: text
+        label: Lead link text
+        default: "Read the post"
+    posts:
+        type: repeater
+        label: Posts
+        source: collections.posts
+        add_button_label: Add post
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Title
+            excerpt:
+                type: textarea
+                label: Excerpt
+                rows: 3
+            image:
+                type: image
+                label: Cover image
+            url:
+                type: url
+                label: Link
+            date:
+                type: text
+                label: Date
+            readTime:
+                type: text
+                label: Read time
+            category:
+                type: text
+                label: Category
+        default:
+            - title: "Rain days, rescheduled before the crew leaves the yard"
+              excerpt: "Almanac watches the hourly forecast for every job on the board and moves the ones that would get rained out, then texts the customer the new slot."
+              image: "/images/blocks/cover-03.jpg"
+              url: "/blog/rain-days-rescheduled"
+              date: "Sep 16, 2026"
+              readTime: "6 min"
+              category: "Product"
+            - title: "Routing 11 crews around one Denver downpour"
+              excerpt: "A Thursday in August, hour by hour, at a company that did not lose a single job to the weather."
+              image: "/images/blocks/cover-05.jpg"
+              url: "/blog/denver-downpour"
+              date: "Sep 9, 2026"
+              readTime: "5 min"
+              category: "Customers"
+            - title: "Mow, edge, blow: the order matters more than you think"
+              excerpt: "Four minutes a lawn adds up to a fifth truck by June."
+              image: "/images/blocks/cover-01.jpg"
+              url: "/blog/mow-edge-blow"
+              date: "Sep 1, 2026"
+              readTime: "4 min"
+              category: "Field"
+            - title: "Quoting a fall cleanup from a satellite photo"
+              excerpt: "Square footage, tree cover and the driveway length, measured before anyone drives out."
+              image: "/images/blocks/cover-04.jpg"
+              url: "/blog/quote-from-satellite"
+              date: "Aug 24, 2026"
+              readTime: "7 min"
+              category: "Product"
+            - title: "Why we hire for the season in March, not May"
+              excerpt: "The crews that start early keep 23% more customers through the fall."
+              image: "/images/blocks/workspace-01.jpg"
+              url: "/blog/hire-in-march"
+              date: "Aug 15, 2026"
+              readTime: "5 min"
+              category: "Company"

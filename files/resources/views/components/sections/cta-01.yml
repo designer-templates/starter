@@ -1,0 +1,55 @@
+title: CTA — dark split band
+description: A rounded dark band with a statement and two actions on the left and a checklist on the right, over a dot grid and one glow
+category: cta
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "After-hours support"
+    heading:
+        type: text
+        label: Heading
+        default: "Wake up to an empty queue"
+        required: true
+    text:
+        type: textarea
+        label: Supporting text
+        rows: 3
+        default: "Vesper answers overnight tickets from your help center and hands the rest to a person at 8:30 AM ET. Most teams are live in one afternoon."
+    ctaText:
+        type: text
+        label: Button text
+        default: "Start free"
+    ctaLink:
+        type: url
+        label: Button link
+        default: "/pricing"
+    linkText:
+        type: text
+        label: Text link
+        description: The arrow link beside the button. Clear to hide.
+        default: "See a real handoff"
+    linkUrl:
+        type: url
+        label: Text link URL
+        default: "/how-it-works"
+    listLabel:
+        type: text
+        label: List label
+        description: Small label above the checklist. Clear to hide.
+        default: "On every plan"
+    items:
+        type: repeater
+        label: Included
+        add_button_label: "Add line"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Line
+        default:
+            - text: "Drafted from your help center, not a script"
+            - text: "Escalates to a person after two unclear turns"
+            - text: "Covers 6:00 PM to 8:30 AM in ET, CT and PT"
+            - text: "Cancel from the billing page, no email needed"

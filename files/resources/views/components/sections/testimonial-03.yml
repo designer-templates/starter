@@ -1,0 +1,65 @@
+title: Testimonials — case study
+description: One large customer quote with a link to the story beside a well of three outcome figures under the company wordmark
+category: testimonials
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the quote. Clear to hide.
+        default: "Customer story"
+    quote:
+        type: textarea
+        label: Quote
+        description: Written without quotation marks; the marks are drawn.
+        rows: 3
+        default: "We onboard a new resident in 4 minutes at the leasing desk instead of a 3-day paper chase. Keys, parking, and the package room all switch on together."
+        required: true
+    name:
+        type: text
+        label: Name
+        default: "Emery Rivera"
+    role:
+        type: text
+        label: Role
+        default: "Director of operations, Ridgely Properties"
+    avatar:
+        type: image
+        label: Portrait
+        default: "https://assets.ui.sh/avatars/8.webp?size=160"
+    company:
+        type: text
+        label: Company name
+        description: Set as a wordmark at the top of the figures.
+        default: "Ridgely Properties"
+    ctaText:
+        type: text
+        label: Link text
+        description: The arrow link under the quote. Clear to hide.
+        default: "Read the Ridgely story"
+    ctaLink:
+        type: url
+        label: Link URL
+        default: "#"
+    stats:
+        type: repeater
+        label: Outcomes
+        source: "collections.stats"
+        add_button_label: "Add outcome"
+        item_label: label
+        description: Three figures stack well. The first one counts up as it scrolls in.
+        sub_fields:
+            value:
+                type: text
+                label: Figure
+                default: "2×"
+            label:
+                type: text
+                label: Caption
+                default: "what the figure measures"
+        default:
+            - value: "1,860"
+              label: "units on Latch across 11 buildings"
+            - value: "4 min"
+              label: "to onboard a resident, down from 3 days"
+            - value: "$38,400"
+              label: "saved on rekeying in the first year"

@@ -1,0 +1,52 @@
+title: Features — numbered steps
+description: Centred opener, four numbered steps on a hairline rail, and a wide product screenshot showing the outcome
+category: features
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "How it works"
+    heading:
+        type: text
+        label: Heading
+        default: "Move your help desk in four steps"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        rows: 3
+        default: "Pebble copies tickets, contacts, and attachments between help desks with the history intact — and lets you rehearse the whole move before anyone notices."
+    steps:
+        type: repeater
+        label: Steps
+        add_button_label: "Add step"
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Title
+                default: "A step"
+            text:
+                type: textarea
+                label: Text
+                rows: 2
+                default: "One line on what happens here."
+        default:
+            - title: "Connect both desks"
+              text: "A read-only key for the source, a scoped key for the destination. Nothing is written yet."
+            - title: "Map the fields"
+              text: "Pebble matches statuses, tags, and custom fields, then shows you the 6 it could not guess."
+            - title: "Run a rehearsal"
+              text: "A full dry run on a copy. Every mismatch lands in a list you can fix before the real thing."
+            - title: "Cut over on a Sunday"
+              text: "Pick the hour. Pebble moves the backlog, replays anything that arrived mid-move, and hands you the report."
+    image:
+        type: image
+        label: Outcome image
+        description: Your screenshot, framed as a wide window under the steps. A 21:9 crop works best.
+        default: "/images/blocks/dashboard-activity.jpg"
+    imageAlt:
+        type: text
+        label: Image alt text
+        default: "The finished migration report: tickets moved, contacts matched, attachments copied, and the run log"

@@ -1,0 +1,102 @@
+title: Contact — offices
+description: A left opener over one card per office, with a live local time in each
+category: contact
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Offices"
+    heading:
+        type: text
+        label: Heading
+        default: "Three offices, one payroll team"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: Line under the heading. Clear to hide.
+        rows: 2
+        default: "Drop by any of them. Every office runs support for every customer, so the nearest one is the right one."
+    localTimeLabel:
+        type: text
+        label: Local time label
+        description: Shown before each office’s live clock.
+        default: "Local time"
+    directionsText:
+        type: text
+        label: Directions link text
+        default: "Get directions"
+    offices:
+        type: repeater
+        label: Offices
+        add_button_label: "Add office"
+        item_label: city
+        description: The time zone is an IANA name (America/Denver, America/New_York, America/Chicago, America/Los_Angeles) and drives the live clock.
+        sub_fields:
+            city:
+                type: text
+                label: City
+                default: "Denver"
+            address:
+                type: textarea
+                label: Address
+                rows: 2
+                default: "1550 Wewatta St, Suite 200\nDenver, CO 80202"
+            hours:
+                type: text
+                label: Hours
+                default: "Mon–Fri, 8:00 AM–5:00 PM MT"
+            phoneText:
+                type: text
+                label: Phone
+                default: "+1 (303) 555-0117"
+            phoneUrl:
+                type: url
+                label: Phone link
+                default: "tel:+13035550117"
+            directionsUrl:
+                type: url
+                label: Directions link
+                default: "#"
+            timezone:
+                type: text
+                label: Time zone
+                default: "America/Denver"
+        default:
+            - city: "Denver"
+              address: "1550 Wewatta St, Suite 200\nDenver, CO 80202"
+              hours: "Mon–Fri, 8:00 AM–5:00 PM MT"
+              phoneText: "+1 (303) 555-0117"
+              phoneUrl: "tel:+13035550117"
+              directionsUrl: "#"
+              timezone: "America/Denver"
+            - city: "Raleigh"
+              address: "421 Fayetteville St, Floor 11\nRaleigh, NC 27601"
+              hours: "Mon–Fri, 9:00 AM–6:00 PM ET"
+              phoneText: "+1 (919) 555-0184"
+              phoneUrl: "tel:+19195550184"
+              directionsUrl: "#"
+              timezone: "America/New_York"
+            - city: "Austin"
+              address: "600 Congress Ave, Suite 1400\nAustin, TX 78701"
+              hours: "Mon–Fri, 8:30 AM–5:30 PM CT"
+              phoneText: "+1 (512) 555-0139"
+              phoneUrl: "tel:+15125550139"
+              directionsUrl: "#"
+              timezone: "America/Chicago"
+    emailNote:
+        type: textarea
+        label: Email note
+        description: Line beside the email link under the cards.
+        rows: 2
+        default: "Not near an office? Email lands with a payroll specialist within one business day."
+    emailText:
+        type: text
+        label: Email address
+        description: Clear to hide the email row.
+        default: "hello@millbrook.app"
+    emailUrl:
+        type: url
+        label: Email link
+        default: "mailto:hello@millbrook.app"

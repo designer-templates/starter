@@ -1,0 +1,62 @@
+title: About — story columns
+description: An eyebrow, heading and text link on the left; three paragraphs of the founding story flowing through two columns on the right; a hairline row of three facts beneath
+category: content
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Our story"
+    heading:
+        type: text
+        label: Heading
+        default: "Built on a job site in Tucson"
+        required: true
+    linkText:
+        type: text
+        label: Link text
+        description: Clear to hide the link.
+        default: "Meet the team"
+    linkUrl:
+        type: url
+        label: Link URL
+        default: "/team"
+    paragraph1:
+        type: textarea
+        label: Paragraph 1
+        rows: 4
+        default: "I ran a six-person remodeling crew in Tucson for nine years. The punch list lived on a legal pad in the truck, and every Friday I spent two hours turning it into an email the homeowner could read. About half the time a photo went missing and the whole conversation started over."
+        required: true
+    paragraph2:
+        type: textarea
+        label: Paragraph 2
+        description: Clear to hide.
+        rows: 4
+        default: "Quinn was writing software for a hospital in Portland and had never set foot on a job site. In 2021 she flew down for a week, walked three houses with me, and came back with a prototype that let a crew lead mark a room done from the driveway. We had 40 crews on it by that fall."
+    paragraph3:
+        type: textarea
+        label: Paragraph 3
+        description: Clear to hide.
+        rows: 4
+        default: "Trowel now tracks 1,860 active job sites for remodelers in 31 states. The office is still next to a lumber yard, and every new hire spends their first week on a crew."
+    facts:
+        type: repeater
+        label: Facts
+        add_button_label: "Add fact"
+        item_label: label
+        sub_fields:
+            label:
+                type: text
+                label: Label
+                default: "Founded"
+            value:
+                type: text
+                label: Value
+                default: "2021"
+        default:
+            - label: "Founded"
+              value: "2021"
+            - label: "People"
+              value: "23"
+            - label: "Home"
+              value: "Tucson, AZ"

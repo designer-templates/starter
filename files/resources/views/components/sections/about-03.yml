@@ -1,0 +1,46 @@
+title: About — photo and quote
+description: A 4:3 photograph on the left; a large founder quote, name and role, one paragraph and a text link on the right
+category: content
+fields:
+    image:
+        type: image
+        label: Photo
+        default: "/images/blocks/workspace-02.jpg"
+    imageAlt:
+        type: text
+        label: Photo description
+        default: "Two Umber founders working through the spring plan at a whiteboard"
+    caption:
+        type: text
+        label: Caption
+        description: Small line under the photo. Clear to hide.
+        default: "The Minneapolis office, Mar 2026"
+    quote:
+        type: textarea
+        label: Quote
+        rows: 3
+        default: "We started Umber because a garden center’s busiest 11 weeks were being run out of a three-ring binder."
+        required: true
+    name:
+        type: text
+        label: Name
+        default: "Morgan Hayes"
+    role:
+        type: text
+        label: Role
+        default: "Co-founder and CEO, Umber"
+    paragraph:
+        type: textarea
+        label: Paragraph
+        description: Clear to hide.
+        rows: 5
+        default: "I managed my family’s nursery in Minneapolis for a decade; Kai ran operations for a chain of hardware stores in Denver. In 2020 we counted 312 independent garden centers within a day’s drive of one of us that still tracked perennials on paper, and built Umber over one winter. It runs the counts at 590 of them now."
+    linkText:
+        type: text
+        label: Link text
+        description: Clear to hide the link.
+        default: "Read the founders’ letter"
+    linkUrl:
+        type: url
+        label: Link URL
+        default: "/letter"

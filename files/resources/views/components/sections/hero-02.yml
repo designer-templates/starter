@@ -1,0 +1,77 @@
+title: Hero — centered with dashboard stage
+description: Eyebrow, two-tone headline, intro and two buttons over a row of customer wordmarks; beneath, a full-width product screenshot on a raised stage, clipped at the section's edge
+category: heroes
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Clear to hide.
+        default: "Dispatch for field-service teams"
+    heading:
+        type: text
+        label: Heading
+        description: The first line sets in ink, the rest in the faint tier.
+        default: "Every technician’s day, planned by 6 AM"
+        required: true
+    text:
+        type: textarea
+        label: Intro
+        rows: 3
+        default: "Fallow routes the day’s calls around drive time and skills, texts each customer a two-hour window, and re-plans the moment a job runs long."
+    buttonText:
+        type: text
+        label: Primary button text
+        description: Clear to hide.
+        default: "Start free"
+    buttonLink:
+        type: url
+        label: Primary button link
+        default: "/signup"
+    buttonText2:
+        type: text
+        label: Secondary button text
+        description: Clear to hide.
+        default: "See pricing"
+    buttonLink2:
+        type: url
+        label: Secondary button link
+        default: "/pricing"
+    logosLabel:
+        type: text
+        label: Wordmarks label
+        description: Clear to hide the label and the wordmarks.
+        default: "Running the day at"
+    logos:
+        type: repeater
+        label: Wordmarks
+        source: collections.logos
+        add_button_label: Add wordmark
+        item_label: name
+        sub_fields:
+            name:
+                type: text
+                label: Name
+            icon:
+                type: textarea
+                label: Mark (inline SVG)
+                rows: 3
+        default:
+            - name: "Fairmont Air"
+              icon: "<svg viewBox='0 0 24 24' class='size-5 fill-current' aria-hidden='true'><path d='M12 2.5 21.5 21.5H2.5Z'/></svg>"
+            - name: "Bannock"
+              icon: "<svg viewBox='0 0 24 24' class='size-5' fill='none' stroke='currentColor' stroke-width='2.25' aria-hidden='true'><circle cx='12' cy='12' r='8.5'/><path d='M12 3.5v17'/></svg>"
+            - name: "Elmwood Plumbing"
+              icon: "<svg viewBox='0 0 24 24' class='size-5 fill-current' aria-hidden='true'><rect x='3' y='3' width='8' height='8' rx='2'/><rect x='13' y='13' width='8' height='8' rx='2'/><rect x='13' y='3' width='8' height='8' rx='4'/></svg>"
+            - name: "Redwood Electric"
+              icon: "<svg viewBox='0 0 24 24' class='size-5' fill='none' stroke='currentColor' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M13 2.5 5 13.5h6l-1 8 8-11h-6Z'/></svg>"
+            - name: "Wyeth & Co"
+              icon: "<svg viewBox='0 0 24 24' class='size-5 fill-current' aria-hidden='true'><path d='M3 5h4l3 10 2-6h3l2 6 3-10h4l-5 15h-4l-2-6-2 6H8Z'/></svg>"
+    image:
+        type: image
+        label: Product image
+        description: Your screenshot, framed as a window on the stage. 16:10 or 16:9 works best; the bottom is cropped.
+        default: "/images/blocks/dashboard-overview.jpg"
+    imageAlt:
+        type: text
+        label: Image alt text
+        default: "The Fallow dashboard: today’s jobs, on-time rate and the dispatch list"

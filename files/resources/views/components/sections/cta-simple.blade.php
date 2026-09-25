@@ -8,7 +8,7 @@
     'footnote' => 'Setup takes about four minutes.',
 ])
 <!-- The closing ask, kept quiet: a heading, one line of copy, two buttons, and a footnote. Clear the secondary text or the footnote to hide them. -->
-<section id="cta" class="px-6 py-28 sm:py-36">
+<section id="cta" class="px-6 py-16 sm:py-28">
     <div class="mx-auto w-full max-w-2xl text-center">
         <h2 class="text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
         <p class="reveal-1 mx-auto mt-5 max-w-[52ch] text-lg/8 text-pretty text-muted" data-reveal>{{ $text }}</p>

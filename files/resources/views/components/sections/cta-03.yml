@@ -1,0 +1,22 @@
+title: CTA — quiet line
+description: A statement between two hairlines with one arrow link on the right
+category: cta
+fields:
+    text:
+        type: text
+        label: Statement
+        default: "Mast puts a status page on your own domain in 11 minutes."
+        required: true
+    note:
+        type: text
+        label: Note
+        description: Small line under the statement. Clear to hide.
+        default: "Free for one page and 250 subscribers."
+    linkText:
+        type: text
+        label: Link text
+        default: "Start a status page"
+    linkUrl:
+        type: url
+        label: Link URL
+        default: "/signup"

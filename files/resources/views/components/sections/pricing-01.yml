@@ -1,0 +1,139 @@
+title: Pricing — three plans with a billing switch
+description: Centred opener, a Monthly / Yearly switch with a savings pill, and three plan cards; the featured plan is outlined in ink, lifted and badged
+category: pricing
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Pricing"
+    heading:
+        type: text
+        label: Heading
+        default: "One price per studio, not per seat"
+        required: true
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two short sentences under the heading. Clear to hide.
+        rows: 2
+        default: "Unlimited clients and invoices on every plan. Add people for free, and pay yearly for two months on us."
+    showToggle:
+        type: toggle
+        label: Show the Monthly / Yearly switch
+        default: "1"
+    monthlyLabel:
+        type: text
+        label: Monthly label
+        default: "Monthly"
+    yearlyLabel:
+        type: text
+        label: Yearly label
+        default: "Yearly"
+    savingsPill:
+        type: text
+        label: Savings pill
+        description: Small pill beside the yearly label. Clear to hide.
+        default: "2 months free"
+    periodMonthly:
+        type: text
+        label: Monthly period text
+        default: "per month"
+    periodYearly:
+        type: text
+        label: Yearly period text
+        default: "per year"
+    badgeText:
+        type: text
+        label: Featured badge
+        description: Shown on the featured plan. Clear to hide.
+        default: "Most studios"
+    footnote:
+        type: textarea
+        label: Footnote
+        description: Under the cards. Clear to hide.
+        rows: 2
+        default: "Prices in US dollars. Card and ACH payments clear through your own processor at its rates. Cancel from settings in one click."
+    plans:
+        type: repeater
+        label: Plans
+        source: "collections.plans"
+        add_button_label: "Add plan"
+        item_label: name
+        description: Features are one per line. The yearly price and note show when the switch is flipped.
+        sub_fields:
+            name:
+                type: text
+                label: Plan name
+                default: "New plan"
+            description:
+                type: text
+                label: Who it is for
+                default: "Who this plan is for."
+            price:
+                type: text
+                label: Monthly price
+                default: "$29"
+            priceYearly:
+                type: text
+                label: Yearly price
+                default: "$290"
+            note:
+                type: text
+                label: Note under the monthly price
+                default: "or $290 a year — two months free"
+            noteYearly:
+                type: text
+                label: Note under the yearly price
+                default: "$24.17 a month, billed yearly"
+            features:
+                type: textarea
+                label: Features (one per line)
+                rows: 5
+                default: "Everything in Solo\nUp to 8 people"
+            ctaText:
+                type: text
+                label: Button text
+                default: "Start a 14-day trial"
+            ctaLink:
+                type: url
+                label: Button link
+                default: "#"
+            featured:
+                type: select
+                label: Featured plan
+                default: "no"
+                options:
+                    yes: "Yes"
+                    no: "No"
+        default:
+            - name: "Solo"
+              description: "For one designer who bills a handful of clients a month."
+              price: "$17"
+              priceYearly: "$170"
+              note: "or $170 a year — two months free"
+              noteYearly: "$14.17 a month, billed yearly"
+              features: "1 person\nUnlimited clients and invoices\nCard and ACH payments\nReminders on a schedule you set\nEmail support"
+              ctaText: "Start a 14-day trial"
+              ctaLink: "#"
+              featured: "no"
+            - name: "Studio"
+              description: "For a studio of two to eight with retainers to keep straight."
+              price: "$41"
+              priceYearly: "$410"
+              note: "or $410 a year — two months free"
+              noteYearly: "$34.17 a month, billed yearly"
+              features: "Everything in Solo\nUp to 8 people\nRetainers and deposits\nTime tracking on every project\nSame-day support"
+              ctaText: "Start a 14-day trial"
+              ctaLink: "#"
+              featured: "yes"
+            - name: "Agency"
+              description: "For agencies that bill from several entities and offices."
+              price: "$113"
+              priceYearly: "$1,130"
+              note: "or $1,130 a year — two months free"
+              noteYearly: "$94.17 a month, billed yearly"
+              features: "Everything in Studio\nUnlimited people\nBilling from several entities\nApprovals and a full audit history\nA named account lead"
+              ctaText: "Book a walkthrough"
+              ctaLink: "#"
+              featured: "no"

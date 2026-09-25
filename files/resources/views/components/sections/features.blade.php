@@ -6,7 +6,7 @@
     'features' => [],
 ])
 <!-- Centered heading over a three-column grid of icon features. Rows live in resources/data/collections/features.json; the icon column is inline SVG. -->
-<section id="features" class="scroll-mt-20 px-6 py-24 sm:py-32">
+<section id="features" class="scroll-mt-20 px-6 py-16 sm:py-28">
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <x-heading
             :eyebrow="$eyebrow"

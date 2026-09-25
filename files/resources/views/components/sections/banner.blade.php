@@ -1,6 +1,6 @@
 @props([
-    'message' => 'Shift swaps now approve themselves when both people qualify.',
-    'linkText' => 'See what changed',
+    'message' => 'Learn how to build amazing landing pages.',
+    'linkText' => 'Read the docs',
     'linkUrl' => '/#features',
     'dismissible' => '1',
 ])

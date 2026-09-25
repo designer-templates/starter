@@ -5,13 +5,13 @@ fields:
     message:
         type: text
         label: Message
-        default: "Shift swaps now approve themselves when both people qualify."
+        default: "Learn how to build amazing landing pages."
         required: true
     linkText:
         type: text
         label: Link text
         description: Clear to hide the link.
-        default: "See what changed"
+        default: "Read the docs"
     linkUrl:
         type: url
         label: Link URL

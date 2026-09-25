@@ -9,28 +9,12 @@ document.documentElement.classList.add('js');
 
 var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-bannerOffset();
 dropdowns();
 mobileMenu();
 markCurrentMenuItem();
 banners();
 pricingToggles();
 reveals(document);
-
-/*
-    The sticky header (components/nav.blade.php) sticks by its bar: the banner's
-    height goes into --banner-h so the banner scrolls away and the bar stays. The
-    observer follows wrapping on narrow screens and the dismiss button.
-*/
-function bannerOffset() {
-    var header = document.getElementById('header');
-    var banner = header && header.querySelector('[data-banner]');
-    if (!header || !banner) return;
-    function measure() { header.style.setProperty('--banner-h', banner.offsetHeight + 'px'); }
-    measure();
-    if ('ResizeObserver' in window) new ResizeObserver(measure).observe(banner);
-    else window.addEventListener('resize', measure);
-}
 
 /*
     Nav dropdowns. Hover opens after a short intent delay and closes after a
@@ -105,7 +89,7 @@ function mobileMenu() {
     window.matchMedia('(min-width: 64rem)').addEventListener('change', function (e) { if (e.matches) set(false); });
 }
 
-/* The announcement banner (sections/banner.blade.php): the dismiss button hides it for this visit. */
+/* The announcement banner (sections/banner.blade.php, above the header in the layout): the dismiss button hides it for this visit. */
 function banners() {
     document.querySelectorAll('[data-banner]').forEach(function (banner) {
         var button = banner.querySelector('[data-banner-dismiss]');

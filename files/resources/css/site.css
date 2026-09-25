@@ -86,9 +86,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 .reveal-5 { --reveal-delay: 350ms; }
 .reveal-6 { --reveal-delay: 420ms; }
 
-/* The header sticks by its bar: main.js writes the banner's height into --banner-h, so the banner scrolls out and the bar stays. */
-#header { top: calc(-1 * var(--banner-h, 0px)); }
-
 /* The logo mark launches up from behind an invisible edge when the page loads. */
 .logo-mark { overflow: hidden; }
 .logo-mark path { transform-box: fill-box; animation: launch-up 1s cubic-bezier(.16, 1, .3, 1) both; }
@@ -127,7 +124,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 .field { transition: border-color .2s ease, box-shadow .2s ease; }
 .field:focus { outline: none; border-color: var(--color-line-strong); box-shadow: 0 0 0 3px var(--color-accent-soft); }
 
-/* The announcement banner (in the nav, and sections/banner.blade.php): main.js removes it when the dismiss button is pressed. */
+/* The announcement banner (sections/banner.blade.php): main.js removes it when the dismiss button is pressed. */
 [data-banner] { transition: opacity .2s ease; }
 [data-banner].is-dismissed { display: none; }
 

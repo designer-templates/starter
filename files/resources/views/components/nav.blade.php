@@ -5,44 +5,20 @@
     'signInLink' => '#',
     'ctaText' => 'Sign up',
     'ctaLink' => '/pricing',
-    'bannerMessage' => 'Are your ready to build amazing landing pages?',
-    'bannerLinkText' => 'Read the docs',
-    'bannerLinkUrl' => '/#features',
-    'bannerDismissible' => '1',
 ])
 <!--
-    The site-wide top of the page: a thin dark announcement bar, then the
-    header — the mark and brand on the left, the links centered, Log in and
-    the primary action on the right. The bar is sticky: main.js measures the
-    banner into --banner-h so the banner scrolls away and the bar stays put
-    (site.css #header). Every page's opening section starts right under it.
+    The site-wide header — the mark and brand on the left, the links centered,
+    Log in and the primary action on the right. It is sticky at the top of the
+    viewport; the announcement bar is its own section (sections/banner.blade.php),
+    placed above it in the layout, so it scrolls away and the bar stays put.
+    Every page's opening section starts right under it.
 
     Links come from nav_links in resources/data/site.json. Nest links under an
     item and it becomes a dropdown (tested with count(): on the canvas an empty
     children list is a DataBag object, which is truthy): opens on hover with a short intent delay,
     toggles on click for touch, closes on Escape or an outside click.
-    Clear the banner message to remove the bar; main.js hides it for the visit when dismissed.
 -->
-<header id="header" class="sticky z-50">
-    @if ($bannerMessage)
-    <div class="relative bg-shade" data-banner>
-        <div class="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-x-4 gap-y-0.5 px-12 py-3 text-center sm:px-14">
-            <p class="text-[14px] text-shade-ink/80">{{ $bannerMessage }}</p>
-            @if ($bannerLinkText)
-            <a href="{{ $bannerLinkUrl }}" class="arrow-link inline-flex items-center gap-1.5 text-[14px] font-medium text-shade-ink underline decoration-shade-ink/30 underline-offset-4 transition-colors duration-200 hover:decoration-shade-ink">
-                {{ $bannerLinkText }}
-                <svg viewBox="0 0 24 24" class="arrow size-3.5" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
-            </a>
-            @endif
-        </div>
-        @if ($bannerDismissible)
-        <button type="button" data-banner-dismiss class="absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer rounded-lg p-1.5 text-shade-muted transition-colors duration-200 hover:bg-shade-line hover:text-shade-ink" aria-label="Dismiss announcement">
-            <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
-        </button>
-        @endif
-    </div>
-    @endif
-
+<header id="header" class="sticky top-0 z-50">
     <div class="relative border-b border-line bg-canvas/85 backdrop-blur-md">
         <div class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-6 px-6 lg:px-8">
 

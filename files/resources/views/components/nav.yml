@@ -1,7 +1,7 @@
 # The visual editor's contract for components/nav.blade.php — surfaces under
 # the Layout tab. Field names are camelCase, matching the props they fill.
 title: Navigation
-description: An announcement bar over the sticky top bar — brand, links with dropdown menus, Log in, and the primary call to action
+description: The sticky top bar — brand, links with dropdown menus, Log in, and the primary call to action
 fixed: true
 fields:
     brand:
@@ -47,21 +47,3 @@ fields:
         type: url
         label: Primary button link
         default: "/pricing"
-    bannerMessage:
-        type: text
-        label: Announcement
-        description: The thin dark bar above the header. Clear to remove it.
-        default: "Version 4.2 is out — offline mode, instant search, and 12 new integrations."
-    bannerLinkText:
-        type: text
-        label: Announcement link text
-        description: Clear to hide the link.
-        default: "Read the changelog"
-    bannerLinkUrl:
-        type: url
-        label: Announcement link URL
-        default: "/#features"
-    bannerDismissible:
-        type: toggle
-        label: Show dismiss button
-        default: "1"

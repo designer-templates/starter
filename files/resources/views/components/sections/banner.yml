@@ -1,12 +1,12 @@
 title: Banner — announcement bar
-description: A thin announcement bar with a message, a link, and an optional dismiss button
+description: The thin dark announcement bar above the header — a message, an optional link, and a dismiss button
 category: banners
 fields:
     message:
         type: text
         label: Message
+        description: Clear to remove the bar.
         default: "Learn how to build amazing landing pages."
-        required: true
     linkText:
         type: text
         label: Link text

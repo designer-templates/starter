@@ -15,8 +15,8 @@
     ],
 ])
 <!-- Team, directory: a left opener with a mono summary on the right, then hairline rows of people (40px portrait, name, role, location in mono, a link arrow), grouped under a mono department label that prints whenever the department changes from the row above. Rows come from the team collection; clear the eyebrow, intro or summary to hide it. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between" data-reveal>
             <div class="max-w-2xl">
                 @if ($eyebrow)

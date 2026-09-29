@@ -23,8 +23,8 @@
     detail of a screenshot (its top-left, past the app chrome), a title and a line. Cells are a repeater in the yml; every screenshot is an image field (clear a
     cell's image to show its copy alone). Clear the eyebrow, the link text or the toast title to hide them.
 -->
-<section class="px-6 py-16 sm:py-28" data-feature-01>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-feature-01>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl">
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>

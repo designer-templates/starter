@@ -17,8 +17,8 @@
     (cover, category, title, excerpt, author) in the left seven columns and the rest as a hairline list
     in the right five. Rows live in collections/posts.json; clear the eyebrow or the link text to hide them.
 -->
-<section class="px-6 py-16 sm:py-28" data-blog-01>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-blog-01>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-6" data-reveal>
             <div>
                 @if ($eyebrow)

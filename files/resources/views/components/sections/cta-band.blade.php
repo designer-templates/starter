@@ -7,8 +7,8 @@
     'secondaryLink' => '/contact',
 ])
 <!-- The closing panel: the one dark surface on the page — a soft accent glow, a dot grid, a statement, and two actions. Clear the secondary text to show one button. -->
-<section id="cta" class="px-6 py-20 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section id="cta" class="py-20 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="relative overflow-hidden rounded-[2.5rem] bg-shade px-6 py-20 sm:px-16 sm:py-24" data-reveal>
             <div class="pointer-events-none absolute inset-0" aria-hidden="true">
                 <div class="absolute top-[-160px] left-1/2 h-[380px] w-[640px] -translate-x-1/2 rounded-full bg-accent opacity-25 blur-3xl"></div>

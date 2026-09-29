@@ -5,8 +5,8 @@
     'linkUrl' => '/signup',
 ])
 <!-- A quiet closing line between two hairlines: the statement and a small note on the left, one arrow link on the right. Clear the note to hide it. -->
-<section class="px-6 py-16 sm:py-20">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-20">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="flex flex-col gap-5 border-y border-line py-10 sm:flex-row sm:items-center sm:justify-between sm:gap-10" data-reveal>
             <div>
                 <h2 class="max-w-[60ch] font-display text-xl/8 font-medium tracking-tight text-balance text-ink">{{ $text }}</h2>

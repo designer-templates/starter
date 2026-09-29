@@ -19,8 +19,8 @@
     raised stage that runs off the right edge on desktop, so the visible part stays large. Swap the image
     for your own screenshot (4:3 works best; the right third is cropped on desktop). Clear the fine print to hide it.
 -->
-<section class="overflow-x-clip px-6 pt-20 pb-12 sm:pt-28 sm:pb-16" data-hero-05>
-    <div class="mx-auto grid w-full max-w-6xl items-center gap-y-16 lg:grid-cols-[6fr_5fr] lg:gap-x-12">
+<section class="overflow-x-clip pt-20 pb-12 sm:pt-28 sm:pb-16" data-hero-05>
+    <div class="mx-auto grid w-full max-w-6xl px-6 lg:px-8 items-center gap-y-16 lg:grid-cols-[6fr_5fr] lg:gap-x-12">
         <div>
             <h1 class="max-w-[17ch] text-hero font-semibold tracking-[-0.04em] text-balance text-ink" data-reveal>{{ $heading }}</h1>
             <p class="reveal-1 mt-6 max-w-[46ch] text-lg/8 font-medium text-pretty text-muted sm:text-xl/8" data-reveal>{{ $text }}</p>

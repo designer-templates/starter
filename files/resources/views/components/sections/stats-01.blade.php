@@ -10,8 +10,8 @@
     'note' => 'Across every Skiff account from Sep 1, 2025 to Aug 31, 2026. Ratings from 61,412 completed jobs.',
 ])
 <!-- Stats in a dark band: one rounded shade surface with a faint dot grid, an eyebrow and heading on the left, four giant figures divided by hairlines, and a source line under a rule. Rows come from collections.stats (value, label); the first figure counts up once when it scrolls in. Clear the eyebrow or the note to hide it. -->
-<section class="px-6 py-16 sm:py-28" data-stats-01>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-stats-01>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="relative overflow-hidden rounded-[2.5rem] bg-shade px-6 py-16 text-shade-ink sm:px-16 sm:py-24">
             <div class="pointer-events-none absolute inset-0 [background-image:radial-gradient(circle,var(--color-shade-line)_1px,transparent_1px)] [background-size:24px_24px]" aria-hidden="true"></div>
 

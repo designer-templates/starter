@@ -8,8 +8,8 @@
     'finePrint' => 'No sales email. Unsubscribe any time.',
 ])
 <!-- Newsletter, muted band: a rounded tinted well with the heading and one line on the left and the email form on the right, one row on desktop. The form posts to the action URL. Clear the text or the fine print to hide it. -->
-<section class="px-6 py-16 sm:py-20" data-newsletter-03>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-20" data-newsletter-03>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="rounded-3xl bg-raised/70 px-6 py-10 sm:px-12 sm:py-12 lg:flex lg:items-center lg:justify-between lg:gap-16">
             <div class="max-w-xl" data-reveal>
                 <h2 class="max-w-[26ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>

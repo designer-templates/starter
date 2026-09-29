@@ -13,8 +13,8 @@
     off the outer edge on desktop so the visible slice stays large. Rows are a repeater in the yml, each with its
     own image; the side alternates by row order.
 -->
-<section class="overflow-x-clip px-6 py-16 sm:py-28" data-feature-02>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="overflow-x-clip py-16 sm:py-28" data-feature-02>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl">
             <h2 class="text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
             <p class="reveal-1 mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted" data-reveal>{{ $intro }}</p>

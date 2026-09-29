@@ -18,8 +18,8 @@
     glyph. Swap the image for your own screenshot (3:2 or 16:10 works best). Clear the toast text to drop the
     toast; clear a button's text to hide it.
 -->
-<section class="px-6 pt-16 pb-12 sm:pt-20 sm:pb-16" data-hero-04>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="pt-16 pb-12 sm:pt-20 sm:pb-16" data-hero-04>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="mb-16 text-center sm:mb-20">
             @if ($showPill)
             <a href="{{ $buttonLink2 }}" class="reveal-1 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3 py-1 text-[12px] font-medium text-muted transition-colors duration-200 hover:border-line-strong hover:text-ink" data-reveal>

@@ -17,8 +17,8 @@
     of posts — cover image, category pill and date, title, excerpt, author avatar and name.
     Rows live in collections/posts.json; clear the link text to hide the link.
 -->
-<section class="px-6 py-16 sm:py-28" data-blog-02>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-blog-02>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-6" data-reveal>
             <div>
                 <h2 class="max-w-[30ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>

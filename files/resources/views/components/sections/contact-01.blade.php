@@ -20,8 +20,8 @@
     'finePrint' => 'No auto-replies. A person writes back.',
 ])
 <!-- Contact split: a page-opening heading and intro with a hairline details list (email, phone, office, hours) on the left, a bordered form (name, work email, company, message) on the right that posts to the action URL. Clear a detail or the fine print to hide it. -->
-<section class="px-6 pt-16 pb-16 sm:pt-24 sm:pb-28">
-    <div class="mx-auto grid w-full max-w-6xl gap-14 lg:grid-cols-2 lg:gap-20">
+<section class="pt-16 pb-16 sm:pt-24 sm:pb-28">
+    <div class="mx-auto grid w-full max-w-6xl px-6 lg:px-8 gap-14 lg:grid-cols-2 lg:gap-20">
         <div data-reveal>
             <h1 class="max-w-[16ch] text-hero font-semibold tracking-[-0.04em] text-balance text-ink">{{ $heading }}</h1>
             @if ($intro)

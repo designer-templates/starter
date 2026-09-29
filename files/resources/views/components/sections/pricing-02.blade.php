@@ -42,8 +42,8 @@
     middle, a secondary button on the right. Plan rows come from the plans collection (features one per line); the
     band's checklist is its own list. Clear the enterprise toggle to drop the band; clear the intro to hide it.
 -->
-<section class="px-6 py-16 sm:py-28" data-pricing-02>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-pricing-02>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center" data-reveal>
             <h2 class="mx-auto max-w-xl text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
             @if ($intro)

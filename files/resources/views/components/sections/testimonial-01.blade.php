@@ -42,8 +42,8 @@
     the company mark on the right. Rows live in collections.testimonials (quote, name, role, avatar, company,
     logo; the logo is inline SVG on currentColor). Clear the eyebrow to hide it.
 -->
-<section class="px-6 py-16 sm:py-28" data-testimonial-01>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-testimonial-01>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
             <div>
                 @if ($eyebrow)

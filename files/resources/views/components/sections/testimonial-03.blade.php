@@ -20,8 +20,8 @@
     The quote and its person are fields; the figures live in collections.stats (value, label). Clear the eyebrow
     or the link text to hide each.
 -->
-<section class="px-6 py-16 sm:py-28" data-testimonial-03>
-    <div class="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
+<section class="py-16 sm:py-28" data-testimonial-03>
+    <div class="mx-auto grid w-full max-w-6xl px-6 lg:px-8 gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
         <figure class="lg:col-span-7">
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>

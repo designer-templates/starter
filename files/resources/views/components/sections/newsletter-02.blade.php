@@ -16,8 +16,8 @@
     'finePrint' => 'No sales email, ever. Unsubscribe in one click.',
 ])
 <!-- Newsletter, split: eyebrow, heading, a line and the "what you get" rows (the repeater) on the left; a bordered card on the right with a labeled email field, an opt-in checkbox and the button. The form posts to the action URL. Clear the eyebrow, text, form heading, checkbox label or fine print to hide it. -->
-<section class="px-6 py-16 sm:py-28" data-newsletter-02>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-newsletter-02>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
             <div>
                 @if ($eyebrow)

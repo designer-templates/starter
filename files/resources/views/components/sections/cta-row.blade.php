@@ -8,8 +8,8 @@
     'secondaryUrl' => '/contact',
 ])
 <!-- A split row between two hairlines: heading and copy on the left, buttons on the right. -->
-<section class="px-6 py-20 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-20 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="flex flex-col gap-6 border-y border-line py-12 sm:flex-row sm:items-center sm:justify-between sm:gap-10" data-reveal>
             <div class="max-w-xl">
                 <h2 class="text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>

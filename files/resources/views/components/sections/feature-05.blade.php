@@ -15,8 +15,8 @@
     eyebrow to hide it.
 -->
 @php $uid = 'f5-' . uniqid(); @endphp
-<section class="px-6 py-16 sm:py-28" data-feature-05>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-feature-05>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center">
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>

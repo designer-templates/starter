@@ -24,8 +24,8 @@
     ],
 ])
 <!-- Demo booking: a heading, a line and a short form (work email, company size select, button) on the left; a recessed well on the right with a customer quote, avatar and name, and a row of three wordmarks. Size options and wordmarks are repeater rows; clear the intro, fine print or wordmark label to hide it. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto grid w-full max-w-6xl gap-14 lg:grid-cols-2 lg:gap-20">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto grid w-full max-w-6xl px-6 lg:px-8 gap-14 lg:grid-cols-2 lg:gap-20">
         <div data-reveal>
             <h2 class="max-w-[22ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
             @if ($intro)

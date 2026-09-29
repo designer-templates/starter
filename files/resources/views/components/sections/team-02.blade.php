@@ -19,8 +19,8 @@
     'hiringNote' => 'Remote across US time zones · Denver office',
 ])
 <!-- Team, people strip and hiring card: a left opener, then a raised card with the open roles and a button beside the opener on desktop, then a single row of round portraits with names under, beneath a hairline. Rows come from the team collection; clear the eyebrow, intro or note to hide it, and switch the card off with its toggle. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-16">
             <div class="max-w-2xl lg:col-span-7" data-reveal>
                 @if ($eyebrow)

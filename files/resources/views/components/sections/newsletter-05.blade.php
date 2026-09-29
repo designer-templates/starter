@@ -11,8 +11,8 @@
     'finePrint' => 'One email every two weeks. Unsubscribe any time.',
 ])
 <!-- Newsletter, dark band: the one dark surface, a faint dot grid, a mono issue line, the heading and a line on the left; the email form on the right with a "read the last issue" link and fine print under it. The form posts to the action URL. Clear the issue line, text, link text or fine print to hide it. -->
-<section class="px-6 py-16 sm:py-20" data-newsletter-05>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-20" data-newsletter-05>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="relative overflow-hidden rounded-[2.5rem] bg-shade px-6 py-16 text-shade-ink sm:px-16 sm:py-20" data-reveal>
             <div class="pointer-events-none absolute inset-0 [background-image:radial-gradient(circle,var(--color-shade-line)_1px,transparent_1px)] [background-size:24px_24px]" aria-hidden="true"></div>
 

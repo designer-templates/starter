@@ -55,8 +55,8 @@
     Rows come from the plans collection (features one per line; both prices and notes are rendered and the switch
     shows one). Clear the toggle to show monthly prices only; clear the badge, pill, eyebrow or footnote to hide them.
 -->
-<section class="px-6 py-16 sm:py-28" data-pricing-01 data-billing="monthly">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-pricing-01 data-billing="monthly">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center" data-reveal>
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>

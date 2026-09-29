@@ -3,8 +3,8 @@
     'stats' => [],
 ])
 <!-- Four headline figures in a row with hairlines between them. Clear the heading to hide it. Rows live in resources/data/collections/stats.json. -->
-<section class="px-6 py-20 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-20 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         @if ($heading)
         <h2 class="mb-14 text-center text-h2 font-semibold tracking-tight text-balance text-ink sm:mb-16" data-reveal>{{ $heading }}</h2>
         @endif

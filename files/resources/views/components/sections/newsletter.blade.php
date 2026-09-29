@@ -6,8 +6,8 @@
     'finePrint' => 'No spam. Unsubscribe any time.',
 ])
 <!-- Centered heading and copy with an email input and a subscribe button. The form is static markup; wire it to your list. Clear the fine print to hide it. -->
-<section class="px-6 py-20 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-20 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="mx-auto max-w-xl text-center" data-reveal>
             <h2 class="text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
             @if ($text)

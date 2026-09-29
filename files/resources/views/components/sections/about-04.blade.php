@@ -19,8 +19,8 @@
     list of values divided by hairlines. On phones the copy comes first. Values are a repeater
     (title, description). Clear the eyebrow or the paragraph to hide it.
 -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid items-start gap-y-14 lg:grid-cols-12 lg:items-center lg:gap-x-16">
             <div class="lg:col-span-6">
                 <div data-reveal>

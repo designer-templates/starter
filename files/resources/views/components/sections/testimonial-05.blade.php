@@ -59,8 +59,8 @@
     motion; the script clones the row once so the loop is seamless. Rows live in collections.testimonials
     (quote, name, role, avatar). Clear the eyebrow or the intro to hide each.
 -->
-<section class="overflow-hidden px-6 py-16 sm:py-28" data-testimonial-05>
-    <div class="mx-auto w-full max-w-6xl text-center">
+<section class="overflow-hidden py-16 sm:py-28" data-testimonial-05>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8 text-center">
         @if ($eyebrow)
         <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>
         @endif
@@ -70,7 +70,7 @@
         @endif
     </div>
 
-    <div class="reveal-3 -mx-6 mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,var(--color-ink)_10%,var(--color-ink)_90%,transparent)] sm:mt-16" data-reveal data-marquee>
+    <div class="reveal-3 mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,var(--color-ink)_10%,var(--color-ink)_90%,transparent)] sm:mt-16" data-reveal data-marquee>
         <div class="flex w-max pl-5" data-marquee-track>
             @foreach ($testimonials as $item)
             <figure class="mr-5 flex w-[20rem] shrink-0 flex-col rounded-2xl border border-line bg-panel p-6 transition-colors duration-200 hover:border-line-strong sm:w-[22rem]">

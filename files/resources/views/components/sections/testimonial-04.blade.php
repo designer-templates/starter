@@ -47,8 +47,8 @@
     company, logo); a row marked featured renders wide, the rest compact — with no row marked, the first one
     leads. Clear the intro to hide it.
 -->
-<section class="px-6 py-16 sm:py-28" data-testimonial-04>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-testimonial-04>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div>
             <h2 class="max-w-2xl text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
             @if ($intro)

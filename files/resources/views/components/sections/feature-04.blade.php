@@ -17,8 +17,8 @@
     page scrolls; right, five features with hairline dividers — icon tile, title, body. Items are a repeater in the
     yml; swap the image for your own screenshot (4:3 works best). Clear the eyebrow to hide it.
 -->
-<section class="px-6 py-16 sm:py-28" data-feature-04>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-feature-04>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl">
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>

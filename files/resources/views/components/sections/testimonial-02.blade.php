@@ -49,8 +49,8 @@
     full list sits under it. Rows live in collections.testimonials (quote, name, role, avatar). Clear the eyebrow, the intro
     or the link text to hide each.
 -->
-<section class="px-6 py-16 sm:py-28" data-testimonial-02>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-testimonial-02>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center">
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>

@@ -28,8 +28,8 @@
     hairline-divided horizontal cards — square thumbnail, meta, title, excerpt, author.
     Post rows live in collections/posts.json.
 -->
-<section class="px-6 py-16 sm:py-28" data-blog-05>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-blog-05>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div data-reveal>
             <h2 class="max-w-[30ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
             <p class="mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>

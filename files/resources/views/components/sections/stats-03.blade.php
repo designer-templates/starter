@@ -17,8 +17,8 @@
     'period' => 'Quarter to date, Jul 1–Sep 12, 2026 · refreshed nightly at 2:00 AM ET',
 ])
 <!-- Stats as a ledger: a left opener, then one bordered card holding a mono header row, six metric rows (label, value, change with a drawn arrow, and a sparkline plotted from the row's points) and a reporting-period line. Rows come from collections.stats (label, value, delta, points); a row without a change or points shows a dash in its place. The sparklines draw in once as the card scrolls into view; the change column hides on phones. Clear the eyebrow, intro or period to hide them. -->
-<section class="px-6 py-16 sm:py-28" data-stats-03>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-stats-03>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl" data-reveal>
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>

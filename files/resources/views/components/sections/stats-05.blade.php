@@ -14,8 +14,8 @@
     ],
 ])
 <!-- Stats, centered three: a centered heading and one line, then three figures each with a bold label and a two-line explanation, divided by hairlines on desktop and stacked with rules on phones, and a source line of three small wordmarks under a rule. Figures come from collections.stats (value, label, note), wordmarks from collections.logos (name, icon). Reveal only. Clear the intro or the source line to hide them. -->
-<section class="px-6 py-16 sm:py-28" data-stats-05>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-stats-05>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center" data-reveal>
             <h2 class="mx-auto max-w-[24ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
             @if ($intro)

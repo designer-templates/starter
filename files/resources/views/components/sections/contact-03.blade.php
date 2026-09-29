@@ -10,8 +10,8 @@
     ],
 ])
 <!-- Contact methods: a left-aligned opener over four linked cards (email, chat, phone, visit), each an icon tile, a title, one line and the detail as an arrow link. Cards are repeater rows; the icon is a select. Clear the eyebrow or intro to hide it. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div data-reveal>
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>

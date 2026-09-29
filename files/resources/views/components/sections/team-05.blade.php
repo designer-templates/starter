@@ -21,8 +21,8 @@
     'joinCtaLink' => '/careers',
 ])
 <!-- Team, bordered cards: a left opener, then three-up cards each with a round portrait, name, role, a one-line bio and two small text links (email, profile) in a hairline footer; the last cell is a raised "join us" card with a button. Rows come from the team collection; clear the eyebrow or intro to hide it, and switch the join card off with its toggle. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl" data-reveal>
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>

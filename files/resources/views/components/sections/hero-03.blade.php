@@ -39,7 +39,7 @@
     The toggle hides the badge; clear the secondary button text or the strip label to hide them.
 -->
 <section class="overflow-hidden pt-20 sm:pt-28" data-hero-03>
-    <div class="mx-auto flex w-full max-w-6xl flex-col items-center px-6 text-center">
+    <div class="mx-auto flex w-full max-w-6xl px-6 lg:px-8 flex-col items-center text-center">
         @if ($showBadge)
         <p class="reveal-1 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3.5 py-1.5 text-[13px] font-medium text-ink" data-reveal>
             <span class="size-1.5 rounded-full bg-ink" aria-hidden="true"></span>

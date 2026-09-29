@@ -25,7 +25,7 @@
 -->
 <header data-navbar-04 class="sticky top-0 z-50">
     <div class="relative border-b border-line bg-canvas/85 backdrop-blur-md">
-        <div class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-8 px-6">
+        <div class="mx-auto flex h-16 w-full max-w-6xl px-6 lg:px-8 items-center justify-between gap-8">
 
             <div class="flex items-center" data-reveal>
                 <a href="/" aria-label="Homepage" class="flex shrink-0 items-center gap-2.5 text-ink">

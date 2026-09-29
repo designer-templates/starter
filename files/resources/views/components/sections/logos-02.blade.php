@@ -12,8 +12,8 @@
     ],
 ])
 <!-- Logo marquee: a left-aligned line of proof, then two rows of wordmarks drifting in opposite directions behind faded edges; the rows pause on hover and hold still under reduced motion. One loop renders the track — the script clones it for the seamless loop and the second row. Rows come from collections.logos; clear the heading to show the marquee alone. -->
-<section class="px-6 py-16 sm:py-20" data-logos-02>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-20" data-logos-02>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         @if ($heading)
         <p class="text-[15px] font-medium text-muted" data-reveal>{{ $heading }}</p>
         @endif

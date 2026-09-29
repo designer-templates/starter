@@ -8,8 +8,8 @@
     'secondaryUrl' => '/pricing',
 ])
 <!-- A bordered panel with a centered heading, one line of copy, and two buttons. Clear the text to hide it; the toggle hides the second button. -->
-<section class="px-6 py-20 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-20 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="rounded-3xl border border-line bg-panel px-6 py-16 text-center sm:px-16 sm:py-20" data-reveal>
             <h2 class="mx-auto max-w-[20ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
             @if ($text)

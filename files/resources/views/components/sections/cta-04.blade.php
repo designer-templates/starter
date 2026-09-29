@@ -7,8 +7,8 @@
     ],
 ])
 <!-- A statement on the left and two linked cards on the right, each an icon tile, a title, one line and an arrow that nudges on hover; the whole card lifts. The cards are the Cards repeater (the icon column is inline SVG). Clear the supporting text to hide it. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-[1fr_1.25fr] lg:items-center lg:gap-16">
             <div data-reveal>
                 <h2 class="max-w-[22ch] font-display text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>

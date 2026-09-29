@@ -17,8 +17,8 @@
     repeater in the yml; swap the image for your own screenshot (a wide 21:9 crop works best). Clear the eyebrow
     to hide it. The number chips fill one after another as the rail scrolls into view.
 -->
-<section class="px-6 py-16 sm:py-28" data-feature-03>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-feature-03>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center">
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>

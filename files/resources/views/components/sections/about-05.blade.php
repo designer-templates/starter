@@ -16,8 +16,8 @@
     Milestones are a repeater (year, title, description). Clear the eyebrow or the intro to hide it.
     The spine draws itself in, once, when the timeline scrolls into view.
 -->
-<section class="px-6 py-16 sm:py-28" data-about-05>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-about-05>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid gap-y-14 lg:grid-cols-12 lg:gap-x-12">
             <div class="lg:sticky lg:top-24 lg:col-span-5 lg:self-start" data-reveal>
                 @if ($eyebrow)

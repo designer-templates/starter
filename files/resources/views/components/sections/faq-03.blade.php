@@ -12,8 +12,8 @@
     ],
 ])
 <!-- FAQ as a numbered grid: a centered opener, then two columns of open answers (no accordion), each with a mono 01–06 number above the question and a hairline over the row. Rows come from collections.faqs (question, answer). Clear the eyebrow or intro to hide them. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center" data-reveal>
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>

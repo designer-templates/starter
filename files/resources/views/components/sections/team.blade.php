@@ -4,8 +4,8 @@
     'members' => [],
 ])
 <!-- Centered heading over a grid of people: photo, name, role. Rows live in resources/data/collections/team.json. -->
-<section class="px-6 py-20 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-20 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center" data-reveal>
             <h2 class="text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
             @if ($subheading)

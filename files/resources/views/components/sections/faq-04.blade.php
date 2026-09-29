@@ -13,8 +13,8 @@
     ],
 ])
 <!-- FAQ grouped by topic: a left opener with no eyebrow, then two columns, each with a small topic heading over its own accordion of native <details>. The topic names are fields; the rows are one repeater whose `topic` select sends each question to the first or second column. The rows ship with the block (question, answer, topic) rather than binding to the site-wide faqs collection, which has no topic. Clear the intro to hide it. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl" data-reveal>
             <h2 class="text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
             @if ($intro)

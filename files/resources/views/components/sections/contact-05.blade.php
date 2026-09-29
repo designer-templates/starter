@@ -14,8 +14,8 @@
     'emailUrl' => 'mailto:hello@millbrook.app',
 ])
 <!-- Offices: a left opener, then one bordered card per office (city with its live local time, address, hours, a tel: link and a directions link) from a repeater, and a general email row under a hairline. The clock reads each row's IANA time zone; clear the eyebrow, intro, note or email to hide it. -->
-<section class="px-6 py-16 sm:py-28" data-contact-05>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-contact-05>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div data-reveal>
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>

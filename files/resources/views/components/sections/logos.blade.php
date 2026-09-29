@@ -3,7 +3,7 @@
     'logos' => [],
 ])
 <!-- One row: a short line of trust on the left, marks with wordmarks spread to the right. Rows live in resources/data/collections/logos.json; the icon column is inline SVG. -->
-<section class="px-6 py-14 sm:py-16">
+<section class="py-14 sm:py-16">
     <div class="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 lg:flex-row lg:justify-between lg:gap-12 px-6 lg:px-8" data-reveal>
         @if ($heading)
         <p class="shrink-0 text-lg font-medium tracking-tight text-ink">{{ $heading }}</p>

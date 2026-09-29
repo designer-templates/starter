@@ -16,8 +16,8 @@
     ],
 ])
 <!-- Stats with a chart: a split opener (heading left, intro right), then a three-column grid where a wide card holds a title, a headline figure and an inline SVG line chart with mono axis labels and a dashed baseline, and three small figure cards stack beside it. Rows come from collections.stats (value, label, note); the chart line draws once as it scrolls into view. Clear the eyebrow, intro, meta, figure note or baseline label to hide them. -->
-<section class="px-6 py-16 sm:py-28" data-stats-04>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-stats-04>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid gap-5 lg:grid-cols-2 lg:items-end lg:gap-16" data-reveal>
             <div>
                 @if ($eyebrow)

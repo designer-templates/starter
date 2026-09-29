@@ -12,8 +12,8 @@
     ],
 ])
 <!-- Stats beside a paragraph: a five-column text side (heading, two paragraphs, an arrow link) and a seven-column two-by-two grid of figures separated by hairlines, each with a label and one line of context. Rows come from collections.stats (value, label, note). Clear the second paragraph or the link text to hide them. -->
-<section class="px-6 py-16 sm:py-28" data-stats-02>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-stats-02>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid gap-14 lg:grid-cols-12 lg:gap-20">
             <div class="lg:col-span-5" data-reveal>
                 <h2 class="max-w-[22ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>

@@ -14,8 +14,8 @@
     ],
 ])
 <!-- Stat + logos: a big figure that counts up once with its caption and one line of copy on the left, a hairline-ruled grid of wordmarks on the right. Rows come from collections.logos; the figure keeps its commas and any prefix or suffix, and the final value is what the markup holds. -->
-<section class="px-6 py-16 sm:py-28" data-logos-04>
-    <div class="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-12 lg:gap-16">
+<section class="py-16 sm:py-28" data-logos-04>
+    <div class="mx-auto grid w-full max-w-6xl px-6 lg:px-8 items-center gap-12 lg:grid-cols-12 lg:gap-16">
         <div class="lg:col-span-5" data-reveal>
             <p class="text-figure font-semibold tracking-tight text-ink tabular-nums" data-logos-04-figure>{{ $figure }}</p>
             <p class="mt-3 text-base font-medium text-ink">{{ $caption }}</p>

@@ -17,8 +17,8 @@
     through two columns on the right at desktop; under both, a hairline and a row of small facts.
     Facts are a repeater (label, value). Clear the eyebrow, the link text or a paragraph to hide it.
 -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid gap-y-10 lg:grid-cols-12 lg:gap-x-12">
             <div class="lg:col-span-4" data-reveal>
                 @if ($eyebrow)

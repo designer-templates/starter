@@ -12,8 +12,8 @@
     'caption' => 'Support teams at 860 software companies answer from Deskline.',
 ])
 <!-- Logo grid: a bordered grid of cells ruled by hairlines, each a centred wordmark that fills on hover, with one caption of proof under it. Rows come from collections.logos; the grid runs two across on phones and four on larger screens for any count; clear the caption to show the grid alone. -->
-<section class="px-6 py-16 sm:py-20" data-logos-03>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-20" data-logos-03>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="overflow-hidden rounded-2xl border border-line" data-reveal>
             <ul role="list" class="-mt-px -ml-px grid grid-cols-2 sm:grid-cols-4">
                 @foreach ($items as $item)

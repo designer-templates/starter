@@ -15,8 +15,8 @@
     ],
 ])
 <!-- Team, founder and team: a heading and intro, a tall founder portrait with a quote and name (left on desktop, between the opener and the grid on a phone), and a three-by-two grid of small portraits with name and role. Rows come from the team collection; clear the intro or quote to hide it. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:gap-y-14">
             <div class="max-w-2xl lg:order-2 lg:col-span-7" data-reveal>
                 <h2 class="text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>

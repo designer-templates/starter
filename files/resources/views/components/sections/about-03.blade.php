@@ -14,8 +14,8 @@
     founder quote, the name and role, then a hairline, one paragraph and a text link. Clear the caption,
     the paragraph or the link text to hide it.
 -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid items-center gap-y-12 lg:grid-cols-2 lg:gap-x-20">
             <figure data-reveal>
                 <img src="{{ $image }}" alt="{{ $imageAlt }}" width="1200" height="900" loading="lazy" decoding="async" class="aspect-[4/3] w-full rounded-3xl object-cover outline-1 -outline-offset-1 outline-ink/10">

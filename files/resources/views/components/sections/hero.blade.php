@@ -16,7 +16,7 @@
     image for your own screenshot (16:10 works best). Clear a button's text to hide it; clear the social
     proof text to drop that row; the toggle hides the window.
 -->
-<section class="px-6 py-16 sm:py-28">
+<section class="py-16 sm:py-28">
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8 text-center">
         <h1 class="mx-auto max-w-3xl text-hero font-semibold tracking-[-0.04em] text-faint first-line:text-ink" data-reveal>
             {{ $heading }}

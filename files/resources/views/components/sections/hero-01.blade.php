@@ -22,8 +22,8 @@
     Clear a button's text to hide it; clear the proof line to drop the avatar row; clear the stat figure to
     drop the card; the toggle hides the badge.
 -->
-<section class="overflow-x-clip px-6 pt-20 pb-12 sm:pt-28 sm:pb-16" data-hero-01>
-    <div class="mx-auto grid w-full max-w-6xl items-center gap-y-16 lg:grid-cols-[7fr_5fr] lg:gap-x-12">
+<section class="overflow-x-clip pt-20 pb-12 sm:pt-28 sm:pb-16" data-hero-01>
+    <div class="mx-auto grid w-full max-w-6xl px-6 lg:px-8 items-center gap-y-16 lg:grid-cols-[7fr_5fr] lg:gap-x-12">
         <div>
             @if ($showBadge)
             <a href="{{ $buttonLink2 }}" class="arrow-link inline-flex items-center gap-1.5 rounded-full border border-line bg-panel px-3 py-1 text-[12px] font-medium text-muted transition-colors duration-200 hover:border-line-strong hover:text-ink" data-reveal>

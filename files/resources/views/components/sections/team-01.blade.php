@@ -17,8 +17,8 @@
     'linkUrl' => '/careers',
 ])
 <!-- Team, four-up grid: a centered opener, then people in a 2/4-column grid, each a square portrait with a name, role and one bio line, and a text link under the grid. Rows come from the team collection; clear the eyebrow or intro to hide it, and switch the link off with its toggle. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center" data-reveal>
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>

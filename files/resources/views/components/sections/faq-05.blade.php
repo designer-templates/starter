@@ -19,8 +19,8 @@
     ],
 ])
 <!-- FAQ with a contact card: a left opener and a hairline accordion of native <details> take two thirds; a sticky card on the right holds three overlapping avatars, a heading, a line and a secondary button. Rows come from collections.faqs (question, answer). Clear the eyebrow, intro or card text to hide them. -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl" data-reveal>
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>

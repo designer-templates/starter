@@ -52,7 +52,7 @@
     @endif
 
     <div class="relative border-b border-line bg-canvas/85 backdrop-blur-md">
-        <div class="mx-auto flex h-16 w-full max-w-6xl items-center gap-6 px-6">
+        <div class="mx-auto flex h-16 w-full max-w-6xl px-6 lg:px-8 items-center gap-6">
 
             <div class="flex items-center" data-reveal>
                 <a href="/" aria-label="Homepage" class="flex shrink-0 items-center gap-2.5 text-ink">

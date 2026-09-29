@@ -15,8 +15,8 @@
     row on phones). Figures are a repeater (value, label) that can bind to the site's stats collection.
     Clear the eyebrow to hide it.
 -->
-<section class="px-6 py-16 sm:py-28">
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28">
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="rounded-3xl bg-raised/70 p-8 sm:p-12 lg:p-16" data-reveal>
             <div class="grid gap-y-8 lg:grid-cols-12 lg:gap-x-12">
                 <div class="lg:col-span-7">

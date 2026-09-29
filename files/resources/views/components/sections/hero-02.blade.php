@@ -24,8 +24,8 @@
     clipped by the section's bottom edge. Swap the image for your own screenshot (16:10 or 16:9 works best).
     Clear a button's text to hide it; clear the eyebrow or the wordmarks label to drop that line.
 -->
-<section class="px-6 pt-20 pb-0 sm:pt-28" data-hero-02>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="pt-20 pb-0 sm:pt-28" data-hero-02>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center">
             @if ($eyebrow)
             <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>

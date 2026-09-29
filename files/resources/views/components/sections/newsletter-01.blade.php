@@ -8,8 +8,8 @@
     'finePrint' => 'Read by 4,218 restaurant owners. Unsubscribe in one click.',
 ])
 <!-- Newsletter, centered: a heading, one line, and an email field with the button set inside it, then fine print. The form posts to the action URL. Clear the text or the fine print to hide it. -->
-<section class="px-6 py-16 sm:py-20" data-newsletter-01>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-20" data-newsletter-01>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
             <h2 class="mx-auto max-w-[28ch] text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
             @if ($text)

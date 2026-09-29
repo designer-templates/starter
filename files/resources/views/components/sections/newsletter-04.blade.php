@@ -12,8 +12,8 @@
     'toast' => 'Delivered to 2,960 inboxes',
 ])
 <!-- Newsletter with a preview: eyebrow, heading, a line and the email form on the left; on the right a screenshot of one issue, framed as a card sitting slightly rotated on a tinted stage, with a small badge overlapping its corner. The card straightens on hover. The form posts to the action URL. Swap the image for a capture of your own issue (5:4 works best). Clear the eyebrow, text, fine print or badge to hide it. -->
-<section class="px-6 py-16 sm:py-28" data-newsletter-04>
-    <div class="mx-auto w-full max-w-6xl">
+<section class="py-16 sm:py-28" data-newsletter-04>
+    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
             <div>
                 @if ($eyebrow)

@@ -5,7 +5,7 @@ fields:
     brand:
         type: text
         label: Brand name
-        default: "Stillwater"
+        default: "Starter"
     heading:
         type: text
         label: Big line
@@ -15,16 +15,16 @@ fields:
         type: textarea
         label: Line under the heading
         rows: 2
-        default: "Stillwater books, reminds and collects for 1,240 home-service crews. Tell us how yours runs and we will have a calendar in front of you in 20 minutes."
+        default: "Starter books, reminds and collects for 1,240 home-service crews. Tell us how yours runs and we will have a calendar in front of you in 20 minutes."
     emailText:
         type: text
         label: Email link text
-        default: "hello@stillwater.co"
+        default: "hello@starter.app"
     emailUrl:
         type: url
         label: Email link
         description: "Usually a mailto: address."
-        default: "mailto:hello@stillwater.co"
+        default: "mailto:hello@starter.app"
     columns:
         type: repeater
         label: Link columns
@@ -133,4 +133,4 @@ fields:
     legal:
         type: text
         label: Legal line
-        default: "© 2026 Stillwater Scheduling, Inc."
+        default: "© 2026 Starter, Inc."

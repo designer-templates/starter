@@ -5,12 +5,12 @@ fields:
     brand:
         type: text
         label: Brand name
-        default: "Ferrous"
+        default: "Starter"
     stripMessage:
         type: text
         label: Announcement
         description: The thin dark strip above the bar. Clear to remove it.
-        default: "Ferrous 2.4 is out: point-in-time restore on every plan."
+        default: "Starter 2.4 is out: point-in-time restore on every plan."
     stripLinkText:
         type: text
         label: Announcement link text

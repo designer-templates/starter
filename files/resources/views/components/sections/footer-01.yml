@@ -5,7 +5,7 @@ fields:
     brand:
         type: text
         label: Brand name
-        default: "Rivet"
+        default: "Starter"
     tagline:
         type: textarea
         label: Brand line
@@ -109,7 +109,7 @@ fields:
     legal:
         type: text
         label: Legal line
-        default: "© 2026 Rivet Software, Inc. All rights reserved."
+        default: "© 2026 Starter, Inc. All rights reserved."
     privacyText:
         type: text
         label: First small link

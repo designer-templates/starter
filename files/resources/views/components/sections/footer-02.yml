@@ -6,7 +6,7 @@ fields:
         type: text
         label: Brand name
         description: Also set as the giant wordmark; a long name shrinks to fit.
-        default: "Larch"
+        default: "Starter"
     tagline:
         type: textarea
         label: Brand line
@@ -96,7 +96,7 @@ fields:
     legal:
         type: text
         label: Legal line
-        default: "© 2026 Larch, Inc. All rights reserved."
+        default: "© 2026 Starter, Inc. All rights reserved."
     note:
         type: text
         label: Note beside the legal line

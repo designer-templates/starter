@@ -1,5 +1,5 @@
 @props([
-    'brand' => 'Saltbrook',
+    'brand' => 'Starter',
     'links' => [
         (object) ['text' => 'Product', 'url' => '#', 'children' => [
             (object) ['text' => 'Invoicing', 'url' => '/product/invoicing', 'description' => 'Estimates, invoices and change orders'],
@@ -28,7 +28,8 @@
 
             <div class="flex flex-1 items-center" data-reveal>
                 <a href="/" aria-label="Homepage" class="flex shrink-0 items-center gap-2.5 text-ink">
-                    <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-current" aria-hidden="true"><path d="M12 2.5 3 20h18L12 2.5Zm0 6.2 4.9 8.3H7.1L12 8.7Z" fill-rule="evenodd"/></svg>
+                    <!-- The mark launches up from behind its own edge on load (.logo-mark in site.css). -->
+                    <svg viewBox="0 0 24 24" class="logo-mark size-5 shrink-0 fill-current" aria-hidden="true"><path d="M12 1.9 21.4 21.4 12 16.9 2.6 21.4Z"/></svg>
                     <span class="text-[17px] font-semibold tracking-tight">{{ $brand }}</span>
                 </a>
             </div>

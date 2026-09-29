@@ -5,7 +5,7 @@ fields:
     brand:
         type: text
         label: Brand name
-        default: "Brindle"
+        default: "Starter"
     links:
         type: repeater
         label: Navigation links
@@ -78,7 +78,7 @@ fields:
     latestTitle:
         type: text
         label: Latest card title
-        default: "Brindle 3.1: shift swaps from the phone"
+        default: "Starter 3.1: shift swaps from the phone"
     latestLinkText:
         type: text
         label: Latest card link text

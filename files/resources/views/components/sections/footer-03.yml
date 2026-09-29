@@ -5,7 +5,7 @@ fields:
     brand:
         type: text
         label: Brand name
-        default: "Keystone"
+        default: "Starter"
     tagline:
         type: text
         label: Brand line
@@ -80,4 +80,4 @@ fields:
     legal:
         type: text
         label: Legal line
-        default: "© 2026 Keystone Analytics, LLC"
+        default: "© 2026 Starter, Inc."

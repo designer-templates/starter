@@ -1,6 +1,6 @@
 @props([
-    'brand' => 'Ferrous',
-    'stripMessage' => 'Ferrous 2.4 is out: point-in-time restore on every plan.',
+    'brand' => 'Starter',
+    'stripMessage' => 'Starter 2.4 is out: point-in-time restore on every plan.',
     'stripLinkText' => 'Read the changelog',
     'stripLinkUrl' => '/changelog',
     'stripDismissible' => '1',
@@ -56,7 +56,8 @@
 
             <div class="flex items-center" data-reveal>
                 <a href="/" aria-label="Homepage" class="flex shrink-0 items-center gap-2.5 text-ink">
-                    <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-current" aria-hidden="true"><path fill-rule="evenodd" d="m12 1.75 8.9 5.1v10.3L12 22.25l-8.9-5.1V6.85L12 1.75Zm0 3.4L6.1 8.55v6.9l5.9 3.4 5.9-3.4v-6.9L12 5.15Z" clip-rule="evenodd"/></svg>
+                    <!-- The mark launches up from behind its own edge on load (.logo-mark in site.css). -->
+                    <svg viewBox="0 0 24 24" class="logo-mark size-5 shrink-0 fill-current" aria-hidden="true"><path d="M12 1.9 21.4 21.4 12 16.9 2.6 21.4Z"/></svg>
                     <span class="text-[17px] font-semibold tracking-tight">{{ $brand }}</span>
                 </a>
             </div>

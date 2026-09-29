@@ -1,5 +1,5 @@
 @props([
-    'brand' => 'Meadowlark',
+    'brand' => 'Starter',
     'links' => [
         (object) ['text' => 'Product', 'url' => '#', 'children' => [
             (object) ['text' => 'Rent collection', 'url' => '/product/rent', 'description' => 'ACH autopay, late fees by your rules'],
@@ -29,7 +29,8 @@
 
             <div class="flex items-center" data-reveal>
                 <a href="/" aria-label="Homepage" class="flex shrink-0 items-center gap-2.5 text-ink">
-                    <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-current" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.5 22.5 12H19v9.5H5V12H1.5L12 2.5Zm0 4.1L8 10.2V18.5h8v-8.3l-4-3.6Z" clip-rule="evenodd"/></svg>
+                    <!-- The mark launches up from behind its own edge on load (.logo-mark in site.css). -->
+                    <svg viewBox="0 0 24 24" class="logo-mark size-5 shrink-0 fill-current" aria-hidden="true"><path d="M12 1.9 21.4 21.4 12 16.9 2.6 21.4Z"/></svg>
                     <span class="text-[17px] font-semibold tracking-tight">{{ $brand }}</span>
                 </a>
             </div>

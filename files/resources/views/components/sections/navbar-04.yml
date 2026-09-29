@@ -5,7 +5,7 @@ fields:
     brand:
         type: text
         label: Brand name
-        default: "Meadowlark"
+        default: "Starter"
     links:
         type: repeater
         label: Navigation links

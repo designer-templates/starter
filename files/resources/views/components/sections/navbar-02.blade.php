@@ -1,5 +1,5 @@
 @props([
-    'brand' => 'Ambit',
+    'brand' => 'Starter',
     'links' => [
         (object) ['text' => 'Product', 'url' => '#', 'children' => [
             (object) ['text' => 'Monitors', 'url' => '/product/monitors', 'description' => '30-second checks from 14 US regions'],
@@ -29,7 +29,8 @@
 
             <div class="flex flex-1 items-center" data-reveal>
                 <a href="/" aria-label="Homepage" class="flex shrink-0 items-center gap-2.5 text-ink">
-                    <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-current" aria-hidden="true"><path fill-rule="evenodd" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 3.2a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6Z" clip-rule="evenodd"/><circle cx="12" cy="12" r="3"/></svg>
+                    <!-- The mark launches up from behind its own edge on load (.logo-mark in site.css). -->
+                    <svg viewBox="0 0 24 24" class="logo-mark size-5 shrink-0 fill-current" aria-hidden="true"><path d="M12 1.9 21.4 21.4 12 16.9 2.6 21.4Z"/></svg>
                     <span class="text-[17px] font-semibold tracking-tight">{{ $brand }}</span>
                 </a>
             </div>

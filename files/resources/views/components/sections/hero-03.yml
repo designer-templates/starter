@@ -1,84 +1,109 @@
-title: Hero — type-led
-description: Eyebrow, an oversized headline, intro, one button and an arrow link; below, a hairline strip of three benefits and a row of three figures, the first counting up once
+title: Hero — centred statement with drifting wordmarks and photographs
+description: A badge, headline, intro and two buttons centred; beneath them a strip of wordmarks drifting one way and a row of tall photographs drifting the other, cut off by the section's edge
 category: heroes
 fields:
-    eyebrow:
+    showBadge:
+        type: toggle
+        label: Show the badge
+        default: "1"
+    badgeText:
         type: text
-        label: Eyebrow
-        description: Clear to hide.
-        default: "Uptime monitoring"
+        label: Badge text
+        default: "Now with retainers and deposits"
     heading:
         type: text
         label: Heading
-        default: "Find out before your customers do"
+        default: "Run the studio, not the spreadsheet"
         required: true
     text:
         type: textarea
         label: Intro
         rows: 3
-        default: "Vessel checks every endpoint from 14 US cities every 30 seconds, pages whoever is on call, and keeps a status page your customers can trust."
+        default: "Hollen keeps every project, hour and invoice for a design studio in one place, so Friday is for the work and not the books."
     buttonText:
         type: text
-        label: Button text
-        description: Clear to hide.
-        default: "Start monitoring free"
+        label: Primary button text
+        default: "Start free"
     buttonLink:
         type: url
-        label: Button link
+        label: Primary button link
         default: "/signup"
-    linkText:
+    buttonText2:
         type: text
-        label: Text link
+        label: Secondary button text
         description: Clear to hide.
-        default: "See a live status page"
-    linkUrl:
+        default: "See a live studio"
+    buttonLink2:
         type: url
-        label: Text link URL
-        default: "/status"
-    benefits:
+        label: Secondary button link
+        default: "/demo"
+    logosLabel:
+        type: text
+        label: Line over the wordmarks
+        description: Clear to hide.
+        default: "Used by 1,400 studios"
+    logos:
         type: repeater
-        label: Benefits
-        source: collections.features
-        add_button_label: Add benefit
-        item_label: title
+        label: Wordmarks
+        source: "collections.logos"
+        add_button_label: "Add wordmark"
+        item_label: name
         sub_fields:
+            name:
+                type: text
+                label: Name
+                default: "New company"
             icon:
                 type: textarea
-                label: Icon (inline SVG)
+                label: Mark (inline SVG)
                 rows: 3
-            title:
-                type: text
-                label: Title
-            description:
-                type: text
-                label: One line
+                default: ""
         default:
-            - icon: "<svg viewBox='0 0 24 24' class='size-5' fill='none' stroke='currentColor' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z'/><path stroke-linecap='round' stroke-linejoin='round' d='M3.6 9h16.8M3.6 15h16.8M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18'/></svg>"
-              title: "Checks from 14 cities"
-              description: "HTTP, TCP and heartbeat checks from Denver to Raleigh, every 30 seconds."
-            - icon: "<svg viewBox='0 0 24 24' class='size-5' fill='none' stroke='currentColor' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0'/></svg>"
-              title: "Pages the right person"
-              description: "Escalates through the on-call rota by text, phone and chat until someone acknowledges."
-            - icon: "<svg viewBox='0 0 24 24' class='size-5' fill='none' stroke='currentColor' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'/></svg>"
-              title: "A status page that writes itself"
-              description: "Incidents open, update and close from your alerts, on your own domain."
-    stats:
+            - name: "Upland"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><path fill-rule='evenodd' d='M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z'/></svg>"
+            - name: "Verity"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><path d='M9.4 20.2 2.6 13.4l2.9-2.9 3.9 3.9L18.5 4.3l2.9 2.9Z'/></svg>"
+            - name: "Valence"
+              icon: "<svg viewBox='0 0 24 24' aria-hidden='true'><circle cx='12' cy='12' r='3.5' fill='currentColor'/><ellipse cx='12' cy='12' rx='9.5' ry='4' fill='none' stroke='currentColor' stroke-width='1.75' transform='rotate(-30 12 12)'/></svg>"
+            - name: "Granary"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><circle cx='7.5' cy='7.5' r='3.75'/><circle cx='16.5' cy='7.5' r='3.75'/><circle cx='7.5' cy='16.5' r='3.75'/><circle cx='16.5' cy='16.5' r='3.75'/></svg>"
+            - name: "Rosewood"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><path d='M12 3 21 10.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5Z'/></svg>"
+            - name: "Cinder"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><rect x='3' y='9' width='13' height='6' rx='3'/><circle cx='19.5' cy='12' r='2.5'/></svg>"
+            - name: "Perch"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><rect x='5' y='5' width='14' height='14' rx='2.5' transform='rotate(45 12 12)'/></svg>"
+            - name: "Tallis"
+              icon: "<svg viewBox='0 0 24 24' class='fill-current' aria-hidden='true'><rect x='3' y='10.25' width='18' height='3.5' rx='1.75'/><rect x='3' y='10.25' width='18' height='3.5' rx='1.75' transform='rotate(60 12 12)'/><rect x='3' y='10.25' width='18' height='3.5' rx='1.75' transform='rotate(120 12 12)'/></svg>"
+    images:
         type: repeater
-        label: Figures
-        source: collections.stats
-        add_button_label: Add figure
-        item_label: label
+        label: Photographs
+        description: Tall tiles (4:5) that drift across the bottom of the hero. Six to eight work best.
+        add_button_label: "Add photograph"
+        item_label: alt
         sub_fields:
-            value:
+            image:
+                type: image
+                label: Photograph
+                default: "/images/blocks/workspace-01.jpg"
+            alt:
                 type: text
-                label: Value
-            label:
-                type: text
-                label: Label
+                label: Description
+                default: "What the photograph shows"
         default:
-            - value: "99.98%"
-              label: "of checks delivered on schedule"
-            - value: "31 s"
-              label: "median time to first alert"
-            - value: "2,140"
-              label: "teams on call with Vessel"
+            - image: "/images/blocks/workspace-01.jpg"
+              alt: "People at desks in a bright studio"
+            - image: "/images/blocks/cover-01.jpg"
+              alt: "A notebook and pencil on an oak desk"
+            - image: "/images/blocks/portrait-01.jpg"
+              alt: "A designer at her desk"
+            - image: "/images/blocks/cover-03.jpg"
+              alt: "White concrete stairs in sunlight"
+            - image: "/images/blocks/workspace-02.jpg"
+              alt: "Two people at a whiteboard"
+            - image: "/images/blocks/cover-05.jpg"
+              alt: "Green leaves against a white wall"
+            - image: "/images/blocks/portrait-02.jpg"
+              alt: "A designer reviewing work at a desk"
+            - image: "/images/blocks/cover-04.jpg"
+              alt: "Ceramic cups on a shelf"

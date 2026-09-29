@@ -9,9 +9,9 @@
 <!--
     The site-wide header — the mark and brand on the left, the links centered,
     Log in and the primary action on the right. It is sticky at the top of the
-    viewport; the announcement bar is its own section (sections/banner.blade.php),
-    placed above it in the layout, so it scrolls away and the bar stays put.
-    Every page's opening section starts right under it.
+    viewport. An announcement bar (sections/banner.blade.php) can be placed
+    above it in the layout; it scrolls away and the header stays put. Every
+    page's opening section starts right under it.
 
     Links come from nav_links in resources/data/site.json. Nest links under an
     item and it becomes a dropdown (tested with count(): on the canvas an empty

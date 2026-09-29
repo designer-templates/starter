@@ -24,9 +24,7 @@
 </head>
 <body class="min-h-dvh bg-canvas font-sans text-ink antialiased">
 
-    <!-- The announcement bar (components/sections/banner.blade.php), then the sticky site-wide nav. Links live in resources/data/site.json (nav_links); the markup is components/nav.blade.php. -->
-    <x-sections.banner />
-
+    <!-- The sticky site-wide nav. Links live in resources/data/site.json (nav_links); the markup is components/nav.blade.php. -->
     <x-nav :links="$site->nav_links"/>
 
     <!-- The header sits in the flow above this; each page's opening section carries its own top padding. -->

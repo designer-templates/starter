@@ -89,7 +89,7 @@ function mobileMenu() {
     window.matchMedia('(min-width: 64rem)').addEventListener('change', function (e) { if (e.matches) set(false); });
 }
 
-/* The announcement banner (sections/banner.blade.php, above the header in the layout): the dismiss button hides it for this visit. */
+/* The announcement banner (sections/banner.blade.php, wherever it is placed): the dismiss button hides it for this visit. */
 function banners() {
     document.querySelectorAll('[data-banner]').forEach(function (banner) {
         var button = banner.querySelector('[data-banner-dismiss]');

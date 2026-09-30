@@ -18,27 +18,27 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div data-reveal>
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
             @endif
-            <h2 class="mt-4 max-w-[30ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+            <h2 class="mt-4 max-w-[30ch] text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
             @if ($intro)
-            <p class="mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+            <p class="mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
             @endif
         </div>
 
         <ul role="list" class="mt-14 grid gap-4 md:grid-cols-3">
             @foreach ($offices as $office)
-            <li class="reveal-{{ min($loop->iteration, 6) }} flex flex-col rounded-2xl border border-line bg-panel p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-[var(--shadow-card)] sm:p-8" data-reveal>
+            <li class="reveal-{{ min($loop->iteration, 6) }} flex flex-col rounded-2xl border border-border bg-card p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-[var(--shadow-card)] sm:p-8" data-reveal>
                 <div class="flex items-baseline justify-between gap-4">
-                    <h3 class="text-xl font-semibold tracking-tight text-ink">{{ $office->city }}</h3>
-                    <p class="hidden font-mono text-[12px] whitespace-nowrap text-faint tabular-nums" data-clock-row>{{ $localTimeLabel }} <span data-clock="{{ $office->timezone }}"></span></p>
+                    <h3 class="text-xl font-semibold tracking-tight text-foreground">{{ $office->city }}</h3>
+                    <p class="hidden font-mono text-[12px] whitespace-nowrap text-muted-foreground/80 tabular-nums" data-clock-row>{{ $localTimeLabel }} <span data-clock="{{ $office->timezone }}"></span></p>
                 </div>
-                <p class="mt-4 text-[15px]/6 whitespace-pre-line text-muted">{{ $office->address }}</p>
-                <p class="mt-2 text-[15px]/6 text-muted">{{ $office->hours }}</p>
+                <p class="mt-4 text-[15px]/6 whitespace-pre-line text-muted-foreground">{{ $office->address }}</p>
+                <p class="mt-2 text-[15px]/6 text-muted-foreground">{{ $office->hours }}</p>
                 <div class="mt-auto pt-6 sm:pt-8">
-                    <div class="flex flex-col gap-2.5 border-t border-line pt-5">
-                        <a href="{{ $office->phoneUrl }}" class="text-[15px] text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 tabular-nums hover:decoration-line-strong">{{ $office->phoneText }}</a>
-                        <a href="{{ $office->directionsUrl }}" class="arrow-link inline-flex items-center gap-1.5 text-[15px] font-medium text-ink">{{ $directionsText }}<svg viewBox="0 0 24 24" class="arrow size-4 opacity-60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></a>
+                    <div class="flex flex-col gap-2.5 border-t border-border pt-5">
+                        <a href="{{ $office->phoneUrl }}" class="text-[15px] text-foreground underline decoration-transparent underline-offset-4 transition-colors duration-200 tabular-nums hover:decoration-border-strong">{{ $office->phoneText }}</a>
+                        <a href="{{ $office->directionsUrl }}" class="arrow-link inline-flex items-center gap-1.5 text-[15px] font-medium text-foreground">{{ $directionsText }}<svg viewBox="0 0 24 24" class="arrow size-4 opacity-60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></a>
                     </div>
                 </div>
             </li>
@@ -46,9 +46,9 @@
         </ul>
 
         @if ($emailText)
-        <div class="mt-12 flex flex-col gap-3 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between sm:gap-8" data-reveal>
-            <p class="max-w-[58ch] text-[15px]/6 text-pretty text-muted">{{ $emailNote }}</p>
-            <a href="{{ $emailUrl }}" class="shrink-0 text-[15px] font-medium text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 hover:decoration-line-strong">{{ $emailText }}</a>
+        <div class="mt-12 flex flex-col gap-3 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between sm:gap-8" data-reveal>
+            <p class="max-w-[58ch] text-[15px]/6 text-pretty text-muted-foreground">{{ $emailNote }}</p>
+            <a href="{{ $emailUrl }}" class="shrink-0 text-[15px] font-medium text-foreground underline decoration-transparent underline-offset-4 transition-colors duration-200 hover:decoration-border-strong">{{ $emailText }}</a>
         </div>
         @endif
     </div>

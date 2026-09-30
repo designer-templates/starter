@@ -53,41 +53,41 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center">
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase" data-reveal>{{ $eyebrow }}</p>
             @endif
-            <h2 class="reveal-1 mx-auto mt-3 max-w-xl text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
+            <h2 class="reveal-1 mx-auto mt-3 max-w-xl text-h2 font-semibold tracking-tight text-balance text-foreground" data-reveal>{{ $heading }}</h2>
             @if ($intro)
-            <p class="reveal-2 mx-auto mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted" data-reveal>{{ $intro }}</p>
+            <p class="reveal-2 mx-auto mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground" data-reveal>{{ $intro }}</p>
             @endif
         </div>
 
         <div class="relative mt-12 sm:mt-16">
             <div class="gap-5 pb-10 columns-1 sm:columns-2 lg:columns-3">
                 @foreach ($testimonials as $item)
-                <figure class="reveal-{{ min($loop->iteration, 6) }} mb-5 break-inside-avoid rounded-2xl border border-line bg-panel p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-[var(--shadow-card)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8" data-reveal>
-                    <div class="flex gap-0.5 text-ink" role="img" aria-label="5 out of 5 stars">
+                <figure class="reveal-{{ min($loop->iteration, 6) }} mb-5 break-inside-avoid rounded-2xl border border-border bg-card p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-[var(--shadow-card)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8" data-reveal>
+                    <div class="flex gap-0.5 text-foreground" role="img" aria-label="5 out of 5 stars">
                         @for ($i = 0; $i < 5; $i++)
                         <svg viewBox="0 0 20 20" class="size-3.5 fill-current" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L10 14.9l-5.3 2.8 1.1-5.9L1.5 7.7l5.9-.8z"/></svg>
                         @endfor
                     </div>
                     <blockquote class="mt-5">
-                        <p class="text-[15px]/6 text-pretty text-lede">{{ $item->quote }}</p>
+                        <p class="text-[15px]/6 text-pretty text-foreground/78">{{ $item->quote }}</p>
                     </blockquote>
                     <figcaption class="mt-6 flex items-center gap-3">
-                        <img src="{{ $item->avatar }}" alt="" width="40" height="40" class="size-10 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-line" loading="lazy">
+                        <img src="{{ $item->avatar }}" alt="" width="40" height="40" class="size-10 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-border" loading="lazy">
                         <div class="min-w-0">
-                            <p class="text-[14px] font-semibold text-ink">{{ $item->name }}</p>
-                            <p class="mt-0.5 text-[13px] text-muted">{{ $item->role }}</p>
+                            <p class="text-[14px] font-semibold text-foreground">{{ $item->name }}</p>
+                            <p class="mt-0.5 text-[13px] text-muted-foreground">{{ $item->role }}</p>
                         </div>
                     </figcaption>
                 </figure>
                 @endforeach
             </div>
-            <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-canvas to-transparent" aria-hidden="true"></div>
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-background to-transparent" aria-hidden="true"></div>
         </div>
         @if ($ctaText)
         <div class="reveal-2 flex justify-center" data-reveal>
-            <a href="{{ $ctaLink }}" class="arrow-link inline-flex min-h-11 items-center gap-1.5 text-[15px] font-medium text-ink">
+            <a href="{{ $ctaLink }}" class="arrow-link inline-flex min-h-11 items-center gap-1.5 text-[15px] font-medium text-foreground">
                 {{ $ctaText }}
                 <svg viewBox="0 0 24 24" class="arrow size-4 opacity-60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
             </a>

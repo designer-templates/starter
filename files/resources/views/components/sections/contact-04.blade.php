@@ -27,53 +27,53 @@
 <section class="py-16 sm:py-28">
     <div class="mx-auto grid w-full max-w-6xl px-6 lg:px-8 gap-14 lg:grid-cols-2 lg:gap-20">
         <div data-reveal>
-            <h2 class="max-w-[22ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+            <h2 class="max-w-[22ch] text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
             @if ($intro)
-            <p class="mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+            <p class="mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
             @endif
 
             <form action="{{ $action }}" method="post" class="mt-10 flex max-w-md flex-col gap-5">
                 <label class="block">
-                    <span class="block text-[14px] font-medium text-ink">{{ $fieldEmail }}</span>
-                    <input type="email" name="email" autocomplete="email" inputmode="email" required class="field mt-2 block h-11 w-full rounded-lg border border-line bg-panel px-3.5 text-base text-ink sm:text-[15px]">
+                    <span class="block text-[14px] font-medium text-foreground">{{ $fieldEmail }}</span>
+                    <input type="email" name="email" autocomplete="email" inputmode="email" required class="field mt-2 block h-11 w-full rounded-lg border border-input bg-card px-3.5 text-base text-foreground sm:text-[15px]">
                 </label>
                 <label class="block">
-                    <span class="block text-[14px] font-medium text-ink">{{ $fieldSize }}</span>
+                    <span class="block text-[14px] font-medium text-foreground">{{ $fieldSize }}</span>
                     <span class="mt-2 grid grid-cols-[1fr_2.5rem]">
-                        <select name="company_size" class="field col-span-full row-start-1 h-11 w-full appearance-none rounded-lg border border-line bg-panel pr-10 pl-3.5 text-base text-ink sm:text-[15px]">
+                        <select name="company_size" class="field col-span-full row-start-1 h-11 w-full appearance-none rounded-lg border border-input bg-card pr-10 pl-3.5 text-base text-foreground sm:text-[15px]">
                             @foreach ($sizes as $size)
                             <option>{{ $size->label }}</option>
                             @endforeach
                         </select>
-                        <svg viewBox="0 0 24 24" class="pointer-events-none col-start-2 row-start-1 size-4 place-self-center text-muted" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+                        <svg viewBox="0 0 24 24" class="pointer-events-none col-start-2 row-start-1 size-4 place-self-center text-muted-foreground" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
                     </span>
                 </label>
                 <div class="mt-1 flex flex-col gap-3">
-                    <button type="submit" class="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-ink px-7 py-3.5 text-[15px] font-medium text-canvas shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto sm:self-start">{{ $buttonText }}</button>
+                    <button type="submit" class="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto sm:self-start">{{ $buttonText }}</button>
                     @if ($finePrint)
-                    <p class="text-[13px] text-faint">{{ $finePrint }}</p>
+                    <p class="text-[13px] text-muted-foreground/80">{{ $finePrint }}</p>
                     @endif
                 </div>
             </form>
         </div>
 
-        <figure class="reveal-2 flex flex-col rounded-3xl bg-raised/70 p-8 sm:p-10" data-reveal>
-            <blockquote class="relative text-xl/8 font-medium text-balance text-ink before:absolute before:-translate-x-full before:content-['\201C'] after:content-['\201D']">{{ $quote }}</blockquote>
+        <figure class="reveal-2 flex flex-col rounded-3xl bg-muted/70 p-8 sm:p-10" data-reveal>
+            <blockquote class="relative text-xl/8 font-medium text-balance text-foreground before:absolute before:-translate-x-full before:content-['\201C'] after:content-['\201D']">{{ $quote }}</blockquote>
             <figcaption class="mt-8 flex items-center gap-3">
                 <img src="{{ $avatar }}" alt="" width="40" height="40" class="size-10 rounded-full object-cover" loading="lazy">
                 <span class="flex flex-col">
-                    <span class="text-[14px] font-medium text-ink">{{ $name }}</span>
-                    <span class="text-[13px] text-muted">{{ $role }}</span>
+                    <span class="text-[14px] font-medium text-foreground">{{ $name }}</span>
+                    <span class="text-[13px] text-muted-foreground">{{ $role }}</span>
                 </span>
             </figcaption>
             <div class="mt-auto pt-8 sm:pt-10">
-                <div class="border-t border-line pt-6">
+                <div class="border-t border-border pt-6">
                     @if ($logosLabel)
-                    <p class="text-[13px] text-faint">{{ $logosLabel }}</p>
+                    <p class="text-[13px] text-muted-foreground/80">{{ $logosLabel }}</p>
                     @endif
                     <ul role="list" class="mt-4 -mb-3 text-balance">
                         @foreach ($logos as $logo)
-                        <li class="mr-8 mb-3 inline-flex items-center gap-2 align-middle text-[15px] font-semibold tracking-tight text-faint transition-colors duration-200 hover:text-ink">{!! $logo->icon !!}<span>{{ $logo->name }}</span></li>
+                        <li class="mr-8 mb-3 inline-flex items-center gap-2 align-middle text-[15px] font-semibold tracking-tight text-muted-foreground/80 transition-colors duration-200 hover:text-foreground">{!! $logo->icon !!}<span>{{ $logo->name }}</span></li>
                         @endforeach
                     </ul>
                 </div>

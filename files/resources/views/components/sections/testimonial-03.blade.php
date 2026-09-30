@@ -24,21 +24,21 @@
     <div class="mx-auto grid w-full max-w-6xl px-6 lg:px-8 gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
         <figure class="lg:col-span-7">
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase" data-reveal>{{ $eyebrow }}</p>
             @endif
             <blockquote class="reveal-1 relative mt-4" data-reveal>
-                <p class="max-w-[32ch] font-display text-3xl/tight font-semibold tracking-tight text-balance text-ink before:absolute before:-translate-x-full before:content-['\201C'] after:content-['\201D'] sm:text-4xl/tight">{{ $quote }}</p>
+                <p class="max-w-[32ch] font-display text-3xl/tight font-semibold tracking-tight text-balance text-foreground before:absolute before:-translate-x-full before:content-['\201C'] after:content-['\201D'] sm:text-4xl/tight">{{ $quote }}</p>
             </blockquote>
             <figcaption class="reveal-2 mt-8 flex items-center gap-4" data-reveal>
-                <img src="{{ $avatar }}" alt="" width="48" height="48" class="size-12 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-line" loading="lazy">
+                <img src="{{ $avatar }}" alt="" width="48" height="48" class="size-12 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-border" loading="lazy">
                 <div>
-                    <p class="text-[15px] font-semibold text-ink">{{ $name }}</p>
-                    <p class="mt-0.5 text-[14px] text-muted">{{ $role }}</p>
+                    <p class="text-[15px] font-semibold text-foreground">{{ $name }}</p>
+                    <p class="mt-0.5 text-[14px] text-muted-foreground">{{ $role }}</p>
                 </div>
             </figcaption>
             @if ($ctaText)
             <div class="reveal-3 mt-8" data-reveal>
-                <a href="{{ $ctaLink }}" class="arrow-link inline-flex min-h-11 items-center gap-1.5 text-[15px] font-medium text-ink">
+                <a href="{{ $ctaLink }}" class="arrow-link inline-flex min-h-11 items-center gap-1.5 text-[15px] font-medium text-foreground">
                     {{ $ctaText }}
                     <svg viewBox="0 0 24 24" class="arrow size-4 opacity-60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                 </a>
@@ -46,13 +46,13 @@
             @endif
         </figure>
 
-        <div class="reveal-3 rounded-3xl bg-raised/70 p-8 sm:p-10 lg:col-span-5" data-reveal>
-            <p class="font-mono text-[13px] font-medium tracking-widest text-ink uppercase">{{ $company }}</p>
-            <dl class="mt-8 divide-y divide-line">
+        <div class="reveal-3 rounded-3xl bg-muted/70 p-8 sm:p-10 lg:col-span-5" data-reveal>
+            <p class="font-mono text-[13px] font-medium tracking-widest text-foreground uppercase">{{ $company }}</p>
+            <dl class="mt-8 divide-y divide-border">
                 @foreach ($stats as $item)
                 <div class="py-6 first:pt-0 last:pb-0">
-                    <dd class="text-figure font-semibold tracking-tight text-ink tabular-nums" @if ($loop->first) data-count @endif>{{ $item->value }}</dd>
-                    <dt class="mt-2 text-[15px] text-muted">{{ $item->label }}</dt>
+                    <dd class="text-figure font-semibold tracking-tight text-foreground tabular-nums" @if ($loop->first) data-count @endif>{{ $item->value }}</dd>
+                    <dt class="mt-2 text-[15px] text-muted-foreground">{{ $item->label }}</dt>
                 </div>
                 @endforeach
             </dl>

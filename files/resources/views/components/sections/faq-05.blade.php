@@ -23,38 +23,38 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl" data-reveal>
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
             @endif
-            <h2 class="mt-4 text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+            <h2 class="mt-4 text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
             @if ($intro)
-            <p class="mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+            <p class="mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
             @endif
         </div>
 
         <div class="mt-14 grid gap-12 lg:grid-cols-3 lg:gap-16">
-            <div class="reveal-2 divide-y divide-line border-y border-line lg:col-span-2" data-reveal>
+            <div class="reveal-2 divide-y divide-border border-y border-border lg:col-span-2" data-reveal>
                 @foreach ($faqs as $item)
                 <details class="faq-item group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[16px] font-medium text-ink transition-colors duration-200 hover:text-accent">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[16px] font-medium text-foreground transition-colors duration-200 hover:text-accent">
                         {{ $item->question }}
-                        <svg viewBox="0 0 16 16" class="faq-plus size-4 shrink-0 fill-current text-muted" aria-hidden="true"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"/></svg>
+                        <svg viewBox="0 0 16 16" class="faq-plus size-4 shrink-0 fill-current text-muted-foreground" aria-hidden="true"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"/></svg>
                     </summary>
-                    <p class="max-w-[62ch] pb-6 text-[15px]/7 text-pretty text-muted">{{ $item->answer }}</p>
+                    <p class="max-w-[62ch] pb-6 text-[15px]/7 text-pretty text-muted-foreground">{{ $item->answer }}</p>
                 </details>
                 @endforeach
             </div>
 
-            <div class="reveal-3 self-start rounded-2xl border border-line bg-panel p-6 sm:p-8 lg:sticky lg:top-24" data-reveal>
+            <div class="reveal-3 self-start rounded-2xl border border-border bg-card p-6 sm:p-8 lg:sticky lg:top-24" data-reveal>
                 <div class="flex -space-x-3">
-                    <img src="{{ $avatarOne }}" alt="" width="40" height="40" class="size-10 rounded-full border-2 border-panel object-cover" loading="lazy">
-                    <img src="{{ $avatarTwo }}" alt="" width="40" height="40" class="size-10 rounded-full border-2 border-panel object-cover" loading="lazy">
-                    <img src="{{ $avatarThree }}" alt="" width="40" height="40" class="size-10 rounded-full border-2 border-panel object-cover" loading="lazy">
+                    <img src="{{ $avatarOne }}" alt="" width="40" height="40" class="size-10 rounded-full border-2 border-card object-cover" loading="lazy">
+                    <img src="{{ $avatarTwo }}" alt="" width="40" height="40" class="size-10 rounded-full border-2 border-card object-cover" loading="lazy">
+                    <img src="{{ $avatarThree }}" alt="" width="40" height="40" class="size-10 rounded-full border-2 border-card object-cover" loading="lazy">
                 </div>
-                <h3 class="mt-6 text-xl font-semibold tracking-tight text-ink">{{ $cardHeading }}</h3>
+                <h3 class="mt-6 text-xl font-semibold tracking-tight text-foreground">{{ $cardHeading }}</h3>
                 @if ($cardText)
-                <p class="mt-2 text-[15px]/6 text-pretty text-muted">{{ $cardText }}</p>
+                <p class="mt-2 text-[15px]/6 text-pretty text-muted-foreground">{{ $cardText }}</p>
                 @endif
-                <a href="{{ $cardButtonUrl }}" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-line bg-panel px-7 py-3.5 text-[15px] font-medium text-lede transition-colors duration-200 hover:border-line-strong hover:bg-raised active:scale-[.98]">{{ $cardButtonText }}</a>
+                <a href="{{ $cardButtonUrl }}" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-7 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $cardButtonText }}</a>
             </div>
         </div>
     </div>

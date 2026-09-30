@@ -21,24 +21,24 @@
         <div class="grid gap-y-14 lg:grid-cols-12 lg:gap-x-12">
             <div class="lg:sticky lg:top-24 lg:col-span-5 lg:self-start" data-reveal>
                 @if ($eyebrow)
-                <p class="mb-4 text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+                <p class="mb-4 text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
                 @endif
-                <h2 class="max-w-[20ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+                <h2 class="max-w-[20ch] text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
                 @if ($intro)
-                <p class="mt-5 max-w-[46ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+                <p class="mt-5 max-w-[46ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
                 @endif
             </div>
 
             <div class="relative lg:col-span-6 lg:col-start-7">
-                <span class="absolute top-2 bottom-2 left-[4px] w-px bg-line" aria-hidden="true"></span>
-                <span class="absolute top-2 bottom-2 left-[4px] w-px bg-ink/30" data-spine aria-hidden="true"></span>
+                <span class="absolute top-2 bottom-2 left-[4px] w-px bg-border" aria-hidden="true"></span>
+                <span class="absolute top-2 bottom-2 left-[4px] w-px bg-primary/30" data-spine aria-hidden="true"></span>
                 <ol>
                     @foreach ($milestones as $milestone)
                     <li class="reveal-{{ min($loop->iteration, 6) }} relative pb-12 pl-10 last:pb-0" data-reveal>
-                        <span class="absolute top-1 left-0 size-2.5 rounded-full bg-ink ring-4 ring-canvas" aria-hidden="true"></span>
-                        <p class="font-mono text-[12px] text-faint tabular-nums">{{ $milestone->year }}</p>
-                        <h3 class="mt-2 text-lg font-medium tracking-tight text-ink">{{ $milestone->title }}</h3>
-                        <p class="mt-1.5 max-w-[48ch] text-[15px]/6 text-pretty text-muted">{{ $milestone->description }}</p>
+                        <span class="absolute top-1 left-0 size-2.5 rounded-full bg-primary ring-4 ring-background" aria-hidden="true"></span>
+                        <p class="font-mono text-[12px] text-muted-foreground/80 tabular-nums">{{ $milestone->year }}</p>
+                        <h3 class="mt-2 text-lg font-medium tracking-tight text-foreground">{{ $milestone->title }}</h3>
+                        <p class="mt-1.5 max-w-[48ch] text-[15px]/6 text-pretty text-muted-foreground">{{ $milestone->description }}</p>
                     </li>
                     @endforeach
                 </ol>

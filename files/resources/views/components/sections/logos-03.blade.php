@@ -14,10 +14,10 @@
 <!-- Logo grid: a bordered grid of cells ruled by hairlines, each a centred wordmark that fills on hover, with one caption of proof under it. Rows come from collections.logos; the grid runs two across on phones and four on larger screens for any count; clear the caption to show the grid alone. -->
 <section class="py-16 sm:py-20" data-logos-03>
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
-        <div class="overflow-hidden rounded-2xl border border-line" data-reveal>
+        <div class="overflow-hidden rounded-2xl border border-border" data-reveal>
             <ul role="list" class="-mt-px -ml-px grid grid-cols-2 sm:grid-cols-4">
                 @foreach ($items as $item)
-                <li class="flex h-24 items-center justify-center gap-2.5 border-t border-l border-line text-faint transition-colors duration-200 hover:bg-raised hover:text-ink sm:h-28 [&_svg]:size-6 [&_svg]:shrink-0">
+                <li class="flex h-24 items-center justify-center gap-2.5 border-t border-l border-border text-muted-foreground/80 transition-colors duration-200 hover:bg-muted hover:text-foreground sm:h-28 [&_svg]:size-6 [&_svg]:shrink-0">
                     {!! $item->icon !!}
                     <span class="text-[17px] font-semibold tracking-tight">{{ $item->name }}</span>
                 </li>
@@ -25,7 +25,7 @@
             </ul>
         </div>
         @if ($caption)
-        <p class="reveal-1 mt-6 text-center text-[13px] text-faint" data-reveal>{{ $caption }}</p>
+        <p class="reveal-1 mt-6 text-center text-[13px] text-muted-foreground/80" data-reveal>{{ $caption }}</p>
         @endif
     </div>
 </section>

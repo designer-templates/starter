@@ -10,17 +10,17 @@
 <!-- A split row between two hairlines: heading and copy on the left, buttons on the right. -->
 <section class="py-20 sm:py-28">
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
-        <div class="flex flex-col gap-6 border-y border-line py-12 sm:flex-row sm:items-center sm:justify-between sm:gap-10" data-reveal>
+        <div class="flex flex-col gap-6 border-y border-border py-12 sm:flex-row sm:items-center sm:justify-between sm:gap-10" data-reveal>
             <div class="max-w-xl">
-                <h2 class="text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+                <h2 class="text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
                 @if ($text)
-                <p class="mt-3 text-[17px]/7 text-pretty text-lede">{{ $text }}</p>
+                <p class="mt-3 text-[17px]/7 text-pretty text-foreground/78">{{ $text }}</p>
                 @endif
             </div>
             <div class="flex flex-wrap items-center gap-3 sm:shrink-0">
-                <a href="{{ $primaryUrl }}" class="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3.5 text-[15px] font-medium text-canvas transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $primaryText }}</a>
+                <a href="{{ $primaryUrl }}" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $primaryText }}</a>
                 @if ($showSecondary)
-                <a href="{{ $secondaryUrl }}" class="inline-flex items-center justify-center rounded-full border border-line-strong px-6 py-3.5 text-[15px] font-medium text-ink transition-colors duration-200 hover:bg-raised active:scale-[.98]">{{ $secondaryText }}</a>
+                <a href="{{ $secondaryUrl }}" class="inline-flex items-center justify-center rounded-full border border-border-strong px-6 py-3.5 text-[15px] font-medium text-foreground transition-colors duration-200 hover:bg-muted active:scale-[.98]">{{ $secondaryText }}</a>
                 @endif
             </div>
         </div>

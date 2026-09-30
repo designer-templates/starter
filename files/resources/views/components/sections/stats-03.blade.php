@@ -21,25 +21,25 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl" data-reveal>
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
             @endif
-            <h2 class="mt-4 max-w-[24ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+            <h2 class="mt-4 max-w-[24ch] text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
             @if ($intro)
-            <p class="mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+            <p class="mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
             @endif
         </div>
 
-        <div class="reveal-2 mt-12 overflow-hidden rounded-2xl border border-line bg-panel sm:mt-14" data-reveal>
+        <div class="reveal-2 mt-12 overflow-hidden rounded-2xl border border-border bg-card sm:mt-14" data-reveal>
             <table class="w-full text-left">
                 <thead>
-                    <tr class="border-b border-line font-mono text-[11px] tracking-[0.12em] text-faint uppercase">
+                    <tr class="border-b border-border font-mono text-[11px] tracking-[0.12em] text-muted-foreground/80 uppercase">
                         <th scope="col" class="py-3.5 pr-4 pl-5 font-normal whitespace-nowrap sm:pl-8">{{ $colMetric }}</th>
                         <th scope="col" class="w-px py-3.5 pl-6 text-right font-normal sm:pl-10 sm:whitespace-nowrap">{{ $colValue }}</th>
                         <th scope="col" class="hidden w-px py-3.5 pl-10 text-right font-normal whitespace-nowrap sm:table-cell">{{ $colDelta }}</th>
                         <th scope="col" class="w-px py-3.5 pr-5 pl-6 text-right font-normal whitespace-nowrap sm:pr-8 sm:pl-10"><span class="max-sm:sr-only">{{ $colTrend }}</span></th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-line">
+                <tbody class="divide-y divide-border">
                     @foreach ($metrics as $item)
                     @php
                         $raw = array_values(array_filter(array_map('trim', explode(',', (string) ($item->points ?? ''))), 'strlen'));
@@ -55,27 +55,27 @@
                         $delta = trim((string) ($item->delta ?? ''));
                         $down = $delta !== '' && (str_starts_with($delta, '−') || str_starts_with($delta, '-'));
                     @endphp
-                    <tr class="transition-colors duration-200 hover:bg-raised/60">
-                        <th scope="row" class="py-4 pr-4 pl-5 text-[15px]/5 font-medium text-pretty text-ink sm:pl-8">{{ $item->label }}</th>
-                        <td class="w-px py-4 pl-6 text-right text-[15px] text-ink tabular-nums whitespace-nowrap sm:pl-10">{{ $item->value }}</td>
-                        <td class="hidden w-px py-4 pl-10 text-right font-mono text-[12px] text-muted tabular-nums whitespace-nowrap sm:table-cell">
+                    <tr class="transition-colors duration-200 hover:bg-muted/60">
+                        <th scope="row" class="py-4 pr-4 pl-5 text-[15px]/5 font-medium text-pretty text-foreground sm:pl-8">{{ $item->label }}</th>
+                        <td class="w-px py-4 pl-6 text-right text-[15px] text-foreground tabular-nums whitespace-nowrap sm:pl-10">{{ $item->value }}</td>
+                        <td class="hidden w-px py-4 pl-10 text-right font-mono text-[12px] text-muted-foreground tabular-nums whitespace-nowrap sm:table-cell">
                             @if ($delta !== '')
                             <span class="inline-flex items-center gap-1">
-                                <svg viewBox="0 0 16 16" class="size-3 shrink-0 text-faint {{ $down ? 'rotate-90' : '' }}" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12L12 4M12 4H6M12 4v6"/></svg>
+                                <svg viewBox="0 0 16 16" class="size-3 shrink-0 text-muted-foreground/80 {{ $down ? 'rotate-90' : '' }}" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12L12 4M12 4H6M12 4v6"/></svg>
                                 {{ $item->delta }}
                             </span>
                             @else
-                            <span class="text-faint">—</span>
+                            <span class="text-muted-foreground/80">—</span>
                             @endif
                         </td>
                         <td class="w-px py-4 pr-5 pl-6 text-right whitespace-nowrap sm:pr-8 sm:pl-10">
                             @if ($n > 1)
                             <svg viewBox="0 0 96 28" width="96" height="28" class="inline-block h-auto w-14 overflow-visible align-middle sm:w-24" data-spark aria-hidden="true">
-                                <polyline points="{{ implode(' ', $coords) }}" pathLength="1" fill="none" stroke="currentColor" class="stroke-ink/60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <circle cx="{{ $last[0] }}" cy="{{ $last[1] }}" r="2" class="fill-ink"/>
+                                <polyline points="{{ implode(' ', $coords) }}" pathLength="1" fill="none" stroke="currentColor" class="stroke-foreground/60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="{{ $last[0] }}" cy="{{ $last[1] }}" r="2" class="fill-foreground"/>
                             </svg>
                             @else
-                            <span class="font-mono text-[12px] text-faint">—</span>
+                            <span class="font-mono text-[12px] text-muted-foreground/80">—</span>
                             @endif
                         </td>
                     </tr>
@@ -83,7 +83,7 @@
                 </tbody>
             </table>
             @if ($period)
-            <p class="border-t border-line px-5 py-3.5 text-[13px]/5 text-pretty text-faint sm:px-8">{{ $period }}</p>
+            <p class="border-t border-border px-5 py-3.5 text-[13px]/5 text-pretty text-muted-foreground/80 sm:px-8">{{ $period }}</p>
             @endif
         </div>
     </div>

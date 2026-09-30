@@ -19,19 +19,19 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center">
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase" data-reveal>{{ $eyebrow }}</p>
             @endif
-            <h2 class="reveal-1 mx-auto mt-4 max-w-xl text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
-            <p class="reveal-2 mx-auto mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted" data-reveal>{{ $intro }}</p>
+            <h2 class="reveal-1 mx-auto mt-4 max-w-xl text-h2 font-semibold tracking-tight text-balance text-foreground" data-reveal>{{ $heading }}</h2>
+            <p class="reveal-2 mx-auto mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground" data-reveal>{{ $intro }}</p>
         </div>
 
         <div class="reveal-3 mt-12 flex flex-wrap justify-center gap-2 sm:mt-14" role="tablist" aria-label="{{ $heading }}" data-reveal>
             @foreach ($tabs as $tab)
-            <button type="button" role="tab" id="{{ $uid }}-tab-{{ $loop->index }}" aria-controls="{{ $uid }}-panel-{{ $loop->index }}" aria-selected="{{ $loop->first ? 'true' : 'false' }}" tabindex="{{ $loop->first ? '0' : '-1' }}" class="order-1 inline-flex min-h-11 items-center justify-center rounded-full border border-line bg-panel px-4 py-2 text-[14px] font-medium text-muted transition-colors duration-200 hover:border-line-strong hover:text-ink aria-selected:border-ink aria-selected:bg-ink aria-selected:text-canvas" data-tab>{{ $tab->title }}</button>
+            <button type="button" role="tab" id="{{ $uid }}-tab-{{ $loop->index }}" aria-controls="{{ $uid }}-panel-{{ $loop->index }}" aria-selected="{{ $loop->first ? 'true' : 'false' }}" tabindex="{{ $loop->first ? '0' : '-1' }}" class="order-1 inline-flex min-h-11 items-center justify-center rounded-full border border-border bg-card px-4 py-2 text-[14px] font-medium text-muted-foreground transition-colors duration-200 hover:border-border-strong hover:text-foreground aria-selected:border-primary aria-selected:bg-primary aria-selected:text-primary-foreground" data-tab>{{ $tab->title }}</button>
             <div role="tabpanel" id="{{ $uid }}-panel-{{ $loop->index }}" aria-labelledby="{{ $uid }}-tab-{{ $loop->index }}" tabindex="0" class="order-2 mt-6 w-full basis-full sm:mt-8" data-panel {{ $loop->first ? '' : 'hidden' }}>
-                <p class="mx-auto max-w-[50ch] text-center text-[15px]/6 text-pretty text-muted">{{ $tab->description }}</p>
-                <div class="mx-auto mt-8 max-w-4xl rounded-3xl bg-raised p-1 sm:p-2">
-                    <div class="overflow-hidden rounded-[20px] border border-line bg-panel shadow-2xl shadow-ink/5">
+                <p class="mx-auto max-w-[50ch] text-center text-[15px]/6 text-pretty text-muted-foreground">{{ $tab->description }}</p>
+                <div class="mx-auto mt-8 max-w-4xl rounded-3xl bg-muted p-1 sm:p-2">
+                    <div class="overflow-hidden rounded-[20px] border border-border bg-card shadow-2xl shadow-foreground/5">
                         <img src="{{ $tab->image }}" alt="{{ $tab->imageAlt }}" width="1600" height="900" class="block h-auto w-full" loading="lazy">
                     </div>
                 </div>

@@ -19,15 +19,15 @@
 <section class="py-16 sm:py-28" data-logos-05>
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8 text-center">
         <figure class="mx-auto max-w-3xl" data-reveal>
-            <blockquote class="text-xl/8 font-medium text-balance text-ink sm:text-2xl/9">&ldquo;{{ $quote }}&rdquo;</blockquote>
+            <blockquote class="text-xl/8 font-medium text-balance text-foreground sm:text-2xl/9">&ldquo;{{ $quote }}&rdquo;</blockquote>
             <figcaption class="mt-6 text-[14px]">
-                <span class="font-medium text-ink">{{ $name }}</span>
-                <span class="text-muted"> &middot; {{ $role }}</span>
+                <span class="font-medium text-foreground">{{ $name }}</span>
+                <span class="text-muted-foreground"> &middot; {{ $role }}</span>
             </figcaption>
         </figure>
         <ul role="list" class="reveal-1 mt-12 grid grid-cols-2 gap-y-6 sm:-mx-7 sm:block sm:text-balance" data-reveal>
             @foreach ($items as $item)
-            <li class="flex items-center justify-center gap-2.5 text-faint transition-colors duration-200 hover:text-ink sm:mx-7 sm:my-3 sm:inline-flex sm:align-middle [&_svg]:size-6 [&_svg]:shrink-0">
+            <li class="flex items-center justify-center gap-2.5 text-muted-foreground/80 transition-colors duration-200 hover:text-foreground sm:mx-7 sm:my-3 sm:inline-flex sm:align-middle [&_svg]:size-6 [&_svg]:shrink-0">
                 {!! $item->icon !!}
                 <span class="text-[17px] font-semibold tracking-tight">{{ $item->name }}</span>
             </li>
@@ -35,7 +35,7 @@
         </ul>
         @if ($linkText)
         <p class="reveal-2 mt-10" data-reveal>
-            <a href="{{ $linkUrl }}" class="arrow-link inline-flex items-center gap-1.5 text-[15px] font-medium text-ink">
+            <a href="{{ $linkUrl }}" class="arrow-link inline-flex items-center gap-1.5 text-[15px] font-medium text-foreground">
                 {{ $linkText }}
                 <svg viewBox="0 0 24 24" class="arrow size-4 opacity-60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
             </a>

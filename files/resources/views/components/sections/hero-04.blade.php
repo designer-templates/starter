@@ -22,19 +22,19 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="mb-16 text-center sm:mb-20">
             @if ($showPill)
-            <a href="{{ $buttonLink2 }}" class="reveal-1 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3 py-1 text-[12px] font-medium text-muted transition-colors duration-200 hover:border-line-strong hover:text-ink" data-reveal>
-                <span class="size-1.5 rounded-full bg-ink" aria-hidden="true"></span>
+            <a href="{{ $buttonLink2 }}" class="reveal-1 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-[12px] font-medium text-muted-foreground transition-colors duration-200 hover:border-border-strong hover:text-foreground" data-reveal>
+                <span class="size-1.5 rounded-full bg-primary" aria-hidden="true"></span>
                 {{ $pillText }}
             </a>
             @endif
-            <h1 class="reveal-2 mx-auto mt-6 max-w-[20ch] text-hero font-semibold tracking-[-0.04em] text-balance text-ink" data-reveal>{{ $heading }}</h1>
-            <p class="reveal-3 mx-auto mt-6 max-w-[54ch] text-lg/8 font-medium text-pretty text-muted sm:text-xl/8" data-reveal>{{ $text }}</p>
+            <h1 class="reveal-2 mx-auto mt-6 max-w-[20ch] text-hero font-semibold tracking-[-0.04em] text-balance text-foreground" data-reveal>{{ $heading }}</h1>
+            <p class="reveal-3 mx-auto mt-6 max-w-[54ch] text-lg/8 font-medium text-pretty text-muted-foreground sm:text-xl/8" data-reveal>{{ $text }}</p>
             <div class="reveal-4 mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row" data-reveal>
                 @if ($buttonText)
-                <a href="{{ $buttonLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ink px-7 py-3.5 text-[15px] font-medium text-canvas shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto">{{ $buttonText }}</a>
+                <a href="{{ $buttonLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto">{{ $buttonText }}</a>
                 @endif
                 @if ($buttonText2)
-                <a href="{{ $buttonLink2 }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-line bg-panel py-3.5 pr-7 pl-5 text-[15px] font-medium text-lede transition-colors duration-200 hover:border-line-strong hover:bg-raised active:scale-[.98] sm:w-auto">
+                <a href="{{ $buttonLink2 }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card py-3.5 pr-7 pl-5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] sm:w-auto">
                     <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"/>
@@ -45,13 +45,13 @@
             </div>
         </div>
         <div class="relative mx-auto max-w-5xl" data-reveal>
-            <div class="overflow-hidden rounded-[20px] border border-line bg-panel shadow-2xl shadow-ink/5">
+            <div class="overflow-hidden rounded-[20px] border border-border bg-card shadow-2xl shadow-foreground/5">
                 <img src="{{ $image }}" alt="{{ $imageAlt }}" width="1600" height="1067" class="block h-auto w-full">
             </div>
             @if ($toastText)
             <!-- The toast: slides in once after the window has arrived. -->
-            <div class="absolute -bottom-5 right-4 flex items-center gap-2.5 rounded-xl border border-line bg-panel py-2.5 pr-4 pl-3 text-[13px] font-medium text-ink shadow-[var(--shadow-card)] sm:right-8" data-toast aria-hidden="true">
-                <span class="flex size-5 items-center justify-center rounded-full bg-ink text-canvas">
+            <div class="absolute -bottom-5 right-4 flex items-center gap-2.5 rounded-xl border border-border bg-card py-2.5 pr-4 pl-3 text-[13px] font-medium text-foreground shadow-[var(--shadow-card)] sm:right-8" data-toast aria-hidden="true">
+                <span class="flex size-5 items-center justify-center rounded-full bg-primary text-primary-foreground">
                     <svg viewBox="0 0 20 20" class="size-3 fill-current" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/></svg>
                 </span>
                 {{ $toastText }}

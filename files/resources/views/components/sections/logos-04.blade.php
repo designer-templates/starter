@@ -17,14 +17,14 @@
 <section class="py-16 sm:py-28" data-logos-04>
     <div class="mx-auto grid w-full max-w-6xl px-6 lg:px-8 items-center gap-12 lg:grid-cols-12 lg:gap-16">
         <div class="lg:col-span-5" data-reveal>
-            <p class="text-figure font-semibold tracking-tight text-ink tabular-nums" data-logos-04-figure>{{ $figure }}</p>
-            <p class="mt-3 text-base font-medium text-ink">{{ $caption }}</p>
-            <p class="mt-3 max-w-[42ch] text-[15px]/6 text-pretty text-muted">{{ $text }}</p>
+            <p class="text-figure font-semibold tracking-tight text-foreground tabular-nums" data-logos-04-figure>{{ $figure }}</p>
+            <p class="mt-3 text-base font-medium text-foreground">{{ $caption }}</p>
+            <p class="mt-3 max-w-[42ch] text-[15px]/6 text-pretty text-muted-foreground">{{ $text }}</p>
         </div>
         <div class="reveal-1 overflow-hidden lg:col-span-7" data-reveal>
             <ul role="list" class="-mt-px -ml-px grid grid-cols-2 sm:grid-cols-4">
                 @foreach ($items as $item)
-                <li class="flex h-20 items-center justify-center gap-2.5 border-t border-l border-line text-faint transition-colors duration-200 hover:text-ink sm:h-24 [&_svg]:size-6 [&_svg]:shrink-0">
+                <li class="flex h-20 items-center justify-center gap-2.5 border-t border-l border-border text-muted-foreground/80 transition-colors duration-200 hover:text-foreground sm:h-24 [&_svg]:size-6 [&_svg]:shrink-0">
                     {!! $item->icon !!}
                     <span class="text-[17px] font-semibold tracking-tight">{{ $item->name }}</span>
                 </li>

@@ -20,30 +20,30 @@
         <div class="mx-auto w-full max-w-2xl">
             <div class="text-center" data-reveal>
                 @if ($eyebrow)
-                <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+                <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
                 @endif
-                <h2 class="mx-auto mt-4 max-w-xl text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+                <h2 class="mx-auto mt-4 max-w-xl text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
                 @if ($intro)
-                <p class="mx-auto mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+                <p class="mx-auto mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
                 @endif
             </div>
 
             <div class="reveal-2 mt-14 flex flex-col gap-3" data-reveal>
                 @foreach ($faqs as $item)
-                <details class="faq-item group rounded-2xl border border-line bg-panel px-6 transition-colors duration-200 open:border-line-strong hover:border-line-strong" name="faq-02">
-                    <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[16px] font-medium text-ink transition-colors duration-200 hover:text-accent">
+                <details class="faq-item group rounded-2xl border border-border bg-card px-6 transition-colors duration-200 open:border-border-strong hover:border-border-strong" name="faq-02">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[16px] font-medium text-foreground transition-colors duration-200 hover:text-accent">
                         {{ $item->question }}
-                        <svg viewBox="0 0 16 16" class="faq-plus size-4 shrink-0 fill-current text-muted" aria-hidden="true"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"/></svg>
+                        <svg viewBox="0 0 16 16" class="faq-plus size-4 shrink-0 fill-current text-muted-foreground" aria-hidden="true"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"/></svg>
                     </summary>
-                    <p class="max-w-[62ch] pb-6 text-[15px]/7 text-pretty text-muted">{{ $item->answer }}</p>
+                    <p class="max-w-[62ch] pb-6 text-[15px]/7 text-pretty text-muted-foreground">{{ $item->answer }}</p>
                 </details>
                 @endforeach
             </div>
 
             @if ($supportText)
-            <p class="reveal-3 mt-10 text-center text-[14px]/6 text-muted" data-reveal>
+            <p class="reveal-3 mt-10 text-center text-[14px]/6 text-muted-foreground" data-reveal>
                 {{ $supportText }}
-                <a href="{{ $supportLinkUrl }}" class="font-medium text-ink underline decoration-line underline-offset-4 transition-colors duration-200 hover:decoration-ink">{{ $supportLinkText }}</a>
+                <a href="{{ $supportLinkUrl }}" class="font-medium text-foreground underline decoration-border underline-offset-4 transition-colors duration-200 hover:decoration-foreground">{{ $supportLinkText }}</a>
             </p>
             @endif
         </div>

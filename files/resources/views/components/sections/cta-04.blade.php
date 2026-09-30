@@ -11,21 +11,21 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-[1fr_1.25fr] lg:items-center lg:gap-16">
             <div data-reveal>
-                <h2 class="max-w-[22ch] font-display text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+                <h2 class="max-w-[22ch] font-display text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
                 @if ($text)
-                <p class="mt-5 max-w-[46ch] text-lg/8 text-pretty text-muted">{{ $text }}</p>
+                <p class="mt-5 max-w-[46ch] text-lg/8 text-pretty text-muted-foreground">{{ $text }}</p>
                 @endif
             </div>
 
             <div class="grid gap-4 sm:grid-cols-2">
                 @foreach ($cards as $card)
-                <a href="{{ $card->url }}" class="arrow-link reveal-{{ min($loop->iteration, 6) }} group flex flex-col rounded-2xl border border-line bg-panel p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-[var(--shadow-card)] sm:p-8" data-reveal>
+                <a href="{{ $card->url }}" class="arrow-link reveal-{{ min($loop->iteration, 6) }} group flex flex-col rounded-2xl border border-border bg-card p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-[var(--shadow-card)] sm:p-8" data-reveal>
                     <div class="flex items-center justify-between">
-                        <span class="flex size-10 items-center justify-center rounded-xl bg-raised text-lede">{!! $card->icon !!}</span>
-                        <svg viewBox="0 0 24 24" class="arrow size-5 text-faint group-hover:text-ink" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                        <span class="flex size-10 items-center justify-center rounded-xl bg-muted text-foreground/78">{!! $card->icon !!}</span>
+                        <svg viewBox="0 0 24 24" class="arrow size-5 text-muted-foreground/80 group-hover:text-foreground" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                     </div>
-                    <h3 class="mt-6 text-base font-medium text-ink">{{ $card->title }}</h3>
-                    <p class="mt-2 text-[15px]/6 text-pretty text-muted">{{ $card->text }}</p>
+                    <h3 class="mt-6 text-base font-medium text-foreground">{{ $card->title }}</h3>
+                    <p class="mt-2 text-[15px]/6 text-pretty text-muted-foreground">{{ $card->text }}</p>
                 </a>
                 @endforeach
             </div>

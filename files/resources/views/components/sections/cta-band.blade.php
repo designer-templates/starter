@@ -16,12 +16,12 @@
             </div>
 
             <div class="relative mx-auto max-w-2xl text-center">
-                <h2 class="text-h2 font-semibold tracking-tight text-balance text-shade-ink sm:text-5xl/[1.05]">{{ $heading }}</h2>
-                <p class="mx-auto mt-5 max-w-xl text-lg/8 text-pretty text-shade-muted">{{ $body }}</p>
+                <h2 class="text-h2 font-semibold tracking-tight text-balance text-shade-foreground sm:text-5xl/[1.05]">{{ $heading }}</h2>
+                <p class="mx-auto mt-5 max-w-xl text-lg/8 text-pretty text-shade-muted-foreground">{{ $body }}</p>
                 <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                    <a href="{{ $ctaLink }}" class="inline-flex w-full items-center justify-center rounded-xl bg-shade-ink px-6 py-3 text-[15px] font-semibold text-shade shadow-lg shadow-shade-ink/10 transition-opacity duration-200 hover:opacity-90 active:scale-[.98] sm:w-auto">{{ $ctaText }}</a>
+                    <a href="{{ $ctaLink }}" class="inline-flex w-full items-center justify-center rounded-xl bg-shade-foreground px-6 py-3 text-[15px] font-semibold text-shade shadow-lg shadow-shade-foreground/10 transition-opacity duration-200 hover:opacity-90 active:scale-[.98] sm:w-auto">{{ $ctaText }}</a>
                     @if ($secondaryText)
-                    <a href="{{ $secondaryLink }}" class="inline-flex w-full items-center justify-center rounded-xl border border-shade-line px-6 py-3 text-[15px] font-medium text-shade-ink transition-colors duration-200 hover:border-shade-ink/25 hover:bg-shade-line active:scale-[.98] sm:w-auto">{{ $secondaryText }}</a>
+                    <a href="{{ $secondaryLink }}" class="inline-flex w-full items-center justify-center rounded-xl border border-shade-border px-6 py-3 text-[15px] font-medium text-shade-foreground transition-colors duration-200 hover:border-shade-foreground/25 hover:bg-shade-border active:scale-[.98] sm:w-auto">{{ $secondaryText }}</a>
                     @endif
                 </div>
             </div>

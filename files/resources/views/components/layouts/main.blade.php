@@ -22,7 +22,7 @@
     <script>document.documentElement.classList.add('js')</script>
     <script src="/js/main.js" defer></script>
 </head>
-<body class="min-h-dvh bg-canvas font-sans text-ink antialiased">
+<body class="min-h-dvh bg-background font-sans text-foreground antialiased">
 
     <!-- The sticky site-wide nav. Links live in resources/data/site.json (nav_links); the markup is components/nav.blade.php. -->
     <x-nav :links="$site->nav_links"/>

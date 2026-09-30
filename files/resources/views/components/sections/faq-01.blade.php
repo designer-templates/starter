@@ -19,28 +19,28 @@
         <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div class="max-w-2xl lg:col-span-5" data-reveal>
                 @if ($eyebrow)
-                <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+                <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
                 @endif
-                <h2 class="mt-4 text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+                <h2 class="mt-4 text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
                 @if ($intro)
-                <p class="mt-5 max-w-[42ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+                <p class="mt-5 max-w-[42ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
                 @endif
                 @if ($linkText)
-                <a href="{{ $linkUrl }}" class="arrow-link mt-8 inline-flex items-center gap-1.5 text-[15px] font-medium text-ink transition-colors duration-200 hover:text-accent">
+                <a href="{{ $linkUrl }}" class="arrow-link mt-8 inline-flex items-center gap-1.5 text-[15px] font-medium text-foreground transition-colors duration-200 hover:text-accent">
                     {{ $linkText }}
                     <svg viewBox="0 0 24 24" class="arrow size-4 opacity-60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                 </a>
                 @endif
             </div>
 
-            <div class="reveal-2 divide-y divide-line border-y border-line lg:col-span-7" data-reveal>
+            <div class="reveal-2 divide-y divide-border border-y border-border lg:col-span-7" data-reveal>
                 @foreach ($faqs as $item)
                 <details class="faq-item group">
-                    <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[16px] font-medium text-ink transition-colors duration-200 hover:text-accent">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[16px] font-medium text-foreground transition-colors duration-200 hover:text-accent">
                         {{ $item->question }}
-                        <svg viewBox="0 0 16 16" class="faq-plus size-4 shrink-0 fill-current text-muted" aria-hidden="true"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"/></svg>
+                        <svg viewBox="0 0 16 16" class="faq-plus size-4 shrink-0 fill-current text-muted-foreground" aria-hidden="true"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"/></svg>
                     </summary>
-                    <p class="max-w-[62ch] pb-6 text-[15px]/7 text-pretty text-muted">{{ $item->answer }}</p>
+                    <p class="max-w-[62ch] pb-6 text-[15px]/7 text-pretty text-muted-foreground">{{ $item->answer }}</p>
                 </details>
                 @endforeach
             </div>

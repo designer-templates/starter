@@ -16,20 +16,20 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center" data-reveal>
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
             @endif
-            <h2 class="mx-auto mt-4 max-w-xl text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+            <h2 class="mx-auto mt-4 max-w-xl text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
             @if ($intro)
-            <p class="mx-auto mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+            <p class="mx-auto mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
             @endif
         </div>
 
         <dl class="mt-16 grid gap-x-16 sm:grid-cols-2">
             @foreach ($faqs as $item)
-            <div class="reveal-{{ min($loop->iteration, 6) }} group border-t border-line py-8" data-reveal>
-                <p class="font-mono text-[12px] text-faint tabular-nums transition-colors duration-200 group-hover:text-ink">{{ sprintf('%02d', $loop->iteration) }}</p>
-                <dt class="mt-3 text-base font-medium text-ink">{{ $item->question }}</dt>
-                <dd class="mt-2 max-w-[58ch] text-[15px]/6 text-pretty text-muted">{{ $item->answer }}</dd>
+            <div class="reveal-{{ min($loop->iteration, 6) }} group border-t border-border py-8" data-reveal>
+                <p class="font-mono text-[12px] text-muted-foreground/80 tabular-nums transition-colors duration-200 group-hover:text-foreground">{{ sprintf('%02d', $loop->iteration) }}</p>
+                <dt class="mt-3 text-base font-medium text-foreground">{{ $item->question }}</dt>
+                <dd class="mt-2 max-w-[58ch] text-[15px]/6 text-pretty text-muted-foreground">{{ $item->answer }}</dd>
             </div>
             @endforeach
         </dl>

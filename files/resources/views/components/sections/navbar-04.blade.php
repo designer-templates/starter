@@ -24,11 +24,11 @@
     into a sheet under the bar. Clear Log in or the button text to hide either.
 -->
 <header data-navbar-04 class="sticky top-0 z-50">
-    <div class="relative border-b border-line bg-canvas/85 backdrop-blur-md">
+    <div class="relative border-b border-border bg-background/85 backdrop-blur-md">
         <div class="mx-auto flex h-16 w-full max-w-6xl px-6 lg:px-8 items-center justify-between gap-8">
 
             <div class="flex items-center" data-reveal>
-                <a href="/" aria-label="Homepage" class="flex shrink-0 items-center gap-2.5 text-ink">
+                <a href="/" aria-label="Homepage" class="flex shrink-0 items-center gap-2.5 text-foreground">
                     <!-- The mark launches up from behind its own edge on load (.logo-mark in site.css). -->
                     <svg viewBox="0 0 24 24" class="logo-mark size-5 shrink-0 fill-current" aria-hidden="true"><path d="M12 1.9 21.4 21.4 12 16.9 2.6 21.4Z"/></svg>
                     <span class="text-[17px] font-semibold tracking-tight">{{ $brand }}</span>
@@ -37,22 +37,22 @@
 
             <div class="flex items-center gap-4" data-reveal>
                 <nav class="max-lg:hidden" aria-label="Main">
-                    <ul role="list" class="flex items-center gap-1 text-[15px] font-medium text-lede">
+                    <ul role="list" class="flex items-center gap-1 text-[15px] font-medium text-foreground/78">
                         @foreach ($links as $link)
                         @if (count($link->children ?? []))
                         <li class="relative" data-nav-item>
-                            <button type="button" data-nav-trigger aria-expanded="false" class="nav-link flex cursor-pointer items-center gap-1 px-3 py-2 transition-colors duration-200 hover:text-ink aria-expanded:text-ink">
+                            <button type="button" data-nav-trigger aria-expanded="false" class="nav-link flex cursor-pointer items-center gap-1 px-3 py-2 transition-colors duration-200 hover:text-foreground aria-expanded:text-foreground">
                                 {{ $link->text }}
-                                <svg viewBox="0 0 20 20" class="nav-caret size-3.5 fill-current text-faint" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
+                                <svg viewBox="0 0 20 20" class="nav-caret size-3.5 fill-current text-muted-foreground/80" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
                             </button>
                             <!-- Centered with left-1/2 and a negative margin of half its width: the open motion animates translate. -->
                             <div data-nav-panel class="absolute top-full left-1/2 -ml-[9.5rem] w-[19rem] pt-5">
-                                <div class="flex flex-col gap-0.5 rounded-xl border border-line bg-panel p-1.5 shadow-xl shadow-black/5">
+                                <div class="flex flex-col gap-0.5 rounded-xl border border-border bg-card p-1.5 shadow-xl shadow-black/5">
                                     @foreach ($link->children as $child)
-                                    <a href="{{ $child->url }}" class="flex flex-col rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-raised">
-                                        <span class="text-[14px] font-medium text-ink">{{ $child->text }}</span>
+                                    <a href="{{ $child->url }}" class="flex flex-col rounded-lg px-3 py-2 transition-colors duration-150 hover:bg-muted">
+                                        <span class="text-[14px] font-medium text-foreground">{{ $child->text }}</span>
                                         @if ($child->description ?? false)
-                                        <span class="mt-0.5 text-[13px] leading-snug font-normal text-muted">{{ $child->description }}</span>
+                                        <span class="mt-0.5 text-[13px] leading-snug font-normal text-muted-foreground">{{ $child->description }}</span>
                                         @endif
                                     </a>
                                     @endforeach
@@ -60,7 +60,7 @@
                             </div>
                         </li>
                         @else
-                        <li><a href="{{ $link->url }}" class="nav-link flex px-3 py-2 transition-colors duration-200 hover:text-ink aria-[current]:text-ink">{{ $link->text }}</a></li>
+                        <li><a href="{{ $link->url }}" class="nav-link flex px-3 py-2 transition-colors duration-200 hover:text-foreground aria-[current]:text-foreground">{{ $link->text }}</a></li>
                         @endif
                         @endforeach
                     </ul>
@@ -68,13 +68,13 @@
 
                 <div class="flex items-center gap-2.5 lg:ml-2">
                     @if ($signInText)
-                    <a href="{{ $signInLink }}" class="px-3 py-2 text-[15px] font-medium text-lede transition-colors duration-200 hover:text-ink max-lg:hidden">{{ $signInText }}</a>
+                    <a href="{{ $signInLink }}" class="px-3 py-2 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:text-foreground max-lg:hidden">{{ $signInText }}</a>
                     @endif
                     @if ($ctaText)
-                    <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-panel px-4 py-2 text-[15px] font-medium text-lede transition-colors duration-200 hover:border-line-strong hover:bg-raised active:scale-[.98] max-lg:hidden">{{ $ctaText }}</a>
+                    <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-2 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] max-lg:hidden">{{ $ctaText }}</a>
                     @endif
                     <!-- The toggle is a 44px box; the two glyphs are stacked and cross-fade. -->
-                    <button type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="grid size-11 cursor-pointer place-items-center rounded-lg text-ink transition-colors duration-200 hover:bg-raised lg:hidden">
+                    <button type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="grid size-11 cursor-pointer place-items-center rounded-lg text-foreground transition-colors duration-200 hover:bg-muted lg:hidden">
                         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" class="nav-glyph nav-glyph-menu size-5 stroke-current" aria-hidden="true"><path stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
                         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" class="nav-glyph nav-glyph-close size-5 stroke-current" aria-hidden="true"><path stroke-linecap="round" d="M6 18 18 6M6 6l12 12"/></svg>
                     </button>
@@ -83,26 +83,26 @@
         </div>
 
         <!-- The sheet hangs under the bar and scrolls inside itself; a link with children flattens into a label and its rows. -->
-        <div data-nav-sheet class="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-line bg-canvas lg:hidden">
+        <div data-nav-sheet class="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-border bg-background lg:hidden">
             <nav class="mx-auto w-full max-w-6xl px-6 py-4" aria-label="Mobile">
                 <ul role="list" class="flex flex-col gap-0.5 text-base font-medium">
                     @foreach ($links as $link)
                     @if (count($link->children ?? []))
-                    <li class="px-3 pt-4 pb-1.5 text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $link->text }}</li>
+                    <li class="px-3 pt-4 pb-1.5 text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $link->text }}</li>
                     @foreach ($link->children as $child)
-                    <li><a href="{{ $child->url }}" class="flex rounded-lg px-3 py-3 text-ink transition-colors duration-200 hover:bg-raised">{{ $child->text }}</a></li>
+                    <li><a href="{{ $child->url }}" class="flex rounded-lg px-3 py-3 text-foreground transition-colors duration-200 hover:bg-muted">{{ $child->text }}</a></li>
                     @endforeach
                     @else
-                    <li><a href="{{ $link->url }}" class="flex rounded-lg px-3 py-3 text-ink transition-colors duration-200 hover:bg-raised">{{ $link->text }}</a></li>
+                    <li><a href="{{ $link->url }}" class="flex rounded-lg px-3 py-3 text-foreground transition-colors duration-200 hover:bg-muted">{{ $link->text }}</a></li>
                     @endif
                     @endforeach
                 </ul>
-                <div class="mt-4 flex flex-col gap-2 border-t border-line pt-4">
+                <div class="mt-4 flex flex-col gap-2 border-t border-border pt-4">
                     @if ($signInText)
-                    <a href="{{ $signInLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-[15px] font-medium text-lede transition-colors duration-200 hover:bg-raised hover:text-ink active:scale-[.98]">{{ $signInText }}</a>
+                    <a href="{{ $signInLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:bg-muted hover:text-foreground active:scale-[.98]">{{ $signInText }}</a>
                     @endif
                     @if ($ctaText)
-                    <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-panel px-4 py-3 text-[15px] font-medium text-lede transition-colors duration-200 hover:border-line-strong hover:bg-raised active:scale-[.98]">{{ $ctaText }}</a>
+                    <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $ctaText }}</a>
                     @endif
                 </div>
             </nav>

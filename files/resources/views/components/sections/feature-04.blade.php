@@ -21,30 +21,30 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl">
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase" data-reveal>{{ $eyebrow }}</p>
             @endif
-            <h2 class="reveal-1 mt-4 text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
-            <p class="reveal-2 mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted" data-reveal>{{ $intro }}</p>
+            <h2 class="reveal-1 mt-4 text-h2 font-semibold tracking-tight text-balance text-foreground" data-reveal>{{ $heading }}</h2>
+            <p class="reveal-2 mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground" data-reveal>{{ $intro }}</p>
         </div>
 
         <div class="mt-14 grid gap-10 sm:mt-16 lg:grid-cols-[1.2fr_1fr] lg:gap-14">
             <div class="reveal-3 min-w-0 lg:sticky lg:top-24 lg:self-start" data-reveal>
-                <div class="rounded-3xl bg-raised p-1 sm:p-2">
-                    <div class="overflow-hidden rounded-[20px] border border-line bg-panel shadow-2xl shadow-ink/5">
+                <div class="rounded-3xl bg-muted p-1 sm:p-2">
+                    <div class="overflow-hidden rounded-[20px] border border-border bg-card shadow-2xl shadow-foreground/5">
                         <img src="{{ $image }}" alt="{{ $imageAlt }}" width="1600" height="1200" class="block h-auto w-full" loading="lazy">
                     </div>
                 </div>
             </div>
 
-            <dl class="min-w-0 divide-y divide-line">
+            <dl class="min-w-0 divide-y divide-border">
                 @foreach ($items as $item)
-                <div class="reveal-{{ min($loop->iteration, 6) }} group -mx-4 flex items-start gap-4 rounded-xl px-4 py-6 transition-colors duration-200 first:pt-0 hover:bg-raised/60 lg:py-7 lg:first:pt-0" data-reveal>
-                    <div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-raised text-lede transition-colors duration-200 group-hover:bg-ink group-hover:text-canvas">
+                <div class="reveal-{{ min($loop->iteration, 6) }} group -mx-4 flex items-start gap-4 rounded-xl px-4 py-6 transition-colors duration-200 first:pt-0 hover:bg-muted/60 lg:py-7 lg:first:pt-0" data-reveal>
+                    <div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-muted text-foreground/78 transition-colors duration-200 group-hover:bg-primary group-hover:text-primary-foreground">
                         {!! $item->icon !!}
                     </div>
                     <div class="min-w-0">
-                        <dt class="text-base font-medium text-ink">{{ $item->title }}</dt>
-                        <dd class="mt-1.5 text-[14px]/6 text-pretty text-muted">{{ $item->description }}</dd>
+                        <dt class="text-base font-medium text-foreground">{{ $item->title }}</dt>
+                        <dd class="mt-1.5 text-[14px]/6 text-pretty text-muted-foreground">{{ $item->description }}</dd>
                     </div>
                 </div>
                 @endforeach

@@ -14,18 +14,18 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div data-reveal>
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
             @endif
-            <h2 class="mt-4 max-w-[30ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+            <h2 class="mt-4 max-w-[30ch] text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
             @if ($intro)
-            <p class="mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+            <p class="mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
             @endif
         </div>
 
         <div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             @foreach ($methods as $method)
-            <a href="{{ $method->linkUrl }}" class="arrow-link reveal-{{ min($loop->iteration, 6) }} flex flex-col rounded-2xl border border-line bg-panel p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-[var(--shadow-card)]" data-reveal>
-                <span class="flex size-10 items-center justify-center rounded-xl bg-raised text-lede">
+            <a href="{{ $method->linkUrl }}" class="arrow-link reveal-{{ min($loop->iteration, 6) }} flex flex-col rounded-2xl border border-border bg-card p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-[var(--shadow-card)]" data-reveal>
+                <span class="flex size-10 items-center justify-center rounded-xl bg-muted text-foreground/78">
                     @if ($method->icon === 'chat')
                     <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"/></svg>
                     @elseif ($method->icon === 'phone')
@@ -36,9 +36,9 @@
                     <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
                     @endif
                 </span>
-                <span class="mt-5 block text-base font-medium text-ink">{{ $method->title }}</span>
-                <span class="mt-2 block text-[14px]/6 text-pretty text-muted">{{ $method->text }}</span>
-                <span class="mt-auto inline-flex items-center gap-1.5 pt-6 text-[15px] font-medium text-ink">
+                <span class="mt-5 block text-base font-medium text-foreground">{{ $method->title }}</span>
+                <span class="mt-2 block text-[14px]/6 text-pretty text-muted-foreground">{{ $method->text }}</span>
+                <span class="mt-auto inline-flex items-center gap-1.5 pt-6 text-[15px] font-medium text-foreground">
                     <span class="truncate">{{ $method->linkText }}</span>
                     <svg viewBox="0 0 24 24" class="arrow size-4 shrink-0 opacity-60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                 </span>

@@ -25,21 +25,21 @@
             <div class="lg:col-span-6">
                 <div data-reveal>
                     @if ($eyebrow)
-                    <p class="mb-4 text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+                    <p class="mb-4 text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
                     @endif
-                    <h2 class="max-w-[22ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+                    <h2 class="max-w-[22ch] text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
                     @if ($paragraph)
-                    <p class="mt-5 max-w-[50ch] text-[16px]/7 text-pretty text-muted">{{ $paragraph }}</p>
+                    <p class="mt-5 max-w-[50ch] text-[16px]/7 text-pretty text-muted-foreground">{{ $paragraph }}</p>
                     @endif
                 </div>
 
-                <ol class="mt-10 divide-y divide-line border-y border-line">
+                <ol class="mt-10 divide-y divide-border border-y border-border">
                     @foreach ($values as $value)
                     <li class="reveal-{{ min($loop->iteration, 6) }} grid grid-cols-[2.5rem_1fr] py-5" data-reveal>
-                        <span class="pt-1 font-mono text-[12px] text-faint tabular-nums" aria-hidden="true">{{ sprintf('%02d', $loop->iteration) }}</span>
+                        <span class="pt-1 font-mono text-[12px] text-muted-foreground/80 tabular-nums" aria-hidden="true">{{ sprintf('%02d', $loop->iteration) }}</span>
                         <div>
-                            <h3 class="text-base font-medium text-ink">{{ $value->title }}</h3>
-                            <p class="mt-1 max-w-[52ch] text-[15px]/6 text-pretty text-muted">{{ $value->description }}</p>
+                            <h3 class="text-base font-medium text-foreground">{{ $value->title }}</h3>
+                            <p class="mt-1 max-w-[52ch] text-[15px]/6 text-pretty text-muted-foreground">{{ $value->description }}</p>
                         </div>
                     </li>
                     @endforeach
@@ -47,8 +47,8 @@
             </div>
 
             <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:order-first lg:col-span-6">
-                <img src="{{ $image1 }}" alt="{{ $image1Alt }}" width="1200" height="800" loading="lazy" decoding="async" class="reveal-2 aspect-[3/4] w-full rounded-2xl object-cover outline-1 -outline-offset-1 outline-ink/10" data-reveal>
-                <img src="{{ $image2 }}" alt="{{ $image2Alt }}" width="1200" height="800" loading="lazy" decoding="async" class="reveal-3 mt-12 aspect-[3/4] w-full rounded-2xl object-cover outline-1 -outline-offset-1 outline-ink/10 sm:mt-20" data-reveal>
+                <img src="{{ $image1 }}" alt="{{ $image1Alt }}" width="1200" height="800" loading="lazy" decoding="async" class="reveal-2 aspect-[3/4] w-full rounded-2xl object-cover outline-1 -outline-offset-1 outline-foreground/10" data-reveal>
+                <img src="{{ $image2 }}" alt="{{ $image2Alt }}" width="1200" height="800" loading="lazy" decoding="async" class="reveal-3 mt-12 aspect-[3/4] w-full rounded-2xl object-cover outline-1 -outline-offset-1 outline-foreground/10 sm:mt-20" data-reveal>
             </div>
         </div>
     </div>

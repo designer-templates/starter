@@ -21,31 +21,31 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center">
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase" data-reveal>{{ $eyebrow }}</p>
             @endif
-            <h2 class="reveal-1 mx-auto mt-4 max-w-2xl text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
-            <p class="reveal-2 mx-auto mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted" data-reveal>{{ $intro }}</p>
+            <h2 class="reveal-1 mx-auto mt-4 max-w-2xl text-h2 font-semibold tracking-tight text-balance text-foreground" data-reveal>{{ $heading }}</h2>
+            <p class="reveal-2 mx-auto mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground" data-reveal>{{ $intro }}</p>
         </div>
 
         <ol class="relative mt-14 grid gap-10 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8" data-rail>
-            <div class="absolute top-4 right-0 left-0 hidden h-px bg-line lg:block" aria-hidden="true"></div>
+            <div class="absolute top-4 right-0 left-0 hidden h-px bg-border lg:block" aria-hidden="true"></div>
             @foreach ($steps as $step)
             <li class="reveal-{{ min($loop->iteration, 6) }} relative" data-reveal>
-                <span class="relative z-10 flex size-8 items-center justify-center rounded-full border border-line bg-panel font-mono text-[12px] text-muted transition-[background-color,color,border-color] duration-500" data-chip style="--i: {{ $loop->index }}">{{ $loop->iteration }}</span>
-                <h3 class="mt-5 text-base font-medium text-ink">{{ $step->title }}</h3>
-                <p class="mt-2 max-w-[34ch] text-[14px]/6 text-pretty text-muted">{{ $step->text }}</p>
+                <span class="relative z-10 flex size-8 items-center justify-center rounded-full border border-border bg-card font-mono text-[12px] text-muted-foreground transition-[background-color,color,border-color] duration-500" data-chip style="--i: {{ $loop->index }}">{{ $loop->iteration }}</span>
+                <h3 class="mt-5 text-base font-medium text-foreground">{{ $step->title }}</h3>
+                <p class="mt-2 max-w-[34ch] text-[14px]/6 text-pretty text-muted-foreground">{{ $step->text }}</p>
             </li>
             @endforeach
         </ol>
 
-        <div class="reveal-4 mt-16 overflow-hidden rounded-[20px] border border-line bg-panel shadow-2xl shadow-ink/5 sm:mt-20" data-reveal>
+        <div class="reveal-4 mt-16 overflow-hidden rounded-[20px] border border-border bg-card shadow-2xl shadow-foreground/5 sm:mt-20" data-reveal>
             <img src="{{ $image }}" alt="{{ $imageAlt }}" width="1600" height="686" class="block h-auto w-full" loading="lazy">
         </div>
     </div>
 </section>
 <style>
     /* Chips fill in sequence once the rail is on screen. */
-    [data-feature-03] [data-rail].is-in [data-chip] { background-color: var(--color-ink); border-color: var(--color-ink); color: var(--color-canvas); transition-delay: calc(var(--i, 0) * 220ms); }
+    [data-feature-03] [data-rail].is-in [data-chip] { background-color: var(--primary); border-color: var(--primary); color: var(--background); transition-delay: calc(var(--i, 0) * 220ms); }
     @media (prefers-reduced-motion: reduce) {
         [data-feature-03] [data-chip] { transition: none; }
     }

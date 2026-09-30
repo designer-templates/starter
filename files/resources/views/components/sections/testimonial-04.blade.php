@@ -50,9 +50,9 @@
 <section class="py-16 sm:py-28" data-testimonial-04>
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div>
-            <h2 class="max-w-2xl text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
+            <h2 class="max-w-2xl text-h2 font-semibold tracking-tight text-balance text-foreground" data-reveal>{{ $heading }}</h2>
             @if ($intro)
-            <p class="reveal-1 mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted" data-reveal>{{ $intro }}</p>
+            <p class="reveal-1 mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground" data-reveal>{{ $intro }}</p>
             @endif
         </div>
 
@@ -65,34 +65,34 @@
         <div class="mt-12 grid gap-5 sm:mt-16 lg:grid-cols-3">
             @foreach ($testimonials as $item)
             @if (($item->featured ?? 'no') === 'yes' || (! $hasFeatured && $loop->first))
-            <figure class="reveal-{{ min($loop->iteration + 1, 6) }} grid gap-8 rounded-2xl border border-line bg-panel p-6 shadow-[var(--shadow-card)] transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-line-strong motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-10 lg:col-span-3 lg:grid-cols-[1fr_16rem] lg:gap-16" data-reveal>
+            <figure class="reveal-{{ min($loop->iteration + 1, 6) }} grid gap-8 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-10 lg:col-span-3 lg:grid-cols-[1fr_16rem] lg:gap-16" data-reveal>
                 <blockquote class="flex items-center">
-                    <p class="max-w-[44ch] font-display text-xl/8 font-medium text-pretty text-ink sm:text-2xl/9">{{ $item->quote }}</p>
+                    <p class="max-w-[44ch] font-display text-xl/8 font-medium text-pretty text-foreground sm:text-2xl/9">{{ $item->quote }}</p>
                 </blockquote>
-                <figcaption class="flex flex-col justify-between gap-8 border-t border-line pt-6 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-12">
+                <figcaption class="flex flex-col justify-between gap-8 border-t border-border pt-6 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-12">
                     <div class="flex items-center gap-4 lg:flex-col lg:items-start">
-                        <img src="{{ $item->avatar }}" alt="" width="64" height="64" class="size-16 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-line" loading="lazy">
+                        <img src="{{ $item->avatar }}" alt="" width="64" height="64" class="size-16 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-border" loading="lazy">
                         <div>
-                            <p class="text-[15px] font-semibold text-ink">{{ $item->name }}</p>
-                            <p class="mt-0.5 text-[14px] text-muted">{{ $item->role }}</p>
+                            <p class="text-[15px] font-semibold text-foreground">{{ $item->name }}</p>
+                            <p class="mt-0.5 text-[14px] text-muted-foreground">{{ $item->role }}</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-2.5 text-ink/80 max-lg:hidden">
+                    <div class="flex items-center gap-2.5 text-foreground/80 max-lg:hidden">
                         {!! $item->logo !!}
                         <span class="text-[17px] font-semibold tracking-tight">{{ $item->company }}</span>
                     </div>
                 </figcaption>
             </figure>
             @else
-            <figure class="reveal-{{ min($loop->iteration + 1, 6) }} flex flex-col justify-between rounded-2xl border border-line bg-panel p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-[var(--shadow-card)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8" data-reveal>
+            <figure class="reveal-{{ min($loop->iteration + 1, 6) }} flex flex-col justify-between rounded-2xl border border-border bg-card p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-[var(--shadow-card)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8" data-reveal>
                 <blockquote>
-                    <p class="text-[15px]/6 text-pretty text-lede">{{ $item->quote }}</p>
+                    <p class="text-[15px]/6 text-pretty text-foreground/78">{{ $item->quote }}</p>
                 </blockquote>
                 <figcaption class="mt-8 flex items-center gap-3">
-                    <img src="{{ $item->avatar }}" alt="" width="40" height="40" class="size-10 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-line" loading="lazy">
+                    <img src="{{ $item->avatar }}" alt="" width="40" height="40" class="size-10 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-border" loading="lazy">
                     <div class="min-w-0">
-                        <p class="text-[14px] font-semibold text-ink">{{ $item->name }}</p>
-                        <p class="mt-0.5 text-[13px] text-muted">{{ $item->role }}</p>
+                        <p class="text-[14px] font-semibold text-foreground">{{ $item->name }}</p>
+                        <p class="mt-0.5 text-[13px] text-muted-foreground">{{ $item->role }}</p>
                     </div>
                 </figcaption>
             </figure>

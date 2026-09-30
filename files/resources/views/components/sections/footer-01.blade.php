@@ -45,19 +45,19 @@
     holds the legal line and two small links. Columns come from footer_links and social
     icons from social_links in site.json. Clear a small link's text to hide it.
 -->
-<footer class="border-t border-line" data-footer-01>
+<footer class="border-t border-border" data-footer-01>
     <div class="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div class="reveal-1 lg:col-span-4" data-reveal>
-                <a href="/" class="inline-flex items-center gap-2.5 text-ink" aria-label="Homepage">
+                <a href="/" class="inline-flex items-center gap-2.5 text-foreground" aria-label="Homepage">
                     <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-current" aria-hidden="true"><path d="M12 1.9 21.4 21.4 12 16.9 2.6 21.4Z"/></svg>
                     <span class="text-[17px] font-semibold tracking-tight">{{ $brand }}</span>
                 </a>
-                <p class="mt-4 max-w-[36ch] text-[14px]/6 text-pretty text-muted">{{ $tagline }}</p>
+                <p class="mt-4 max-w-[36ch] text-[14px]/6 text-pretty text-muted-foreground">{{ $tagline }}</p>
                 <ul role="list" class="-ml-3.5 mt-5 flex items-center sm:-ml-2.5">
                     @foreach ($social as $item)
                     <li>
-                        <a href="{{ $item->url }}" aria-label="{{ $item->text }}" class="flex size-11 items-center justify-center rounded-lg text-muted transition-colors duration-200 hover:bg-raised hover:text-ink sm:size-9 [&>svg]:size-4">{!! $item->icon !!}</a>
+                        <a href="{{ $item->url }}" aria-label="{{ $item->text }}" class="flex size-11 items-center justify-center rounded-lg text-muted-foreground transition-colors duration-200 hover:bg-muted hover:text-foreground sm:size-9 [&>svg]:size-4">{!! $item->icon !!}</a>
                     </li>
                     @endforeach
                 </ul>
@@ -66,10 +66,10 @@
             <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4 lg:col-span-8">
                 @foreach ($columns as $column)
                 <div class="reveal-{{ min($loop->iteration + 1, 6) }} min-w-0" data-reveal>
-                    <p class="text-[14px] font-semibold text-ink">{{ $column->text }}</p>
+                    <p class="text-[14px] font-semibold text-foreground">{{ $column->text }}</p>
                     <ul role="list" class="mt-4 flex flex-col gap-3 text-[14px] max-sm:gap-0">
                         @foreach ($column->children ?? [] as $child)
-                        <li><a href="{{ $child->url }}" class="text-muted transition-colors duration-200 hover:text-ink max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $child->text }}</a></li>
+                        <li><a href="{{ $child->url }}" class="text-muted-foreground transition-colors duration-200 hover:text-foreground max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $child->text }}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -77,14 +77,14 @@
             </div>
         </div>
 
-        <div class="mt-14 flex flex-col gap-2 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-            <p class="text-[14px] text-faint">{{ $legal }}</p>
+        <div class="mt-14 flex flex-col gap-2 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+            <p class="text-[14px] text-muted-foreground/80">{{ $legal }}</p>
             <div class="flex items-center gap-6 text-[14px]">
                 @if ($privacyText)
-                <a href="{{ $privacyUrl }}" class="text-muted transition-colors duration-200 hover:text-ink max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $privacyText }}</a>
+                <a href="{{ $privacyUrl }}" class="text-muted-foreground transition-colors duration-200 hover:text-foreground max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $privacyText }}</a>
                 @endif
                 @if ($termsText)
-                <a href="{{ $termsUrl }}" class="text-muted transition-colors duration-200 hover:text-ink max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $termsText }}</a>
+                <a href="{{ $termsUrl }}" class="text-muted-foreground transition-colors duration-200 hover:text-foreground max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $termsText }}</a>
                 @endif
             </div>
         </div>

@@ -18,23 +18,23 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="grid items-center gap-y-12 lg:grid-cols-2 lg:gap-x-20">
             <figure data-reveal>
-                <img src="{{ $image }}" alt="{{ $imageAlt }}" width="1200" height="900" loading="lazy" decoding="async" class="aspect-[4/3] w-full rounded-3xl object-cover outline-1 -outline-offset-1 outline-ink/10">
+                <img src="{{ $image }}" alt="{{ $imageAlt }}" width="1200" height="900" loading="lazy" decoding="async" class="aspect-[4/3] w-full rounded-3xl object-cover outline-1 -outline-offset-1 outline-foreground/10">
                 @if ($caption)
-                <figcaption class="mt-3 font-mono text-[12px] text-faint">{{ $caption }}</figcaption>
+                <figcaption class="mt-3 font-mono text-[12px] text-muted-foreground/80">{{ $caption }}</figcaption>
                 @endif
             </figure>
 
             <div class="reveal-1" data-reveal>
-                <blockquote class="max-w-[30ch] text-2xl font-medium tracking-tight text-balance text-ink sm:text-3xl">{{ $quote }}</blockquote>
+                <blockquote class="max-w-[30ch] text-2xl font-medium tracking-tight text-balance text-foreground sm:text-3xl">{{ $quote }}</blockquote>
                 <div class="mt-6">
-                    <p class="text-[15px] font-medium text-ink">{{ $name }}</p>
-                    <p class="mt-0.5 text-[14px] text-muted">{{ $role }}</p>
+                    <p class="text-[15px] font-medium text-foreground">{{ $name }}</p>
+                    <p class="mt-0.5 text-[14px] text-muted-foreground">{{ $role }}</p>
                 </div>
                 @if ($paragraph)
-                <p class="mt-8 max-w-[52ch] border-t border-line pt-8 text-[15px]/6 text-pretty text-muted">{{ $paragraph }}</p>
+                <p class="mt-8 max-w-[52ch] border-t border-border pt-8 text-[15px]/6 text-pretty text-muted-foreground">{{ $paragraph }}</p>
                 @endif
                 @if ($linkText)
-                <a href="{{ $linkUrl }}" class="arrow-link mt-6 inline-flex items-center gap-1.5 text-[15px] font-medium text-ink transition-colors duration-200 hover:text-muted">
+                <a href="{{ $linkUrl }}" class="arrow-link mt-6 inline-flex items-center gap-1.5 text-[15px] font-medium text-foreground transition-colors duration-200 hover:text-muted-foreground">
                     {{ $linkText }}
                     <svg viewBox="0 0 24 24" class="arrow size-4 opacity-60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                 </a>

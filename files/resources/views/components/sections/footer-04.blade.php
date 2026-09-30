@@ -43,26 +43,26 @@
     the social icons from social_links sits under a hairline. Clear the fine print to
     hide it. The form is static markup with a `name` on the field, ready to wire up.
 -->
-<footer class="border-t border-line" data-footer-04>
+<footer class="border-t border-border" data-footer-04>
     <div class="mx-auto w-full max-w-6xl px-6 py-16 sm:py-20 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div class="reveal-1 lg:col-span-5" data-reveal>
-                <a href="/" class="inline-flex items-center gap-2.5 text-ink" aria-label="Homepage">
+                <a href="/" class="inline-flex items-center gap-2.5 text-foreground" aria-label="Homepage">
                     <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-current" aria-hidden="true"><path d="M12 1.9 21.4 21.4 12 16.9 2.6 21.4Z"/></svg>
                     <span class="text-[17px] font-semibold tracking-tight">{{ $brand }}</span>
                 </a>
-                <h2 class="mt-8 text-2xl font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
-                <p class="mt-3 max-w-[40ch] text-[15px]/6 text-pretty text-muted">{{ $tagline }}</p>
+                <h2 class="mt-8 text-2xl font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
+                <p class="mt-3 max-w-[40ch] text-[15px]/6 text-pretty text-muted-foreground">{{ $tagline }}</p>
                 <form action="{{ $action }}" method="post" class="mt-6 flex max-w-md flex-col gap-3 sm:flex-row">
-                    <input type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email address" placeholder="{{ $placeholder }}" class="field h-11 w-full min-w-0 rounded-lg border border-line bg-canvas px-3.5 text-base text-ink placeholder:text-faint sm:flex-1 sm:text-[15px]">
-                    <button type="submit" class="inline-flex h-11 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-ink px-5 text-[15px] font-medium text-canvas shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
+                    <input type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email address" placeholder="{{ $placeholder }}" class="field h-11 w-full min-w-0 rounded-lg border border-input bg-background px-3.5 text-base text-foreground placeholder:text-muted-foreground/80 sm:flex-1 sm:text-[15px]">
+                    <button type="submit" class="inline-flex h-11 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-primary px-5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
                 </form>
                 @if ($finePrint)
-                <p class="mt-3 text-[13px] text-faint">{{ $finePrint }}</p>
+                <p class="mt-3 text-[13px] text-muted-foreground/80">{{ $finePrint }}</p>
                 @endif
                 @if ($showStatus)
-                <a href="{{ $statusUrl }}" class="mt-8 inline-flex min-h-11 items-center gap-2.5 text-[14px] text-muted transition-colors duration-200 hover:text-ink sm:min-h-0">
-                    <span class="status-dot relative flex size-2 rounded-full bg-ink" aria-hidden="true"></span>
+                <a href="{{ $statusUrl }}" class="mt-8 inline-flex min-h-11 items-center gap-2.5 text-[14px] text-muted-foreground transition-colors duration-200 hover:text-foreground sm:min-h-0">
+                    <span class="status-dot relative flex size-2 rounded-full bg-primary" aria-hidden="true"></span>
                     {{ $statusText }}
                 </a>
                 @endif
@@ -71,10 +71,10 @@
             <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:col-span-7 lg:pl-12">
                 @foreach ($columns as $column)
                 <div class="reveal-{{ min($loop->iteration + 1, 6) }} min-w-0" data-reveal>
-                    <p class="text-[14px] font-semibold text-ink">{{ $column->text }}</p>
+                    <p class="text-[14px] font-semibold text-foreground">{{ $column->text }}</p>
                     <ul role="list" class="mt-4 flex flex-col gap-3 text-[14px] max-sm:gap-0">
                         @foreach ($column->children ?? [] as $child)
-                        <li><a href="{{ $child->url }}" class="text-muted transition-colors duration-200 hover:text-ink max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $child->text }}</a></li>
+                        <li><a href="{{ $child->url }}" class="text-muted-foreground transition-colors duration-200 hover:text-foreground max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $child->text }}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -82,12 +82,12 @@
             </div>
         </div>
 
-        <div class="mt-14 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
-            <p class="text-[14px] text-faint">{{ $legal }}</p>
+        <div class="mt-14 flex flex-col gap-4 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-[14px] text-muted-foreground/80">{{ $legal }}</p>
             <ul role="list" class="-ml-3.5 flex items-center sm:-mr-2.5 sm:ml-0">
                 @foreach ($social as $item)
                 <li>
-                    <a href="{{ $item->url }}" aria-label="{{ $item->text }}" class="flex size-11 items-center justify-center rounded-lg text-muted transition-colors duration-200 hover:bg-raised hover:text-ink sm:size-9 [&>svg]:size-4">{!! $item->icon !!}</a>
+                    <a href="{{ $item->url }}" aria-label="{{ $item->text }}" class="flex size-11 items-center justify-center rounded-lg text-muted-foreground transition-colors duration-200 hover:bg-muted hover:text-foreground sm:size-9 [&>svg]:size-4">{!! $item->icon !!}</a>
                 </li>
                 @endforeach
             </ul>
@@ -95,7 +95,7 @@
     </div>
 </footer>
 <style>
-    [data-footer-04] .status-dot::after { content: ""; position: absolute; inset: 0; border-radius: 9999px; background-color: var(--color-ink); animation: footer-04-pulse 2.8s var(--ease-out-quart) infinite; }
+    [data-footer-04] .status-dot::after { content: ""; position: absolute; inset: 0; border-radius: 9999px; background-color: var(--primary); animation: footer-04-pulse 2.8s var(--ease-out-quart) infinite; }
     @keyframes footer-04-pulse { 0% { transform: scale(1); opacity: .45; } 70%, 100% { transform: scale(3.2); opacity: 0; } }
     @media (prefers-reduced-motion: reduce) { [data-footer-04] .status-dot::after { animation: none; display: none; } }
 </style>

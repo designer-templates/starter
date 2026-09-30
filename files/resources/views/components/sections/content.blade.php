@@ -10,11 +10,11 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl" data-reveal>
             @if ($eyebrow)
-            <p class="font-mono text-[11px] tracking-widest text-faint uppercase">{{ $eyebrow }}</p>
+            <p class="font-mono text-[11px] tracking-widest text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
             @endif
-            <h1 class="mt-4 text-hero font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h1>
+            <h1 class="mt-4 text-hero font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h1>
 
-            <div class="mt-8 flex flex-col gap-5 text-[17px]/7 text-pretty text-lede">
+            <div class="mt-8 flex flex-col gap-5 text-[17px]/7 text-pretty text-foreground/78">
                 <p>{{ $paragraph1 }}</p>
                 @if ($paragraph2)
                 <p>{{ $paragraph2 }}</p>

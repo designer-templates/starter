@@ -41,20 +41,20 @@
 <section class="overflow-hidden pt-20 sm:pt-28" data-hero-03>
     <div class="mx-auto flex w-full max-w-6xl px-6 lg:px-8 flex-col items-center text-center">
         @if ($showBadge)
-        <p class="reveal-1 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3.5 py-1.5 text-[13px] font-medium text-ink" data-reveal>
-            <span class="size-1.5 rounded-full bg-ink" aria-hidden="true"></span>
+        <p class="reveal-1 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-[13px] font-medium text-foreground" data-reveal>
+            <span class="size-1.5 rounded-full bg-primary" aria-hidden="true"></span>
             {{ $badgeText }}
         </p>
         @endif
-        <h1 class="reveal-2 mt-7 max-w-[18ch] text-hero font-semibold tracking-[-0.04em] text-balance text-ink" data-reveal>{{ $heading }}</h1>
-        <p class="reveal-3 mt-6 max-w-[52ch] text-lg/8 font-medium text-pretty text-muted sm:text-xl/8" data-reveal>{{ $text }}</p>
+        <h1 class="reveal-2 mt-7 max-w-[18ch] text-hero font-semibold tracking-[-0.04em] text-balance text-foreground" data-reveal>{{ $heading }}</h1>
+        <p class="reveal-3 mt-6 max-w-[52ch] text-lg/8 font-medium text-pretty text-muted-foreground sm:text-xl/8" data-reveal>{{ $text }}</p>
         <div class="reveal-4 mt-9 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center" data-reveal>
-            <a href="{{ $buttonLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ink px-7 py-3.5 text-[15px] font-medium text-canvas shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto">
+            <a href="{{ $buttonLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto">
                 {{ $buttonText }}
                 <svg viewBox="0 0 16 16" class="size-3.5 shrink-0 fill-current opacity-80" aria-hidden="true"><path fill-rule="evenodd" d="M4.5 3.25a.75.75 0 0 1 .75-.75h7.25a.75.75 0 0 1 .75.75V10.5a.75.75 0 0 1-1.5 0V5.06l-7.22 7.22a.75.75 0 0 1-1.06-1.06L10.69 4H5.25a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/></svg>
             </a>
             @if ($buttonText2)
-            <a href="{{ $buttonLink2 }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-line bg-panel px-7 py-3.5 text-[15px] font-medium text-lede transition-colors duration-200 hover:border-line-strong hover:bg-raised active:scale-[.98] sm:w-auto">
+            <a href="{{ $buttonLink2 }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-7 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] sm:w-auto">
                 {{ $buttonText2 }}
                 <svg viewBox="0 0 16 16" class="size-3.5 shrink-0 fill-current opacity-60" aria-hidden="true"><path fill-rule="evenodd" d="M4.5 3.25a.75.75 0 0 1 .75-.75h7.25a.75.75 0 0 1 .75.75V10.5a.75.75 0 0 1-1.5 0V5.06l-7.22 7.22a.75.75 0 0 1-1.06-1.06L10.69 4H5.25a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/></svg>
             </a>
@@ -65,12 +65,12 @@
     <!-- The wordmark strip: one row drifting left, edges faded to the canvas -->
     <div class="reveal-5 mt-16 sm:mt-20" data-reveal>
         @if ($logosLabel)
-        <p class="text-center text-[15px] font-medium text-muted">{{ $logosLabel }}</p>
+        <p class="text-center text-[15px] font-medium text-muted-foreground">{{ $logosLabel }}</p>
         @endif
-        <div class="mt-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,var(--color-ink)_12%,var(--color-ink)_88%,transparent)]" data-marquee>
+        <div class="mt-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,var(--foreground)_12%,var(--foreground)_88%,transparent)]" data-marquee>
             <ul role="list" class="flex w-max items-center" data-marquee-track data-speed="36">
                 @foreach ($logos as $item)
-                <li class="flex shrink-0 items-center gap-2.5 px-7 text-faint [&_svg]:size-6 [&_svg]:shrink-0">
+                <li class="flex shrink-0 items-center gap-2.5 px-7 text-muted-foreground/80 [&_svg]:size-6 [&_svg]:shrink-0">
                     {!! $item->icon !!}
                     <span class="whitespace-nowrap text-[17px] font-semibold tracking-tight">{{ $item->name }}</span>
                 </li>
@@ -83,7 +83,7 @@
     <div class="mt-10 h-[15rem] overflow-hidden sm:mt-14 sm:h-[19rem]" data-marquee>
         <ul role="list" class="flex w-max items-start gap-3 pr-3 sm:gap-4 sm:pr-4" data-marquee-track data-marquee-reverse data-speed="28">
             @foreach ($images as $tile)
-            <li class="w-[13rem] shrink-0 overflow-hidden rounded-2xl bg-raised sm:w-[17rem] {{ $loop->index % 3 == 1 ? 'mt-10 sm:mt-14' : ($loop->index % 3 == 2 ? 'mt-4 sm:mt-6' : '') }}">
+            <li class="w-[13rem] shrink-0 overflow-hidden rounded-2xl bg-muted sm:w-[17rem] {{ $loop->index % 3 == 1 ? 'mt-10 sm:mt-14' : ($loop->index % 3 == 2 ? 'mt-4 sm:mt-6' : '') }}">
                 <img src="{{ $tile->image }}" alt="{{ $tile->alt }}" width="1600" height="1067" loading="{{ $loop->index < 4 ? 'eager' : 'lazy' }}" class="aspect-[4/5] w-full object-cover">
             </li>
             @endforeach

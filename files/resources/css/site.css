@@ -4,12 +4,90 @@
     Inlined right after Tailwind by @vite in the layout, so everything here
     applies to every page. One palette and one type pairing, tuned together;
     real values live here and only here. The tokens become utilities:
-    bg-canvas, text-ink, text-muted, border-line, bg-panel, bg-shade…
-    (contract: the designer-craft skill, references/tokens.md)
+    bg-background, text-foreground, text-muted-foreground, border-border,
+    bg-card, bg-primary, rounded-xl…
 
     The mood: a near-white page, hairlines, soft black for the actions that
     matter. Inter for everything, so the sections read as a neutral kit.
 */
+
+/* ============================================================================
+   Designer global variables
+
+   The same names in every Designer template, so a section written for one
+   works in any other and a theme can change the whole site by rewriting the
+   :root values below. The @theme block only maps them onto utilities
+   (inline, so a later override of --background anywhere in the tree wins).
+
+   Text has four tiers from two variables: foreground, foreground/78 (body
+   copy and nav labels), muted-foreground (supporting copy), and
+   muted-foreground/80 (metadata, icons at rest).
+   ========================================================================== */
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    /* Tailwind's own rounded-* scale, derived from the three radius variables */
+    --radius-sm: calc(var(--radius) - 0.5rem);
+    --radius-md: calc(var(--radius) - 0.375rem);
+    --radius-lg: calc(var(--radius) - 0.25rem);
+    --radius-xl: var(--radius);
+    --radius-2xl: var(--radius-medium);
+    --radius-3xl: var(--radius-large);
+    --radius-medium: var(--radius-medium);
+    --radius-large: var(--radius-large);
+}
+
+:root {
+    /* Surfaces: a near-white page, true white for cards, a toasted step for hover fills and wells */
+    --background: #fbfbfb;
+    --foreground: #0a0a0a;
+    --card: #ffffff;
+    --card-foreground: #0a0a0a;
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+
+    /* Actions: primary buttons are soft black; the accent is the one blue, budgeted */
+    --primary: #0a0a0a;
+    --primary-foreground: #fbfbfb;
+    --secondary: #f2f2f2;
+    --secondary-foreground: #0a0a0a;
+    --muted: #f2f2f2;
+    --muted-foreground: #737373;
+    --accent: #1d4ed8;
+    --accent-foreground: #fbfbfb;
+    --destructive: #e7000b;
+
+    /* Hairlines: low-alpha ink, not a grey. The focus ring is the accent */
+    --border: rgba(10, 10, 10, 0.08);
+    --input: rgba(10, 10, 10, 0.08);
+    --ring: #1d4ed8;
+
+    /* Corners: controls and cards (rounded-xl), panels (rounded-2xl), framed images (rounded-3xl) */
+    --radius: 0.75rem;
+    --radius-medium: 1rem;
+    --radius-large: 1.5rem;
+}
+
+/* ============================================================================
+   Starter — this template's own tokens
+   ========================================================================== */
 @theme {
     --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -23,30 +101,19 @@
     --text-figure: clamp(2.25rem, 1.75rem + 1.8vw, 3.25rem);
     --text-figure--line-height: 1;
 
-    /* Surfaces: a near-white page, true white for raised cards */
-    --color-canvas: #fbfbfb;
-    --color-panel: #ffffff;
-    --color-raised: #f2f2f2;
-    --color-line: rgba(10, 10, 10, 0.08);
-    --color-line-strong: rgba(10, 10, 10, 0.16);
-
-    --color-ink: #0a0a0a;
-    --color-lede: #404040;
-    --color-muted: #737373;
-    --color-faint: #8f8f8f;
-
-    --color-accent: #1d4ed8;
-    --color-accent-ink: #fbfbfb;
+    /* A stronger hairline for outlined buttons and window frames; a tinted well behind accent content */
+    --color-border-strong: rgba(10, 10, 10, 0.16);
     --color-accent-soft: rgba(29, 78, 216, 0.08);
 
     /* Two named colours the drawn UI needs: star ratings and an upward delta */
     --color-star: #fbbf24;
     --color-up: #059669;
 
+    /* The dark counterpart of the page: the closing panel, the terminal, one dark band */
     --color-shade: #0a0a0a;
-    --color-shade-ink: #fafafa;
-    --color-shade-muted: #a3a3a3;
-    --color-shade-line: rgba(255, 255, 255, 0.12);
+    --color-shade-foreground: #fafafa;
+    --color-shade-muted-foreground: #a3a3a3;
+    --color-shade-border: rgba(255, 255, 255, 0.12);
 
     /* One depth recipe page-wide: a hairline plus this soft layered shadow */
     --shadow-card: 0 1px 2px rgba(10, 10, 10, 0.05), 0 12px 32px -16px rgba(10, 10, 10, 0.18);
@@ -56,10 +123,10 @@
     --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-html { background-color: var(--color-canvas); color-scheme: light; }
+html { background-color: var(--background); color-scheme: light; }
 body { overflow-x: clip; }
-::selection { background-color: var(--color-ink); color: var(--color-canvas); }
-:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 3px; }
+::selection { background-color: var(--primary); color: var(--primary-foreground); }
+:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: 3px; }
 h1, h2, h3, h4 { font-family: var(--font-display); }
 
 /* Cross-page fades — the whole site feels like one surface. */
@@ -122,7 +189,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 
 /* Form fields: one recipe for every input on the site. */
 .field { transition: border-color .2s ease, box-shadow .2s ease; }
-.field:focus { outline: none; border-color: var(--color-line-strong); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+.field:focus { outline: none; border-color: var(--color-border-strong); box-shadow: 0 0 0 3px var(--color-accent-soft); }
 
 /* The announcement banner (sections/banner.blade.php): main.js removes it when the dismiss button is pressed. */
 [data-banner] { transition: opacity .2s ease; }
@@ -131,10 +198,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 /* Pricing: the section's data-billing decides which price shows; the pressed toggle option sits on a white pill. */
 [data-pricing]:not([data-billing="yearly"]) [data-price="yearly"] { display: none; }
 [data-pricing][data-billing="yearly"] [data-price="monthly"] { display: none; }
-.billing-option[aria-pressed="true"] { background-color: var(--color-panel); color: var(--color-ink); box-shadow: 0 1px 2px rgba(10, 10, 10, 0.08); }
+.billing-option[aria-pressed="true"] { background-color: var(--card); color: var(--foreground); box-shadow: 0 1px 2px rgba(10, 10, 10, 0.08); }
 
-/* The closing panel's dot grid — faint shade-ink points on the shade surface. */
-.dot-grid { background-image: radial-gradient(circle, var(--color-shade-line) 1px, transparent 1px); background-size: 24px 24px; }
+/* The closing panel's dot grid — faint points on the shade surface. */
+.dot-grid { background-image: radial-gradient(circle, var(--color-shade-border) 1px, transparent 1px); background-size: 24px 24px; }
 
 /* Smooth <details> opening (Chrome; instant elsewhere). The plus turns into a cross. */
 details.faq-item { interpolate-size: allow-keywords; }

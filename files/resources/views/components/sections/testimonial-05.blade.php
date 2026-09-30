@@ -62,27 +62,27 @@
 <section class="overflow-hidden py-16 sm:py-28" data-testimonial-05>
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8 text-center">
         @if ($eyebrow)
-        <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>
+        <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase" data-reveal>{{ $eyebrow }}</p>
         @endif
-        <h2 class="reveal-1 mx-auto mt-3 max-w-xl text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
+        <h2 class="reveal-1 mx-auto mt-3 max-w-xl text-h2 font-semibold tracking-tight text-balance text-foreground" data-reveal>{{ $heading }}</h2>
         @if ($intro)
-        <p class="reveal-2 mx-auto mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted" data-reveal>{{ $intro }}</p>
+        <p class="reveal-2 mx-auto mt-4 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground" data-reveal>{{ $intro }}</p>
         @endif
     </div>
 
-    <div class="reveal-3 mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,var(--color-ink)_10%,var(--color-ink)_90%,transparent)] sm:mt-16" data-reveal data-marquee>
+    <div class="reveal-3 mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,var(--foreground)_10%,var(--foreground)_90%,transparent)] sm:mt-16" data-reveal data-marquee>
         <div class="flex w-max pl-5" data-marquee-track>
             @foreach ($testimonials as $item)
-            <figure class="mr-5 flex w-[20rem] shrink-0 flex-col rounded-2xl border border-line bg-panel p-6 transition-colors duration-200 hover:border-line-strong sm:w-[22rem]">
+            <figure class="mr-5 flex w-[20rem] shrink-0 flex-col rounded-2xl border border-border bg-card p-6 transition-colors duration-200 hover:border-border-strong sm:w-[22rem]">
                 <figcaption class="flex items-center gap-3">
-                    <img src="{{ $item->avatar }}" alt="" width="40" height="40" class="size-10 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-line" loading="lazy">
+                    <img src="{{ $item->avatar }}" alt="" width="40" height="40" class="size-10 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-border" loading="lazy">
                     <div class="min-w-0">
-                        <p class="text-[14px] font-semibold text-ink">{{ $item->name }}</p>
-                        <p class="mt-0.5 text-[13px] text-muted">{{ $item->role }}</p>
+                        <p class="text-[14px] font-semibold text-foreground">{{ $item->name }}</p>
+                        <p class="mt-0.5 text-[13px] text-muted-foreground">{{ $item->role }}</p>
                     </div>
                 </figcaption>
                 <blockquote class="mt-5">
-                    <p class="text-[15px]/6 text-pretty text-lede">{{ $item->quote }}</p>
+                    <p class="text-[15px]/6 text-pretty text-foreground/78">{{ $item->quote }}</p>
                 </blockquote>
             </figure>
             @endforeach

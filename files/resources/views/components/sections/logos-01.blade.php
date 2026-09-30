@@ -15,11 +15,11 @@
 <section class="py-16 sm:py-20" data-logos-01>
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         @if ($heading)
-        <p class="text-center text-[15px] font-medium text-muted" data-reveal>{{ $heading }}</p>
+        <p class="text-center text-[15px] font-medium text-muted-foreground" data-reveal>{{ $heading }}</p>
         @endif
         <ul role="list" class="reveal-1 mt-8 grid grid-cols-2 gap-y-6 text-center sm:-mx-7 sm:block sm:text-balance" data-reveal>
             @foreach ($items as $item)
-            <li class="flex items-center justify-center gap-2.5 text-faint transition-colors duration-200 hover:text-ink sm:mx-7 sm:my-3 sm:inline-flex sm:align-middle [&_svg]:size-6 [&_svg]:shrink-0">
+            <li class="flex items-center justify-center gap-2.5 text-muted-foreground/80 transition-colors duration-200 hover:text-foreground sm:mx-7 sm:my-3 sm:inline-flex sm:align-middle [&_svg]:size-6 [&_svg]:shrink-0">
                 {!! $item->icon !!}
                 <span class="text-[17px] font-semibold tracking-tight">{{ $item->name }}</span>
             </li>

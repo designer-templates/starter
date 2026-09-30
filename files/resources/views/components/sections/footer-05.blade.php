@@ -42,33 +42,33 @@
     hairline. Columns come from footer_links and social icons from social_links in
     site.json. Clear the hours or an address line to drop it.
 -->
-<footer class="border-t border-line" data-footer-05>
+<footer class="border-t border-border" data-footer-05>
     <div class="mx-auto w-full max-w-6xl px-6 py-16 sm:py-24 lg:px-8">
         <div class="max-w-3xl">
-            <h2 class="reveal-1 text-4xl/[1.08] font-semibold tracking-[-0.03em] text-balance text-ink sm:text-5xl/[1.05]" data-reveal>{{ $heading }}</h2>
-            <p class="reveal-2 mt-5 max-w-[52ch] text-lg/8 text-pretty text-muted" data-reveal>{{ $tagline }}</p>
-            <a href="{{ $emailUrl }}" class="arrow-link reveal-3 mt-6 inline-flex min-h-11 items-center gap-2 text-xl font-medium text-ink" data-reveal>
+            <h2 class="reveal-1 text-4xl/[1.08] font-semibold tracking-[-0.03em] text-balance text-foreground sm:text-5xl/[1.05]" data-reveal>{{ $heading }}</h2>
+            <p class="reveal-2 mt-5 max-w-[52ch] text-lg/8 text-pretty text-muted-foreground" data-reveal>{{ $tagline }}</p>
+            <a href="{{ $emailUrl }}" class="arrow-link reveal-3 mt-6 inline-flex min-h-11 items-center gap-2 text-xl font-medium text-foreground" data-reveal>
                 {{ $emailText }}
                 <svg viewBox="0 0 24 24" class="arrow size-5 opacity-60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
             </a>
         </div>
 
-        <div class="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 border-t border-line pt-14 sm:grid-cols-4 lg:gap-x-8">
+        <div class="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 border-t border-border pt-14 sm:grid-cols-4 lg:gap-x-8">
             @foreach ($columns as $column)
             <div class="reveal-{{ min($loop->iteration, 6) }} min-w-0" data-reveal>
-                <p class="text-[14px] font-semibold text-ink">{{ $column->text }}</p>
+                <p class="text-[14px] font-semibold text-foreground">{{ $column->text }}</p>
                 <ul role="list" class="mt-4 flex flex-col gap-3 text-[14px] max-sm:gap-0">
                     @foreach ($column->children ?? [] as $child)
-                    <li><a href="{{ $child->url }}" class="text-muted transition-colors duration-200 hover:text-ink max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $child->text }}</a></li>
+                    <li><a href="{{ $child->url }}" class="text-muted-foreground transition-colors duration-200 hover:text-foreground max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $child->text }}</a></li>
                     @endforeach
                 </ul>
             </div>
             @endforeach
 
             <div class="reveal-4 min-w-0 max-sm:col-span-2" data-reveal>
-                <p class="text-[14px] font-semibold text-ink">{{ $contactHeading }}</p>
-                <ul role="list" class="mt-4 flex flex-col gap-3 text-[14px] text-muted">
-                    <li><a href="{{ $phoneUrl }}" class="tabular-nums transition-colors duration-200 hover:text-ink max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $phone }}</a></li>
+                <p class="text-[14px] font-semibold text-foreground">{{ $contactHeading }}</p>
+                <ul role="list" class="mt-4 flex flex-col gap-3 text-[14px] text-muted-foreground">
+                    <li><a href="{{ $phoneUrl }}" class="tabular-nums transition-colors duration-200 hover:text-foreground max-sm:flex max-sm:min-h-11 max-sm:items-center">{{ $phone }}</a></li>
                     <li class="leading-6">
                         @if ($addressLine1)
                         <span class="block">{{ $addressLine1 }}</span>
@@ -84,18 +84,18 @@
             </div>
         </div>
 
-        <div class="mt-14 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div class="mt-14 flex flex-col gap-4 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
-                <a href="/" class="inline-flex items-center gap-2.5 text-ink" aria-label="Homepage">
+                <a href="/" class="inline-flex items-center gap-2.5 text-foreground" aria-label="Homepage">
                     <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-current" aria-hidden="true"><path d="M12 1.9 21.4 21.4 12 16.9 2.6 21.4Z"/></svg>
                     <span class="text-[17px] font-semibold tracking-tight">{{ $brand }}</span>
                 </a>
-                <p class="text-[14px] text-faint">{{ $legal }}</p>
+                <p class="text-[14px] text-muted-foreground/80">{{ $legal }}</p>
             </div>
             <ul role="list" class="-ml-3.5 flex items-center sm:-mr-2.5 sm:ml-0">
                 @foreach ($social as $item)
                 <li>
-                    <a href="{{ $item->url }}" aria-label="{{ $item->text }}" class="flex size-11 items-center justify-center rounded-lg text-muted transition-colors duration-200 hover:bg-raised hover:text-ink sm:size-9 [&>svg]:size-4">{!! $item->icon !!}</a>
+                    <a href="{{ $item->url }}" aria-label="{{ $item->text }}" class="flex size-11 items-center justify-center rounded-lg text-muted-foreground transition-colors duration-200 hover:bg-muted hover:text-foreground sm:size-9 [&>svg]:size-4">{!! $item->icon !!}</a>
                 </li>
                 @endforeach
             </ul>

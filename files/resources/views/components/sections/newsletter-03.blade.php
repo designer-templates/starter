@@ -10,11 +10,11 @@
 <!-- Newsletter, muted band: a rounded tinted well with the heading and one line on the left and the email form on the right, one row on desktop. The form posts to the action URL. Clear the text or the fine print to hide it. -->
 <section class="py-16 sm:py-20" data-newsletter-03>
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
-        <div class="rounded-3xl bg-raised/70 px-6 py-10 sm:px-12 sm:py-12 lg:flex lg:items-center lg:justify-between lg:gap-16">
+        <div class="rounded-3xl bg-muted/70 px-6 py-10 sm:px-12 sm:py-12 lg:flex lg:items-center lg:justify-between lg:gap-16">
             <div class="max-w-xl" data-reveal>
-                <h2 class="max-w-[26ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+                <h2 class="max-w-[26ch] text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
                 @if ($text)
-                <p class="mt-3 max-w-[50ch] text-[15px]/6 text-pretty text-muted sm:text-base/7">{{ $text }}</p>
+                <p class="mt-3 max-w-[50ch] text-[15px]/6 text-pretty text-muted-foreground sm:text-base/7">{{ $text }}</p>
                 @endif
             </div>
 
@@ -22,12 +22,12 @@
                 <form action="{{ $action }}" method="post" class="flex flex-col gap-3 sm:flex-row">
                     <label class="min-w-0 flex-1 sm:w-72 sm:flex-none">
                         <span class="sr-only">{{ $inputLabel }}</span>
-                        <input type="email" name="email" autocomplete="email" required placeholder="{{ $inputPlaceholder }}" class="field h-12 w-full rounded-xl border border-line bg-panel px-4 text-base text-ink placeholder:text-faint sm:text-[15px]">
+                        <input type="email" name="email" autocomplete="email" required placeholder="{{ $inputPlaceholder }}" class="field h-12 w-full rounded-xl border border-input bg-card px-4 text-base text-foreground placeholder:text-muted-foreground/80 sm:text-[15px]">
                     </label>
-                    <button type="submit" class="inline-flex h-12 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-ink px-6 text-[15px] font-medium whitespace-nowrap text-canvas shadow-lg shadow-black/10 transition-all duration-200 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
+                    <button type="submit" class="inline-flex h-12 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-primary px-6 text-[15px] font-medium whitespace-nowrap text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
                 </form>
                 @if ($finePrint)
-                <p class="mt-3 text-[13px] text-muted">{{ $finePrint }}</p>
+                <p class="mt-3 text-[13px] text-muted-foreground">{{ $finePrint }}</p>
                 @endif
             </div>
         </div>

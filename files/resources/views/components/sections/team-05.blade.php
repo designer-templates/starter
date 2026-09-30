@@ -25,38 +25,38 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl" data-reveal>
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
             @endif
-            <h2 class="mt-4 text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+            <h2 class="mt-4 text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
             @if ($intro)
-            <p class="mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+            <p class="mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
             @endif
         </div>
 
         <div class="mt-14 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($members as $item)
-            <article class="reveal-{{ min($loop->iteration, 6) }} flex flex-col rounded-2xl border border-line bg-panel p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-[var(--shadow-card)]" data-reveal>
+            <article class="reveal-{{ min($loop->iteration, 6) }} flex flex-col rounded-2xl border border-border bg-card p-6 transition-[border-color,translate,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-[var(--shadow-card)]" data-reveal>
                 <div class="flex items-center gap-4">
-                    <img src="{{ $item->image }}" alt="" width="56" height="56" class="size-14 shrink-0 rounded-full bg-raised object-cover outline-1 -outline-offset-1 outline-ink/10" loading="lazy">
+                    <img src="{{ $item->image }}" alt="" width="56" height="56" class="size-14 shrink-0 rounded-full bg-muted object-cover outline-1 -outline-offset-1 outline-foreground/10" loading="lazy">
                     <div class="min-w-0">
-                        <p class="text-[15px] font-medium text-ink">{{ $item->name }}</p>
-                        <p class="mt-0.5 text-[14px] text-muted">{{ $item->role }}</p>
+                        <p class="text-[15px] font-medium text-foreground">{{ $item->name }}</p>
+                        <p class="mt-0.5 text-[14px] text-muted-foreground">{{ $item->role }}</p>
                     </div>
                 </div>
-                <p class="mt-5 mb-6 text-[14px]/6 text-pretty text-lede">{{ $item->bio }}</p>
-                <div class="mt-auto flex gap-5 border-t border-line pt-4 text-[13px] font-medium">
-                    <a href="mailto:{{ $item->email }}" class="inline-flex min-h-11 items-center text-muted transition-colors duration-200 hover:text-ink sm:min-h-0">{{ $emailLabel }}</a>
-                    <a href="{{ $item->linkUrl }}" class="inline-flex min-h-11 items-center text-muted transition-colors duration-200 hover:text-ink sm:min-h-0">{{ $profileLabel }}</a>
+                <p class="mt-5 mb-6 text-[14px]/6 text-pretty text-foreground/78">{{ $item->bio }}</p>
+                <div class="mt-auto flex gap-5 border-t border-border pt-4 text-[13px] font-medium">
+                    <a href="mailto:{{ $item->email }}" class="inline-flex min-h-11 items-center text-muted-foreground transition-colors duration-200 hover:text-foreground sm:min-h-0">{{ $emailLabel }}</a>
+                    <a href="{{ $item->linkUrl }}" class="inline-flex min-h-11 items-center text-muted-foreground transition-colors duration-200 hover:text-foreground sm:min-h-0">{{ $profileLabel }}</a>
                 </div>
             </article>
             @endforeach
 
             @if ($showJoin)
-            <div class="flex flex-col rounded-2xl bg-raised/70 p-6" data-reveal>
-                <h3 class="text-xl font-semibold tracking-tight text-ink">{{ $joinHeading }}</h3>
-                <p class="mt-3 text-[15px]/6 text-pretty text-muted">{{ $joinText }}</p>
+            <div class="flex flex-col rounded-2xl bg-muted/70 p-6" data-reveal>
+                <h3 class="text-xl font-semibold tracking-tight text-foreground">{{ $joinHeading }}</h3>
+                <p class="mt-3 text-[15px]/6 text-pretty text-muted-foreground">{{ $joinText }}</p>
                 <div class="mt-auto pt-6">
-                    <a href="{{ $joinCtaLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-line bg-panel px-4 py-2.5 text-[15px] font-medium text-lede transition-colors duration-200 hover:border-line-strong hover:bg-raised active:scale-[.98] sm:w-auto">{{ $joinCtaText }}</a>
+                    <a href="{{ $joinCtaLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] sm:w-auto">{{ $joinCtaText }}</a>
                 </div>
             </div>
             @endif

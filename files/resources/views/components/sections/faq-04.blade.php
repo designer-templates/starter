@@ -16,22 +16,22 @@
 <section class="py-16 sm:py-28">
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="max-w-2xl" data-reveal>
-            <h2 class="text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+            <h2 class="text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
             @if ($intro)
-            <p class="mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted">{{ $intro }}</p>
+            <p class="mt-5 max-w-[50ch] text-lg/8 text-pretty text-muted-foreground">{{ $intro }}</p>
             @endif
         </div>
 
         <div class="reveal-2 mt-16 flex flex-col lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-x-16" data-reveal>
-            <h3 class="order-1 border-b border-line pb-4 text-base font-medium text-ink lg:col-start-1 lg:row-start-1">{{ $topicFirst }}</h3>
-            <h3 class="order-3 mt-14 border-b border-line pb-4 text-base font-medium text-ink lg:col-start-2 lg:row-start-1 lg:mt-0">{{ $topicSecond }}</h3>
+            <h3 class="order-1 border-b border-border pb-4 text-base font-medium text-foreground lg:col-start-1 lg:row-start-1">{{ $topicFirst }}</h3>
+            <h3 class="order-3 mt-14 border-b border-border pb-4 text-base font-medium text-foreground lg:col-start-2 lg:row-start-1 lg:mt-0">{{ $topicSecond }}</h3>
             @foreach ($questions as $item)
-            <details class="faq-item group border-b border-line {{ ($item->topic ?? 'first') === 'second' ? 'order-4 lg:col-start-2' : 'order-2 lg:col-start-1' }}">
-                <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[16px] font-medium text-ink transition-colors duration-200 hover:text-accent">
+            <details class="faq-item group border-b border-border {{ ($item->topic ?? 'first') === 'second' ? 'order-4 lg:col-start-2' : 'order-2 lg:col-start-1' }}">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[16px] font-medium text-foreground transition-colors duration-200 hover:text-accent">
                     {{ $item->question }}
-                    <svg viewBox="0 0 16 16" class="faq-plus size-4 shrink-0 fill-current text-muted" aria-hidden="true"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"/></svg>
+                    <svg viewBox="0 0 16 16" class="faq-plus size-4 shrink-0 fill-current text-muted-foreground" aria-hidden="true"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"/></svg>
                 </summary>
-                <p class="max-w-[62ch] pb-6 text-[15px]/7 text-pretty text-muted">{{ $item->answer }}</p>
+                <p class="max-w-[62ch] pb-6 text-[15px]/7 text-pretty text-muted-foreground">{{ $item->answer }}</p>
             </details>
             @endforeach
         </div>

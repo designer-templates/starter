@@ -47,16 +47,16 @@
         <div class="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
             <div>
                 @if ($eyebrow)
-                <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>
+                <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase" data-reveal>{{ $eyebrow }}</p>
                 @endif
-                <h2 class="reveal-1 mt-3 max-w-2xl text-h2 font-semibold tracking-tight text-balance text-ink" data-reveal>{{ $heading }}</h2>
+                <h2 class="reveal-1 mt-3 max-w-2xl text-h2 font-semibold tracking-tight text-balance text-foreground" data-reveal>{{ $heading }}</h2>
             </div>
             <div class="reveal-2 flex shrink-0 items-center gap-3" data-reveal>
-                <span class="mr-2 font-mono text-[12px] text-muted tabular-nums" data-counter>1 / 4</span>
-                <button type="button" class="flex size-11 items-center justify-center rounded-full border border-line bg-panel text-lede transition-colors duration-200 hover:border-line-strong hover:bg-raised active:scale-[.98] disabled:pointer-events-none disabled:opacity-40" data-prev aria-label="Previous quote">
+                <span class="mr-2 font-mono text-[12px] text-muted-foreground tabular-nums" data-counter>1 / 4</span>
+                <button type="button" class="flex size-11 items-center justify-center rounded-full border border-border bg-card text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] disabled:pointer-events-none disabled:opacity-40" data-prev aria-label="Previous quote">
                     <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
                 </button>
-                <button type="button" class="flex size-11 items-center justify-center rounded-full border border-line bg-panel text-lede transition-colors duration-200 hover:border-line-strong hover:bg-raised active:scale-[.98] disabled:pointer-events-none disabled:opacity-40" data-next aria-label="Next quote">
+                <button type="button" class="flex size-11 items-center justify-center rounded-full border border-border bg-card text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] disabled:pointer-events-none disabled:opacity-40" data-next aria-label="Next quote">
                     <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                 </button>
             </div>
@@ -67,17 +67,17 @@
                 @foreach ($testimonials as $item)
                 <figure class="w-full shrink-0 snap-start">
                     <blockquote>
-                        <p class="max-w-4xl font-display text-2xl/snug font-medium tracking-tight text-balance text-ink sm:text-3xl/snug">{{ $item->quote }}</p>
+                        <p class="max-w-4xl font-display text-2xl/snug font-medium tracking-tight text-balance text-foreground sm:text-3xl/snug">{{ $item->quote }}</p>
                     </blockquote>
-                    <figcaption class="mt-10 flex items-center justify-between gap-6 border-t border-line pt-8">
+                    <figcaption class="mt-10 flex items-center justify-between gap-6 border-t border-border pt-8">
                         <div class="flex items-center gap-4">
-                            <img src="{{ $item->avatar }}" alt="" width="56" height="56" class="size-14 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-line" loading="lazy">
+                            <img src="{{ $item->avatar }}" alt="" width="56" height="56" class="size-14 shrink-0 rounded-full object-cover outline-1 -outline-offset-1 outline-border" loading="lazy">
                             <div>
-                                <p class="text-[15px] font-semibold text-ink">{{ $item->name }}</p>
-                                <p class="mt-0.5 text-[14px] text-muted">{{ $item->role }}</p>
+                                <p class="text-[15px] font-semibold text-foreground">{{ $item->name }}</p>
+                                <p class="mt-0.5 text-[14px] text-muted-foreground">{{ $item->role }}</p>
                             </div>
                         </div>
-                        <div class="flex shrink-0 items-center gap-2.5 text-ink/80">
+                        <div class="flex shrink-0 items-center gap-2.5 text-foreground/80">
                             {!! $item->logo !!}
                             <span class="text-[17px] font-semibold tracking-tight max-sm:hidden">{{ $item->company }}</span>
                         </div>

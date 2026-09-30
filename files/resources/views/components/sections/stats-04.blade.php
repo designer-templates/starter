@@ -21,52 +21,52 @@
         <div class="grid gap-5 lg:grid-cols-2 lg:items-end lg:gap-16" data-reveal>
             <div>
                 @if ($eyebrow)
-                <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase">{{ $eyebrow }}</p>
+                <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase">{{ $eyebrow }}</p>
                 @endif
-                <h2 class="mt-4 max-w-[22ch] text-h2 font-semibold tracking-tight text-balance text-ink">{{ $heading }}</h2>
+                <h2 class="mt-4 max-w-[22ch] text-h2 font-semibold tracking-tight text-balance text-foreground">{{ $heading }}</h2>
             </div>
             @if ($intro)
-            <p class="max-w-[50ch] text-lg/8 text-pretty text-muted lg:pb-1">{{ $intro }}</p>
+            <p class="max-w-[50ch] text-lg/8 text-pretty text-muted-foreground lg:pb-1">{{ $intro }}</p>
             @endif
         </div>
 
         <div class="mt-12 grid gap-4 sm:mt-14 lg:grid-cols-3">
-            <div class="reveal-1 rounded-2xl border border-line bg-panel p-6 sm:p-8 lg:col-span-2" data-reveal>
+            <div class="reveal-1 rounded-2xl border border-border bg-card p-6 sm:p-8 lg:col-span-2" data-reveal>
                 <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-                    <p class="text-[14px] font-medium text-muted">{{ $chartTitle }}</p>
+                    <p class="text-[14px] font-medium text-muted-foreground">{{ $chartTitle }}</p>
                     @if ($chartMeta)
-                    <p class="font-mono text-[12px] text-faint">{{ $chartMeta }}</p>
+                    <p class="font-mono text-[12px] text-muted-foreground/80">{{ $chartMeta }}</p>
                     @endif
                 </div>
                 <div class="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                    <p class="text-figure font-semibold tracking-tight text-ink tabular-nums">{{ $chartValue }}</p>
+                    <p class="text-figure font-semibold tracking-tight text-foreground tabular-nums">{{ $chartValue }}</p>
                     @if ($chartDelta)
-                    <p class="text-[14px] text-muted tabular-nums">{{ $chartDelta }}</p>
+                    <p class="text-[14px] text-muted-foreground tabular-nums">{{ $chartDelta }}</p>
                     @endif
                 </div>
 
                 <div class="mt-8 flex gap-3">
-                    <div class="-my-2 flex w-9 shrink-0 flex-col justify-between text-right font-mono text-[11px]/4 text-faint tabular-nums" aria-hidden="true">
+                    <div class="-my-2 flex w-9 shrink-0 flex-col justify-between text-right font-mono text-[11px]/4 text-muted-foreground/80 tabular-nums" aria-hidden="true">
                         <span>100%</span>
                         <span>90%</span>
                         <span>80%</span>
                     </div>
                     <div class="relative min-w-0 flex-1" data-chart>
                         <svg viewBox="0 0 600 240" class="block h-auto w-full overflow-visible" aria-hidden="true">
-                            <line x1="0" y1="0" x2="600" y2="0" stroke="currentColor" class="stroke-line" stroke-width="1"/>
-                            <line x1="0" y1="120" x2="600" y2="120" stroke="currentColor" class="stroke-line" stroke-width="1"/>
-                            <line x1="0" y1="240" x2="600" y2="240" stroke="currentColor" class="stroke-line-strong" stroke-width="1"/>
-                            <path d="M0,69.6 L50,60 L100,64.8 L150,49.2 L200,43.2 L250,46.8 L300,36 L350,28.8 L400,31.2 L450,24 L500,20.4 L550,22.8 L600,16.8 L600,240 L0,240 Z" class="fill-raised" data-chart-area/>
-                            <line x1="0" y1="190.8" x2="600" y2="190.8" stroke="currentColor" class="stroke-line-strong" stroke-width="1.5" stroke-dasharray="5 6"/>
-                            <path d="M0,69.6 L50,60 L100,64.8 L150,49.2 L200,43.2 L250,46.8 L300,36 L350,28.8 L400,31.2 L450,24 L500,20.4 L550,22.8 L600,16.8" fill="none" stroke="currentColor" class="stroke-ink" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" data-chart-line/>
-                            <circle cx="600" cy="16.8" r="5" class="fill-ink" data-chart-dot/>
+                            <line x1="0" y1="0" x2="600" y2="0" stroke="currentColor" class="stroke-border" stroke-width="1"/>
+                            <line x1="0" y1="120" x2="600" y2="120" stroke="currentColor" class="stroke-border" stroke-width="1"/>
+                            <line x1="0" y1="240" x2="600" y2="240" stroke="currentColor" class="stroke-border-strong" stroke-width="1"/>
+                            <path d="M0,69.6 L50,60 L100,64.8 L150,49.2 L200,43.2 L250,46.8 L300,36 L350,28.8 L400,31.2 L450,24 L500,20.4 L550,22.8 L600,16.8 L600,240 L0,240 Z" class="fill-muted" data-chart-area/>
+                            <line x1="0" y1="190.8" x2="600" y2="190.8" stroke="currentColor" class="stroke-border-strong" stroke-width="1.5" stroke-dasharray="5 6"/>
+                            <path d="M0,69.6 L50,60 L100,64.8 L150,49.2 L200,43.2 L250,46.8 L300,36 L350,28.8 L400,31.2 L450,24 L500,20.4 L550,22.8 L600,16.8" fill="none" stroke="currentColor" class="stroke-foreground" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" data-chart-line/>
+                            <circle cx="600" cy="16.8" r="5" class="fill-foreground" data-chart-dot/>
                         </svg>
                         @if ($baselineLabel)
-                        <p class="absolute right-0 top-[79.5%] -translate-y-[calc(100%+5px)] font-mono text-[11px] text-faint">{{ $baselineLabel }}</p>
+                        <p class="absolute right-0 top-[79.5%] -translate-y-[calc(100%+5px)] font-mono text-[11px] text-muted-foreground/80">{{ $baselineLabel }}</p>
                         @endif
                     </div>
                 </div>
-                <div class="mt-3 flex justify-between pl-12 font-mono text-[11px] text-faint">
+                <div class="mt-3 flex justify-between pl-12 font-mono text-[11px] text-muted-foreground/80">
                     <span>{{ $axisStart }}</span>
                     <span>{{ $axisEnd }}</span>
                 </div>
@@ -74,12 +74,12 @@
 
             <div class="grid gap-4 sm:grid-cols-3 lg:auto-rows-fr lg:grid-cols-1">
                 @foreach ($figures as $item)
-                <div class="reveal-{{ min($loop->iteration + 1, 6) }} flex flex-col justify-between rounded-2xl border border-line bg-panel p-6" data-reveal>
-                    <p class="text-[14px]/5 text-muted">{{ $item->label }}</p>
+                <div class="reveal-{{ min($loop->iteration + 1, 6) }} flex flex-col justify-between rounded-2xl border border-border bg-card p-6" data-reveal>
+                    <p class="text-[14px]/5 text-muted-foreground">{{ $item->label }}</p>
                     <div class="mt-5">
-                        <p class="text-3xl font-semibold tracking-tight text-ink tabular-nums">{{ $item->value }}</p>
+                        <p class="text-3xl font-semibold tracking-tight text-foreground tabular-nums">{{ $item->value }}</p>
                         @if ($item->note ?? '')
-                        <p class="mt-1.5 text-[13px]/5 text-pretty text-faint">{{ $item->note }}</p>
+                        <p class="mt-1.5 text-[13px]/5 text-pretty text-muted-foreground/80">{{ $item->note }}</p>
                         @endif
                     </div>
                 </div>

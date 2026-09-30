@@ -28,26 +28,26 @@
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center">
             @if ($eyebrow)
-            <p class="text-xs font-semibold tracking-[0.2em] text-faint uppercase" data-reveal>{{ $eyebrow }}</p>
+            <p class="text-xs font-semibold tracking-[0.2em] text-muted-foreground/80 uppercase" data-reveal>{{ $eyebrow }}</p>
             @endif
-            <h1 class="reveal-1 mx-auto mt-5 max-w-[22ch] text-hero font-semibold tracking-[-0.04em] text-balance text-faint first-line:text-ink" data-reveal>{{ $heading }}</h1>
-            <p class="reveal-2 mx-auto mt-6 max-w-[54ch] text-lg/8 font-medium text-pretty text-muted sm:text-xl/8" data-reveal>{{ $text }}</p>
+            <h1 class="reveal-1 mx-auto mt-5 max-w-[22ch] text-hero font-semibold tracking-[-0.04em] text-balance text-muted-foreground/80 first-line:text-foreground" data-reveal>{{ $heading }}</h1>
+            <p class="reveal-2 mx-auto mt-6 max-w-[54ch] text-lg/8 font-medium text-pretty text-muted-foreground sm:text-xl/8" data-reveal>{{ $text }}</p>
 
             <div class="reveal-3 mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row" data-reveal>
                 @if ($buttonText)
-                <a href="{{ $buttonLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-ink px-7 py-3.5 text-[15px] font-medium text-canvas shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto">{{ $buttonText }}</a>
+                <a href="{{ $buttonLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto">{{ $buttonText }}</a>
                 @endif
                 @if ($buttonText2)
-                <a href="{{ $buttonLink2 }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-line bg-panel px-7 py-3.5 text-[15px] font-medium text-lede transition-colors duration-200 hover:border-line-strong hover:bg-raised active:scale-[.98] sm:w-auto">{{ $buttonText2 }}</a>
+                <a href="{{ $buttonLink2 }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-7 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] sm:w-auto">{{ $buttonText2 }}</a>
                 @endif
             </div>
 
             @if ($logosLabel)
             <div class="reveal-4 mt-12" data-reveal>
-                <p class="text-[13px] text-faint">{{ $logosLabel }}</p>
-                <ul role="list" class="mt-5 flex flex-wrap items-center justify-center gap-x-9 gap-y-4 text-faint">
+                <p class="text-[13px] text-muted-foreground/80">{{ $logosLabel }}</p>
+                <ul role="list" class="mt-5 flex flex-wrap items-center justify-center gap-x-9 gap-y-4 text-muted-foreground/80">
                     @foreach ($logos as $logo)
-                    <li class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-ink">
+                    <li class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-foreground">
                         {!! $logo->icon !!}
                         <span class="text-[17px] font-semibold tracking-tight whitespace-nowrap">{{ $logo->name }}</span>
                     </li>
@@ -58,8 +58,8 @@
         </div>
 
         <!-- The stage: shorter than the image inside it, so the section's edge crops the dashboard. -->
-        <div class="reveal-5 mt-16 h-[26rem] overflow-hidden rounded-t-3xl bg-raised p-1.5 pb-0 sm:mt-20 sm:h-[30rem] sm:p-2 sm:pb-0" data-reveal>
-            <div class="overflow-hidden rounded-t-[20px] border border-b-0 border-line bg-panel shadow-2xl shadow-ink/5">
+        <div class="reveal-5 mt-16 h-[26rem] overflow-hidden rounded-t-3xl bg-muted p-1.5 pb-0 sm:mt-20 sm:h-[30rem] sm:p-2 sm:pb-0" data-reveal>
+            <div class="overflow-hidden rounded-t-[20px] border border-b-0 border-border bg-card shadow-2xl shadow-foreground/5">
                 <img src="{{ $image }}" alt="{{ $imageAlt }}" width="1600" height="1000" class="block h-auto w-full">
             </div>
         </div>

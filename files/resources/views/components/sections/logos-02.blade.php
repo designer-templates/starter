@@ -15,13 +15,13 @@
 <section class="py-16 sm:py-20" data-logos-02>
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         @if ($heading)
-        <p class="text-[15px] font-medium text-muted" data-reveal>{{ $heading }}</p>
+        <p class="text-[15px] font-medium text-muted-foreground" data-reveal>{{ $heading }}</p>
         @endif
-        <div class="reveal-1 mt-8 space-y-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,var(--color-ink)_14%,var(--color-ink)_86%,transparent)]" data-reveal data-logos-02-marquee>
+        <div class="reveal-1 mt-8 space-y-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,var(--foreground)_14%,var(--foreground)_86%,transparent)]" data-reveal data-logos-02-marquee>
             <div class="flex w-max" data-logos-02-row>
                 <ul role="list" class="flex w-max items-center" data-logos-02-track>
                     @foreach ($items as $item)
-                    <li class="flex items-center gap-2.5 px-7 text-faint transition-colors duration-200 hover:text-ink [&_svg]:size-6 [&_svg]:shrink-0">
+                    <li class="flex items-center gap-2.5 px-7 text-muted-foreground/80 transition-colors duration-200 hover:text-foreground [&_svg]:size-6 [&_svg]:shrink-0">
                         {!! $item->icon !!}
                         <span class="whitespace-nowrap text-[17px] font-semibold tracking-tight">{{ $item->name }}</span>
                     </li>

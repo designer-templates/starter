@@ -49,7 +49,7 @@
                     </span>
                 </label>
                 <div class="mt-1 flex flex-col gap-3">
-                    <button type="submit" class="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto sm:self-start">{{ $buttonText }}</button>
+                    <button type="submit" class="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-control bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto sm:self-start">{{ $buttonText }}</button>
                     @if ($finePrint)
                     <p class="text-[13px] text-muted-foreground/80">{{ $finePrint }}</p>
                     @endif

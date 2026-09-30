@@ -22,7 +22,7 @@
                         <span class="sr-only">{{ $inputLabel }}</span>
                         <input type="email" name="email" autocomplete="email" required placeholder="{{ $inputPlaceholder }}" class="h-11 w-full min-w-0 border-0 bg-transparent px-4 text-base text-foreground placeholder:text-muted-foreground/80 sm:text-[15px]">
                     </label>
-                    <button type="submit" class="inline-flex h-11 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-primary px-5 text-[15px] font-medium whitespace-nowrap text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $buttonText }}</button>
+                    <button type="submit" class="inline-flex h-11 shrink-0 cursor-pointer items-center justify-center rounded-control bg-primary px-5 text-[15px] font-medium whitespace-nowrap text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $buttonText }}</button>
                 </div>
             </form>
 

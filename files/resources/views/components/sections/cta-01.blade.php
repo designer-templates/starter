@@ -31,7 +31,7 @@
                     <h2 class="max-w-[18ch] font-display text-h2 font-semibold tracking-tight text-balance text-shade-foreground sm:text-5xl/[1.05]">{{ $heading }}</h2>
                     <p class="mt-5 max-w-[46ch] text-lg/8 text-pretty text-shade-muted-foreground">{{ $text }}</p>
                     <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
-                        <a href="{{ $ctaLink }}" class="inline-flex w-full items-center justify-center rounded-xl bg-shade-foreground px-6 py-3 text-[15px] font-semibold text-shade shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 active:scale-[.98] sm:w-auto">{{ $ctaText }}</a>
+                        <a href="{{ $ctaLink }}" class="inline-flex w-full items-center justify-center rounded-control bg-shade-foreground px-6 py-3 text-[15px] font-semibold text-shade shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 active:scale-[.98] sm:w-auto">{{ $ctaText }}</a>
                         @if ($linkText)
                         <a href="{{ $linkUrl }}" class="arrow-link inline-flex min-h-11 items-center justify-center gap-1.5 text-[15px] font-medium text-shade-foreground transition-opacity duration-200 hover:opacity-80 sm:min-h-0 sm:justify-start">{{ $linkText }}<svg viewBox="0 0 24 24" class="arrow size-4 opacity-60" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></a>
                         @endif

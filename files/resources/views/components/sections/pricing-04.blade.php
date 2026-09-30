@@ -68,9 +68,9 @@
                                     <span class="text-[13px] font-normal whitespace-nowrap text-muted-foreground">{{ $period }}</span>
                                 </p>
                                 @if ($plan->featured == 'yes')
-                                <a href="{{ $plan->ctaLink }}" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2 text-[14px] font-medium text-primary-foreground shadow-lg lg:whitespace-nowrap shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $plan->ctaText }}</a>
+                                <a href="{{ $plan->ctaLink }}" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-control bg-primary px-4 py-2 text-[14px] font-medium text-primary-foreground shadow-lg lg:whitespace-nowrap shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $plan->ctaText }}</a>
                                 @else
-                                <a href="{{ $plan->ctaLink }}" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-2 text-[14px] font-medium text-foreground/78 transition-colors lg:whitespace-nowrap duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $plan->ctaText }}</a>
+                                <a href="{{ $plan->ctaLink }}" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-control border border-border bg-card px-4 py-2 text-[14px] font-medium text-foreground/78 transition-colors lg:whitespace-nowrap duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $plan->ctaText }}</a>
                                 @endif
                             </div>
                         </th>

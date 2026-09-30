@@ -100,10 +100,10 @@
 
             <div class="flex items-center justify-end gap-2.5 max-lg:ml-auto" data-reveal>
                 @if ($signInText)
-                <a href="{{ $signInLink }}" class="rounded-xl px-4 py-2 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:text-foreground max-lg:hidden">{{ $signInText }}</a>
+                <a href="{{ $signInLink }}" class="rounded-control px-4 py-2 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:text-foreground max-lg:hidden">{{ $signInText }}</a>
                 @endif
                 @if ($ctaText)
-                <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] max-lg:hidden">{{ $ctaText }}</a>
+                <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-control bg-primary px-4 py-2 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] max-lg:hidden">{{ $ctaText }}</a>
                 @endif
                 <!-- The toggle is a 44px box; the two glyphs are stacked and cross-fade. -->
                 <button type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="grid size-11 cursor-pointer place-items-center rounded-lg text-foreground transition-colors duration-200 hover:bg-muted lg:hidden">
@@ -130,10 +130,10 @@
                 </ul>
                 <div class="mt-4 flex flex-col gap-2 border-t border-border pt-4">
                     @if ($signInText)
-                    <a href="{{ $signInLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $signInText }}</a>
+                    <a href="{{ $signInLink }}" class="inline-flex items-center justify-center gap-2 rounded-control border border-border bg-card px-4 py-3 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $signInText }}</a>
                     @endif
                     @if ($ctaText)
-                    <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:opacity-90 active:scale-[.98]">{{ $ctaText }}</a>
+                    <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-control bg-primary px-4 py-3 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:opacity-90 active:scale-[.98]">{{ $ctaText }}</a>
                     @endif
                 </div>
             </nav>

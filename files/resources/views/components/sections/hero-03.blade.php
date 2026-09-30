@@ -49,12 +49,12 @@
         <h1 class="reveal-2 mt-7 max-w-[18ch] text-hero font-semibold tracking-[-0.04em] text-balance text-foreground" data-reveal>{{ $heading }}</h1>
         <p class="reveal-3 mt-6 max-w-[52ch] text-lg/8 font-medium text-pretty text-muted-foreground sm:text-xl/8" data-reveal>{{ $text }}</p>
         <div class="reveal-4 mt-9 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center" data-reveal>
-            <a href="{{ $buttonLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto">
+            <a href="{{ $buttonLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-control bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto">
                 {{ $buttonText }}
                 <svg viewBox="0 0 16 16" class="size-3.5 shrink-0 fill-current opacity-80" aria-hidden="true"><path fill-rule="evenodd" d="M4.5 3.25a.75.75 0 0 1 .75-.75h7.25a.75.75 0 0 1 .75.75V10.5a.75.75 0 0 1-1.5 0V5.06l-7.22 7.22a.75.75 0 0 1-1.06-1.06L10.69 4H5.25a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/></svg>
             </a>
             @if ($buttonText2)
-            <a href="{{ $buttonLink2 }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-7 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] sm:w-auto">
+            <a href="{{ $buttonLink2 }}" class="inline-flex w-full items-center justify-center gap-2 rounded-control border border-border bg-card px-7 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] sm:w-auto">
                 {{ $buttonText2 }}
                 <svg viewBox="0 0 16 16" class="size-3.5 shrink-0 fill-current opacity-60" aria-hidden="true"><path fill-rule="evenodd" d="M4.5 3.25a.75.75 0 0 1 .75-.75h7.25a.75.75 0 0 1 .75.75V10.5a.75.75 0 0 1-1.5 0V5.06l-7.22 7.22a.75.75 0 0 1-1.06-1.06L10.69 4H5.25a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/></svg>
             </a>

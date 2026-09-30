@@ -90,7 +90,7 @@
                     @endforeach
                 </ul>
 
-                <a href="{{ $ctaLink }}" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto">{{ $ctaText }}</a>
+                <a href="{{ $ctaLink }}" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-control bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto">{{ $ctaText }}</a>
             </div>
 
             <div class="reveal-2 lg:pt-2" data-reveal>

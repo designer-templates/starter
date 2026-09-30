@@ -70,9 +70,9 @@
                     @endforeach
                 </ul>
                 @if ($plan->featured == 'yes')
-                <a href="{{ $plan->ctaLink }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $plan->ctaText }}</a>
+                <a href="{{ $plan->ctaLink }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-control bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $plan->ctaText }}</a>
                 @else
-                <a href="{{ $plan->ctaLink }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-7 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $plan->ctaText }}</a>
+                <a href="{{ $plan->ctaLink }}" class="mt-auto inline-flex w-full items-center justify-center gap-2 rounded-control border border-border bg-card px-7 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $plan->ctaText }}</a>
                 @endif
             </div>
             @endforeach
@@ -92,7 +92,7 @@
                 </li>
                 @endforeach
             </ul>
-            <a href="{{ $enterpriseCtaLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-7 py-3.5 text-[15px] font-medium whitespace-nowrap text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] sm:w-auto">{{ $enterpriseCtaText }}</a>
+            <a href="{{ $enterpriseCtaLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-control border border-border bg-card px-7 py-3.5 text-[15px] font-medium whitespace-nowrap text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98] sm:w-auto">{{ $enterpriseCtaText }}</a>
         </div>
         @endif
     </div>

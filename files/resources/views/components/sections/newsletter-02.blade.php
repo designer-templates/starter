@@ -60,7 +60,7 @@
                     </label>
                     @endif
 
-                    <button type="submit" class="inline-flex h-12 w-full cursor-pointer items-center justify-center rounded-xl bg-primary px-6 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
+                    <button type="submit" class="inline-flex h-12 w-full cursor-pointer items-center justify-center rounded-control bg-primary px-6 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
                 </form>
                 @if ($finePrint)
                 <p class="mt-4 text-[13px] text-muted-foreground">{{ $finePrint }}</p>

@@ -55,7 +55,7 @@
                 <p class="mt-3 max-w-[40ch] text-[15px]/6 text-pretty text-muted-foreground">{{ $tagline }}</p>
                 <form action="{{ $action }}" method="post" class="mt-6 flex max-w-md flex-col gap-3 sm:flex-row">
                     <input type="email" name="email" autocomplete="email" inputmode="email" required aria-label="Email address" placeholder="{{ $placeholder }}" class="field h-11 w-full min-w-0 rounded-lg border border-input bg-background px-3.5 text-base text-foreground placeholder:text-muted-foreground/80 sm:flex-1 sm:text-[15px]">
-                    <button type="submit" class="inline-flex h-11 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-primary px-5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
+                    <button type="submit" class="inline-flex h-11 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-control bg-primary px-5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
                 </form>
                 @if ($finePrint)
                 <p class="mt-3 text-[13px] text-muted-foreground/80">{{ $finePrint }}</p>

@@ -94,7 +94,7 @@
 
             <div class="flex items-center justify-end gap-2.5 max-lg:ml-auto" data-reveal>
                 @if ($searchText)
-                <a href="{{ $searchLink }}" class="inline-flex items-center gap-2 rounded-xl border border-border bg-card py-1.5 pr-1.5 pl-3 text-[14px] font-medium text-muted-foreground transition-colors duration-200 hover:border-border-strong hover:text-foreground max-lg:hidden">
+                <a href="{{ $searchLink }}" class="inline-flex items-center gap-2 rounded-control border border-border bg-card py-1.5 pr-1.5 pl-3 text-[14px] font-medium text-muted-foreground transition-colors duration-200 hover:border-border-strong hover:text-foreground max-lg:hidden">
                     <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
                     {{ $searchText }}
                     @if ($searchShortcut)
@@ -103,10 +103,10 @@
                 </a>
                 @endif
                 @if ($signInText)
-                <a href="{{ $signInLink }}" class="rounded-xl px-3 py-2 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:text-foreground max-lg:hidden">{{ $signInText }}</a>
+                <a href="{{ $signInLink }}" class="rounded-control px-3 py-2 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:text-foreground max-lg:hidden">{{ $signInText }}</a>
                 @endif
                 @if ($ctaText)
-                <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] max-lg:hidden">{{ $ctaText }}</a>
+                <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-control bg-primary px-4 py-2 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] max-lg:hidden">{{ $ctaText }}</a>
                 @endif
                 <!-- The toggle is a 44px box; the two glyphs are stacked and cross-fade. -->
                 <button type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="grid size-11 cursor-pointer place-items-center rounded-lg text-foreground transition-colors duration-200 hover:bg-muted lg:hidden">
@@ -120,7 +120,7 @@
         <div data-nav-sheet class="absolute inset-x-0 top-full max-h-[calc(100dvh-6.5rem)] overflow-y-auto border-b border-border bg-background lg:hidden">
             <nav class="mx-auto w-full max-w-6xl px-6 py-4" aria-label="Mobile">
                 @if ($searchText)
-                <a href="{{ $searchLink }}" class="flex items-center gap-2.5 rounded-xl border border-border bg-card px-3.5 py-3 text-[15px] font-medium text-muted-foreground transition-colors duration-200 hover:border-border-strong hover:text-foreground">
+                <a href="{{ $searchLink }}" class="flex items-center gap-2.5 rounded-control border border-border bg-card px-3.5 py-3 text-[15px] font-medium text-muted-foreground transition-colors duration-200 hover:border-border-strong hover:text-foreground">
                     <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
                     {{ $searchText }}
                 </a>
@@ -139,10 +139,10 @@
                 </ul>
                 <div class="mt-4 flex flex-col gap-2 border-t border-border pt-4">
                     @if ($signInText)
-                    <a href="{{ $signInLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $signInText }}</a>
+                    <a href="{{ $signInLink }}" class="inline-flex items-center justify-center gap-2 rounded-control border border-border bg-card px-4 py-3 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $signInText }}</a>
                     @endif
                     @if ($ctaText)
-                    <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:opacity-90 active:scale-[.98]">{{ $ctaText }}</a>
+                    <a href="{{ $ctaLink }}" class="inline-flex items-center justify-center gap-2 rounded-control bg-primary px-4 py-3 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:opacity-90 active:scale-[.98]">{{ $ctaText }}</a>
                     @endif
                 </div>
             </nav>

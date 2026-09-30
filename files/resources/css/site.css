@@ -52,6 +52,7 @@
     --radius-3xl: var(--radius-large);
     --radius-medium: var(--radius-medium);
     --radius-large: var(--radius-large);
+    --radius-control: var(--radius-control);
 }
 
 :root {
@@ -79,10 +80,12 @@
     --input: rgba(10, 10, 10, 0.08);
     --ring: #1d4ed8;
 
-    /* Corners: controls and cards (rounded-xl), panels (rounded-2xl), framed images (rounded-3xl) */
+    /* Corners: controls and cards (rounded-xl), panels (rounded-2xl), framed images (rounded-3xl);
+       rounded-control is every text button, so one variable can square or pill them all */
     --radius: 0.75rem;
     --radius-medium: 1rem;
     --radius-large: 1.5rem;
+    --radius-control: var(--radius);
 }
 
 /* ============================================================================
@@ -102,18 +105,18 @@
     --text-figure--line-height: 1;
 
     /* A stronger hairline for outlined buttons and window frames; a tinted well behind accent content */
-    --color-border-strong: rgba(10, 10, 10, 0.16);
-    --color-accent-soft: rgba(29, 78, 216, 0.08);
+    --color-border-strong: color-mix(in srgb, var(--foreground) 16%, transparent);
+    --color-accent-soft: color-mix(in srgb, var(--accent) 8%, transparent);
 
     /* Two named colours the drawn UI needs: star ratings and an upward delta */
     --color-star: #fbbf24;
     --color-up: #059669;
 
     /* The dark counterpart of the page: the closing panel, the terminal, one dark band */
-    --color-shade: #0a0a0a;
-    --color-shade-foreground: #fafafa;
-    --color-shade-muted-foreground: #a3a3a3;
-    --color-shade-border: rgba(255, 255, 255, 0.12);
+    --color-shade: var(--foreground);
+    --color-shade-foreground: var(--background);
+    --color-shade-muted-foreground: color-mix(in srgb, var(--background) 63%, var(--foreground));
+    --color-shade-border: color-mix(in srgb, var(--background) 12%, transparent);
 
     /* One depth recipe page-wide: a hairline plus this soft layered shadow */
     --shadow-card: 0 1px 2px rgba(10, 10, 10, 0.05), 0 12px 32px -16px rgba(10, 10, 10, 0.18);

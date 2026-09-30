@@ -29,7 +29,7 @@
                 <label for="hero-05-email" class="block text-[14px] font-medium text-foreground">{{ $inputLabel }}</label>
                 <div class="mt-2 flex flex-col gap-3 sm:flex-row">
                 <input id="hero-05-email" type="email" name="email" required autocomplete="email" class="field h-12 w-full min-w-0 flex-1 rounded-xl border border-input bg-background px-4 text-[15px] text-foreground">
-                <button type="submit" class="inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-[15px] font-medium whitespace-nowrap text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
+                <button type="submit" class="inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-control bg-primary px-6 py-3 text-[15px] font-medium whitespace-nowrap text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
                 </div>
             </form>
             @if ($finePrint)

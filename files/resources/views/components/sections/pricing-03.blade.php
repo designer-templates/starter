@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="mt-8 flex flex-col gap-4 sm:mt-auto sm:pt-10">
-                    <a href="{{ $ctaLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto sm:self-start">{{ $ctaText }}</a>
+                    <a href="{{ $ctaLink }}" class="inline-flex w-full items-center justify-center gap-2 rounded-control bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98] sm:w-auto sm:self-start">{{ $ctaText }}</a>
                     <p class="text-[13px] text-muted-foreground/80" data-swap>
                         <span data-period="monthly">{{ $note }}</span>
                         <span data-period="yearly">{{ $noteYearly }}</span>

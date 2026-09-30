@@ -67,10 +67,10 @@
 
             <div class="flex items-center gap-2.5 max-lg:hidden">
                 @if ($signInText)
-                <a href="{{ $signInLink }}" class="rounded-xl px-4 py-2 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:text-foreground">{{ $signInText }}</a>
+                <a href="{{ $signInLink }}" class="rounded-control px-4 py-2 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:text-foreground">{{ $signInText }}</a>
                 @endif
                 @if ($ctaText)
-                <a href="{{ $ctaLink }}" class="rounded-xl bg-primary px-4 py-2 text-[15px] font-medium text-primary-foreground shadow-sm transition-opacity duration-200 hover:opacity-85">{{ $ctaText }}</a>
+                <a href="{{ $ctaLink }}" class="rounded-control bg-primary px-4 py-2 text-[15px] font-medium text-primary-foreground shadow-sm transition-opacity duration-200 hover:opacity-85">{{ $ctaText }}</a>
                 @endif
             </div>
 
@@ -98,10 +98,10 @@
                 </ul>
                 <div class="mt-4 flex flex-col gap-2 border-t border-border pt-4">
                     @if ($signInText)
-                    <a href="{{ $signInLink }}" class="rounded-xl border border-border-strong px-4 py-2.5 text-center text-[15px] font-medium text-foreground transition-colors duration-200 hover:bg-muted">{{ $signInText }}</a>
+                    <a href="{{ $signInLink }}" class="rounded-control border border-border-strong px-4 py-2.5 text-center text-[15px] font-medium text-foreground transition-colors duration-200 hover:bg-muted">{{ $signInText }}</a>
                     @endif
                     @if ($ctaText)
-                    <a href="{{ $ctaLink }}" class="rounded-xl bg-primary px-4 py-2.5 text-center text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85">{{ $ctaText }}</a>
+                    <a href="{{ $ctaLink }}" class="rounded-control bg-primary px-4 py-2.5 text-center text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85">{{ $ctaText }}</a>
                     @endif
                 </div>
             </nav>

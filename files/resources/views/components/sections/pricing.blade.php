@@ -76,9 +76,9 @@
                 </ul>
 
                 @if ($plan->featured == 'yes')
-                <a href="{{ $plan->ctaLink }}" class="mt-auto inline-flex w-full items-center justify-center rounded-xl bg-primary px-6 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $plan->ctaText }}</a>
+                <a href="{{ $plan->ctaLink }}" class="mt-auto inline-flex w-full items-center justify-center rounded-control bg-primary px-6 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $plan->ctaText }}</a>
                 @else
-                <a href="{{ $plan->ctaLink }}" class="mt-auto inline-flex w-full items-center justify-center rounded-xl border border-border bg-card px-6 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $plan->ctaText }}</a>
+                <a href="{{ $plan->ctaLink }}" class="mt-auto inline-flex w-full items-center justify-center rounded-control border border-border bg-card px-6 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $plan->ctaText }}</a>
                 @endif
             </div>
             @endforeach

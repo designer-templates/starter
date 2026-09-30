@@ -50,7 +50,7 @@
                     <form action="{{ $formAction }}" method="post" class="mt-4 flex flex-col gap-2.5">
                         <label for="blog-05-email" class="block text-[14px] font-medium text-foreground">{{ $emailLabel }}</label>
                         <input id="blog-05-email" type="email" name="email" required autocomplete="email" class="field h-11 w-full rounded-lg border border-input bg-background px-3.5 text-[15px] text-foreground">
-                        <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
+                        <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-control bg-primary px-4 py-2.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
                     </form>
                 </div>
             </aside>

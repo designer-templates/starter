@@ -54,7 +54,7 @@
                 @if ($cardText)
                 <p class="mt-2 text-[15px]/6 text-pretty text-muted-foreground">{{ $cardText }}</p>
                 @endif
-                <a href="{{ $cardButtonUrl }}" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-7 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $cardButtonText }}</a>
+                <a href="{{ $cardButtonUrl }}" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-control border border-border bg-card px-7 py-3.5 text-[15px] font-medium text-foreground/78 transition-colors duration-200 hover:border-border-strong hover:bg-muted active:scale-[.98]">{{ $cardButtonText }}</a>
             </div>
         </div>
     </div>

@@ -42,7 +42,7 @@
             </li>
             @endif
             <li class="reveal-{{ min($loop->iteration, 6) }} border-t border-border last:border-b" data-reveal>
-                <a href="{{ $item->linkUrl }}" class="group -mx-3 grid grid-cols-[2.5rem_minmax(0,1fr)_1rem] items-center gap-x-4 rounded-xl px-3 py-4 transition-colors duration-200 hover:bg-muted sm:grid-cols-[2.5rem_minmax(0,0.8fr)_minmax(0,1.2fr)_minmax(0,9rem)_1rem]">
+                <a href="{{ $item->linkUrl }}" class="group -mx-3 grid grid-cols-[2.5rem_minmax(0,1fr)_1rem] items-center gap-x-4 rounded-control px-3 py-4 transition-colors duration-200 hover:bg-muted sm:grid-cols-[2.5rem_minmax(0,0.8fr)_minmax(0,1.2fr)_minmax(0,9rem)_1rem]">
                     <img src="{{ $item->image }}" alt="" width="40" height="40" class="size-10 rounded-full bg-muted object-cover outline-1 -outline-offset-1 outline-foreground/10" loading="lazy">
                     <span class="min-w-0">
                         <span class="block truncate text-[15px] font-medium text-foreground">{{ $item->name }}</span>

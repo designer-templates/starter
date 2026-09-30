@@ -33,7 +33,7 @@
                             <span class="sr-only">{{ $inputLabel }}</span>
                             <input type="email" name="email" autocomplete="email" required placeholder="{{ $inputPlaceholder }}" class="field h-12 w-full rounded-xl border border-shade-border bg-shade px-4 text-base text-shade-foreground placeholder:text-shade-muted-foreground sm:text-[15px]">
                         </label>
-                        <button type="submit" class="inline-flex h-12 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-shade-foreground px-6 text-[15px] font-semibold whitespace-nowrap text-shade shadow-lg shadow-shade-foreground/10 transition-opacity duration-200 hover:opacity-90 active:scale-[.98]">{{ $buttonText }}</button>
+                        <button type="submit" class="inline-flex h-12 shrink-0 cursor-pointer items-center justify-center rounded-control bg-shade-foreground px-6 text-[15px] font-semibold whitespace-nowrap text-shade shadow-lg shadow-shade-foreground/10 transition-opacity duration-200 hover:opacity-90 active:scale-[.98]">{{ $buttonText }}</button>
                     </form>
                     <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]">
                         @if ($linkText)

@@ -60,7 +60,7 @@
                         <span class="block text-[14px] font-medium text-foreground">{{ $fieldMessage }}</span>
                         <textarea name="message" rows="4" required class="field mt-2 block min-h-28 w-full resize-none rounded-lg border border-input bg-background px-3.5 py-2.5 text-base/6 text-foreground [field-sizing:content] sm:text-[15px]/6"></textarea>
                     </label>
-                    <button type="submit" class="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
+                    <button type="submit" class="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-control bg-primary px-7 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
                     @if ($replyLine)
                     <p class="text-center text-[13px] text-muted-foreground/80">{{ $replyLine }}</p>
                     @endif

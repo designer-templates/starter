@@ -29,7 +29,7 @@
                         <span class="sr-only">{{ $inputLabel }}</span>
                         <input type="email" name="email" autocomplete="email" required placeholder="{{ $inputPlaceholder }}" class="field h-12 w-full rounded-xl border border-input bg-card px-4 text-base text-foreground placeholder:text-muted-foreground/80 sm:text-[15px]">
                     </label>
-                    <button type="submit" class="inline-flex h-12 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-primary px-6 text-[15px] font-medium whitespace-nowrap text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
+                    <button type="submit" class="inline-flex h-12 shrink-0 cursor-pointer items-center justify-center rounded-control bg-primary px-6 text-[15px] font-medium whitespace-nowrap text-primary-foreground shadow-lg shadow-black/10 transition-all duration-200 hover:opacity-90 hover:shadow-xl hover:shadow-black/15 active:scale-[.98]">{{ $buttonText }}</button>
                 </form>
                 @if ($finePrint)
                 <p class="mt-4 text-[13px] text-muted-foreground reveal-4" data-reveal>{{ $finePrint }}</p>

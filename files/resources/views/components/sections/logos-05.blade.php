@@ -16,7 +16,7 @@
     'linkUrl' => '/customers',
 ])
 <!-- Quote + logos: one customer line set large and centred with its attribution, a balanced row of wordmarks beneath, and an arrow link to the stories. Rows come from collections.logos; clear the link text to drop the link. -->
-<section class="py-16 sm:py-28" data-logos-05>
+<section class="overflow-x-clip py-16 sm:py-28" data-logos-05>
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8 text-center">
         <figure class="mx-auto max-w-3xl" data-reveal>
             <blockquote class="text-xl/8 font-medium text-balance text-foreground sm:text-2xl/9">&ldquo;{{ $quote }}&rdquo;</blockquote>

@@ -12,7 +12,7 @@
     ],
 ])
 <!-- Logo row: one quiet line of proof centred over a single balanced row of marks and wordmarks (faint at rest, ink on hover). Rows come from collections.logos (name + inline-SVG icon); clear the heading to show the row alone. -->
-<section class="py-16 sm:py-20" data-logos-01>
+<section class="overflow-x-clip py-16 sm:py-20" data-logos-01>
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         @if ($heading)
         <p class="text-center text-[15px] font-medium text-muted-foreground" data-reveal>{{ $heading }}</p>

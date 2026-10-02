@@ -336,8 +336,12 @@
         }
 
         // Where the browser can, the swap rides the same cross-fade site.css gives full page loads.
-        if (document.startViewTransition && !reduceMotion) document.startViewTransition(guarded);
-        else guarded();
+        if (document.startViewTransition && !reduceMotion) {
+            // A cross-fade the browser skips (the viewport changed size mid-way, another one began) has
+            // still run the swap; its `ready` rejects, and unheard that surfaces as a script error.
+            var transition = document.startViewTransition(guarded);
+            if (transition && transition.ready) transition.ready.catch(function () {});
+        } else guarded();
     }
 
     /* Intent: a resting pointer, keyboard focus, a touch, a press. */

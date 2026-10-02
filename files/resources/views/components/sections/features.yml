@@ -18,6 +18,14 @@ fields:
         description: Short line under the heading. Clear to hide.
         rows: 2
         default: "Sections, content, and layout live side by side, so nobody waits on a developer to change a headline."
+    headingLevel:
+        type: select
+        label: Heading level
+        description: Use H1 when this section opens the page, H2 everywhere else.
+        default: "2"
+        options:
+            "1": "H1 — the page title, set large"
+            "2": "H2 — a section heading"
     features:
         type: repeater
         label: Features

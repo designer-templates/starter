@@ -2,6 +2,11 @@ title: Testimonials — quotes and numbers
 description: A left-aligned heading, two wide quote cards with company marks, and three outcome cards with big figures
 category: testimonials
 fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Testimonials"
     heading:
         type: text
         label: Heading
@@ -13,6 +18,14 @@ fields:
         description: One or two lines under the heading. Clear to hide.
         rows: 2
         default: "Developers use Starter to ship marketing pages faster and hand the content to the people who write it. Here is how it fits real Laravel workflows."
+    headingLevel:
+        type: select
+        label: Heading level
+        description: Use H1 when this section opens the page, H2 everywhere else.
+        default: "2"
+        options:
+            "1": "H1 — the page title, set large"
+            "2": "H2 — a section heading"
     testimonials:
         type: repeater
         label: Quotes

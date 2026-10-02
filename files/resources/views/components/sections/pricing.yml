@@ -6,7 +6,7 @@ fields:
         type: text
         label: Eyebrow
         description: Small label above the heading. Clear to hide.
-        default: ""
+        default: "Pricing"
     heading:
         type: text
         label: Heading
@@ -18,6 +18,14 @@ fields:
         description: Short line under the heading. Clear to hide.
         rows: 2
         default: "Start free and build for as long as you like. Upgrade when you are ready to build without limits. Yearly billing gets two months free."
+    headingLevel:
+        type: select
+        label: Heading level
+        description: Use H1 when this section opens the page, H2 everywhere else.
+        default: "2"
+        options:
+            "1": "H1 — the page title, set large"
+            "2": "H2 — a section heading"
     showToggle:
         type: toggle
         label: Show the Monthly / Yearly toggle

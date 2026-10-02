@@ -5,13 +5,13 @@ fields:
     heading:
         type: text
         label: Heading
-        default: "Start building your next great idea"
+        default: "Start building your next great idea."
         required: true
     text:
         type: textarea
         label: Description
         rows: 3
-        default: "Build pages, edit content, and control layouts. All inside of our visual editor built for developers."
+        default: "Build pages, content, and layouts with the visual design tool built for Laravel applications."
     buttonText:
         type: text
         label: Primary button text

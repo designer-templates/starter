@@ -91,7 +91,11 @@
         }
         fit();
         if ('ResizeObserver' in window) new ResizeObserver(fit).observe(root);
-        else window.addEventListener('resize', fit);
+        /* On window, so it lets go once a page change has taken the block away. */
+        else window.addEventListener('resize', function refit() {
+            if (!root.isConnected) { window.removeEventListener('resize', refit); return; }
+            fit();
+        });
     });
 })();
 </script>

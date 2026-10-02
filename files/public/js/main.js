@@ -9,12 +9,26 @@ document.documentElement.classList.add('js');
 
 var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/*
+    Pages change in place (instant.js): the header, the footer and this file
+    run once per visit, while everything inside <main> is replaced on each page
+    change. So behavior comes in two kinds. Once per visit: the header, its
+    dropdowns, the mobile sheet. Once per page: setUp(root), called now and
+    again on `site:navigated` with the <main> that just arrived. Anything that
+    touches content inside <main> belongs in setUp — a script that only runs on
+    load works on the first page and on no page after it.
+*/
 dropdowns();
 mobileMenu();
-markCurrentMenuItem();
-banners();
-pricingToggles();
-reveals(document);
+setUp(document);
+document.addEventListener('site:navigated', function (event) { setUp(event.detail.main); });
+
+function setUp(root) {
+    markCurrentMenuItem();
+    banners(root);
+    pricingToggles(root);
+    reveals(root);
+}
 
 /*
     Nav dropdowns. Hover opens after a short intent delay and closes after a
@@ -70,6 +84,7 @@ function dropdowns() {
     document.addEventListener('pointerdown', function (e) {
         roots.forEach(function (root) { if (!root.contains(e.target)) closeOne(root); });
     });
+    document.addEventListener('site:navigated', function () { roots.forEach(closeOne); });
 }
 
 /* The mobile sheet: .menu-open on <html> shows it and locks scroll. */
@@ -87,11 +102,15 @@ function mobileMenu() {
     panel.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
     window.matchMedia('(min-width: 64rem)').addEventListener('change', function (e) { if (e.matches) set(false); });
+    document.addEventListener('site:navigated', function () { set(false); });
 }
 
-/* The announcement banner (sections/banner.blade.php, wherever it is placed): the dismiss button hides it for this visit. */
-function banners() {
-    document.querySelectorAll('[data-banner]').forEach(function (banner) {
+/*
+    The announcement banner (sections/banner.blade.php, wherever it is placed): the dismiss button hides it for this visit.
+    The first run takes the whole document, so a banner in the layout is bound once; later runs see only the new <main>.
+*/
+function banners(root) {
+    root.querySelectorAll('[data-banner]').forEach(function (banner) {
         var button = banner.querySelector('[data-banner-dismiss]');
         if (!button) return;
         button.addEventListener('click', function () { banner.classList.add('is-dismissed'); });
@@ -99,8 +118,8 @@ function banners() {
 }
 
 /* Pricing (sections/pricing.blade.php): the Monthly / Yearly buttons set data-billing on the section; site.css shows the matching price. */
-function pricingToggles() {
-    document.querySelectorAll('[data-pricing]').forEach(function (section) {
+function pricingToggles(root) {
+    root.querySelectorAll('[data-pricing]').forEach(function (section) {
         var options = section.querySelectorAll('[data-billing-option]');
         options.forEach(function (button) {
             button.addEventListener('click', function () {
@@ -114,12 +133,13 @@ function pricingToggles() {
     });
 }
 
-/* aria-current on the nav link matching the page. */
+/* aria-current on the nav link matching the page; re-run on every page change, so it clears the last one first. */
 function markCurrentMenuItem() {
     var path = window.location.pathname.replace(/\/$/, '') || '/';
     document.querySelectorAll('#header nav a[href]').forEach(function (a) {
         var href = a.getAttribute('href').replace(/\/$/, '') || '/';
         if (href === path) a.setAttribute('aria-current', 'page');
+        else a.removeAttribute('aria-current');
     });
 }
 

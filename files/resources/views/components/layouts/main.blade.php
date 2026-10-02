@@ -21,8 +21,11 @@
     <!-- Flag JS support before first paint so scroll reveals never flash (see main.js) -->
     <script>document.documentElement.classList.add('js')</script>
     <script src="/js/main.js" defer></script>
+
+    <!-- Instant navigation: links preload on intent and pages swap <main> in place (see instant.js). The switch is the body attribute. -->
+    <script src="/js/instant.js" defer></script>
 </head>
-<body class="min-h-dvh bg-background font-sans text-foreground antialiased">
+<body class="min-h-dvh bg-background font-sans text-foreground antialiased" data-instant-navigation>
 
     <!-- The sticky site-wide nav. Links live in resources/data/site.json (nav_links); the markup is components/nav.blade.php. -->
     <x-nav :links="$site->nav_links"/>

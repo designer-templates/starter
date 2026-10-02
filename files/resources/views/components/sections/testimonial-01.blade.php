@@ -120,7 +120,11 @@
                 cancelAnimationFrame(raf);
                 raf = requestAnimationFrame(update);
             }, { passive: true });
-            window.addEventListener('resize', update);
+            /* On window, so it lets go once a page change has taken the block away. */
+            window.addEventListener('resize', function onResize() {
+                if (!root.isConnected) { window.removeEventListener('resize', onResize); return; }
+                update();
+            });
             update();
         });
     })();

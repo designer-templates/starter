@@ -157,17 +157,36 @@
         }
         if (toggle) toggle.addEventListener('click', function () { setSheet(!root.hasAttribute('data-open')); });
         if (sheet) sheet.addEventListener('click', function (e) { if (e.target.closest('a')) setSheet(false); });
-        window.matchMedia('(min-width: 64rem)').addEventListener('change', function (e) { if (e.matches) setSheet(false); });
+        /* What is bound outside the block carries this signal, so a page change that takes the block away lets all of it go (see the end). */
+        var gone = new AbortController();
+        var outside = { signal: gone.signal };
+        window.matchMedia('(min-width: 64rem)').addEventListener('change', function (e) { if (e.matches) setSheet(false); }, outside);
         document.addEventListener('keydown', function (e) {
             if (e.key !== 'Escape') return;
             items.forEach(function (item) { if (isOpen(item) && item.contains(document.activeElement)) item.querySelector('[data-nav-trigger]').focus(); });
             closeAll();
             if (root.hasAttribute('data-open')) { setSheet(false); if (toggle) toggle.focus(); }
-        });
-        document.addEventListener('pointerdown', function (e) { items.forEach(function (item) { if (!item.contains(e.target)) set(item, false); }); });
+        }, outside);
+        document.addEventListener('pointerdown', function (e) { items.forEach(function (item) { if (!item.contains(e.target)) set(item, false); }); }, outside);
         /* aria-current on the link that matches this page keeps its hairline. */
-        var path = window.location.pathname.replace(/\/$/, '') || '/';
-        root.querySelectorAll('nav a[href]').forEach(function (a) { if ((a.getAttribute('href').replace(/\/$/, '') || '/') === path) a.setAttribute('aria-current', 'page'); });
+        function markCurrent() {
+            var path = window.location.pathname.replace(/\/$/, '') || '/';
+            root.querySelectorAll('nav a[href]').forEach(function (a) {
+                if ((a.getAttribute('href').replace(/\/$/, '') || '/') === path) a.setAttribute('aria-current', 'page');
+                else a.removeAttribute('aria-current');
+            });
+        }
+        markCurrent();
+        /*
+            Pages change in place (instant.js). Placed in the layout, the bar stays through the change: it closes up
+            and marks the new page's link. Placed in a page, it left with the old <main>: it releases the scroll lock
+            and everything bound outside itself, and the copy that arrived sets itself up.
+        */
+        document.addEventListener('site:navigated', function () {
+            closeAll();
+            if (root.hasAttribute('data-open')) setSheet(false);
+            if (root.isConnected) markCurrent(); else gone.abort();
+        }, outside);
     });
 })();
 </script>

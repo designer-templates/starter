@@ -72,7 +72,11 @@
             });
         }
         tick();
-        setInterval(tick, 30000);
+        /* The clock stops once a page change has taken the block away. */
+        var timer = setInterval(function () {
+            if (!root.isConnected) { clearInterval(timer); return; }
+            tick();
+        }, 30000);
     });
 })();
 </script>

@@ -230,8 +230,40 @@
         try { id = decodeURIComponent(hash.slice(1)); } catch (e) { id = hash.slice(1); }
         var target = id && (document.getElementById(id) || document.querySelector('a[name="' + id.replace(/"/g, '') + '"]'));
         if (!target) return false;
-        try { target.scrollIntoView({ behavior: 'instant', block: 'start' }); } catch (e) { target.scrollIntoView(true); }
+        settleOn(target);
         return true;
+    }
+
+    /*
+        Scroll to an anchor and keep it there while the arriving page settles.
+        Straight after a swap the new content is not laid out at its final size
+        yet (styles for its classes are still being generated, images arrive),
+        so one scroll lands somewhere above or below the section. Re-align each
+        frame until the section has held still for a few frames, for at most
+        1.5s, and stop the moment the visitor scrolls on their own.
+    */
+    var settling = null;
+    function settleOn(target) {
+        if (settling) settling();
+        var stop = false, last = null, still = 0, start = Date.now();
+        function align() { try { target.scrollIntoView({ behavior: 'instant', block: 'start' }); } catch (e) { target.scrollIntoView(true); } }
+        function cancel() {
+            stop = true;
+            ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(function (type) { window.removeEventListener(type, cancel, true); });
+            settling = null;
+        }
+        ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(function (type) { window.addEventListener(type, cancel, { capture: true, passive: true }); });
+        settling = cancel;
+        align();
+        (function tick() {
+            if (stop || !target.isConnected) return cancel();
+            var top = Math.round(target.getBoundingClientRect().top);
+            still = top === last ? still + 1 : 0;
+            last = top;
+            if (still >= 6 || Date.now() - start > 1500) return cancel();
+            align();
+            requestAnimationFrame(tick);
+        })();
     }
 
     /* The scroll position rides on the history entry, so back returns to it. */

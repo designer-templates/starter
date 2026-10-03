@@ -1,0 +1,15 @@
+# Column types for posts.json — the blog. One row per post, served at /blog/{slug}; the body is HTML in content.
+fields:
+    title: { type: text }
+    slug: { type: text }
+    url: { type: url }
+    category: { type: text }
+    date: { type: text }
+    readTime: { type: text }
+    author: { type: text }
+    authorRole: { type: text }
+    avatar: { type: image }
+    image: { type: image }
+    imageAlt: { type: text }
+    excerpt: { type: textarea }
+    content: { type: richtext }

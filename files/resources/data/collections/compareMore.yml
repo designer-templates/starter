@@ -1,0 +1,7 @@
+# Column types for compareMore.json — the extra comparison rows behind Compare everything. plan1/plan2/plan3 follow the plans in order: yes = check, no = dash, anything else is shown as written.
+fields:
+    group: { type: text }
+    feature: { type: text }
+    plan1: { type: text }
+    plan2: { type: text }
+    plan3: { type: text }

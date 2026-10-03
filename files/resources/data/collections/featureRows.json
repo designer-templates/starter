@@ -1,0 +1,26 @@
+[
+    {
+        "label": "The canvas",
+        "title": "Edit the page you are looking at",
+        "body": "Pick a section on the real page and its fields open beside it. Every keystroke renders on the server, so what you see is exactly what will publish.",
+        "points": "Text, links and images change in place\nReorder, hide or duplicate any section\nPhone, tablet and desktop widths in one click",
+        "image": "/images/shot-editor.jpg",
+        "imageAlt": "The page editor with the pricing section selected and its fields open in the inspector"
+    },
+    {
+        "label": "Content",
+        "title": "Lists live in one table",
+        "body": "Plans, posts, testimonials and team members are collections. Edit a row once and every section that shows it follows, on every page.",
+        "points": "A table per collection, sortable and searchable\nDrag rows into the order the site uses\nBound lists show a card on the canvas",
+        "image": "/images/shot-content.jpg",
+        "imageAlt": "The content view showing the posts collection as a table of titles, authors and dates"
+    },
+    {
+        "label": "Code",
+        "title": "Plain Blade, in your repository",
+        "body": "Every section is an anonymous Blade component with a small YAML file beside it. Open it in your editor, review it in a pull request, deploy it like anything else.",
+        "points": "No database and no lock-in\nA new YAML file adds a section to the picker\nRemove the editor and the site keeps serving",
+        "image": "/images/shot-code.jpg",
+        "imageAlt": "The code view with the sections folder open and a Blade component in the editor"
+    }
+]

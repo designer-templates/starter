@@ -1,0 +1,7 @@
+# Column types for releases.json — the changelog, newest first. The body is HTML in content.
+fields:
+    version: { type: text }
+    date: { type: text }
+    kind: { type: select, options: { New: "New", Improved: "Improved", Fixed: "Fixed" } }
+    title: { type: text }
+    content: { type: richtext }

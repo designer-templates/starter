@@ -12,11 +12,11 @@ fields:
         label: Text
         description: Short line under the heading. Clear to hide.
         rows: 2
-        default: "What shipped, what changed, and one scheduling habit worth stealing from another store. That is all."
+        default: "What shipped, what changed, and one marketing page worth stealing from another team. That is all."
     inputPlaceholder:
         type: text
         label: Input placeholder
-        default: "you@yourshop.com"
+        default: "you@company.com"
     buttonText:
         type: text
         label: Button text

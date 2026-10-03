@@ -1,7 +1,7 @@
 @props([
     'heading' => 'One email a month',
-    'text' => 'What shipped, what changed, and one scheduling habit worth stealing from another store. That is all.',
-    'inputPlaceholder' => 'you@yourshop.com',
+    'text' => 'What shipped, what changed, and one marketing page worth stealing from another team. That is all.',
+    'inputPlaceholder' => 'you@company.com',
     'buttonText' => 'Subscribe',
     'finePrint' => 'No spam. Unsubscribe any time.',
 ])
@@ -16,8 +16,8 @@
 
             <form action="#" method="get" onsubmit="return false" class="mx-auto mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row">
                 <label for="newsletter-email" class="sr-only">Email address</label>
-                <input id="newsletter-email" type="email" autocomplete="email" placeholder="{{ $inputPlaceholder }}" class="field h-12 w-full flex-1 rounded-full border border-input bg-card px-5 text-[15px] text-foreground placeholder:text-muted-foreground/80">
-                <button type="submit" class="h-12 shrink-0 cursor-pointer rounded-full bg-primary px-6 text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $buttonText }}</button>
+                <input id="newsletter-email" type="email" autocomplete="email" placeholder="{{ $inputPlaceholder }}" class="field h-12 w-full flex-1 rounded-control border border-input bg-card px-5 text-[15px] text-foreground placeholder:text-muted-foreground/80">
+                <button type="submit" class="h-12 shrink-0 cursor-pointer rounded-control bg-primary px-6 text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $buttonText }}</button>
             </form>
 
             @if ($finePrint)

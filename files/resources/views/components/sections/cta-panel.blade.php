@@ -1,6 +1,6 @@
 @props([
     'heading' => 'Start with the free plan',
-    'text' => 'One location, ten people, the full schedule and swaps. Upgrade when the roster outgrows it.',
+    'text' => 'One site, every section, in-place editing and collections. Upgrade when you add a second site or a custom domain.',
     'primaryText' => 'Start free',
     'primaryUrl' => '/pricing',
     'showSecondary' => '1',
@@ -16,9 +16,9 @@
             <p class="mx-auto mt-5 max-w-[48ch] text-[17px]/7 text-pretty text-foreground/78">{{ $text }}</p>
             @endif
             <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-                <a href="{{ $primaryUrl }}" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $primaryText }}</a>
+                <a href="{{ $primaryUrl }}" class="inline-flex items-center justify-center rounded-control bg-primary px-6 py-3.5 text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $primaryText }}</a>
                 @if ($showSecondary)
-                <a href="{{ $secondaryUrl }}" class="inline-flex items-center justify-center rounded-full border border-border-strong px-6 py-3.5 text-[15px] font-medium text-foreground transition-colors duration-200 hover:bg-muted active:scale-[.98]">{{ $secondaryText }}</a>
+                <a href="{{ $secondaryUrl }}" class="inline-flex items-center justify-center rounded-control border border-border-strong px-6 py-3.5 text-[15px] font-medium text-foreground transition-colors duration-200 hover:bg-muted active:scale-[.98]">{{ $secondaryText }}</a>
                 @endif
             </div>
         </div>

@@ -14,7 +14,7 @@
     copy and its image — 16:9 works best). Arrow keys move between tabs; panels cross-fade in 150ms. Clear the
     eyebrow to hide it.
 -->
-@php $uid = 'f5-' . uniqid(); @endphp
+@php $uid = 'f5-' . substr(md5($heading . $eyebrow), 0, 6); @endphp
 <section class="py-16 sm:py-28" data-feature-05>
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div class="text-center">

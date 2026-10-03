@@ -5,18 +5,19 @@
             "text": "Product",
             "url": "#",
             "children": [
-                { "text": "Features", "url": "/#features", "description": "Sections, in-place editing and collections" },
-                { "text": "Customers", "url": "/#testimonials", "description": "Notes from teams who switched" },
-                { "text": "Questions", "url": "/pricing#faq", "description": "Plans, billing and getting set up" }
+                { "text": "Features", "url": "/features", "description": "The canvas, collections and plain Blade underneath" },
+                { "text": "Customers", "url": "/customers", "description": "Three teams that stopped filing copy tickets" },
+                { "text": "Changelog", "url": "/changelog", "description": "What shipped, every other Tuesday" }
             ]
         },
         { "text": "Pricing", "url": "/pricing" },
+        { "text": "Blog", "url": "/blog" },
         { "text": "About", "url": "/about" },
         { "text": "Contact", "url": "/contact" }
     ],
     "footer_links": [
-        { "text": "Product", "url": "#", "children": [ { "text": "Features", "url": "/#features" }, { "text": "Pricing", "url": "/pricing" }, { "text": "Questions", "url": "/pricing#faq" }, { "text": "Changelog", "url": "#" } ] },
-        { "text": "Company", "url": "#", "children": [ { "text": "About", "url": "/about" }, { "text": "Contact", "url": "/contact" }, { "text": "Log in", "url": "#" } ] },
+        { "text": "Product", "url": "#", "children": [ { "text": "Features", "url": "/features" }, { "text": "Pricing", "url": "/pricing" }, { "text": "Customers", "url": "/customers" }, { "text": "Changelog", "url": "/changelog" } ] },
+        { "text": "Company", "url": "#", "children": [ { "text": "About", "url": "/about" }, { "text": "Blog", "url": "/blog" }, { "text": "Contact", "url": "/contact" }, { "text": "Log in", "url": "#" } ] },
         { "text": "Legal", "url": "#", "children": [ { "text": "Privacy policy", "url": "#" }, { "text": "Terms of service", "url": "#" } ] }
     ],
     "social_links": [

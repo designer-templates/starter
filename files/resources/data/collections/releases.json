@@ -1,0 +1,58 @@
+[
+    {
+        "version": "2.14",
+        "date": "Sep 29, 2026",
+        "kind": "New",
+        "title": "Collections get a table of their own",
+        "content": "<p>Collections used to live in a side panel that showed one row at a time. They now open in a full table: every field is a column, a header click sorts, and rows drag into a new order by their number. Editing a row opens a drawer with the whole entry, including the rich-text editor for long fields.</p>\n<ul>\n<li>Search filters across every text column as you type.</li>\n<li>New entries join the collection on their first save, so a half-written row never shows up on the site.</li>\n<li>The canvas card for a bound list now has an “Edit in Content” link that opens the same table on the right collection.</li>\n</ul>"
+    },
+    {
+        "version": "2.13",
+        "date": "Sep 1, 2026",
+        "kind": "New",
+        "title": "Pages change in place",
+        "content": "<p>Every site now swaps pages without a full reload. Links are fetched when a visitor hovers, focuses or touches them, and the click replaces only the page’s main content; the header and footer stay put. On our own site the median time from click to paint went from 410 ms to 38 ms.</p>\n<ul>\n<li>Turned on by one attribute on the layout’s body. Remove it and every link loads the ordinary way.</li>\n<li>Section scripts written as a function of their root keep working after a swap. The documentation has the pattern.</li>\n<li>Sign-in links into your app opt out with <code>data-instant-navigation=\"false\"</code>.</li>\n</ul>"
+    },
+    {
+        "version": "2.12",
+        "date": "Aug 18, 2026",
+        "kind": "Improved",
+        "title": "One set of variables for every template",
+        "content": "<p>Every template now opens its stylesheet with the same named variables for the page, the text, the cards, the borders, the primary button and the accent. Change them in one place and the whole site follows, including any section you add from another template’s library.</p>\n<ul>\n<li>Text sits in four tiers made from two variables, so a new grey never sneaks in.</li>\n<li>Every text button reads its corner radius from one variable. Set it to <code>9999px</code> and every button on the site becomes a pill.</li>\n</ul>"
+    },
+    {
+        "version": "2.11",
+        "date": "Aug 4, 2026",
+        "kind": "Improved",
+        "title": "Publish shows what is waiting",
+        "content": "<p>The Publish button now carries a small dot when there are unpublished changes, and its menu lists every changed page with the kind of change beside it. Discard works per site, as before, and asks first.</p>\n<p>This was the most common question in our support inbox for six months running. It has dropped from about thirty messages a month to four.</p>"
+    },
+    {
+        "version": "2.10",
+        "date": "Jul 21, 2026",
+        "kind": "New",
+        "title": "Global blocks",
+        "content": "<p>Any section can be made global from its menu. A global block is edited once and updates on every page that uses it, which is what you want for a closing call to action, a pricing teaser or an announcement bar.</p>\n<ul>\n<li>Global blocks show a teal outline on the canvas so you always know when an edit reaches more than one page.</li>\n<li>Detach turns a placement back into an ordinary section with the same values.</li>\n<li>On disk, a block is one Blade file in <code>components/blocks</code>, placed with a single tag.</li>\n</ul>"
+    },
+    {
+        "version": "2.9",
+        "date": "Jul 7, 2026",
+        "kind": "Fixed",
+        "title": "Twelve fixes from the support inbox",
+        "content": "<ul>\n<li>Undo after deleting a section restores it in the same position, including on layout regions.</li>\n<li>Image fields remember the media folder you last picked from.</li>\n<li>Very long page titles no longer push the publish button off a 1280-pixel screen.</li>\n<li>The phone preview width is 390 pixels, matching the most common phone in our analytics.</li>\n<li>Repeater rows with an empty child list render the same on the canvas and on the live site.</li>\n<li>Seven smaller fixes to keyboard focus in the inspector.</li>\n</ul>"
+    },
+    {
+        "version": "2.8",
+        "date": "Jun 23, 2026",
+        "kind": "New",
+        "title": "Search listing and social sharing per page",
+        "content": "<p>Page settings now include a search listing preview, a social sharing card and an advanced panel for a canonical URL and custom head tags. Each page writes its own title, description and Open Graph tags; anything left empty falls back to the site’s defaults.</p>\n<p>Renaming a page keeps a permanent redirect from its old address, so a link someone shared last year still lands.</p>"
+    },
+    {
+        "version": "2.7",
+        "date": "Jun 9, 2026",
+        "kind": "Improved",
+        "title": "Faster canvas on long pages",
+        "content": "<p>Edits on the canvas are now rendered on the server in batches, about 90 milliseconds after you stop typing, and only the section you changed is replaced. On a 24-section home page, typing in a heading no longer re-renders the other 23.</p>"
+    }
+]

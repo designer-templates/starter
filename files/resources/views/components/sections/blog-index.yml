@@ -1,0 +1,50 @@
+title: Blog index
+description: The newest post as a wide feature, then every other post in a three-column grid of cards
+category: blog
+fields:
+    featuredLabel:
+        type: text
+        label: Label on the newest post
+        description: Clear to hide.
+        default: "Latest"
+    posts:
+        type: repeater
+        label: Posts
+        source: collections.posts
+        add_button_label: Add post
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Title
+            url:
+                type: url
+                label: Link
+            category:
+                type: text
+                label: Category
+            date:
+                type: text
+                label: Date
+            readTime:
+                type: text
+                label: Reading time
+            author:
+                type: text
+                label: Author
+            authorRole:
+                type: text
+                label: Author role
+            avatar:
+                type: image
+                label: Author photo
+            image:
+                type: image
+                label: Cover image (3:2)
+            imageAlt:
+                type: text
+                label: Cover description
+            excerpt:
+                type: textarea
+                label: Excerpt
+                rows: 3

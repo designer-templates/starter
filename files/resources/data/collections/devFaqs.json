@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Which Laravel versions does it support?",
+        "answer": "Laravel 11, 12 and 13 on PHP 8.2 or newer. Starter installs as a Composer package and adds one service provider to your app."
+    },
+    {
+        "question": "Can I use my own components?",
+        "answer": "Yes. Any Blade component with a YAML file beside it becomes a section in the picker, with the fields the YAML names."
+    },
+    {
+        "question": "Does it need a database?",
+        "answer": "No. Pages, layouts and collections are files in your repository, so they deploy, diff and roll back like the rest of your code."
+    },
+    {
+        "question": "What does an editor see?",
+        "answer": "The real page, with each section outlined on hover. They click a heading or an image to change it, and press Publish when they are done."
+    },
+    {
+        "question": "How do drafts and publishing work?",
+        "answer": "Edits are saved as a draft as you type. Publish writes the files in one go, so a half-finished page never reaches visitors."
+    },
+    {
+        "question": "Can I remove it later?",
+        "answer": "Yes. The site is served by a small runtime that lives in your app, so it keeps working after the editor package is removed."
+    }
+]

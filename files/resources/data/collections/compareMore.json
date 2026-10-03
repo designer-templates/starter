@@ -1,0 +1,44 @@
+[
+    {
+        "group": "Editing",
+        "feature": "Global blocks",
+        "plan1": "yes",
+        "plan2": "yes",
+        "plan3": "yes"
+    },
+    {
+        "group": "Editing",
+        "feature": "Search and social settings per page",
+        "plan1": "yes",
+        "plan2": "yes",
+        "plan3": "yes"
+    },
+    {
+        "group": "Team",
+        "feature": "Audit log",
+        "plan1": "no",
+        "plan2": "no",
+        "plan3": "yes"
+    },
+    {
+        "group": "Team",
+        "feature": "Single sign-on",
+        "plan1": "no",
+        "plan2": "no",
+        "plan3": "yes"
+    },
+    {
+        "group": "Billing",
+        "feature": "Pay by invoice",
+        "plan1": "no",
+        "plan2": "no",
+        "plan3": "yes"
+    },
+    {
+        "group": "Billing",
+        "feature": "Yearly billing, two months free",
+        "plan1": "no",
+        "plan2": "yes",
+        "plan3": "yes"
+    }
+]

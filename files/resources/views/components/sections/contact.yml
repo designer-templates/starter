@@ -12,7 +12,7 @@ fields:
         label: Subheading
         description: Short line under the heading. Clear to hide.
         rows: 3
-        default: "Questions about plans, a demo for a few locations, or moving a schedule over from another tool. We reply within one business day."
+        default: "Questions about plans, a demo for your team, or moving a site over from another builder. We reply within one business day."
     email:
         type: text
         label: Email

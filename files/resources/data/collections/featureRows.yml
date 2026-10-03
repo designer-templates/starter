@@ -1,0 +1,8 @@
+# Column types for featureRows.json — the alternating rows on /features. Points are one per line; images are 3:2 screenshots.
+fields:
+    label: { type: text }
+    title: { type: text }
+    body: { type: textarea }
+    points: { type: textarea }
+    image: { type: image }
+    imageAlt: { type: text }

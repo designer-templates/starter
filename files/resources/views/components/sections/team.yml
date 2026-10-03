@@ -12,7 +12,7 @@ fields:
         label: Subheading
         description: Short line under the heading. Clear to hide.
         rows: 2
-        default: "Six people in Columbus, Ohio, most of whom have closed a store or a clinic on a Saturday night."
+        default: "Six people in Columbus, Ohio, most of whom have shipped a marketing site at 11 PM the night before a launch."
     members:
         type: repeater
         label: Members

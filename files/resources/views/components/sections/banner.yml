@@ -6,16 +6,16 @@ fields:
         type: text
         label: Message
         description: Clear to remove the bar.
-        default: "Learn how to build amazing landing pages."
+        default: "Starter 2.14: collections get a table of their own."
     linkText:
         type: text
         label: Link text
         description: Clear to hide the link.
-        default: "Read the docs"
+        default: "See what shipped"
     linkUrl:
         type: url
         label: Link URL
-        default: "/#features"
+        default: "/changelog"
     dismissible:
         type: toggle
         label: Show dismiss button

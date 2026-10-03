@@ -12,7 +12,7 @@ fields:
         label: Supporting text
         description: Short line under the heading. Clear to hide.
         rows: 2
-        default: "One location, ten people, the full schedule and swaps. Upgrade when the roster outgrows it."
+        default: "One site, every section, in-place editing and collections. Upgrade when you add a second site or a custom domain."
     primaryText:
         type: text
         label: Primary button text

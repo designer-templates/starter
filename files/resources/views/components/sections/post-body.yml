@@ -1,0 +1,43 @@
+title: Post body
+description: The post's text on the page's left edge, then three more posts as cards
+category: blog
+fields:
+    content:
+        type: richtext
+        label: Body
+        default: "<p>The post itself, as HTML from the posts collection.</p>"
+    moreHeading:
+        type: text
+        label: More-posts heading
+        description: Clear to hide the more-posts row.
+        default: "Keep reading"
+    moreLinkText:
+        type: text
+        label: More-posts link text
+        default: "All posts"
+    moreLinkUrl:
+        type: url
+        label: More-posts link URL
+        default: "/blog"
+    more:
+        type: repeater
+        label: More posts
+        source: collections.posts
+        add_button_label: Add post
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Title
+            url:
+                type: url
+                label: Link
+            date:
+                type: text
+                label: Date
+            readTime:
+                type: text
+                label: Reading time
+            image:
+                type: image
+                label: Cover image

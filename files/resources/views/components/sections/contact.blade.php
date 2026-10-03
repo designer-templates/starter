@@ -1,6 +1,6 @@
 @props([
     'heading' => 'Get in touch',
-    'subheading' => 'Questions about plans, a demo for a few locations, or moving a schedule over from another tool. We reply within one business day.',
+    'subheading' => 'Questions about plans, a demo for your team, or moving a site over from another builder. We reply within one business day.',
     'email' => 'hello@starter.app',
     'phone' => '+1 (614) 555-0136',
     'address' => '221 N High St, Suite 400, Columbus, OH 43215',
@@ -54,7 +54,7 @@
                     <label for="contact-message" class="block text-[14px] font-medium text-foreground">{{ $messageLabel }}</label>
                     <textarea id="contact-message" rows="4" class="field mt-2 block w-full rounded-lg border border-input bg-background px-3.5 py-2.5 text-[15px] text-foreground placeholder:text-muted-foreground/80"></textarea>
                 </div>
-                <button type="submit" class="h-12 w-full cursor-pointer rounded-full bg-primary px-6 text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $buttonText }}</button>
+                <button type="submit" class="h-12 w-full cursor-pointer rounded-control bg-primary px-6 text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $buttonText }}</button>
             </div>
         </form>
     </div>

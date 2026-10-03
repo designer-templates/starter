@@ -1,6 +1,6 @@
 @props([
     'heading' => 'The team',
-    'subheading' => 'Six people in Columbus, Ohio, most of whom have closed a store or a clinic on a Saturday night.',
+    'subheading' => 'Six people in Columbus, Ohio, most of whom have shipped a marketing site at 11 PM the night before a launch.',
     'members' => [],
 ])
 <!-- Centered heading over a grid of people: photo, name, role. Rows live in resources/data/collections/team.json. -->

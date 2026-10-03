@@ -18,7 +18,7 @@
 -->
 <section class="py-16 sm:py-28">
     <div class="mx-auto w-full max-w-6xl px-6 lg:px-8 text-center">
-        <h1 class="mx-auto max-w-3xl text-hero font-semibold tracking-[-0.04em] text-muted-foreground/80 first-line:text-foreground" data-reveal>
+        <h1 class="mx-auto max-w-lg md:max-w-xl lg:max-w-2xl text-hero font-semibold tracking-[-0.04em] text-muted-foreground/80 first-line:text-foreground" data-reveal>
             {{ $heading }}
         </h1>
         <p class="reveal-1 mx-auto mt-6 max-w-[500px] text-lg/8 font-medium text-pretty text-muted-foreground sm:text-xl/8" data-reveal>{{ $text }}</p>

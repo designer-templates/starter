@@ -1,0 +1,4 @@
+# Column types for setupSteps.json — the four numbered steps on /features.
+fields:
+    title: { type: text }
+    text: { type: textarea }

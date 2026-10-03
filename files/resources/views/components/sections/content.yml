@@ -10,23 +10,23 @@ fields:
     heading:
         type: text
         label: Heading
-        default: "Why we built a scheduler"
+        default: "Why we built Starter"
         required: true
     paragraph1:
         type: textarea
         label: Paragraph 1
         rows: 4
-        default: "Two of us managed a coffee shop and a climbing gym before this. Every week ended the same way: a spreadsheet on Sunday night, a photo of it in the group chat, and a Monday morning of texts about who was swapping with whom."
+        default: "Two of us ran a five-person web agency in Columbus for six years. Every site we launched ended the same way: a queue of tickets asking a developer to change a sentence, swap a photo, or rename a button."
         required: true
     paragraph2:
         type: textarea
         label: Paragraph 2
         description: Clear to hide.
         rows: 4
-        default: "The tools we tried were built for companies with an HR department. They had approval chains and org charts and a mobile app that needed a password reset every month. What a twelve-person team needs is a schedule that publishes in minutes and a swap that approves itself when it fits."
+        default: "The tools we tried asked us to choose. A headless CMS kept the words in one system and the components in another, and the two drifted. A hosted page builder made the marketing pages look like a different company. What we wanted was to edit the page you are looking at and have the change land in the same Blade files we already wrote."
     paragraph3:
         type: textarea
         label: Paragraph 3
         description: Clear to hide.
         rows: 4
-        default: "So that is what we built. Starter runs 2,140 schedules a week now, most of them for teams under twenty, and the whole company still fits around one table in Columbus."
+        default: "So that is what we built. Starter has published 2,140 sites now, most of them for teams of under twenty, and the whole company still fits around one table in Columbus."

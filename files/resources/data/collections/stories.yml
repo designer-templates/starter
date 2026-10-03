@@ -1,0 +1,23 @@
+# Column types for stories.json — customer stories, served at /customers/{slug}. The body is HTML in content.
+fields:
+    company: { type: text }
+    slug: { type: text }
+    url: { type: url }
+    location: { type: text }
+    industry: { type: text }
+    size: { type: text }
+    title: { type: text }
+    excerpt: { type: textarea }
+    image: { type: image }
+    imageAlt: { type: text }
+    figureOneValue: { type: text }
+    figureOneLabel: { type: text }
+    figureTwoValue: { type: text }
+    figureTwoLabel: { type: text }
+    figureThreeValue: { type: text }
+    figureThreeLabel: { type: text }
+    quote: { type: textarea }
+    person: { type: text }
+    initials: { type: text }
+    role: { type: text }
+    content: { type: richtext }

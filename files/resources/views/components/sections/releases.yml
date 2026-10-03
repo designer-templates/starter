@@ -1,0 +1,44 @@
+title: Changelog entries
+description: Dated releases on a two-column rail — date, version and label on the left, the title and notes on the right
+category: content
+fields:
+    note:
+        type: text
+        label: Note above the entries
+        default: "A release every other Tuesday, written by the people who built it."
+    feedText:
+        type: text
+        label: Feed button text
+        description: Clear to hide the button.
+        default: "Request a feature"
+    feedUrl:
+        type: url
+        label: Feed URL
+        default: "/contact"
+    releases:
+        type: repeater
+        label: Releases
+        source: collections.releases
+        add_button_label: Add release
+        item_label: title
+        sub_fields:
+            version:
+                type: text
+                label: Version
+            date:
+                type: text
+                label: Date
+            kind:
+                type: select
+                label: Label
+                options:
+                    New: New
+                    Improved: Improved
+                    Fixed: Fixed
+            title:
+                type: text
+                label: Title
+            content:
+                type: textarea
+                label: Notes (HTML)
+                rows: 6

@@ -1,0 +1,58 @@
+[
+    {
+        "group": "Sites",
+        "feature": "Sites",
+        "plan1": "1",
+        "plan2": "10",
+        "plan3": "Unlimited"
+    },
+    {
+        "group": "Sites",
+        "feature": "Custom domains",
+        "plan1": "no",
+        "plan2": "10",
+        "plan3": "Unlimited"
+    },
+    {
+        "group": "Editing",
+        "feature": "Every section and layout",
+        "plan1": "yes",
+        "plan2": "yes",
+        "plan3": "yes"
+    },
+    {
+        "group": "Editing",
+        "feature": "Collections and in-place editing",
+        "plan1": "yes",
+        "plan2": "yes",
+        "plan3": "yes"
+    },
+    {
+        "group": "Editing",
+        "feature": "Version history and rollbacks",
+        "plan1": "7 days",
+        "plan2": "1 year",
+        "plan3": "Unlimited"
+    },
+    {
+        "group": "Team",
+        "feature": "Editors",
+        "plan1": "2",
+        "plan2": "10",
+        "plan3": "Unlimited"
+    },
+    {
+        "group": "Team",
+        "feature": "Roles and approvals",
+        "plan1": "no",
+        "plan2": "no",
+        "plan3": "yes"
+    },
+    {
+        "group": "Support",
+        "feature": "Support",
+        "plan1": "Community",
+        "plan2": "Priority email and chat",
+        "plan3": "Same-day"
+    }
+]

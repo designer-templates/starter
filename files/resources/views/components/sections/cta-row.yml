@@ -5,14 +5,14 @@ fields:
     heading:
         type: text
         label: Heading
-        default: "Ready when your roster is"
+        default: "Ready when your next page is"
         required: true
     text:
         type: textarea
         label: Supporting text
         description: Short line under the heading. Clear to hide.
         rows: 2
-        default: "Set up takes a few minutes. Invite the team when the first week looks right."
+        default: "Setup takes about four minutes. Invite your editors once the first page looks right."
     primaryText:
         type: text
         label: Primary button text

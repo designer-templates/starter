@@ -1,7 +1,7 @@
 @props([
-    'message' => 'Learn how to build amazing landing pages.',
-    'linkText' => 'Read the docs',
-    'linkUrl' => '/#features',
+    'message' => 'Starter 2.14: collections get a table of their own.',
+    'linkText' => 'See what shipped',
+    'linkUrl' => '/changelog',
     'dismissible' => '1',
 ])
 <!--

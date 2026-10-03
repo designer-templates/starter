@@ -1,0 +1,82 @@
+title: Story header
+description: The top of a customer story — company facts, the headline, a standfirst, the photograph and three figures
+category: testimonials
+fields:
+    backText:
+        type: text
+        label: Back link text
+        default: "All customers"
+    backUrl:
+        type: url
+        label: Back link URL
+        default: "/customers"
+    company:
+        type: text
+        label: Company
+        default: "Bellwood & Vane"
+    location:
+        type: text
+        label: Location
+        default: "Raleigh, NC"
+    industry:
+        type: text
+        label: Industry
+        default: "Web studio"
+    size:
+        type: text
+        label: Team size
+        default: "9 people"
+    title:
+        type: text
+        label: Headline
+        required: true
+        default: "Fourteen client sites, and nobody files a copy ticket"
+    excerpt:
+        type: textarea
+        label: Standfirst
+        rows: 3
+        default: "A nine-person studio moved every client site onto Starter in one quarter. Clients edit their own pages now; the studio spends its hours on new work."
+    image:
+        type: image
+        label: Photograph (3:2)
+        default: "/images/story-studio.jpg"
+    imageAlt:
+        type: text
+        label: Photograph description
+        default: "Two designers at Bellwood & Vane reviewing printed page layouts pinned to a studio wall"
+    figureOneValue:
+        type: text
+        label: First figure
+        default: "14"
+    figureOneLabel:
+        type: text
+        label: First figure label
+        default: "client sites moved in one quarter"
+    figureTwoValue:
+        type: text
+        label: Second figure
+        default: "91%"
+    figureTwoLabel:
+        type: text
+        label: Second figure label
+        default: "fewer copy-change tickets"
+    figureThreeValue:
+        type: text
+        label: Third figure
+        default: "3 days"
+    figureThreeLabel:
+        type: text
+        label: Third figure label
+        default: "from kickoff to a launched site"
+    locationLabel:
+        type: text
+        label: Location label
+        default: "Location"
+    industryLabel:
+        type: text
+        label: Industry label
+        default: "Industry"
+    sizeLabel:
+        type: text
+        label: Team size label
+        default: "Team"

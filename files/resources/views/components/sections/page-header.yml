@@ -1,0 +1,36 @@
+title: Page header
+description: The opener for an inner page — eyebrow, the page heading, a line of intro and an optional arrow link
+category: heroes
+fields:
+    eyebrow:
+        type: text
+        label: Eyebrow
+        description: Small label above the heading. Clear to hide.
+        default: "Features"
+    heading:
+        type: text
+        label: Heading
+        required: true
+        default: "One editor, plain Blade underneath"
+    intro:
+        type: textarea
+        label: Intro
+        description: One or two sentences. Clear to hide.
+        rows: 2
+        default: "Edit on the page, keep lists in collections, and ship sections as files in your own repository. Here is how the pieces fit."
+    linkText:
+        type: text
+        label: Link text
+        description: Clear to hide the link.
+        default: "See pricing"
+    linkUrl:
+        type: url
+        label: Link URL
+        default: "/pricing"
+    align:
+        type: select
+        label: Alignment
+        default: left
+        options:
+            left: Left
+            center: Centered

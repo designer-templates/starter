@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Install the package",
+        "text": "One Composer command in your Laravel app. It adds a service provider and a folder for the site, and nothing else."
+    },
+    {
+        "title": "Pick a template",
+        "text": "Start from Starter, Blank or one of the landing templates. Every page and section is copied into your app as files."
+    },
+    {
+        "title": "Hand over the words",
+        "text": "Invite your editors. They change copy and images on the canvas while you keep shipping sections in code."
+    },
+    {
+        "title": "Publish",
+        "text": "Drafts stay drafts until someone presses Publish. Then the files are written and the change is live, with the diff in your next commit."
+    }
+]

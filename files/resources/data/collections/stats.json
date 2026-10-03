@@ -1,6 +1,18 @@
 [
-    { "value": "2,140", "label": "Teams on the schedule" },
-    { "value": "11 min", "label": "Average time to publish a week" },
-    { "value": "38%", "label": "Fewer no-shows after 60 days" },
-    { "value": "4.8", "label": "Average app store rating" }
+    {
+        "value": "2,140",
+        "label": "Sites published with Starter"
+    },
+    {
+        "value": "11 min",
+        "label": "Median time to the first published page"
+    },
+    {
+        "value": "71%",
+        "label": "Fewer copy-change tickets after 60 days"
+    },
+    {
+        "value": "4.8",
+        "label": "Average rating from 312 developers"
+    }
 ]

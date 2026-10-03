@@ -1,0 +1,55 @@
+title: Customer stories
+description: The first story as a wide feature with its three figures, the rest as photograph cards
+category: testimonials
+fields:
+    linkText:
+        type: text
+        label: Link text
+        default: "Read the story"
+    stories:
+        type: repeater
+        label: Stories
+        source: collections.stories
+        add_button_label: Add story
+        item_label: company
+        sub_fields:
+            company:
+                type: text
+                label: Company
+            url:
+                type: url
+                label: Link
+            location:
+                type: text
+                label: Location
+            title:
+                type: text
+                label: Headline
+            excerpt:
+                type: textarea
+                label: Excerpt
+                rows: 3
+            image:
+                type: image
+                label: Photograph (3:2)
+            imageAlt:
+                type: text
+                label: Photograph description
+            figureOneValue:
+                type: text
+                label: First figure
+            figureOneLabel:
+                type: text
+                label: First figure label
+            figureTwoValue:
+                type: text
+                label: Second figure
+            figureTwoLabel:
+                type: text
+                label: Second figure label
+            figureThreeValue:
+                type: text
+                label: Third figure
+            figureThreeLabel:
+                type: text
+                label: Third figure label

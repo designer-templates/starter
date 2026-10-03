@@ -1,6 +1,6 @@
 @props([
-    'heading' => 'Ready when your roster is',
-    'text' => 'Set up takes a few minutes. Invite the team when the first week looks right.',
+    'heading' => 'Ready when your next page is',
+    'text' => 'Setup takes about four minutes. Invite your editors once the first page looks right.',
     'primaryText' => 'Create an account',
     'primaryUrl' => '/pricing',
     'showSecondary' => '1',
@@ -18,9 +18,9 @@
                 @endif
             </div>
             <div class="flex flex-wrap items-center gap-3 sm:shrink-0">
-                <a href="{{ $primaryUrl }}" class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $primaryText }}</a>
+                <a href="{{ $primaryUrl }}" class="inline-flex items-center justify-center rounded-control bg-primary px-6 py-3.5 text-[15px] font-medium text-primary-foreground transition-opacity duration-200 hover:opacity-85 active:scale-[.98]">{{ $primaryText }}</a>
                 @if ($showSecondary)
-                <a href="{{ $secondaryUrl }}" class="inline-flex items-center justify-center rounded-full border border-border-strong px-6 py-3.5 text-[15px] font-medium text-foreground transition-colors duration-200 hover:bg-muted active:scale-[.98]">{{ $secondaryText }}</a>
+                <a href="{{ $secondaryUrl }}" class="inline-flex items-center justify-center rounded-control border border-border-strong px-6 py-3.5 text-[15px] font-medium text-foreground transition-colors duration-200 hover:bg-muted active:scale-[.98]">{{ $secondaryText }}</a>
                 @endif
             </div>
         </div>

@@ -1,0 +1,60 @@
+title: Story body
+description: The story's text with the customer's quote in a well beside it, then the other stories as linked rows
+category: testimonials
+fields:
+    content:
+        type: richtext
+        label: Body
+        default: "<p>The story itself, as HTML from the stories collection.</p>"
+    quote:
+        type: textarea
+        label: Quote
+        rows: 3
+        default: "Our clients used to email us a sentence and wait two days. Now they change it themselves before lunch, and we see it in the next pull request."
+    person:
+        type: text
+        label: Name
+        default: "Tessa Bellwood"
+    initials:
+        type: text
+        label: Initials
+        default: "TB"
+    role:
+        type: text
+        label: Role
+        default: "Founder and creative director"
+    company:
+        type: text
+        label: Company
+        default: "Bellwood & Vane"
+    moreHeading:
+        type: text
+        label: More-stories heading
+        description: Clear to hide the more-stories row.
+        default: "More customer stories"
+    linkText:
+        type: text
+        label: Link text
+        default: "Read the story"
+    more:
+        type: repeater
+        label: More stories
+        source: collections.stories
+        add_button_label: Add story
+        item_label: company
+        sub_fields:
+            company:
+                type: text
+                label: Company
+            url:
+                type: url
+                label: Link
+            location:
+                type: text
+                label: Location
+            title:
+                type: text
+                label: Headline
+            image:
+                type: image
+                label: Photograph

@@ -1,0 +1,54 @@
+title: Post header
+description: The top of a blog post — back link, category and date, the title, a standfirst, the author and the cover photograph
+category: blog
+fields:
+    backText:
+        type: text
+        label: Back link text
+        default: "All posts"
+    backUrl:
+        type: url
+        label: Back link URL
+        default: "/blog"
+    category:
+        type: text
+        label: Category
+        default: "Engineering"
+    date:
+        type: text
+        label: Date
+        default: "Sep 29, 2026"
+    readTime:
+        type: text
+        label: Reading time
+        default: "7 min"
+    title:
+        type: text
+        label: Title
+        required: true
+        default: "Why every section is plain Blade"
+    excerpt:
+        type: textarea
+        label: Standfirst
+        rows: 3
+        default: "We could have stored pages in a database and rendered them from JSON. We chose files you can open in your editor, and it has paid for itself every week since."
+    author:
+        type: text
+        label: Author
+        default: "Marcus Bell"
+    authorRole:
+        type: text
+        label: Author role
+        default: "Co-founder and CTO"
+    avatar:
+        type: image
+        label: Author photo
+        default: "/images/team/marcus.svg"
+    image:
+        type: image
+        label: Cover photograph (3:2)
+        default: "/images/post-cards.jpg"
+    imageAlt:
+        type: text
+        label: Cover description
+        default: "A stack of plain white index cards held by a brass binder clip on an oak desk"
